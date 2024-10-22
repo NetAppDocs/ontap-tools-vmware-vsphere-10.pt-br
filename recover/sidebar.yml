@@ -1,0 +1,6 @@
+---
+section: recover
+title: Recuperar ferramentas ONTAP
+entries:
+- title: Recupere suas ferramentas do ONTAP
+  url: "/recover/recovery-deployment.html"
