@@ -2,8 +2,13 @@
 section: manage
 title: Gerenciar ferramentas do ONTAP
 entries:
+- title: Visão geral das ferramentas do NetApp ONTAP para o painel de plugins do VMware
+    vSphere
+  url: "/configure/dashboard-overview.html"
 - title: Gerenciar armazenamentos de dados
   entries:
+  - title: Crie um datastore
+    url: "/configure/create-vvols-datastore.html"
   - title: Montar o armazenamento de dados NFS e VMFS
     url: "/manage/mount-datastores-on-host.html"
   - title: Desmonte o armazenamento de dados NFS e VMFS
@@ -56,6 +61,8 @@ entries:
     url: "/manage/migrate-standard-virtual-machines-to-vvols-datastores.html"
   - title: Limpeza VASA
     url: "/manage/delete-virtual-machines.html"
+- title: Descubra sistemas de storage e hosts
+  url: "/configure/discover-storage-systems-and-hosts.html"
 - title: Modifique as configurações do host ESXi
   url: "/manage/edit-esxi-host-settings.html"
 - title: Gerenciar senhas

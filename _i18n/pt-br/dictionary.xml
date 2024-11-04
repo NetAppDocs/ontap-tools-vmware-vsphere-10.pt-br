@@ -529,9 +529,7 @@
   <block id="a36819c9a38cba7c918742e034acfe59" category="inline-link">Habilite o NVMe em adaptadores de software RDMA ou NVMe em TCP</block>
   <block id="521a15c47fb41d8055141333f4c3f248" category="inline-link">Adicionar software NVMe em adaptadores RDMA ou NVMe em TCP</block>
   <block id="7b30cf0bf941c59665059610f32765b2" category="list-text">Para a versão do VMware vSphere 7, siga as instruções no site da VMware<block ref="78ea54819b62ddbcd655a4671d8a5b88" category="inline-link-rx"></block> para configurar adaptadores de software NVMe/TCP. Para a versão do VMware vSphere 8, siga<block ref="d7f2ab4a5e61632cb53ab17b5775b973" category="inline-link-rx"></block> para configurar os adaptadores de software NVMe/TCP.</block>
-  <block id="de458ad6ecb99cfc8e4cc7fa762462c4" category="inline-link-macro">Atualizar dados do host</block>
   <block id="f897e941469c1def0ceaad5904784393" category="inline-link">Como configurar o NVMe/TCP com o vSphere 8,0 Update 1 e o ONTAP 9.13,1 para datastores VMFS</block>
-  <block id="81dc7c047ef799c2030ebccbe36d3322" category="list-text">Execute <block ref="6c4ebf1ca886332539cd9c26d849d11e" category="inline-link-macro-rx"></block> uma ação no host ESXi. Para obter mais informações, consulte<block ref="08964a7c7e6cd9155ed7286907a68824" category="inline-link-rx"></block></block>
   <block id="b52744b7fe6a50a639b45ebe19c17f96" category="list-text">Se você estiver usando o protocolo NVMe/FC, execute as seguintes etapas para configurar o host ESXi:</block>
   <block id="0d2e4cff54d6f550e6b15a47007a161c" category="list-text">Habilite o NVMe sobre Fabrics (NVMe-of) no(s) host(s) ESXi.</block>
   <block id="802068251371051bc6ae5a5f001b4460" category="list-text">Zoneamento SCSI completo.</block>
@@ -689,8 +687,6 @@
   <block id="1df0d7e9f5b78d4fa1a6976adc523050" category="list-text">Se pretender anular o registo do fornecedor VASA, execute os seguintes passos:</block>
   <block id="35cad240f98c78499e16ff2c12c26c3e" category="list-text">Para cancelar o registo do fornecedor VASA, selecione a opção *Unregister* na parte inferior do ecrã.</block>
   <block id="f80c9283353883b14d2a39cfb0f83568" category="list-text">Na página *Unregister VASA provider*, pode ver o nome do fornecedor VASA. Nesta página, forneça as credenciais do usuário do aplicativo e clique em *Anular Registro*.</block>
-  <block id="ea87c4ef97995827b2d23fec795f9cbd" category="summary">Você pode executar um reconhecimento sob demanda no host ESXi para obter as atualizações mais recentes sobre os dados de storage.</block>
-  <block id="6099322beed408d39a0c31a402ba9f04" category="list-text">Na janela pop-up *Update Host Data*, selecione *Yes* para reiniciar a descoberta de todos os sistemas de armazenamento conetados.</block>
   <block id="d5fb672b62a493a68492dfcdac746c0b" category="summary">Verifique se o SVM integrado está listado em Fornecedor VASA da IU do cliente vCenter.</block>
   <block id="53d752e3cc33b6d74616d71f03425e0f" category="doc">Verifique o provedor VASA registrado</block>
   <block id="b05db788b95e64cca7587ea1c9a8d4fe" category="paragraph">Verifique se o provedor VASA integrado está listado em Fornecedor VASA da IU do cliente vCenter e da IU do plug-in remoto.</block>
@@ -1821,15 +1817,16 @@
   <block id="430cbe0d7261af556b6d05cea5b38e0e" category="sidebar">Modificar a proteção do cluster do host</block>
   <block id="1e4bd1ddc2319e118af50ab5c5d7522f" category="sidebar">Migrar ferramentas do ONTAP</block>
   <block id="f724dfae8a2bb3b34e049dcedf88d10d" category="sidebar">Proteja armazenamentos de dados e máquinas virtuais</block>
-  <block id="30dcbadaeab2008f15a279a602f8b6e2" category="sidebar">Configurar o sistema de storage para recuperação de desastres</block>
-  <block id="3d7d171ecad1cba0c2d8d707b648b023" category="sidebar">Configurar sites protegidos e de recuperação</block>
   <block id="a239701adb72159a71164b036c18a53a" category="sidebar">Configurar recursos do site protegidos e de recuperação</block>
   <block id="6956cfc9382ccb41c8ac57f99255b409" category="sidebar">Verifique os sistemas de storage replicados</block>
   <block id="4b10c0328f31fc426beffe86fb80aa8e" category="sidebar">Recuperar ferramentas ONTAP</block>
-  <block id="d3dc6537536e641facaa2e80efee8fc5" category="sidebar">Recupere suas ferramentas do ONTAP</block>
   <block id="5dd03e8d039863e563e049be198c3fd3" category="sidebar">Notas de versão</block>
   <block id="ed8359854c43609fca7bc8a46cca9eac" category="sidebar">Comparação de recursos das ferramentas ONTAP 9 e ONTAP 10</block>
   <block id="a2fa58344be7fbd9a2be0320a8df0f77" category="sidebar">Atualizar as ferramentas do ONTAP</block>
   <block id="310782e61fec1bb5ccb93c0b13bfd162" category="list-text">Verifique se você tem três endereços IP gratuitos disponíveis para implantação sem HA: Um endereço IP gratuito para balanceador de carga e um endereço IP gratuito para o plano de controle do Kubernetes e um endereço IP para nó. Para a implantação de HA, juntamente com esses três endereços IP, você precisará de mais dois endereços IP para segundo e terceiro nós. Os nomes de host devem ser mapeados para os endereços IP gratuitos no DNS antes de atribuir para implantações de HA e não HA. Todos os cinco endereços IP na implantação HA e os três endereços IP na implantação não HA devem estar na mesma VLAN selecionada para implantação.</block>
   <block id="598d1a03a9fabe277211c3c65adbfbc6" category="admonition">O nome de usuário e a senha do aplicativo são definidos durante a implantação de ferramentas do ONTAP. Isto é necessário para o registo do fornecedor/SRA da VASA.</block>
+  <block id="9fc56e301e08de92885a49e832294c9b" category="list-text">Execute <block ref="d7dfa373f3b590500a261c503f3d702f" category="inline-link-macro-rx"></block> uma ação no host ESXi. Para obter mais informações, consulte<block ref="08964a7c7e6cd9155ed7286907a68824" category="inline-link-rx"></block></block>
+  <block id="1bf63b567c68de7fcd78fcc89f42f93c" category="sidebar">Proteger usando a proteção do cluster de host</block>
+  <block id="d8ddfdd9298e5862ca00168195c4be29" category="sidebar">Proteja usando proteção SRA</block>
+  <block id="f6af7ed15ad67767270b003672cdfdbb" category="sidebar">Recupere sua configuração de ferramentas do ONTAP</block>
 </blocks>
