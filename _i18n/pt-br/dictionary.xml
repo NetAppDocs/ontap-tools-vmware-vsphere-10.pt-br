@@ -687,8 +687,6 @@
   <block id="1df0d7e9f5b78d4fa1a6976adc523050" category="list-text">Se pretender anular o registo do fornecedor VASA, execute os seguintes passos:</block>
   <block id="35cad240f98c78499e16ff2c12c26c3e" category="list-text">Para cancelar o registo do fornecedor VASA, selecione a opção *Unregister* na parte inferior do ecrã.</block>
   <block id="f80c9283353883b14d2a39cfb0f83568" category="list-text">Na página *Unregister VASA provider*, pode ver o nome do fornecedor VASA. Nesta página, forneça as credenciais do usuário do aplicativo e clique em *Anular Registro*.</block>
-  <block id="d5fb672b62a493a68492dfcdac746c0b" category="summary">Verifique se o SVM integrado está listado em Fornecedor VASA da IU do cliente vCenter.</block>
-  <block id="53d752e3cc33b6d74616d71f03425e0f" category="doc">Verifique o provedor VASA registrado</block>
   <block id="b05db788b95e64cca7587ea1c9a8d4fe" category="paragraph">Verifique se o provedor VASA integrado está listado em Fornecedor VASA da IU do cliente vCenter e da IU do plug-in remoto.</block>
   <block id="12c4b643913312ffb0ca49cedfcedd35" category="list-text">Para verificar o provedor VASA da IU do vCenter client, siga estas etapas:</block>
   <block id="3b81d27fac8f09b16f1a3c38fef1586e" category="list-text">Navegue até o vCenter Server.</block>
@@ -1829,4 +1827,5 @@
   <block id="1bf63b567c68de7fcd78fcc89f42f93c" category="sidebar">Proteger usando a proteção do cluster de host</block>
   <block id="d8ddfdd9298e5862ca00168195c4be29" category="sidebar">Proteja usando proteção SRA</block>
   <block id="f6af7ed15ad67767270b003672cdfdbb" category="sidebar">Recupere sua configuração de ferramentas do ONTAP</block>
+  <block id="a2635d75789f249837881cc5136979e1" category="paragraph">*Depois de terminar*</block>
 </blocks>
