@@ -135,6 +135,7 @@ NOTE: Não implante ferramentas do ONTAP para a máquina virtual VMware vSphere 
 . Selecione a rede de destino para cada rede de origem e clique em *Next*.
 . Na janela *Personalizar modelo*, preencha os campos obrigatórios e clique em *seguinte*.
 +
+** No modo de implantação HA, não renomeie os nomes da VM após a implantação.
 ** Quando o escopo da SVM estiver ativado, você já deverá ter o suporte à SVM com endereço IP de gerenciamento.
 ** As informações fornecidas aqui são validadas para padrões adequados durante o processo de instalação. Em caso de discrepância, uma mensagem de erro é exibida no console da Web e você é solicitado a corrigir qualquer informação incorreta fornecida.
 ** Os nomes dos hosts devem consistir em letras maiúsculas (A-Z), letras minúsculas (a-z), dígitos (0-9) ou carateres especiais hífen (-). Se você quiser configurar a pilha dupla, especifique o nome do host mapeado para o endereço IPv6.
