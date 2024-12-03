@@ -28,20 +28,24 @@ NOTE: Você pode criar usuários no cluster ou diretamente no nível de máquina
 
 . Extraia o arquivo _/https://<loadbalancerIP>:8443/Virtualization/user-Privileges/Users_roles.zip_ baixado.
 . Acesse o Gerenciador do sistema do ONTAP usando o endereço IP de gerenciamento de cluster do cluster.
-. Faça login como cluster ou usuário do SVM.
-. Selecione o painel *Cluster* > *Settings* > *Users and Roles*.
-. Selecione *Adicionar* em usuários.
-. Na caixa de diálogo *Adicionar usuário*, selecione *Produtos de virtualização*.
-. *Procurar* para selecionar e carregar o arquivo JSON do ONTAP Privileges.
+. Faça login no cluster com admin Privileges. Para configurar um usuário, execute as seguintes etapas:
++
+.. Para configurar o usuário de ferramentas do cluster ONTAP, selecione *Cluster* > *Configurações* > *usuários e funções* painel.
+.. Para configurar o usuário das ferramentas do SVM ONTAP, selecione *Storage SVM* > *Configurações* > *usuários e funções* painel.
+.. Selecione *Adicionar* em usuários.
+.. Na caixa de diálogo *Adicionar usuário*, selecione *Produtos de virtualização*.
+.. *Procurar* para selecionar e carregar o arquivo JSON do ONTAP Privileges.
 +
 O campo produto é preenchido automaticamente.
 
-. Selecione a capacidade necessária no menu pendente capacidade do produto.
+.. Selecione a capacidade necessária no menu pendente capacidade do produto.
 +
 O campo *Role* é preenchido automaticamente com base na capacidade do produto selecionada.
 
-. Introduza o nome de utilizador e a palavra-passe necessários.
-. Selecione a função Privileges (descoberta, criação de armazenamento, Modificar armazenamento, destruir armazenamento, nas/SAN) necessária para o usuário e clique em *Adicionar*.
+.. Introduza o nome de utilizador e a palavra-passe necessários.
+.. Selecione a função Privileges (descoberta, criação de armazenamento, Modificar armazenamento, destruir armazenamento, nas/SAN) necessária para o usuário e clique em *Adicionar*.
+
+
 
 
 A nova função e o usuário são adicionados e você pode ver o Privileges detalhado na função que você configurou.
@@ -74,8 +78,12 @@ sti115_vsim_ucs630f_aggr1 vserver show-aggregates                               
 Siga as instruções nesta seção para criar o usuário e as funções manualmente sem usar o arquivo JSON.
 
 . Acesse o Gerenciador do sistema do ONTAP usando o endereço IP de gerenciamento de cluster do cluster.
-. Faça login como cluster ou usuário do SVM.
-. Selecione o painel *Cluster* > *Settings* > *Users and Roles*.
+. Faça login no cluster com admin Privileges.
++
+.. Para configurar as funções de ferramentas do cluster ONTAP, selecione *Cluster* > *Configurações* > *usuários e funções* painel.
+.. Para configurar as funções de ferramentas do cluster SVM ONTAP, selecione *Storage SVM* > *Configurações* > *usuários e funções* painel
+
+
 . Criar funções:
 +
 .. Selecione *Adicionar* na tabela *funções*.
