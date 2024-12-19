@@ -1834,4 +1834,6 @@
   <block id="2000e83d945563ce0118bc3b5c5f6fbc" category="list-text">Faça login no cluster com admin Privileges.</block>
   <block id="9d65b5cebe69c5a066b9142b67334767" category="list-text">Para configurar as funções de ferramentas do cluster ONTAP, selecione *Cluster* &gt; *Configurações* &gt; *usuários e funções* painel.</block>
   <block id="5aa0457cc95965b125467f8be60fadcf" category="list-text">Para configurar as funções de ferramentas do cluster SVM ONTAP, selecione *Storage SVM* &gt; *Configurações* &gt; *usuários e funções* painel</block>
+  <block id="f6e2644fce556a8207829c90c0760e9e" category="inline-link">Pré-requisitos para configuração avançada e HA não-HA</block>
+  <block id="e919c4d13d770923e879fa844b30c21a" category="list-text">Antes de instalar as ferramentas do ONTAP para VMware vSphere 10,2 em configurações avançadas e de HA não-HA, consulte o artigo da KB:<block ref="e4dee65de4069a83bb14c7c7d5ee3ead" category="inline-link-rx"></block></block>
 </blocks>
