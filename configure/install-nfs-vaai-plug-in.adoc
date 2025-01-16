@@ -16,7 +16,7 @@ Você pode instalar o plug-in NFS do NetApp para APIs do vSphere para integraç�
 *O que você vai precisar*
 
 * Você deve ter baixado o pacote de instalação do plug-in NFS para VAAI ) (`.vib`do site de suporte da NetApp. https://mysupport.netapp.com/site/products/all/details/nfsplugin-vmware-vaai/downloads-tab["Plug-in NFS do NetApp para VMware VAAI"]
-* Você deve ter instalado o patch mais recente do host ESXi 7.0U3 como versão mínima e o ONTAP 9.12,1Px (versão P mais recente) 9.13.1Px, 9.14.1Px ou posterior.
+* Você deve ter instalado o patch mais recente 7.0U3 do host ESXi como versão mínima e ONTAP 9.14.1, 9.15.1 e 9.16.0.
 * Você deve ter ativado o host ESXi e montado um datastore NFS.
 * Você deve ter definido os valores das `DataMover.HardwareAcceleratedMove` configurações do , `DataMover.HardwareAcceleratedInit` e `VMFS3.HardwareAcceleratedLocking` do host como "'1'".
 +

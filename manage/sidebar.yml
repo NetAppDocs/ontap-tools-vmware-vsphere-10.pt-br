@@ -2,9 +2,12 @@
 section: manage
 title: Gerenciar ferramentas do ONTAP
 entries:
-- title: Visão geral das ferramentas do NetApp ONTAP para o painel de plugins do VMware
-    vSphere
+- title: Visão geral das ferramentas do ONTAP para o painel do VMware vSphere
   url: "/configure/dashboard-overview.html"
+- title: Interface de usuário do Gerenciador de ferramentas do ONTAP
+  url: "/configure/manager-user-interface.html"
+- title: Edite as definições do dispositivo
+  url: "/manage/edit-appliance-settings.html"
 - title: Gerenciar armazenamentos de dados
   entries:
   - title: Crie um datastore
@@ -35,8 +38,6 @@ entries:
   url: "/manage/manage-vcenter.html"
 - title: Gerenciar certificados
   url: "/manage/certificate-manage.html"
-- title: Gerencie grupos e políticas de exportação
-  url: "/manage/igroup-management.html"
 - title: Acesse as ferramentas do ONTAP para o console de manutenção do VMware vSphere
   entries:
   - title: Visão geral das ferramentas do ONTAP para o console de manutenção do VMware
@@ -48,7 +49,7 @@ entries:
     url: "/manage/start-the-ssh-on-other-nodes.html"
   - title: Atualize as credenciais do vCenter Server e do ONTAP
     url: "/manage/update-vcenter-credentials.html"
-- title: Relatórios da ferramenta ONTAP
+- title: Relatórios de ferramentas do ONTAP
   url: "/manage/reports.html"
 - title: Recolha os ficheiros de registo
   url: "/manage/collect-the-log-files.html"
@@ -83,3 +84,5 @@ entries:
     url: "/manage/edit-hostcluster-protection.html"
   - title: Remova a proteção do cluster do host
     url: "/manage/delete-hostcluster-protection.html"
+- title: Perto de RPO zero
+  url: "/manage/enable-backup.html"

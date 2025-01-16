@@ -27,4 +27,4 @@ A montagem de um datastore fornece acesso ao storage a hosts adicionais (NFS/VMF
 . Selecione os armazenamentos de dados que você deseja montar e clique em *montar*.
 
 
-Você pode acompanhar o progresso no painel tarefas recentes.
+Você pode acompanhar o progresso no painel de tarefas recentes.

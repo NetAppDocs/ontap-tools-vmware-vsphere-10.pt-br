@@ -45,22 +45,6 @@ Você pode acessar a API REST do ONTAP de várias maneiras diferentes.
 
 
 
-== Considerações de rede
-
-Você pode se conetar à API REST através das seguintes interfaces:
-
-* LIF de gerenciamento de clusters
-* LIF de gerenciamento de nós
-* LIF de gerenciamento do SVM
-
-
-O LIF que você escolher usar deve ser configurado para suportar o protocolo de gerenciamento HTTPS. Além disso, a configuração do firewall na rede deve permitir o tráfego HTTPS.
-
-
-NOTE: Você deve sempre usar um LIF de gerenciamento de cluster. Isso equilibrará a carga das solicitações de API em todos os nós e evitará os nós que estão offline ou que apresentam problemas de conetividade. Se você tiver várias LIFs de gerenciamento de cluster configuradas, todas elas serão equivalentes em relação ao acesso à API REST.
-
-
-
 == Variáveis de entrada que controlam uma solicitação de API
 
 Você pode controlar como uma chamada de API é processada através de parâmetros e variáveis definidos na solicitação HTTP.

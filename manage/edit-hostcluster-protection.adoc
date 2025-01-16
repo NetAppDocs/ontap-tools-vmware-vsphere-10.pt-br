@@ -8,12 +8,9 @@ summary: Você pode editar as relações SnapMirror do cluster de host protegido
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
-:firstname: [.lead]
-:author: [.lead]
-:authorinitials: [
-:authors: [.lead]
 
 
+[role="lead"]
 Você pode executar as seguintes tarefas como parte da proteção de modificação. Você pode executar todas as alterações no mesmo fluxo de trabalho.
 
 * Adicione novos armazenamentos de dados ou hosts ao cluster protegido.
@@ -47,12 +44,12 @@ Use este procedimento para proteger os armazenamentos de dados ou hosts recém-a
 . Faça login no cliente vSphere usando `\https://vcenterip/ui`
 . Para editar as propriedades de um cluster protegido, é possível
 +
-.. Navegue até *Ferramentas do NetApp ONTAP* > *proteção* > *relacionamentos de cluster do host*, clique no menu kebab contra o cluster e selecione *Editar* ou
+.. Navegue até *Ferramentas do NetApp ONTAP* > *proteção* > *relacionamentos de cluster do host*, clique no menu de elipse contra o cluster e selecione *Editar* ou
 .. Clique com o botão direito do Mouse em um cluster de host e selecione *NetApp ONTAP Tools* > *Protect Cluster*.
 
 
 . Se você tiver criado um datastore na interface de usuário nativa do vCenter, esse datastore será mostrado como desprotegido. A interface do usuário mostra todos os armazenamentos de dados no cluster e seu status de proteção em uma caixa de diálogo. Selecione o botão *Protect* para ativar a proteção completa.
-. Se você tiver adicionado um novo host ESXi, o status de proteção será exibido como parcialmente protegido. Selecione o menu kebab nas configurações do SnapMirror e selecione *Editar* para definir a proximidade do host ESXi recém-adicionado.
+. Se você tiver adicionado um novo host ESXi, o status de proteção será exibido como parcialmente protegido. Selecione o menu de elipse nas configurações do SnapMirror e selecione *Editar* para definir a proximidade do host ESXi recém-adicionado.
 +
 
 NOTE: No caso de relação de tipo assíncrono, a ação de edição não é suportada, pois não é possível adicionar o SVM de destino para local terciário à mesma instância de ferramentas do ONTAP. No entanto, você pode usar o gerente do sistema ou a CLI do SVM de destino para alterar a configuração do relacionamento.
@@ -71,7 +68,7 @@ Uma tarefa do vCenter é criada e você pode acompanhar o progresso no painel *t
 . Faça login no cliente vSphere usando `\https://vcenterip/ui`
 . Para editar as propriedades de um cluster protegido, é possível
 +
-.. Navegue até *Ferramentas do NetApp ONTAP* > *proteção* > *relacionamentos de cluster do host*, clique no menu kebab contra o cluster e selecione *Editar* ou
+.. Navegue até *Ferramentas do NetApp ONTAP* > *proteção* > *relacionamentos de cluster do host*, clique no menu de elipse contra o cluster e selecione *Editar* ou
 .. Clique com o botão direito do Mouse em um cluster de host e selecione *NetApp ONTAP Tools* > *Protect Cluster*.
 
 
@@ -95,11 +92,11 @@ A exclusão da relação aciona uma nova verificação no site secundário para 
 . Faça login no cliente vSphere usando `\https://vcenterip/ui`
 . Para editar as propriedades de um cluster protegido, é possível
 +
-.. Navegue até *Ferramentas do NetApp ONTAP* > *proteção* > *relacionamentos de cluster do host*, clique no menu kebab contra o cluster e selecione *Editar* ou
+.. Navegue até *Ferramentas do NetApp ONTAP* > *proteção* > *relacionamentos de cluster do host*, clique no menu de elipse contra o cluster e selecione *Editar* ou
 .. Clique com o botão direito do Mouse em um cluster de host e selecione *NetApp ONTAP Tools* > *Protect Cluster*.
 
 
-. Selecione o menu kebab sob as configurações do SnapMirror e selecione *Excluir*.
+. Selecione o menu de elipse nas configurações do SnapMirror e selecione *Excluir*.
 
 
 Uma tarefa do vCenter é criada e você pode acompanhar o progresso no painel *tarefa recente*.
@@ -117,7 +114,7 @@ NOTE: Não é possível editar uma relação de SnapMirror assíncrona existente
 . Faça login no cliente vSphere usando `\https://vcenterip/ui`
 . Para editar as propriedades de um cluster protegido, é possível
 +
-.. Navegue até *Ferramentas do NetApp ONTAP* > *proteção* > *relacionamentos de cluster do host*, clique no menu kebab contra o cluster e selecione *Editar* ou
+.. Navegue até *Ferramentas do NetApp ONTAP* > *proteção* > *relacionamentos de cluster do host*, clique no menu de elipse contra o cluster e selecione *Editar* ou
 .. Clique com o botão direito do Mouse em um cluster de host e selecione *NetApp ONTAP Tools* > *Protect Cluster*.
 
 

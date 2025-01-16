@@ -34,7 +34,9 @@ NOTE: Não é possível excluir os datastores se houver máquinas virtuais usand
 
 +
 .. No caso do armazenamento de dados NFS ou VMFS, uma caixa de diálogo aparece com a lista de VMs que estão usando o armazenamento de dados.
+.. Se o datastore VMFS for criado em sistemas ASA R2 e se for parte da proteção, você precisará desproteger o datastore antes de excluí-lo.
 .. No caso do datastore vVols, a ação Excluir datastore exclui o datastore somente quando não houver vVols associados a ele. A caixa de diálogo Excluir datastore fornece uma opção para excluir volumes do cluster ONTAP.
+.. No caso do armazenamento de dados vVols baseado em sistemas ASA R2, a caixa de seleção para excluir os volumes de backup não é aplicável.
 
 
 . Para excluir os volumes de backup no armazenamento ONTAP, selecione *Excluir volumes no cluster ONTAP*.

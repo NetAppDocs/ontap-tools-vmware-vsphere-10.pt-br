@@ -77,9 +77,9 @@ Você pode executar a operação de remoção de clusters globais do ONTAP usand
 
 == Visualização detalhada do back-end de storage
 
-A página de back-end de armazenamento lista todos os backends de armazenamento. É possível executar operações de descoberta de armazenamento, modificação e remoção nos backends de armazenamento que você adicionou e não no filho individual sob o cluster.
+A página de back-end de armazenamento lista todos os backends de armazenamento. É possível realizar a descoberta de storage, modificar e remover operações nos back-ends de storage adicionados, e não na SVM filho individual no cluster.
 
-Quando você clica no cluster pai ou no filho no back-end de armazenamento, você pode ver o resumo geral do componente. Quando você clica no cluster pai, você tem o menu suspenso ações a partir do qual você pode executar as operações de armazenamento de descoberta, modificação e remoção. Essa opção está ausente quando você clica no SVM filho.
+Quando você clica no cluster pai ou no filho no back-end de armazenamento, você pode ver o resumo geral do componente. Quando você clica no cluster pai, você tem o menu suspenso ações a partir do qual você pode executar as operações de armazenamento de descoberta, modificação e remoção.
 
 A página de resumo fornece os seguintes detalhes:
 
@@ -88,8 +88,11 @@ A página de resumo fornece os seguintes detalhes:
 * Informações básicas sobre a VM
 * Informações de rede, como o endereço IP e a porta da rede. Para o SVM filho, as informações serão as mesmas que o back-end de storage pai.
 * Privileges permitido e restrito para o back-end de storage. Para o SVM filho, as informações serão as mesmas que o back-end de storage pai. Os Privileges são exibidos apenas nos backends de armazenamento baseados em cluster. Se você adicionar SVM como back-end de storage, as informações do Privileges não serão exibidas.
+* A visualização de detalhamento do cluster do ASA R2 não inclui a guia camadas locais quando a propriedade desagregada for definida como "verdadeira" para o SVM ou para o cluster.
+* Para sistemas ASA R2 SVM, o portlet de capacidade não é mostrado. O portal de capacidade só é necessário quando a propriedade desagregada é definida como "verdadeiro" para o SVM ou cluster.
+* Para sistemas ASA R2 SVM, a seção de informações básicas mostra o tipo de plataforma.
 
 
-A guia Interface fornece informações detalhadas sobre a interface.
+A guia interface fornece informações detalhadas sobre a interface.
 
 A guia níveis locais fornece informações detalhadas sobre a lista de agregados.

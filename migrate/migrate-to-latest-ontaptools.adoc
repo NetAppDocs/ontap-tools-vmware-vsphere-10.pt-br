@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: migrate 
 summary: Ao migrar dados de storage, os back-ends de storage são integrados manualmente usando APIS REST. Ao migrar dados do provedor VASA, os dados são exportados do banco de dados Derby existente e importados para o banco de dados MongoDB. 
 ---
-= Migrar das ferramentas do ONTAP para o VMware vSphere 9.x para o 10,2
+= Migrar das ferramentas do ONTAP para o VMware vSphere 9.x para o 10,3
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -14,17 +14,14 @@ summary: Ao migrar dados de storage, os back-ends de storage são integrados man
 Ao migrar dados de storage, os back-ends de storage são integrados manualmente usando APIS REST. Ao migrar dados do provedor VASA, os dados são exportados do banco de dados Derby existente e importados para o banco de dados MongoDB.
 
 
-NOTE: É recomendável migrar as ferramentas do ONTAP para a configuração do VMware vSphere 9.x somente se a configuração estiver atendendo ao recurso do provedor VASA sozinho.
+NOTE: É recomendável migrar as ferramentas do ONTAP para a configuração do VMware vSphere 9.xx somente se a configuração estiver atendendo somente ao recurso do provedor VASA.
 
 
-NOTE: Após a migração das ferramentas do ONTAP para o VMware vSphere 9.x para o 10,2, os armazenamentos de dados vVols com protocolo NVMe/FC não funcionam porque o ONTAP Tools 10,2 oferece suporte apenas a NVMe-of com datastores VMFS.
+NOTE: Depois de migrar de ferramentas do ONTAP para VMware vSpher 9.x para 10,3, os armazenamentos de dados vVols com o protocolo NVMe/FC não funcionam porque o ONTAP Tools 10,3 oferece suporte apenas a NVMe-of com datastores VMFS.
 
 *Sobre esta tarefa*
 
-A migração é compatível com as ferramentas do ONTAP para as versões do VMware vSphere 9.10D2, 9.11D4, 9.12D1 e 9.13D2 para a versão 10,2.
-
-
-NOTE: Se você estiver usando as ferramentas do ONTAP para a versão do VMware vSphere 9.13P1, você deve atualizar para o 9.13D2 antes da migração para a versão 10,2.
+A migração é compatível com as ferramentas do ONTAP para as versões do VMware vSphere 9.12D1 e 9.13D2 para a versão 10,3.
 
 
 NOTE: Como um usuário existente, você precisa fazer o backup OVA de sua versão atual antes de atualizar para as versões de patch.
@@ -33,10 +30,10 @@ NOTE: Como um usuário existente, você precisa fazer o backup OVA de sua versã
 
 == Etapas comuns de migração
 
-. Implantar as ferramentas OVA para ONTAP para a versão do VMware vSphere 10,2.
-. Adicione a instância do vCenter Server que você deseja migrar para as ferramentas do ONTAP para a versão do VMware vSphere 10,2. Consulte link:../configure/add-vcenter.html["Adicione instâncias do vCenter Server"]
+. Implantar as ferramentas OVA para ONTAP para a versão do VMware vSphere 10,3.
+. Adicione a instância do vCenter Server que você deseja migrar para as ferramentas do ONTAP para a versão do VMware vSphere 10,3. Consulte link:../configure/add-vcenter.html["Adicione instâncias do vCenter Server"]
 . Back-end de storage integrado localmente a partir das ferramentas do ONTAP para APIs de servidor do plug-in do VMware vSphere. Adicione o armazenamento como um armazenamento com escopo local para migração.
-. Os armazenamentos de dados NFS e VMFS migrados das ferramentas do ONTAP para o VMware vSphere 9.xx ficam visíveis nas ferramentas do ONTAP para o VMware vSphere 10,2 somente após a ativação da tarefa de descoberta do datastore, o que pode levar até 30 minutos para ser acionada. Verifique se os armazenamentos de dados estão visíveis na página Visão geral da página de IU do ONTAP Tools for VMware vSphere Plugin.
+. Os armazenamentos de dados NFS e VMFS migrados das ferramentas do ONTAP para o VMware vSphere 9.xx ficam visíveis nas ferramentas do ONTAP para o VMware vSphere 10,3 somente após a ativação da tarefa de descoberta do datastore, o que pode levar até 30 minutos para ser acionada. Verifique se os armazenamentos de dados estão visíveis na página Visão geral da página de IU do ONTAP Tools for VMware vSphere Plugin.
 
 
 
@@ -54,20 +51,20 @@ NOTE: Não migre se o failover estiver concluído e reproteger estiver pendente.
 +
 .. Vá para a página de gerenciamento de configuração do VMware Live Site Recovery
 .. Vá para a seção Storage Replication Adapter (adaptador de replicação de armazenamento)
-.. Clique no menu Kebab e clique em *Reset Configuration*
-.. Clique no menu Kebab e selecione *Delete*
+.. Clique no menu elipsis e clique em *Reset Configuration*
+.. Clique no menu de elipses e selecione *Delete*
 +
 Execute estas etapas nos locais de proteção e recuperação.
 
 
 
-. Instale as ferramentas do ONTAP para o adaptador VMware vSphere 10,2 SRA em locais de proteção e recuperação, usando as etapas em link:../protect/configure-on-srm-appliance.html["Configure o SRA no VMware Live Site Recovery Appliance"]
+. Instale as ferramentas do ONTAP para o adaptador VMware vSphere 10,3 SRA em locais de proteção e recuperação, usando as etapas em link:../protect/configure-on-srm-appliance.html["Configure o SRA no VMware Live Site Recovery Appliance"]
 . Na página da IU do VMware Live Site Recovery, execute as operações *Discover Arrays* e *Discover Devices* e verifique se os dispositivos estão aparecendo como era antes da migração.
 
 
 
 
-== Etapas de migração do provedor VASA
+== Etapas de migração do VASA Provider
 
 . Ative A PORTA Derby 1527 nas ferramentas existentes do ONTAP para VMware vSphere. Para ativar a porta, faça login na CLI com o usuário root e execute o seguinte comando:
 +
@@ -75,8 +72,8 @@ Execute estas etapas nos locais de proteção e recuperação.
 ----
 iptables -I INPUT 1 -p tcp --dport 1527 -j ACCEPT
 ----
-. Implantar as ferramentas OVA para ONTAP para a versão do VMware vSphere 10,2.
-. Adicione a instância do vCenter Server que você deseja migrar para as ferramentas do ONTAP para a versão do VMware vSphere 10,2. link:../configure/add-vcenter.html["Adicione uma instância do vCenter Server"]Consulte .
+. Implantar as ferramentas OVA para ONTAP para a versão do VMware vSphere 10,3.
+. Adicione a instância do vCenter Server que você deseja migrar para as ferramentas do ONTAP para a versão do VMware vSphere 10,3. link:../configure/add-vcenter.html["Adicione uma instância do vCenter Server"]Consulte .
 . Back-end de storage integrado localmente a partir das APIs de servidor do plug-in vCenter remoto. Adicione armazenamento como escopo local para migração.
 . Emita a seguinte chamada de API para migrar:
 +
@@ -126,7 +123,7 @@ https://xx.xx.xx.xxx:8443/virtualization/api/jobmanager/v2/jobs/<JobID>?includeS
 +
 Quando o trabalho estiver concluído, valide o relatório de migração. Você pode ver o relatório da resposta do trabalho como parte do jobData.
 
-. Adicione as ferramentas do ONTAP para o provedor de storage do VMware vSphere ao vCenter Server e link:../configure/registration-process.html["Registre o provedor VASA no vCenter Server"]ao .
+. Adicione as ferramentas do ONTAP para o provedor de storage do VMware vSphere ao vCenter Server e link:../configure/registration-process.html["Registre o provedor VASA com uma instância do vCenter Server"]ao .
 . Pare as ferramentas do ONTAP para o provedor de armazenamento VMware vSphere 9,10/9,11/9,12/9,13 Serviço do provedor VASA a partir do console de manutenção.
 +
 Não elimine o fornecedor VASA.
@@ -201,8 +198,12 @@ Esta API exclui a migração por ID de migração e exclui a migração no vCent
 ====
 
 
-Após a migração bem-sucedida e depois de Registrar as ferramentas do ONTAP 10,2 no vCenter Server, faça o seguinte:
+Após a migração bem-sucedida e depois de Registrar as ferramentas do ONTAP 10,3 no vCenter Server, faça o seguinte:
 
 * Atualize o certificado em todos os hosts.
 * Aguarde algum tempo antes de executar operações de datastore (DS) e Virtual Machine (VM). O tempo de espera depende do número de hosts, DS e VMs que estão presentes na configuração. Quando você não espera, as operações podem falhar intermitentemente.
 
+
+*Depois de terminar*
+
+Depois de migrar de versões antigas das ferramentas do ONTAP para o VMware vSphere para a versão 10,3, volte a digitalizar os adaptadores SRA para verificar se os detalhes estão atualizados na página adaptadores de replicação de armazenamento de recuperação de site do VMware Live.

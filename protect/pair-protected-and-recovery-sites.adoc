@@ -13,9 +13,6 @@ summary: 'Você deve emparelhar os sites protegidos e de recuperação criados u
 [role="lead"]
 Você deve emparelhar os sites protegidos e de recuperação criados usando o vSphere Client para habilitar o Storage Replication Adapter (SRA) para descobrir os sistemas de armazenamento.
 
-
-NOTE: O adaptador de replicação de armazenamento (SRA) não suporta configurações SnapMirror de fan-out. As configurações de fan-out do SnapMirror são aquelas em que um volume de origem é replicado para dois destinos diferentes. Isso cria um problema durante a recuperação quando o VMware Live Site Recovery precisa recuperar a máquina virtual de seu destino.
-
 *O que você vai precisar*
 
 * Você deve ter o VMware Live Site Recovery instalado nos sites protegidos e de recuperação.

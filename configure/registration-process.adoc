@@ -39,8 +39,7 @@ Verifique se o provedor VASA integrado está listado em Fornecedor VASA da IU do
 +
 .. Navegue até o vCenter Server.
 .. Inicie sessão com as credenciais de administrador.
-.. Selecione *fornecedores de armazenamento*.
-.. Selecione *Configurar*.
+.. Selecione *fornecedores de armazenamento* > *Configurar*.
 .. Em Provedor de armazenamento/backends de armazenamento, verifique se o provedor VASA integrado está listado corretamente.
 
 
@@ -48,7 +47,7 @@ Verifique se o provedor VASA integrado está listado em Fornecedor VASA da IU do
 +
 .. Faça login no cliente vSphere usando `\https://vcenterip/ui`
 .. Na página de atalhos, clique em *Ferramentas do NetApp ONTAP* na seção plug-ins.
-.. Pode ver o fornecedor VASA registado na página de descrição geral e na página *Definições* > *Definições do fornecedor VASA*.
+.. Você pode ver o provedor VASA registrado na página de visão geral e na página *Configurações* > *Configurações do provedor VASA*.
 
 
 

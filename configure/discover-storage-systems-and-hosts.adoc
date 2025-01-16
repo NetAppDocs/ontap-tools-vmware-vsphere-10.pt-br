@@ -43,6 +43,6 @@ As ferramentas do ONTAP para VMware vSphere exibem uma caixa de diálogo *Confir
 
 Depois que o processo de descoberta estiver concluído, execute as seguintes ações:
 
-* Use as ferramentas do ONTAP para VMware vSphere para configurar as configurações do host ESXi para hosts que exibem o ícone de alerta na coluna Configurações do adaptador, na coluna Configurações do MPIO ou na coluna Configurações NFS.
+* Use as ferramentas do ONTAP para VMware vSphere para configurar as configurações do host ESXi para hosts que exibem o ícone de alerta na coluna Configurações do adaptador, na coluna Configurações do MPIO ou na coluna Configurações de NFS.
 * Forneça as credenciais do sistema de storage.
 

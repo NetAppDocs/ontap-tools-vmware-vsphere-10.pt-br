@@ -8,12 +8,9 @@ summary: As ferramentas do ONTAP para o VMware vSphere gerenciam a proteção do
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
-:firstname: [.lead]
-:author: [.lead]
-:authorinitials: [
-:authors: [.lead]
 
 
+[role="lead"]
 As ferramentas do ONTAP para o VMware vSphere gerenciam a proteção dos clusters de host. Todos os armazenamentos de dados pertencentes ao SVM selecionado e montados em um ou mais hosts do cluster são protegidos em um cluster de host.
 
 .Pré-requisitos
@@ -21,7 +18,7 @@ Certifique-se de que os seguintes pré-requisitos são cumpridos:
 
 * O cluster de host tem armazenamentos de dados somente em uma SVM.
 * O datastore montado no cluster de host não deve ser montado em nenhum host fora do cluster.
-* Todos os armazenamentos de dados montados no cluster de host devem ser armazenamentos de dados VMFS com protocolo iSCSI/FC. Armazenamentos de dados VMFS com protocolos NVMe/FC e NVMe/TCP não são compatíveis.
+* Todos os armazenamentos de dados montados no cluster de host precisam ser armazenamentos de dados VMFS com protocolo iSCSI/FC. Armazenamentos de dados vVols, NFS ou VMFS com protocolos NVMe/FC e NVMe/TCP não são compatíveis.
 * Armazenamentos de dados de formação de FlexVol/LUN montados no cluster de host não devem fazer parte de nenhum grupo de consistência existente (CG).
 * Armazenamentos de dados de formação de FlexVol/LUN montados no cluster de host não devem fazer parte de qualquer relacionamento existente com o SnapMirror.
 * O cluster de host deve ter pelo menos um datastore.
@@ -45,7 +42,7 @@ No tipo de política AutomatedFailOverDuplex, há uma configuração de host uni
 
 . Se você optar por ter uma configuração de host não uniforme, selecione o acesso do host (origem/destino) para cada host dentro desse cluster.
 . Selecione *Adicionar*.
-. Na janela *Protect cluster*, durante a operação criar, somente a ação de exclusão é suportada. Você pode excluir e adicionar a proteção novamente. Durante a operação Modificar proteção do cluster do host, a opção de edição está disponível. Você pode editar ou excluir os relacionamentos usando as opções de menu kebab.
+. Na janela *Protect cluster*, durante a operação criar, somente a ação de exclusão é suportada. Você pode excluir e adicionar a proteção novamente. Durante a operação Modificar proteção do cluster do host, a opção de edição está disponível. Você pode editar ou excluir as relações usando as opções do menu de elipse.
 . Selecione o botão *Protect*.
 +
 Uma tarefa do vCenter é criada com detalhes de ID da tarefa e o progresso é mostrado no painel tarefas recentes. Esta é uma tarefa assíncrona, a interface do usuário mostra apenas o status de envio da solicitação e não espera a conclusão da tarefa.

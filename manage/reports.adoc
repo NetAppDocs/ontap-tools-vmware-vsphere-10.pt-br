@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:  
 summary: O plug-in das ferramentas do ONTAP para VMware vSphere fornece relatórios para máquinas virtuais e datastores. 
 ---
-= Relatórios da ferramenta ONTAP
+= Relatórios de ferramentas do ONTAP
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

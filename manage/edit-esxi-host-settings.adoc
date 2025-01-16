@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:  
 summary: Você pode usar o painel das ferramentas do ONTAP para o VMware vSphere para editar as configurações do host ESXi. 
 ---
-= Modifique as configurações do host ESXi usando as ferramentas do ONTAP
+= Modifique as configurações do host ESXi
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

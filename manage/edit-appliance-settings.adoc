@@ -1,0 +1,68 @@
+---
+permalink: manage/edit-appliance-settings.html 
+sidebar: sidebar 
+keywords:  
+summary: Você pode alterar a senha do administrador usando o Gerenciador de ferramentas do ONTAP. 
+---
+= Edite as definições do dispositivo
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Use o Gerenciador de ferramentas do ONTAP para escalar o tamanho do nó, gerenciar serviços e atualizar as ferramentas do ONTAP para a configuração de alta disponibilidade (HA) do VMware vSphere.
+
+O dispositivo de ferramentas ONTAP é implantado inicialmente em uma configuração de nó único que não é HA. Pode editar a configuração na janela *Edit Appliance settings* (Editar definições do dispositivo).
+
+*Antes de começar*
+
+Certifique-se de que o modelo OVA fornecido tenha a mesma versão OVA que o primeiro nó.
+
+*Passos*
+
+. Inicie o Gerenciador de ferramentas do ONTAP a partir de um navegador da Web: `\https://loadBalanceIP:8443/virtualization/ui/`
+. Faça login com as ferramentas do ONTAP para as credenciais de administrador do VMware vSphere fornecidas durante a implantação.
+. Clique em *Edit Appliance Settings* (Editar configurações do dispositivo) na seção Overview (visão geral).
+. Na seção *Serviços*, você pode habilitar serviços opcionais como o provedor VASA, a importação de configuração vVols e a recuperação de desastres (SRA) de acordo com suas necessidades.
++
+Ao ativar os serviços pela primeira vez, você precisa criar credenciais Vasa Provider/SRA. Isso é usado para Registrar ou habilitar os serviços Vasa Provider/SRA no vCenter Server.
+
++
+
+NOTE: Para desativar qualquer um dos serviços opcionais, certifique-se de que nenhum vCenter Servers gerenciado pelas ferramentas do ONTAP esteja usando esses serviços.
+
++
+*A opção permitir importação de configuração vVols* é mostrada somente quando o serviço provedor VASA está habilitado. Esta opção permite a migração de dados vVols das ferramentas ONTAP 9.x para as ferramentas ONTAP 10,3.
+
+. Na seção *Configuração*, você pode escalar cada tamanho de nó de ferramentas do ONTAP e ativar a configuração de HA de acordo com seu requisito. Você precisa das credenciais do vCenter Server para fazer quaisquer alterações.
++
+Quando as ferramentas do ONTAP estão na configuração HA, você pode alterar os detalhes da biblioteca de conteúdo. Você deve fornecer a senha novamente para o novo envio de edição.
+
++
+
+NOTE: Você só tem permissão para fazer escalabilidade vertical do tamanho do nó das ferramentas do ONTAP. Não é possível reduzir o nó do tamanho atual para um tamanho menor. Para configurações não-HA, o máximo suportado é médio. Para configurações de média e grande HA são suportadas.
+
+. Utilize o botão de alternância HA para ativar a configuração HA. Quando você escolhe a configuração HA, uma página adicional de *HA settings* é exibida para entradas relacionadas a HA.
++
+** A biblioteca de conteúdo deve pertencer ao mesmo vCenter Server onde as VMs de nó das ferramentas do ONTAP estão sendo executadas. As credenciais do vCenter Server são usadas para validar e baixar o modelo OVA para alterações de dispositivo.
+** Para ativar a implantação de HA, a máquina virtual que hospeda as ferramentas do ONTAP não deve ser implantada diretamente em um host ESXi. Em vez disso, ele deve ser implantado em um cluster ou em um pool de recursos.
+** Uma vez ativado, você não pode reverter da configuração de HA para uma configuração de nó único que não seja de HA.
+
+
+. Na seção *HA settings* da janela *Edit Appliance Settings* (Editar configurações do dispositivo), você pode inserir os detalhes do nó 2 e do nó 3. O nó 1 é o nó padrão das ferramentas ONTAP implantado como parte do OVA. As ferramentas do ONTAP para VMware vSphere são compatíveis com três nós na configuração de HA.
++
+
+NOTE: A maioria das opções de entrada são pré-preenchidas com os detalhes da rede do nó 1 para facilitar o fluxo de trabalho. No entanto, você pode editar os dados de entrada antes de navegar para a página final do assistente. Somente quando o endereço IPv6 estiver ativado no primeiro nó, você poderá inserir detalhes IPv6 para outros dois nós.
+
++
+Certifique-se de que um host ESXi contenha apenas uma VM de ferramentas ONTAP. As entradas são validadas cada vez que você passa para a próxima janela.
+
+. Na seção *resumo*, revise os detalhes e clique em *Salvar* para aplicar as alterações.
+
+
+A página *Visão geral* mostra o status da implantação. Também pode controlar o estado do trabalho de editar definições do dispositivo a partir da vista trabalhos utilizando a ID do trabalho.
+
+Se a implantação de HA falhar e o status dos novos nós for "novo", exclua a nova VM no vCenter antes de tentar novamente a operação Ativar HA.
+
+A guia *Alertas* no painel esquerdo lista alertas de ferramentas do ONTAP para VMware vSphere.

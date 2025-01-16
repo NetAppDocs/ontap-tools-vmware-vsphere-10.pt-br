@@ -50,6 +50,8 @@ Atualmente, a VMware não suporta máquinas virtuais clonadas para um modelo de 
 
 É suportado clone-of-Clone de uma máquina virtual protegida.
 
+ https://docs.vmware.com/en/VMware-Horizon/2103/virtual-desktops/GUID-B5020738-8649-4308-A8B0-70AF80527DF6.html["Criando uma Máquina Virtual para Clonagem"]Consulte para obter mais detalhes.
+
 
 
 == Instantâneos de máquina virtual
@@ -57,3 +59,5 @@ Atualmente, a VMware não suporta máquinas virtuais clonadas para um modelo de 
 Atualmente, apenas instantâneos de máquina virtual sem memória são suportados. Se a máquina virtual tiver Snapshot com memória, a máquina virtual não será considerada para proteção.
 
 Você também não pode proteger máquinas virtuais desprotegidas que tenham Snapshot de memória. Para esta versão, espera-se que você exclua o instantâneo da memória antes de ativar a proteção para a máquina virtual.
+
+Para o Windows VM com tipo de armazenamento ASA R2, quando você tirar um instantâneo da máquina virtual, ele será um instantâneo somente leitura. Quando há uma chamada de ativação para a VM, o provedor VASA cria um LUN usando o snapshot somente leitura e, em seguida, ele o habilita para IOPS. Durante a solicitação de desligamento, o provedor VASA exclui o LUN que foi criado e desativa o IOPS.

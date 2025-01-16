@@ -32,6 +32,7 @@ Configuração da aplicação
 . Apresentar resumo do estado do servidor
 . Altere o nível DE LOG para os Serviços de fornecedores VASA e Serviços SRA
 . Desative o AutoSupport
+. Atualize o URL do proxy do AutoSupport
 
 
 
@@ -71,6 +72,8 @@ Suporte e Diagnóstico
  a| 
 . Aceder ao shell de diagnóstico
 . Ative o acesso de diagnóstico remoto
+. Forneça credenciais do vCenter para backup
+. Faça backup
 
 
 |===

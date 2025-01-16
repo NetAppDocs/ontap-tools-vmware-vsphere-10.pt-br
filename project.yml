@@ -1,6 +1,6 @@
 ---
 settings:
-  name: ONTAP tools for VMware vSphere 10.2
+  name: ONTAP tools for VMware vSphere 10.3
   internal:
     pdf_enabled: true
   prod:
@@ -9,7 +9,7 @@ settings:
   langs: pt-br,us-en,de-de,es-es,fr-fr,it-it,ja-jp,ko-kr,zh-cn,zh-tw
 sidebar:
   entries:
-  - title: Ferramentas do ONTAP para documentos do VMware vSphere 10,2
+  - title: Ferramentas do ONTAP para VMware vSphere 10,3
     url: "/index.html"
   - section: release-notes
   - section: concepts
@@ -18,7 +18,6 @@ sidebar:
   - section: protect
   - section: manage
   - section: upgrade
-  - section: recover
   - section: migrate
   - section: automation
   - title: Avisos legais

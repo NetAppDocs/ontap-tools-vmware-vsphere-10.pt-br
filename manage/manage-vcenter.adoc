@@ -17,7 +17,7 @@ As instâncias do vCenter Server são plataformas de gerenciamento central que p
 
 == Associe ou dissocie os backends de armazenamento com a instância do vCenter Server
 
-A página de listagem do vCenter Server mostra o número associado de backends de armazenamento. Cada instância do vCenter Server tem a opção de associar ou desassociar um back-end de storage. Essa tarefa ajuda você a criar um mapeamento entre o back-end de storage e a instância integrada do vCenter Server globalmente.
+A página de listagem do vCenter Server mostra o número associado de backends de armazenamento. Cada instância do vCenter Server tem a opção de associar ou desassociar a um back-end de armazenamento. Essa tarefa ajuda você a criar um mapeamento entre o back-end de storage e a instância integrada do vCenter Server globalmente.
 
 *Passos*
 
