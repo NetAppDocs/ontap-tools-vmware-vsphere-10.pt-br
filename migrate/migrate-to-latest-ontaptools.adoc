@@ -218,3 +218,7 @@ Em *conformidade com a política de armazenamento de VM*, você pode ver o statu
 O status de conformidade em *conformidade com a política de armazenamento de VM* agora é mostrado como compatível.
 
 
+
+*Informações relacionadas*
+
+link:../upgrade/upgrade-ontap-tools.html["Atualize das ferramentas do ONTAP para o VMware vSphere 10.x para o 10,3"]
