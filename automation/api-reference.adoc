@@ -29,5 +29,5 @@ Você pode acessar as ferramentas do ONTAP para a documentação da API REST do 
 +
 `\https://10.61.25.33:8443/`
 
-. Como exemplo de uma chamada de API individual, role para baixo até a categoria *vCenters* e clique em *OBTER* ao lado do endpoint `/virtualization/api/v1/vcenters`
+. Como exemplo de uma chamada de API individual, role para baixo até a categoria *vCenters* e selecione *GET* ao lado do endpoint `/virtualization/api/v1/vcenters`
 

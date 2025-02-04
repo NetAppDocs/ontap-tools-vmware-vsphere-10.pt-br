@@ -22,10 +22,10 @@ Os backends de armazenamento são sistemas que os hosts ESXi usam para armazenam
 Siga os passos abaixo para descobrir os backends de armazenamento.
 
 .Passos
-. Faça login no cliente vSphere usando `\https://vcenterip/ui`
-. Na página de atalhos, clique em *Ferramentas do NetApp ONTAP* na seção plug-ins.
+. Faça login no cliente vSphere usando `\https://<vcenterip>/<ui>`
+. Na página atalhos, selecione *Ferramentas do NetApp ONTAP* na seção plug-ins.
 . No painel esquerdo das ferramentas do ONTAP, navegue até *backends de armazenamento* e selecione um back-end de armazenamento.
-. Clique no menu elipses verticais e selecione *Discover storage*
+. Selecione o menu elipses verticais e selecione *Discover storage*
 
 
 Você pode acompanhar o progresso no painel tarefas recentes.
@@ -36,19 +36,19 @@ Você pode acompanhar o progresso no painel tarefas recentes.
 
 Siga as etapas nesta seção para modificar um back-end de armazenamento.
 
-. Faça login no cliente vSphere usando `\https://vcenterip/ui`
-. Na página de atalhos, clique em *Ferramentas do NetApp ONTAP* na seção plug-ins.
+. Faça login no cliente vSphere usando `\https://<vcenterip>/<ui>`
+. Na página atalhos, selecione *Ferramentas do NetApp ONTAP* na seção plug-ins.
 . No painel esquerdo das ferramentas do ONTAP, navegue até *backends de armazenamento* e selecione um back-end de armazenamento.
-. Clique no menu elipses verticais e selecione *Modificar* para modificar as credenciais ou o nome da porta. Você pode acompanhar o progresso no painel tarefas recentes.
+. Selecione o menu reticências verticais e selecione *Modificar* para modificar as credenciais ou o nome da porta. Você pode acompanhar o progresso no painel tarefas recentes.
 
 
 Você pode executar a operação Modificar para clusters globais do ONTAP usando o Gerenciador de ferramentas do ONTAP seguindo as etapas a seguir.
 
-. Inicie o Gerenciador de ferramentas do ONTAP a partir de um navegador da Web: `\https://loadBalanceIP:8443/virtualization/ui/`
+. Inicie o Gerenciador de ferramentas do ONTAP a partir de um navegador da Web: `\https://loadBalancerIP:8443/virtualization/ui/`
 . Faça login com as ferramentas do ONTAP para as credenciais de administrador do VMware vSphere fornecidas durante a implantação.
 . Selecione backends de armazenamento na barra lateral.
 . Selecione o back-end de armazenamento que você deseja modificar.
-. Clique no menu reticências verticais e selecione *Modificar*.
+. Selecione o menu elipses verticais e selecione *Modificar*.
 . Você pode modificar as credenciais ou a porta. Digite *Nome de usuário* e *Senha* para modificar o back-end de armazenamento.
 
 
@@ -58,19 +58,19 @@ Você pode executar a operação Modificar para clusters globais do ONTAP usando
 
 Você precisa excluir todos os datastores anexados ao back-end de armazenamento antes de remover o back-end de armazenamento. Siga as etapas abaixo para remover um back-end de armazenamento.
 
-. Faça login no cliente vSphere usando `\https://vcenterip/ui`
-. Na página de atalhos, clique em *Ferramentas do NetApp ONTAP* na seção plug-ins.
+. Faça login no cliente vSphere usando `\https://<vcenterip>/<ui>`
+. Na página atalhos, selecione *Ferramentas do NetApp ONTAP* na seção plug-ins.
 . No painel esquerdo das ferramentas do ONTAP, navegue até *backends de armazenamento* e selecione um back-end de armazenamento.
-. Clique no menu reticências verticais e selecione *Remover*. Certifique-se de que o back-end de armazenamento não contenha nenhum datastore. Você pode acompanhar o progresso no painel tarefas recentes.
+. Selecione o menu elipses verticais e selecione *Remover*. Certifique-se de que o back-end de armazenamento não contenha nenhum datastore. Você pode acompanhar o progresso no painel tarefas recentes.
 
 
 Você pode executar a operação de remoção de clusters globais do ONTAP usando o Gerenciador de ferramentas do ONTAP.
 
-. Inicie o Gerenciador de ferramentas do ONTAP a partir de um navegador da Web: `\https://loadBalanceIP:8443/virtualization/ui/`
+. Inicie o Gerenciador de ferramentas do ONTAP a partir de um navegador da Web: `\https://loadBalancerIP:8443/virtualization/ui/`
 . Faça login com as ferramentas do ONTAP para as credenciais de administrador do VMware vSphere fornecidas durante a implantação.
 . Selecione *backends de armazenamento* na barra lateral.
 . Selecione o back-end de armazenamento que você deseja remover
-. Clique no menu reticências verticais e selecione *Remover*.
+. Selecione o menu elipses verticais e selecione *Remover*.
 
 
 
@@ -79,7 +79,7 @@ Você pode executar a operação de remoção de clusters globais do ONTAP usand
 
 A página de back-end de armazenamento lista todos os backends de armazenamento. É possível realizar a descoberta de storage, modificar e remover operações nos back-ends de storage adicionados, e não na SVM filho individual no cluster.
 
-Quando você clica no cluster pai ou no filho no back-end de armazenamento, você pode ver o resumo geral do componente. Quando você clica no cluster pai, você tem o menu suspenso ações a partir do qual você pode executar as operações de armazenamento de descoberta, modificação e remoção.
+Quando você seleciona o cluster pai ou o filho no back-end de armazenamento, você pode ver o resumo geral do componente. Quando você seleciona o cluster pai, você tem o menu suspenso ações a partir do qual você pode executar as operações de armazenamento de descoberta, modificação e remoção.
 
 A página de resumo fornece os seguintes detalhes:
 

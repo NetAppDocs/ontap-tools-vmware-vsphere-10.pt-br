@@ -101,7 +101,7 @@ Execute os seguintes comandos para fazer um backup do MongoDB:
 * Tire snapshots de todos os volumes um a um usando um dos seguintes métodos:
 +
 ** Na CLI, execute o comando _volume snapshot create -vserver <vserver_name> -volume <volume_name> -snapshot <snapshot_name>_
-** Na interface de usuário do gerenciador do sistema ONTAP, pesquise o volume pelo nome na barra de pesquisa e abra esse volume clicando no nome. Vá para snapshot e adicione o snapshot desse volume.
+** Na interface de usuário do gerenciador do sistema ONTAP, pesquise o volume pelo nome na barra de pesquisa e abra esse volume selecionando no nome. Vá para snapshot e adicione o snapshot desse volume.
 
 
 
@@ -109,7 +109,7 @@ Execute os seguintes comandos para fazer um backup do MongoDB:
 *Faça o snapshot das ferramentas do ONTAP para VMs VMware vSphere no vCenter (3VMs no caso de implantação HA, 1 VMs no caso de implantação não HA)*
 
 * Na interface de usuário do cliente vSphere, selecione a VM.
-* Vá para a guia instantâneos e clique no botão *tirar instantâneo*. Faça um snapshot bloqueado da VM.  https://docs.vmware.com/en/VMware-vSphere/7.0/com.vmware.vsphere.vm_admin.doc/GUID-9720B104-9875-4C2C-A878-F1C351A4F3D8.html["Tire um instantâneo de uma máquina virtual"^]Consulte para obter mais detalhes.
+* Vá para a guia instantâneos e selecione o botão *tirar instantâneo*. Faça um snapshot bloqueado da VM.  https://docs.vmware.com/en/VMware-vSphere/7.0/com.vmware.vsphere.vm_admin.doc/GUID-9720B104-9875-4C2C-A878-F1C351A4F3D8.html["Tire um instantâneo de uma máquina virtual"^]Consulte para obter mais detalhes.
 
 
 Antes de executar a atualização, exclua os pods concluídos do pacote de log com o prefixo "gerar suporte-pacote-job". Se a geração de pacotes de suporte estiver em andamento, aguarde que ela seja concluída e exclua o pod.
@@ -131,7 +131,7 @@ Será criado um novo HDD. O provisionador de storage dinâmico usa esse HDD para
 . Faça o upload das ferramentas do ONTAP para a ISO de atualização do VMware vSphere para a biblioteca de conteúdo.
 . Na página da VM principal, selecione *ações* > *Editar configurações*
 . Selecione o arquivo ISO da biblioteca de conteúdo na janela de configurações de edição no campo *unidade de CD/DVD*.
-. Selecione o arquivo ISO e clique em *OK*. Selecione a caixa de verificação Connected (ligado) no campo *CD/DVD drive* (unidade de CD/DVD). image:../media/primaryvm-edit-settings.png["Editar definições"]
+. Selecione o ficheiro ISO e selecione *OK*. Selecione a caixa de verificação Connected (ligado) no campo *CD/DVD drive* (unidade de CD/DVD). image:../media/primaryvm-edit-settings.png["Editar definições"]
 . No vCenter Server, abra um console para as ferramentas do ONTAP.
 . Inicie sessão como utilizador de manutenção.
 . Introduza *3* para selecionar o menu Configuração do sistema.

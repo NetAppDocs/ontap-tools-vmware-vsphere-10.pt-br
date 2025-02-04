@@ -54,7 +54,7 @@ A atribuição de uma função determina as ferramentas do ONTAP para tarefas do
 
 Para simplificar o trabalho com o vCenter Server Privileges e o RBAC, as ferramentas do ONTAP para VMware vSphere fornecem ferramentas ONTAP padrão para funções do VMware vSphere que permitem que você execute as principais ferramentas do ONTAP para tarefas do VMware vSphere. Há também uma função somente leitura que permite visualizar as informações, mas não executar nenhuma tarefa.
 
-Você pode visualizar as ferramentas do ONTAP para as funções padrão do VMware vSphere clicando em *Roles* na página inicial do vSphere Client. As funções que as ferramentas do ONTAP para VMware vSphere fornecem permitem que você execute as seguintes tarefas:
+Você pode visualizar as ferramentas do ONTAP para as funções padrão do VMware vSphere selecionando *Roles* na página inicial do vSphere Client. As funções que as ferramentas do ONTAP para VMware vSphere fornecem permitem que você execute as seguintes tarefas:
 
 |===
 

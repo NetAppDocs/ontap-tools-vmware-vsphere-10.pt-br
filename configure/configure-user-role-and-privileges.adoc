@@ -43,7 +43,7 @@ O campo produto é preenchido automaticamente.
 O campo *Role* é preenchido automaticamente com base na capacidade do produto selecionada.
 
 .. Introduza o nome de utilizador e a palavra-passe necessários.
-.. Selecione a função Privileges (descoberta, criação de armazenamento, Modificar armazenamento, destruir armazenamento, nas/SAN) necessária para o usuário e clique em *Adicionar*.
+.. Selecione a função Privileges (descoberta, criação de armazenamento, Modificar armazenamento, destruir armazenamento, nas/SAN) necessária para o usuário e selecione *Adicionar*.
 
 
 

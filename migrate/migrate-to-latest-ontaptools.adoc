@@ -51,8 +51,8 @@ NOTE: Não migre se o failover tiver sido concluído e a nova proteção estiver
 +
 .. Vá para a página de gerenciamento de configuração do VMware Live Site Recovery
 .. Vá para a seção *Storage Replication Adapter*
-.. Clique no menu de elipses e selecione *Reset Configuration*
-.. Clique no menu de elipses e selecione *Delete*
+.. Selecione o menu de elipse e selecione *Redefinir configuração*
+.. Selecione o menu de elipses e selecione *Delete*
 +
 Execute estas etapas nos locais de proteção e recuperação.
 
@@ -205,8 +205,6 @@ Após a migração bem-sucedida e depois de Registrar as ferramentas do ONTAP 10
 
 
 *Depois de terminar*
-
-Depois de migrar de versões antigas das ferramentas do ONTAP para o VMware vSphere para o 10,3, volte a digitalizar os adaptadores SRA para verificar se os detalhes estão atualizados na página adaptadores de replicação de armazenamento de recuperação de site do VMware Live.
 
 Após a atualização, se o estado de conformidade da máquina virtual estiver desatualizado, reaplique a política de armazenamento da máquina virtual usando as seguintes etapas:
 

@@ -19,10 +19,10 @@ Essa tarefa ajuda você a criar um mapeamento entre o back-end de storage e a in
 
 *Passos*
 
-. Inicie o Gerenciador de ferramentas do ONTAP a partir de um navegador da Web: `\https://loadBalanceIP:8443/virtualization/ui/`
+. Inicie o Gerenciador de ferramentas do ONTAP a partir de um navegador da Web: `\https://loadBalancerIP:8443/virtualization/ui/`
 . Faça login com as ferramentas do ONTAP para as credenciais de administrador do VMware vSphere fornecidas durante a implantação.
 . Selecione vCenter na barra lateral.
-. Clique nas elipses verticais em relação ao vCenter que você deseja associar aos backends de armazenamento.
+. Selecione as elipses verticais em relação ao vCenter que você deseja associar aos backends de armazenamento.
 . Selecione back-end de armazenamento no menu suspenso na janela pop-up.
 . Selecione a opção *Associate Storage backend* para associar a instância do vCenter Server ao back-end de armazenamento necessário.
 

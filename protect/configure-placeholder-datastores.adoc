@@ -21,11 +21,11 @@ Você deve configurar um datastore de espaço reservado para manter um lugar no 
 
 *Passos*
 
-. Faça login no vCenter Server e clique em *Site Recovery* > *Sites*.
-. Selecione seu site protegido e clique em *Gerenciar*.
+. Inicie sessão no vCenter Server e selecione *Site Recovery* > *Sites*.
+. Selecione seu site protegido e selecione *Gerenciar*.
 . Na guia Gerenciar, selecione *datastores de espaço*.
 . Clique em *New* para criar um novo datastore de espaço reservado.
-. Selecione o datastore apropriado e clique em *OK*.
+. Selecione o datastore apropriado e selecione *OK*.
 +
 
 NOTE: Os datastores de espaço reservado podem ser locais ou remotos e não devem ser replicados.

@@ -26,7 +26,7 @@ A guia Ferramentas do ONTAP mostra detalhes como tipo de certificado (autoassina
 
 *Passos*
 
-. Inicie o Gerenciador de ferramentas do ONTAP a partir de um navegador da Web: `\https://loadBalanceIP:8443/virtualization/ui/`
+. Inicie o Gerenciador de ferramentas do ONTAP a partir de um navegador da Web: `\https://loadBalancerIP:8443/virtualization/ui/`
 . Faça login com as ferramentas do ONTAP para as credenciais de administrador do VMware vSphere fornecidas durante a implantação.
 . Selecione a opção *certificados* > *Ferramentas ONTAP* > *renovar* para renovar os certificados.
 +
@@ -56,7 +56,7 @@ As ferramentas do ONTAP para o VMware vSphere são implantadas com um certificad
 
 *Passos*
 
-. Inicie o Gerenciador de ferramentas do ONTAP a partir de um navegador da Web: `\https://loadBalanceIP:8443/virtualization/ui/`
+. Inicie o Gerenciador de ferramentas do ONTAP a partir de um navegador da Web: `\https://loadBalancerIP:8443/virtualization/ui/`
 . Faça login com as ferramentas do ONTAP para as credenciais de administrador do VMware vSphere fornecidas durante a implantação.
 . Selecione *certificados* > *Fornecedor VASA* ou *Ferramentas ONTAP* > *renovar* opção para renovar os certificados.
 . Para atualizar o certificado auto-assinado para o certificado CA personalizado, selecione *certificados* > *Fornecedor VASA* ou *Ferramentas ONTAP* > *Atualizar para CA* opção.

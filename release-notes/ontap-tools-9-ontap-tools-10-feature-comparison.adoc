@@ -18,7 +18,7 @@ Saiba se a migração das ferramentas do ONTAP para o VMware vSphere 9 para as f
 | Recurso | Ferramentas ONTAP 9,13 | Ferramentas ONTAP 10,1 | Ferramentas ONTAP a partir do modelo do ano 10,2 
 
 
-| Proposta de valor chave | Simplifique e simplifique as operações do dia 0 ao dia 2 com recursos aprimorados de segurança, conformidade e automação | Evolução das ferramentas do ONTAP 10.x em direção à paridade 9.x, estendendo os limites de alta disponibilidade, desempenho e escala | Suporte expandido para incluir FC para VMFS e vVols e NVMe-of/FC, NVMe-of/TCP apenas para VMFS. Facilidade de uso para NetApp SnapMirror, configuração simples para clusters de armazenamento do vSphere metro e suporte a SRM de três locais 
+| Proposta de valor chave | Simplifique e simplifique as operações do dia 0 ao dia 2 com recursos aprimorados de segurança, conformidade e automação | Evolução das ferramentas do ONTAP 10.x em direção à paridade 9.x, estendendo os limites de alta disponibilidade, desempenho e escala | Suporte expandido para incluir FC para VMFS e vVols e NVMe-of/FC, NVMe-of/TCP apenas para VMFS. Facilidade de uso para o NetApp SnapMirror, configuração simples para clusters de armazenamento do vSphere metro e suporte para recuperação de site em tempo real em três locais 
 
 
 | Qualificação de lançamento do ONTAP | ONTAP 9.9,1 para ONTAP 9.15,1 | ONTAP 9.12,1 para ONTAP 9.14,1 | ONTAP 9.12.1 para ONTAP 9.15.1 para ferramentas ONTAP 10,2 ONTAP 9.14.1, 9.15.1 e 9.16.0 para ferramentas ONTAP 10,3. 
@@ -36,7 +36,7 @@ Saiba se a migração das ferramentas do ONTAP para o VMware vSphere 9 para as f
 | Observabilidade | Relatórios dinâmicos de VM e armazenamento de dados, além de dashboards de conformidade de host, capacidade e performance | Relatórios dinâmicos de VM e armazenamento de dados atualizados sobre performance, capacidade e conformidade do host | Relatórios dinâmicos de VM e armazenamento de dados atualizados sobre performance, capacidade e conformidade do host 
 
 
-| Proteção de dados | Replicação SRA para replicação baseada em VMFS e NFS FlexVols para integração de VCS vVols e interoperável para backup | Replicação SRA para armazenamentos de dados iSCSI VMFS e NFS v3 | A replicação SRA para iSCSI VMFS e NFS v3 armazenamentos de dados de três locais de proteção, combinando SMAS e SRM. 
+| Proteção de dados | Replicação SRA para replicação baseada em VMFS e NFS FlexVols para integração de VCS vVols e interoperável para backup | Replicação SRA para armazenamentos de dados iSCSI VMFS e NFS v3 | A replicação SRA para iSCSI VMFS e NFS v3 armazenamentos de dados de três locais de proteção combinando SMAS e VMware Live Site Recovery. 
 
 
 | Suporte ao VASA Provider | VASA 4,0 | VASA 3,0 | VASA 3,0 

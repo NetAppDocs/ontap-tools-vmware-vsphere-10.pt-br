@@ -29,7 +29,7 @@ Se você ainda não tiver uma biblioteca de conteúdo adequada, crie uma usando 
 NOTE: Se você pretende usar apenas uma implantação de nó único pequeno, não é necessário criar uma biblioteca de conteúdo.
 
 . Faça o download do `.zip` arquivo que contém binários (_.ova_) e certificados assinados para ferramentas do ONTAP para VMware vSphere no https://mysupport.netapp.com/site/products/all/details/otv/downloads-tab["Site de suporte da NetApp"^] .
-. Faça login no cliente vSphere usando `\https://vcenterip/ui`
+. Faça login no cliente vSphere usando `\https://<vcenterip>/<ui>`
 . Selecione as elipses horizontais ao lado do cliente vSphere e selecione *Content Library*.
 . Selecione *criar* à direita da página.
 . Forneça um nome para a biblioteca e crie a biblioteca de conteúdo.
@@ -55,20 +55,20 @@ NOTE: Antes de prosseguir com a implantação, defina o DRS (Distributed Resourc
 
 NOTE: Nunca armazene ferramentas do ONTAP para máquinas virtuais VMware vSphere em armazenamentos de dados vVols que eles gerenciam.
 
-. Selecione o arquivo OVA através da URL do arquivo _.ova_ ou navegue até a pasta onde o arquivo _.ova_ é salvo e clique em *Next*.
+. Selecione o arquivo OVA através da URL do arquivo _.ova_ ou navegue até a pasta onde o arquivo _.ova_ é salvo e selecione *Next*.
 . Para implantar as ferramentas do ONTAP para VMware vSphere a partir da biblioteca de conteúdo:
 +
-.. Vá para sua biblioteca de conteúdo e clique no item da biblioteca que você deseja implantar.
-.. Clique em *ações* > *Nova VM a partir deste modelo*
+.. Vá para sua biblioteca de conteúdo e selecione o item da biblioteca que você deseja implantar.
+.. Selecione *ações* > *Nova VM a partir deste modelo*
 
 
 . Na janela *Selecione um nome e uma pasta* para a máquina virtual, insira o nome da máquina virtual e selecione o local da máquina virtual. Se você marcar a caixa de seleção que diz *Personalizar o hardware desta máquina virtual*, uma etapa chamada *Personalizar hardware* será ativada antes de você chegar à janela *Pronto para concluir*.
-. Selecione um recurso de computador e clique em *Next*. Você pode optar por marcar a caixa de seleção para *ligar automaticamente a VM implantada*.
-. Revise os detalhes do modelo e clique em *Next*.
-. Leia e aceite o contrato de licença e clique em *Next*.
-. Selecione o armazenamento para a configuração e os arquivos de disco e clique em *Next*.
-. Selecione a rede de destino para cada rede de origem e clique em *Next*.
-. Na janela *Personalizar modelo*, preencha os campos obrigatórios e clique em *seguinte*.
+. Selecione um recurso de computador e selecione *Next*. Você pode optar por marcar a caixa de seleção para *ligar automaticamente a VM implantada*.
+. Revise os detalhes do modelo e selecione *Next*.
+. Leia e aceite o contrato de licença e selecione *Next*.
+. Selecione o armazenamento para a configuração e os arquivos de disco e selecione *Next*.
+. Selecione a rede de destino para cada rede de origem e selecione *seguinte*.
+. Na janela *Personalizar modelo*, preencha os campos obrigatórios e selecione *seguinte*.
 +
 ** As informações fornecidas aqui são validadas para padrões adequados durante o processo de instalação. Em caso de discrepância, uma mensagem de erro é exibida no console da Web e você é solicitado a corrigir qualquer informação incorreta fornecida.
 ** Os nomes dos hosts devem consistir em letras maiúsculas (A-Z), letras minúsculas (a-z), dígitos (0-9) ou carateres especiais hífen (-). Se você quiser configurar a pilha dupla, especifique o nome do host mapeado para o endereço IPv6.

@@ -21,16 +21,16 @@ Você deve emparelhar os sites protegidos e de recuperação criados usando o vS
 
 *Passos*
 
-. Clique duas vezes em *Site Recovery* na página inicial do vSphere Client e clique em *Sites*.
+. Clique duas vezes em *Site Recovery* na página inicial do vSphere Client e selecione *Sites*.
 . Clique em *objetos* > *ações* > *Emparelhar sites*.
-. Na caixa de diálogo *Emparelhar servidores do Gestor de recuperação de Site*, introduza o endereço do controlador de Serviços de Plataforma do site protegido e, em seguida, clique em *seguinte*.
+. Na caixa de diálogo *Emparelhar servidores do Gestor de recuperação de Site*, introduza o endereço do controlador de Serviços de Plataforma do site protegido e, em seguida, selecione *seguinte*.
 . Na seção Selecionar vCenter Server, faça o seguinte:
 +
 .. Verifique se o vCenter Server do site protegido aparece como um candidato correspondente para emparelhar.
-.. Insira as credenciais administrativas SSO e clique em *Finish*.
+.. Insira as credenciais administrativas SSO e selecione *Finish*.
 
 
-. Se solicitado, clique em *Sim* para aceitar os certificados de segurança.
+. Se solicitado, selecione *Sim* para aceitar os certificados de segurança.
 
 
 *Resultado*

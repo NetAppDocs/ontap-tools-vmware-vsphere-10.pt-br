@@ -18,7 +18,7 @@ Você deve ter as ferramentas VMware instaladas depois de implantar as ferrament
 
 NOTE: Você deve definir uma senha para `diag` o usuário ao ativar o diagnóstico remoto.
 
-Você deve usar a guia *Resumo* das ferramentas do ONTAP implantadas para o VMware vSphere para acessar o console de manutenção. Quando você clica image:../media/launch-maintenance-console.gif["Botão Play (Reproduzir)"]em , o console de manutenção é iniciado.
+Você deve usar a guia *Resumo* das ferramentas do ONTAP implantadas para o VMware vSphere para acessar o console de manutenção. Quando você seleciona image:../media/launch-maintenance-console.gif["Botão Play (Reproduzir)"], o console de manutenção é iniciado.
 
 |===
 
