@@ -17,8 +17,7 @@ Você deve configurar os sistemas de armazenamento antes de executar o Storage R
 
 == Configurar o SRA para ambientes SAN
 
-*O que você vai precisar*
-
+.Antes de começar
 Você deve ter os seguintes programas instalados no site protegido e no site de recuperação:
 
 * Recuperação do VMware Live Site
@@ -26,7 +25,7 @@ Você deve ter os seguintes programas instalados no site protegido e no site de 
 A documentação sobre a instalação do VMware Live Site Recovery está no site da VMware.
 
 +
-https://docs.vmware.com/en/VMware-Live-Site-Recovery/9.0/vmware-live-site-recovery/GUID-1F66BEEA-7344-45C7-BDD4-D87734906F16.html["Sobre o VMware Live Site Recovery"]
+https://techdocs.broadcom.com/us/en/vmware-cis/live-recovery/live-site-recovery/9-0/about-vmware-live-site-recovery-installation-and-configuration.html["Sobre o VMware Live Site Recovery"]
 
 * SRA
 +
@@ -34,8 +33,7 @@ O adaptador é instalado no VMware Live Site Recovery.
 
 
 
-*Passos*
-
+.Passos
 . Verifique se os hosts ESXi primários estão conetados aos LUNs no sistema de armazenamento primário no local protegido.
 . Verifique se os LUNS estão em grupos que têm a `ostype` opção definida como _VMware_ no sistema de armazenamento primário.
 . Verifique se os hosts ESXi no local de recuperação têm conetividade iSCSI adequada à máquina virtual de armazenamento (SVM). Os hosts ESXi do local secundário devem ter acesso ao armazenamento do local secundário e os hosts ESXi do local principal devem ter acesso ao armazenamento do local primário.
@@ -48,8 +46,7 @@ Você pode fazer isso verificando se os hosts ESXi têm LUNs locais conetados na
 
 == Configurar o SRA para ambientes nas
 
-*O que você vai precisar*
-
+.Antes de começar
 Você deve ter os seguintes programas instalados no site protegido e no site de recuperação:
 
 * Recuperação do VMware Live Site
@@ -57,7 +54,7 @@ Você deve ter os seguintes programas instalados no site protegido e no site de 
 A documentação sobre a instalação do VMware Live Site Recovery pode ser encontrada no site da VMware.
 
 +
-https://docs.vmware.com/en/VMware-Live-Site-Recovery/9.0/vmware-live-site-recovery/GUID-1F66BEEA-7344-45C7-BDD4-D87734906F16.html["Sobre o VMware Live Site Recovery"]
+https://techdocs.broadcom.com/us/en/vmware-cis/live-recovery/live-site-recovery/9-0/about-vmware-live-site-recovery-installation-and-configuration.html["Sobre o VMware Live Site Recovery"]
 
 * SRA
 +
@@ -65,8 +62,7 @@ O adaptador é instalado no VMware Live Site Recovery e no servidor SRA.
 
 
 
-*Passos*
-
+.Passos
 . Verifique se os datastores no site protegido contêm máquinas virtuais registradas no vCenter Server.
 . Verifique se os hosts ESXi no local protegido montaram os volumes de exportações NFS da máquina virtual de storage (SVM).
 . Verifique se endereços válidos, como o endereço IP, nome do host ou FQDN em que as exportações NFS estão presentes, estão especificados no campo *endereços NFS* ao usar o assistente Array Manager para adicionar arrays ao VMware Live Site Recovery.

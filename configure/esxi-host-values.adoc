@@ -11,7 +11,7 @@ summary: Você pode definir tempos limite e outros valores nos hosts ESXi usando
 
 
 [role="lead"]
-Você pode definir tempos limite e outros valores nos hosts ESXi usando as ferramentas do ONTAP para VMware vSphere para garantir o melhor desempenho e o failover bem-sucedido. Os valores que as ferramentas do ONTAP para VMware vSphere definem são baseados no teste interno do NetApp.
+Usando as ferramentas do ONTAP para VMware vSphere, você pode definir tempos limite e outros valores nos hosts ESXi para garantir o melhor desempenho e o failover bem-sucedido. Os valores que as ferramentas do ONTAP para VMware vSphere definem são baseados no teste interno do NetApp.
 
 Você pode definir os seguintes valores em um host ESXi:
 
@@ -40,7 +40,7 @@ Define as definições de tempo limite de HBA recomendadas para sistemas de arma
 
 == Definições MPIO
 
-Configurações MPIO definem caminhos preferidos para sistemas de armazenamento NetApp. As configurações do MPIO determinam quais dos caminhos disponíveis são otimizados (em vez de caminhos não otimizados que atravessam o cabo de interconexão) e definem o caminho preferido para um desses caminhos.
+Configurações MPIO definem os caminhos preferidos para sistemas de armazenamento NetApp. Eles determinam quais dos caminhos disponíveis são otimizados (em vez de caminhos não otimizados que atravessam o cabo de interconexão) e definem o caminho preferido para um desses caminhos.
 
 Em ambientes de alto desempenho, ou quando você estiver testando o desempenho com um único armazenamento de dados LUN, considere alterar a configuração de balanceamento de carga da política de seleção de caminho (PSP) de round-robin (VMW_PSP_RR) da configuração padrão de IOPS de 1000 para um valor de 1.
 

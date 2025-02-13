@@ -19,8 +19,7 @@ O dispositivo de ferramentas ONTAP é implantado inicialmente em uma configuraç
 
 Certifique-se de que o modelo OVA fornecido tenha a mesma versão OVA que o primeiro nó.
 
-*Passos*
-
+.Passos
 . Inicie o Gerenciador de ferramentas do ONTAP a partir de um navegador da Web: `\https://loadBalancerIP:8443/virtualization/ui/`
 . Faça login com as ferramentas do ONTAP para as credenciais de administrador do VMware vSphere fornecidas durante a implantação.
 . Selecione *Edit Appliance Settings* (Editar definições do dispositivo) na secção Overview (Descrição geral).

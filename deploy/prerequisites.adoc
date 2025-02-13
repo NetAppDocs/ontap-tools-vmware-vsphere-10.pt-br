@@ -25,7 +25,7 @@ Você pode usar as ferramentas do ONTAP para VMware vSphere com o VMware vCenter
 ** 348 GB para instalações com provisionamento espesso
 
 
-* *Requisitos de dimensionamento do sistema anfitrião por nó* a memória recomendada de acordo com o tamanho da implementação e por nó é como mostrado na tabela abaixo:
+* *Requisitos de dimensionamento do sistema anfitrião* a memória recomendada de acordo com o tamanho da implementação é como mostrado na tabela abaixo:
 
 
 |===
@@ -40,13 +40,13 @@ Você pode usar as ferramentas do ONTAP para VMware vSphere com o VMware vCenter
 | Meio não-HA | 13 | 26 | 350 
 
 
-| HA pequena | 27 | 54 | 1050 
+| Ha pequena (cumulativa de três nós) | 27 | 54 | 1050 
 
 
-| HA médio | 39 | 78 | 1050 
+| Meio HA (cumulativo de três nós) | 39 | 78 | 1050 
 
 
-| HA grande | 51 | 102 | 1050 
+| Ha grande (cumulativo de três nós) | 51 | 102 | 1050 
 |===
 
 
@@ -142,7 +142,7 @@ A tabela a seguir mostra o número de VMware Live Site Recovery e as ferramentas
 
 | Mais de 8 | Grande 
 |===
-Para obter mais informações, https://docs.vmware.com/en/VMware-Live-Recovery/services/vmware-live-site-recovery/GUID-3AD7D565-8A27-450C-8493-7B53F995BB14.html["Limites operacionais da recuperação do VMware Live Site"] consulte .
+Para obter mais informações, https://techdocs.broadcom.com/us/en/vmware-cis/live-recovery/live-site-recovery/9-0/overview/site-recovery-manager-system-requirements/operational-limits-of-site-recovery-manager.html["Limites operacionais da recuperação do VMware Live Site"] consulte .
 
 
 

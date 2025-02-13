@@ -13,16 +13,14 @@ summary: Você precisa iniciar o SSH em outros nós antes de atualizar.
 [role="lead"]
 Você precisa iniciar o SSH em outros nós antes de atualizar.
 
-*O que você vai precisar*
-
+.Antes de começar
 A extensão do provedor VASA deve estar habilitada para sua instância do vCenter Server.
 
 *Sobre esta tarefa*
 
 Execute este procedimento em cada um dos nós antes de atualizar.
 
-*Passos*
-
+.Passos
 . No vCenter Server, abra um console para o provedor VASA.
 . Inicie sessão como utilizador de manutenção.
 . Entre `4` para selecionar suporte e Diagnóstico.

@@ -109,7 +109,7 @@ Execute os seguintes comandos para fazer um backup do MongoDB:
 *Faça o snapshot das ferramentas do ONTAP para VMs VMware vSphere no vCenter (3VMs no caso de implantação HA, 1 VMs no caso de implantação não HA)*
 
 * Na interface de usuário do cliente vSphere, selecione a VM.
-* Vá para a guia instantâneos e selecione o botão *tirar instantâneo*. Faça um snapshot bloqueado da VM.  https://docs.vmware.com/en/VMware-vSphere/7.0/com.vmware.vsphere.vm_admin.doc/GUID-9720B104-9875-4C2C-A878-F1C351A4F3D8.html["Tire um instantâneo de uma máquina virtual"^]Consulte para obter mais detalhes.
+* Vá para a guia instantâneos e selecione o botão *tirar instantâneo*. Faça um snapshot bloqueado da VM.  https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere/8-0/take-snapshots-of-a-virtual-machine.html["Tire um instantâneo de uma máquina virtual"^]Consulte para obter detalhes.
 
 
 Antes de executar a atualização, exclua os pods concluídos do pacote de log com o prefixo "gerar suporte-pacote-job". Se a geração de pacotes de suporte estiver em andamento, aguarde que ela seja concluída e exclua o pod.
@@ -119,15 +119,14 @@ Para qualquer tipo de atualização, você precisa adicionar uma unidade de disc
 . Selecione a VM na configuração de nó único ou todas as três VMs na configuração de HA.
 . Clique com o botão direito do rato na(s) VM(s) e selecione *Adicionar novo dispositivo* > *disco rígido*
 . Adicione um HDD de 100 GB no campo *novo disco rígido*.
-. Clique em *aplicar*
+. Selecione *aplicar*
 
 
 Depois de adicionar o disco rígido, atualize os recursos da VM para as respetivas configurações e reinicie a VM principal.
 
 Será criado um novo HDD. O provisionador de storage dinâmico usa esse HDD para gerar ou replicar volumes.
 
-*Passos*
-
+.Passos
 . Faça o upload das ferramentas do ONTAP para a ISO de atualização do VMware vSphere para a biblioteca de conteúdo.
 . Na página da VM principal, selecione *ações* > *Editar configurações*
 . Selecione o arquivo ISO da biblioteca de conteúdo na janela de configurações de edição no campo *unidade de CD/DVD*.

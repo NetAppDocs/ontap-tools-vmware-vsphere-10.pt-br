@@ -45,8 +45,7 @@ Certifique-se de que importou o OVA para a sua biblioteca de conteúdo.
 
 NOTE: Antes de prosseguir com a implantação, defina o DRS (Distributed Resource Scheduler) do cluster no inventário como 'Conservador' durante a instalação de ferramentas do ONTAP. Isso garante que as VMs não migrem durante a instalação.
 
-*Passos*
-
+.Passos
 . Faça o download do `.zip` arquivo que contém binários (_.ova_) e certificados assinados para ferramentas do ONTAP para VMware vSphere no https://mysupport.netapp.com/site/products/all/details/otv/downloads-tab["Site de suporte da NetApp"^] . Se você tiver importado o OVA para a biblioteca de conteúdo, você pode pular esta etapa e prosseguir com a próxima etapa, pois pode implantar diretamente a partir da biblioteca de conteúdo.
 . Faça login no servidor vSphere.
 . Navegue até o pool de recursos que você criou, para o cluster ou para o host onde deseja implantar o OVA.

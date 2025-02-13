@@ -22,5 +22,5 @@ Você pode optar por permitir alguns endereços de host ESXi específicos para o
 +
 Use uma vírgula (,) para separar os endereços IP. Você pode especificar um endereço IP específico ou um intervalo de endereços IP ou endereços IPv6.
 
-. Clique em *Salvar*.
+. Selecione *Guardar*.
 

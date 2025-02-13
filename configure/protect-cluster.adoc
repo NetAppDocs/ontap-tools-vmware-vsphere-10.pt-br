@@ -13,7 +13,7 @@ summary: As ferramentas do ONTAP para o VMware vSphere gerenciam a proteção do
 [role="lead"]
 As ferramentas do ONTAP para o VMware vSphere gerenciam a proteção dos clusters de host. Todos os armazenamentos de dados pertencentes ao SVM selecionado e montados em um ou mais hosts do cluster são protegidos em um cluster de host.
 
-.Pré-requisitos
+.Antes de começar
 Certifique-se de que os seguintes pré-requisitos são cumpridos:
 
 * O cluster de host tem armazenamentos de dados somente em uma SVM.
@@ -38,7 +38,7 @@ O tipo de política pode ser assíncrono ou AutomatedFailOverDuplex.
 Quando você adiciona a relação do SnapMirror como uma política de tipo AutomatedFailOverDuplex, você deve adicionar a VM de armazenamento de destino como back-end de armazenamento ao mesmo vCenter onde as ferramentas do ONTAP para VMware vSphere são implantadas.
 
 +
-No tipo de política AutomatedFailOverDuplex, existem configurações de host uniformes e não uniformes. Quando você seleciona o botão de alternância *Uniform host Configuration*, a configuração do grupo de iniciadores do host é implicitamente replicada no site de destino. Para obter mais informações, consulte link:../concepts/ontap-tools-concepts-terms.html["Principais conceitos e termos"]
+No tipo de política AutomatedFailOverDuplex, existem configurações de host uniformes e não uniformes. Quando você seleciona o botão de alternância *Uniform host Configuration*, a configuração do grupo de iniciadores do host é implicitamente replicada no site de destino. Para obter detalhes, link:../concepts/ontap-tools-concepts-terms.html["Principais conceitos e termos"]consulte .
 
 . Se você optar por ter uma configuração de host não uniforme, selecione o acesso do host (origem/destino) para cada host dentro desse cluster.
 . Selecione *Adicionar*.

@@ -18,7 +18,7 @@ NOTE: Essa exibição é aplicável à VM que tem pelo menos uma ferramenta ONTA
 
 .Passos
 . No vSphere Client, navegue até a máquina virtual.
-. Clique na guia *Monitor* no painel direito.
+. Selecione a guia *Monitor* no painel direito.
 . Selecione *Ferramentas NetApp ONTAP* > *armazenamento*. Os detalhes *Storage* aparecem no painel direito. Você pode ver a lista de vVols que estão presentes na VM.
 +
 Você pode usar a opção 'Gerenciar colunas' para ocultar ou mostrar diferentes colunas.

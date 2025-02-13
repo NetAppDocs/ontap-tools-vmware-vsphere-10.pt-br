@@ -19,7 +19,7 @@ A visualização de storage do ONTAP na guia configurar das ferramentas do ONTAP
 
 .Passos
 . No vSphere Client, navegue até o armazenamento de dados NFS.
-. Clique na guia *Configure* no painel direito.
+. Selecione a guia *Configure* no painel direito.
 . Selecione *Ferramentas NetApp ONTAP* > *armazenamento ONTAP*. Os *Detalhes de armazenamento* e *detalhes de NFS* aparecem no painel direito.
 +
 ** A página de detalhes de armazenamento contém informações sobre backends de armazenamento, agregado e volume.
@@ -34,7 +34,7 @@ A visualização de storage do ONTAP na guia configurar das ferramentas do ONTAP
 
 .Passos
 . No vSphere Client, navegue até o datastore do VMFS.
-. Clique na guia *Configure* no painel direito.
+. Selecione a guia *Configure* no painel direito.
 . Selecione *Ferramentas NetApp ONTAP* > *armazenamento ONTAP*. Os *Detalhes do armazenamento* e *detalhes do LUN* ou *detalhes do namespace* dependendo do protocolo aparecem no painel direito.
 +
 ** A página de detalhes de armazenamento contém informações sobre backends de armazenamento, agregado e volume.
@@ -54,7 +54,7 @@ NOTE: Essa exibição não é suportada para o armazenamento de dados vVols base
 
 .Passos
 . No vSphere Client, navegue até o armazenamento de dados vVols.
-. Clique na guia *Configure* no painel direito.
+. Selecione a guia *Configure* no painel direito.
 . Selecione *Ferramentas NetApp ONTAP* > *armazenamento ONTAP*.
 . A visualização de armazenamento do ONTAP lista todos os volumes. Você pode expandir ou remover o armazenamento do painel de armazenamento do ONTAP.
 +

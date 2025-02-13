@@ -21,8 +21,7 @@ Você deve verificar se o site protegido e o site de recuperação foram emparel
 * Você deve ter as mesmas políticas e programações do SnapMirror nos sites de origem e destino.
 
 
-*Passos*
-
+.Passos
 . Faça login no vCenter Server.
 . Navegue até *Site Recovery* > *Array Based Replication*.
 . Selecione o par de matrizes necessário e verifique os detalhes correspondentes.

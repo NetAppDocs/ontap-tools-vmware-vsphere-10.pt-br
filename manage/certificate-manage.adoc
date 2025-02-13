@@ -11,62 +11,65 @@ summary: Uma única instância das ferramentas do ONTAP para VMware vSphere pode
 
 
 [role="lead"]
-Uma única instância das ferramentas do ONTAP para VMware vSphere pode gerenciar várias instâncias do vCenter Server.
+Um certificado autoassinado é gerado por padrão para as ferramentas do ONTAP e o provedor VASA durante a implantação. Usando a interface do Gerenciador de ferramentas do ONTAP, você pode renovar o certificado ou atualizá-lo para uma CA personalizada.
 
-Certifique-se de que o nome de domínio no qual o certificado é emitido esteja mapeado para o endereço IP virtual em uma implantação multi-vCenter onde os certificados de CA personalizados são obrigatórios. _Nslookup_ verifica se o nome de domínio está sendo resolvido para o endereço IP pretendido. Os certificados devem ser criados com nome de domínio e endereço IP do endereço IP do balanceador de carga.
+.Antes de começar
+* O nome de domínio no qual o certificado é emitido deve ser mapeado para o endereço IP virtual em uma implantação multi-vCenter onde certificados de CA personalizados são obrigatórios .
+* Execute a verificação nslookup no nome de domínio para verificar se o domínio está sendo resolvido para o endereço IP pretendido.
+* Os certificados devem ser criados com o nome de domínio e o endereço IP do balanceador de carga.
 
 
-NOTE: Um endereço IP do balanceador de carga diferente mapeado para domínios diferentes não é suportado quando você atualiza a assinatura automática para a CA personalizada.
+
+NOTE: Um endereço IP do loadbalancer deve ser mapeado para o nome de domínio totalmente qualificado (FQDN). Os certificados devem ser gerados usando o mesmo FQDN mapeado para o endereço IP do loadbalancer.
+
+
+NOTE: Não é possível alternar de um certificado assinado pela CA para um certificado autoassinado.
 
 [role="tabbed-block"]
 ====
-.Certificado de ferramentas ONTAP
+.Atualize o certificado das ferramentas do ONTAP
 --
 A guia Ferramentas do ONTAP mostra detalhes como tipo de certificado (autoassinado/CA assinado) e nome de domínio. Durante a implantação, o certificado autoassinado é gerado por padrão. Você pode renovar o certificado ou atualizar o certificado para CA.
 
-*Passos*
-
+.Passos
 . Inicie o Gerenciador de ferramentas do ONTAP a partir de um navegador da Web: `\https://loadBalancerIP:8443/virtualization/ui/`
 . Faça login com as ferramentas do ONTAP para as credenciais de administrador do VMware vSphere fornecidas durante a implantação.
-. Selecione a opção *certificados* > *Ferramentas ONTAP* > *renovar* para renovar os certificados.
+. Selecione *certificados* > *Ferramentas ONTAP* > *renovar* para renovar os certificados.
++
+Você pode renovar o certificado se tiver expirado ou estiver próximo da data de validade. A opção renovar está disponível quando o tipo de certificado é assinado pela CA. Na janela pop-up, forneça os detalhes do certificado do servidor, da chave privada, da CA raiz e do certificado intermediário.
+
 +
 
-NOTE: Você pode renovar o certificado se ele expirou ou estiver próximo à data de expiração. O sistema estará offline até que o certificado seja renovado e você será desconetado da interface do usuário.
-
-+
-*Renew* é a única opção disponível quando o tipo de certificado é CA assinado. Para certificado assinado pela CA, uma caixa de diálogo é exibida onde você pode fornecer os detalhes do certificado do servidor, da chave privada, da CA raiz e do certificado intermediário.
+NOTE: O sistema estará offline até que o certificado seja renovado e você será desconetado da interface do Gerenciador de ferramentas do ONTAP.
 
 . Para atualizar o certificado auto-assinado para certificado CA personalizado, selecione *certificados* > *Ferramentas ONTAP* > *Atualizar para CA* opção.
 +
-.. Na janela pop-up *Upgrade certificate to custom CA* (Atualizar certificado para CA* personalizado), carregue o certificado do servidor, a chave privada do certificado do servidor, o certificado da CA raiz e os arquivos de certificado intermediários. A dica da ferramenta fornece a descrição dos certificados.
-.. Introduza o nome de domínio para o qual gerou este certificado.
-.. Clique em *Upgrade*.
+.. Na janela pop-up, carregue o certificado do servidor, a chave privada do certificado do servidor, o certificado da CA raiz e os ficheiros de certificado intermédios.
+.. Introduza o nome de domínio para o qual gerou este certificado e atualize o certificado.
 +
 
-NOTE: O sistema estará offline até que a atualização esteja concluída e você será desconetado da interface do usuário. Não é permitido mudar de CA assinada para certificado auto-assinado.
+NOTE: O sistema estará offline até que a atualização esteja concluída, e você será desconetado da interface do Gerenciador de ferramentas do ONTAP.
 
 
 
 
 
 --
-.Certificado do fornecedor VASA
+.Atualize o certificado do fornecedor VASA
 --
-As ferramentas do ONTAP para o VMware vSphere são implantadas com um certificado autoassinado para o provedor VASA. Com isso, apenas uma instância do vCenter Server pode ser gerenciada para armazenamentos de dados vVols. Ao gerenciar várias instâncias do vCenter Server e desejar habilitar o recurso vVols em várias instâncias do vCenter Server, você precisa alterar o certificado autoassinado para certificado CA personalizado usando a interface do Gerenciador de ferramentas do ONTAP.
+As ferramentas do ONTAP para o VMware vSphere são implantadas com um certificado autoassinado para o provedor VASA. Com isso, apenas uma instância do vCenter Server pode ser gerenciada para armazenamentos de dados vVols. Quando você gerencia várias instâncias do vCenter Server e deseja habilitar o recurso vVols nelas, você precisa alterar o certificado autoassinado para um certificado de CA personalizado.
 
-*Passos*
-
+.Passos
 . Inicie o Gerenciador de ferramentas do ONTAP a partir de um navegador da Web: `\https://loadBalancerIP:8443/virtualization/ui/`
 . Faça login com as ferramentas do ONTAP para as credenciais de administrador do VMware vSphere fornecidas durante a implantação.
-. Selecione *certificados* > *Fornecedor VASA* ou *Ferramentas ONTAP* > *renovar* opção para renovar os certificados.
-. Para atualizar o certificado auto-assinado para o certificado CA personalizado, selecione *certificados* > *Fornecedor VASA* ou *Ferramentas ONTAP* > *Atualizar para CA* opção.
+. Selecione *certificados* > *Fornecedor VASA* ou *Ferramentas ONTAP* > *renovar* para renovar os certificados.
+. Selecione *certificados* > *Fornecedor VASA* ou *Ferramentas ONTAP* > *Upgrade para CA* para atualizar o certificado auto-assinado para certificado CA personalizado.
 +
-.. Na janela pop-up *Upgrade certificate to custom CA* (Atualizar certificado para CA* personalizado), carregue o certificado do servidor, a chave privada do certificado do servidor, o certificado da CA raiz e os arquivos de certificado intermediários. A dica da ferramenta fornece a descrição dos certificados.
-.. Introduza o nome de domínio para o qual gerou este certificado.
-.. Clique em *Upgrade*.
+.. Na janela pop-up, carregue o certificado do servidor, a chave privada do certificado do servidor, o certificado da CA raiz e os ficheiros de certificado intermédios.
+.. Introduza o nome de domínio para o qual gerou este certificado e atualize o certificado.
 +
 
-NOTE: O sistema estará offline até que a atualização esteja concluída e você será desconetado da interface do usuário. Não é permitido mudar de CA assinada para certificado auto-assinado.
+NOTE: O sistema estará offline até que a atualização esteja concluída, e você será desconetado da interface do Gerenciador de ferramentas do ONTAP.
 
 
 

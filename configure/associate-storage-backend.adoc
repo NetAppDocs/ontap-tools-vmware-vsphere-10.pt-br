@@ -17,8 +17,7 @@ A página de listagem do vCenter Server mostra o número associado de backends d
 
 Essa tarefa ajuda você a criar um mapeamento entre o back-end de storage e a instância integrada do vCenter Server globalmente.
 
-*Passos*
-
+.Passos
 . Inicie o Gerenciador de ferramentas do ONTAP a partir de um navegador da Web: `\https://loadBalancerIP:8443/virtualization/ui/`
 . Faça login com as ferramentas do ONTAP para as credenciais de administrador do VMware vSphere fornecidas durante a implantação.
 . Selecione vCenter na barra lateral.

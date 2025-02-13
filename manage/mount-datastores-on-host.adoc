@@ -18,8 +18,7 @@ A montagem de um datastore fornece acesso ao storage a hosts adicionais (NFS/VMF
 * O armazenamento de dados de montagem é desativado quando o cluster de host é protegido com configurações uniformes.
 
 
-*Passos*
-
+.Passos
 . Na página inicial do vSphere Client, selecione *hosts and clusters*.
 . No painel de navegação, selecione o centro de dados que contém o anfitrião.
 . Repita a Etapa 2 para quaisquer hosts adicionais.

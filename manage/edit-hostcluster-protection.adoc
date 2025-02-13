@@ -54,7 +54,7 @@ Use este procedimento para proteger os armazenamentos de dados ou hosts recém-a
 
 NOTE: No caso de relação de tipo assíncrono, a ação de edição não é suportada, pois não é possível adicionar o SVM de destino para local terciário à mesma instância de ferramentas do ONTAP. No entanto, você pode usar o gerente do sistema ou a CLI do SVM de destino para alterar a configuração do relacionamento.
 
-. Clique em *Salvar* depois de fazer as alterações necessárias.
+. Selecione *Salvar* depois de fazer as alterações necessárias.
 . Você pode ver as alterações na janela *Protect Cluster*.
 
 
@@ -74,8 +74,10 @@ Uma tarefa do vCenter é criada e você pode acompanhar o progresso no painel *t
 
 . Selecione *Adicionar relacionamento*.
 . Adicione um novo relacionamento como tipo de política *assíncrono* ou *AutomatedFailOverDuplex*.
-. Clique em *Protect*.
-. Você pode ver as alterações na janela *Protect Cluster*.
+. Selecione *Protect*.
++
+Você pode ver as alterações na janela *Protect Cluster*.
+
 
 
 Uma tarefa do vCenter é criada e você pode acompanhar o progresso no painel *tarefa recente*.
