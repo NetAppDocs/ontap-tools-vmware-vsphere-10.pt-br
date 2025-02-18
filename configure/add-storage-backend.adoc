@@ -38,10 +38,10 @@ NOTE: LIFs de gerenciamento de endereços IPv4 e IPv6 são compatíveis.
 
 
 --
-.Usando a IU do cliente vSphere
+.Usando a interface de usuário do cliente vSphere
 --
 
-NOTE: Quando você adiciona um back-end de storage usando a IU do cliente vSphere, o datastore vVols não dá suporte à adição direta de um usuário SVM.
+NOTE: Quando você adiciona um back-end de storage usando a interface de usuário do cliente vSphere, o datastore vVols não dá suporte à adição direta de um usuário SVM.
 
 . Faça login no cliente vSphere usando `\https://<vcenterip>/<ui>`
 . Na página atalhos, selecione *Ferramentas do NetApp ONTAP* na seção plug-ins.

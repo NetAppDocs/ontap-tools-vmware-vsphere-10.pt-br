@@ -21,7 +21,7 @@ Uma caixa de diálogo é aberta e lista os hosts ESXi nos quais o datastore est�
 
 . Selecione um ou mais hosts ESXi para desmontar o datastore.
 +
-Não é possível desmontar o datastore de todos os hosts. A interface do usuário sugere que você use a operação excluir datastore em vez disso.
+Não é possível desmontar o datastore de todos os hosts. A interface do usuário sugere que você use a operação delete datastore em vez disso.
 
 . Selecione o botão *Desmontar*.
 +

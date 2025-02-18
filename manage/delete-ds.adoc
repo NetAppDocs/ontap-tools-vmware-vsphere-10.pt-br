@@ -27,7 +27,7 @@ Siga as etapas abaixo para excluir o armazenamento de dados NFS, VMFS ou vVOL de
 
 .Passos
 . Faça login no cliente vSphere usando `\https://<vcenterip>/<ui>`
-. Clique com o botão direito do Mouse em um sistema host ou em um cluster de host ou em um datacenter e selecione *Ferramentas NetApp ONTAP* > *Excluir datastore*.
+. Clique com o botão direito do Mouse em um sistema host ou em um cluster de host ou em um data center e selecione *NetApp ONTAP Tools* > *Delete datastore*.
 +
 
 NOTE: Não é possível excluir os datastores se houver máquinas virtuais usando esse datastore. Você precisa mover as máquinas virtuais para um datastore diferente antes de excluir o datastore. Não é possível selecionar a caixa de verificação eliminação de volume se o datastore pertencer a um cluster de host protegido.

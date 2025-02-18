@@ -1,6 +1,6 @@
 ---
 section: configure
-title: Configurar ferramentas do ONTAP
+title: Configurar as ferramentas do ONTAP para o VMware vSphere
 entries:
 - title: Adicione o vCenter Server
   url: "/configure/add-vcenter.html"

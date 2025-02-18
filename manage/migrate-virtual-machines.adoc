@@ -2,7 +2,7 @@
 permalink: manage/migrate-virtual-machines.html 
 sidebar: sidebar 
 keywords:  
-summary: Você deve estar ciente de algumas das considerações ao migrar máquinas virtuais existentes em seu datacenter. 
+summary: Você deve estar ciente de algumas das considerações ao migrar máquinas virtuais existentes em seu data center. 
 ---
 = Considerações para migrar ou clonar máquinas virtuais
 :allow-uri-read: 
@@ -11,7 +11,7 @@ summary: Você deve estar ciente de algumas das considerações ao migrar máqui
 
 
 [role="lead"]
-Você deve estar ciente de algumas das considerações ao migrar máquinas virtuais existentes em seu datacenter.
+Você deve estar ciente de algumas das considerações ao migrar máquinas virtuais existentes em seu data center.
 
 
 

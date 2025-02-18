@@ -33,7 +33,7 @@ NOTE: Você deve pegar o backup OVA de sua versão atual antes de atualizar para
 . Implantar as ferramentas OVA para ONTAP para a versão do VMware vSphere 10,3.
 . Adicione a instância do vCenter Server que você deseja migrar para as ferramentas do ONTAP para a versão do VMware vSphere 10,3. link:../configure/add-vcenter.html["Adicione instâncias do vCenter Server"]Consulte .
 . Back-end de storage integrado localmente a partir das ferramentas do ONTAP para APIs de servidor do plug-in do VMware vSphere. Adicione o armazenamento como um armazenamento com escopo local para migração.
-. Os armazenamentos de dados NFS e VMFS migrados das ferramentas do ONTAP para o VMware vSphere 9.xx ficam visíveis nas ferramentas do ONTAP para o VMware vSphere 10,3 somente após a ativação da tarefa de descoberta do datastore, o que pode levar até 30 minutos para ser acionada. Verifique se os armazenamentos de dados estão visíveis na página Visão geral das ferramentas do ONTAP para a página de IU do plug-in do VMware vSphere.
+. Os armazenamentos de dados NFS e VMFS migrados das ferramentas do ONTAP para o VMware vSphere 9.xx ficam visíveis nas ferramentas do ONTAP para o VMware vSphere 10,3 somente após a ativação da tarefa de descoberta do datastore, o que pode levar até 30 minutos para ser acionada. Verifique se os armazenamentos de dados estão visíveis na página Visão geral das ferramentas do ONTAP para a página de interface de usuário do plug-in VMware vSphere.
 
 
 
@@ -47,7 +47,7 @@ Antes de migrar, certifique-se de que um dos sites está em um estado protegido 
 
 NOTE: Não migre se o failover tiver sido concluído e a nova proteção estiver pendente. Complete a re-proteção e, em seguida, execute a migração. Depois de concluir o teste do plano de recuperação, limpe a recuperação do teste e inicie a migração.
 
-. Execute as seguintes etapas para excluir as ferramentas do ONTAP para o adaptador SRA de versão do VMware vSphere 9.xx na IU de recuperação de site do VMware Live:
+. Execute as seguintes etapas para excluir as ferramentas do ONTAP para o adaptador SRA de versão do VMware vSphere 9.xx na interface de usuário do VMware Live Site Recovery:
 +
 .. Vá para a página de gerenciamento de configuração do VMware Live Site Recovery
 .. Vá para a seção *Storage Replication Adapter*
@@ -59,7 +59,7 @@ Execute estas etapas nos locais de proteção e recuperação.
 
 
 . Instale as ferramentas do ONTAP para o adaptador VMware vSphere 10,3 SRA em locais de proteção e recuperação, usando as etapas em link:../protect/configure-on-srm-appliance.html["Configure o SRA no VMware Live Site Recovery Appliance"]
-. Na página da IU do VMware Live Site Recovery, execute as operações *Discover Arrays* e *Discover Devices* e verifique se os dispositivos estão sendo exibidos como eram antes da migração.
+. Na página da interface de usuário do VMware Live Site Recovery, execute as operações *Discover Arrays* e *Discover Devices* e verifique se os dispositivos estão sendo exibidos como eram antes da migração.
 
 
 

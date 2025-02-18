@@ -15,7 +15,7 @@ As ferramentas do ONTAP para VMware vSphere oferecem a opção de habilitar o re
 
 .Antes de começar
 * Você deve ter configurado a instância do vCenter Server e configurado o host ESXi.
-* Você deve ter implantado ferramentas do ONTAP.
+* Você deve ter implantado as ferramentas do ONTAP para o VMware vSphere.
 * Você deve ter baixado o arquivo do adaptador SRA `.tar.gz` do https://mysupport.netapp.com/site/products/all/details/otv/downloads-tab["Site de suporte da NetApp"^].
 * Os clusters do ONTAP de origem e destino devem ter as mesmas programações personalizadas do SnapMirror criadas antes de executar os workflows do SRA.
 

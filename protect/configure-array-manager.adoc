@@ -34,7 +34,7 @@ SRA é compatível com gerenciamento em nível de cluster e gerenciamento em ní
 *** Se você estiver se conetando diretamente a uma SVM, insira o endereço IP do LIF de gerenciamento da SVM.
 +
 
-NOTE: Ao configurar o Gerenciador de array, você deve usar a mesma conexão (endereço IP) para o sistema de storage usado para integrar o sistema de storage nas ferramentas do ONTAP. Por exemplo, se a configuração do gerenciador de array for SVM com escopo, o storage em ferramentas do ONTAP para VMware vSphere deve ser adicionado ao nível da SVM.
+NOTE: Ao configurar o gerenciador de array, você deve usar a mesma conexão (endereço IP) para o sistema de storage usado para integrar o sistema de storage nas ferramentas do ONTAP para VMware vSphere. Por exemplo, se a configuração do gerenciador de array for SVM com escopo, o storage em ferramentas do ONTAP para VMware vSphere deve ser adicionado ao nível da SVM.
 
 
 
