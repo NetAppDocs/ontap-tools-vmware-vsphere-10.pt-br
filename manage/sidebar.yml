@@ -82,7 +82,7 @@ entries:
     url: "/manage/delete-hostcluster-protection.html"
 - title: Perto de RPO zero
   url: "/manage/enable-backup.html"
-- title: Encerrar a implantação de ferramentas do ONTAP
+- title: Desinstalar a implantação de ferramentas do ONTAP
   url: "/manage/uninstall-deployment.html"
 - title: Limpe os volumes
   url: "/manage/delete-deployment.html"

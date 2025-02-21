@@ -388,7 +388,6 @@
   <block id="7642832535ff83a877a05e578e6e55f7" category="list-text">Gerenciamento de back-end de storage: Adicione e gerencie clusters de storage do ONTAP às ferramentas do ONTAP para VMware vSphere e mapeie-os para instâncias integradas do vCenter Server globalmente.</block>
   <block id="ce3d50f0dc891fd49131a5879ff0cfbb" category="list-text">Downloads do pacote de log - coletar arquivos de log para as ferramentas do ONTAP para VMware vSphere.</block>
   <block id="973e35fe570f98dc6e1c5fe1bd6b5876" category="summary">As ferramentas do ONTAP para o VMware vSphere gerenciam a proteção dos clusters de host.</block>
-  <block id="46bf98dea599db077d28c3e2f58a655a" category="doc">Criar proteção do cluster de host</block>
   <block id="ee68e5b99222bbc29a480fcb0d1d6ee2" category="paragraph-title">Pré-requisitos</block>
   <block id="dd4ee610bd1d035c73bc0cbcd80e46da" category="paragraph">Certifique-se de que os seguintes pré-requisitos são cumpridos:</block>
   <block id="7c923b6532ecd9637deac92eebf7333a" category="list-text">O cluster de host tem armazenamentos de dados somente em uma SVM.</block>
@@ -1007,7 +1006,6 @@
   <block id="de958ca4246386d24c708fb5f2871258" category="admonition">No VMware Live Site Recovery, os recursos podem ser pools de recursos, hosts ESXi ou clusters vSphere.</block>
   <block id="20586b09df186411bee0e3968b2ef2dd" category="list-text">No assistente criar mapeamento de recursos, execute o seguinte:</block>
   <block id="3c16183aac3a35635bd37651c6e30ca9" category="paragraph">A página Mapeamentos de recursos exibe os recursos do site protegido e os recursos do site de recuperação. Você pode seguir os mesmos passos para outras redes em seu ambiente.</block>
-  <block id="f7f3984fa732d05af01413abe0c139fa" category="summary">Você deve emparelhar os sites protegidos e de recuperação criados usando o vSphere Client para habilitar o Storage Replication Adapter (SRA) para descobrir os sistemas de armazenamento.</block>
   <block id="31f39e1dd44660cbf064de93a5ac5fe9" category="doc">Emparelhe locais protegidos e de recuperação</block>
   <block id="7156f9669ad3e8dc5543b26c90b677b9" category="paragraph">Você deve emparelhar os sites protegidos e de recuperação criados usando o vSphere Client para habilitar o Storage Replication Adapter (SRA) para descobrir os sistemas de armazenamento.</block>
   <block id="2268184944a360ac30d7effc3f458ecb" category="list-text">Você deve ter o VMware Live Site Recovery instalado nos sites protegidos e de recuperação.</block>
@@ -1812,9 +1810,6 @@
   <block id="eed7fc96f746813cb6dc7931e0b308b0" category="list-text">Selecione o menu elipses verticais e selecione *Remover*.</block>
   <block id="1b46a38e17199ae5d2201aa53d2f0fe9" category="paragraph">Quando você seleciona o cluster pai ou o filho no back-end de armazenamento, você pode ver o resumo geral do componente. Quando você seleciona o cluster pai, você tem o menu suspenso ações a partir do qual você pode executar as operações de armazenamento de descoberta, modificação e remoção.</block>
   <block id="3192ac3fc20742576276f99f96eb7d0b" category="summary">Siga as instruções nesta seção para encerrar suas ferramentas do ONTAP para a implantação do VMware vSphere.</block>
-  <block id="d1a23a03023137fd38165cea715f27d9" category="doc">Encerrar a implantação de ferramentas do ONTAP</block>
-  <block id="33338c06d0b18b2f71e85923222b72e5" category="paragraph">Siga as instruções nesta seção para encerrar suas ferramentas do ONTAP para a implantação do VMware vSphere com simplicidade.</block>
-  <block id="5a542b803059205c8fd2335844a87295" category="admonition">Encerrar as ferramentas do ONTAP para o VMware vSphere excluirá todos os dados das ferramentas.</block>
   <block id="f0833ce92c23eb056dde238669740988" category="list-text"><block ref="523efdef8100699453c6b07ce8f4921c" category="inline-link-macro-rx"></block> Criado nas ferramentas do ONTAP para VMware vSphere.</block>
   <block id="446b6ba7fba75a7ecc60d88a968956a4" category="list-text">Nas ferramentas do ONTAP, selecione *Definições* &gt; *Definições do fornecedor VASA* &gt; *Desregistar* na parte inferior do ecrã.</block>
   <block id="60ba17bf2537f7f153738b7a53985263" category="list-text">Desassocie todos os backends de armazenamento da instância do vCenter Server. <block ref="8743d7af4f3d1585e8a908d41950b1ae" category="inline-link-macro-rx"></block>Consulte a .</block>
@@ -2021,4 +2016,7 @@
   <block id="27668debe2a46165745d80fe01711790" category="list-text">DesRegistre os provedores VASA de todos os servidores vCenter usando as seguintes etapas:</block>
   <block id="89cc07c4865380b62ec83b09b399b504" category="list-text">Na página *Unregister VASA Provider*, forneça as credenciais do utilizador da aplicação e selecione *Unregister*.</block>
   <block id="4dbcaa40dfd796f9c86fd033df9508db" category="admonition">O nome de usuário e a senha do aplicativo são definidos durante a implantação de ferramentas do ONTAP. Isto é necessário para o registo do fornecedor/SRA da VASA.</block>
+  <block id="cd8867ea57955f19f3087c7262d1186d" category="doc">Desinstalar a implantação de ferramentas do ONTAP</block>
+  <block id="f54e212052df635bcc70d25302fd583e" category="paragraph">A desinstalação das ferramentas do ONTAP para VMware vSphere exclui todos os dados das ferramentas.</block>
+  <block id="9ebcd4f583a00c985808cafa9e416f71" category="sidebar">Migrar as ferramentas do ONTAP para o VMware vSphere 9.x para o 10,3</block>
 </blocks>

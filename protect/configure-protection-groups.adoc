@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:  
 summary: Você deve criar grupos de proteção para proteger um grupo de máquinas virtuais no site protegido. 
 ---
-= Configurar grupos de proteção
+= Configurar sites protegidos e de recuperação
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -12,6 +12,10 @@ summary: Você deve criar grupos de proteção para proteger um grupo de máquin
 
 [role="lead"]
 Você deve criar grupos de proteção para proteger um grupo de máquinas virtuais no site protegido.
+
+
+
+== Configurar grupos de proteção
 
 .Antes de começar
 Você deve garantir que ambos os sites de origem e destino estejam configurados para o seguinte:
@@ -34,3 +38,30 @@ Todas as máquinas virtuais no grupo de replicação são adicionadas ao grupo d
 . Selecione o plano de recuperação existente ou crie um novo plano selecionando *Adicionar ao novo plano de recuperação*.
 . Na guia Pronto para concluir, revise os detalhes do grupo de proteção que você criou e selecione *concluir*.
 
+
+
+
+== Emparelhe locais protegidos e de recuperação
+
+Você deve emparelhar os sites protegidos e de recuperação criados usando o vSphere Client para habilitar o Storage Replication Adapter (SRA) para descobrir os sistemas de armazenamento.
+
+.Antes de começar
+* Você deve ter o VMware Live Site Recovery instalado nos sites protegidos e de recuperação.
+* Você deve ter o SRA instalado nos sites protegidos e de recuperação.
+
+
+.Passos
+. Clique duas vezes em *Site Recovery* na página inicial do vSphere Client e selecione *Sites*.
+. Selecione *Objects* > *actions* > *Pair Sites*.
+. Na caixa de diálogo *Emparelhar servidores do Gestor de recuperação de Site*, introduza o endereço do controlador de Serviços de Plataforma do site protegido e, em seguida, selecione *seguinte*.
+. Na seção Selecionar vCenter Server, faça o seguinte:
++
+.. Verifique se o vCenter Server do site protegido aparece como um candidato correspondente para emparelhar.
+.. Insira as credenciais administrativas SSO e selecione *Finish*.
+
+
+. Se solicitado, selecione *Sim* para aceitar os certificados de segurança.
+
+
+.Resultado
+Os locais protegidos e de recuperação aparecerão na caixa de diálogo objetos.
