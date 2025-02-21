@@ -159,7 +159,7 @@ A tabela a seguir descreve as portas de rede que o NetApp usa e seus propósitos
 | 22 (TCP) | O Ansible usa essa porta SSH para comunicação durante o provisionamento de cluster. Essa porta é necessária para funcionalidades como alterar a senha do usuário de manutenção, mensagens de status e atualizar valores em todos os três nós no caso de configuração de HA. 
 
 
-| 443 (TCP) | Esta é a porta de passagem para comunicação de entrada para o serviço do fornecedor VASA. O certificado auto-assinado do provedor VASA e o certificado CA personalizado são hospedados nesta porta. 
+| 443 (TCP) | Esta é a porta de passagem para a comunicação de entrada para o serviço do fornecedor VASA. O certificado auto-assinado do Fornecedor VASA e o certificado CA personalizado estão alojados nesta porta. 
 
 
 | 8443 (TCP) | Essa porta hospeda a documentação da API por meio do Swagger e do aplicativo de interface de usuário do Manager. 

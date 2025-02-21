@@ -30,4 +30,5 @@ A montagem de um datastore fornece acesso ao storage a hosts adicionais. Você p
 . Selecione os armazenamentos de dados que você deseja montar e selecione *Mount*.
 
 
+.O que se segue?
 Você pode acompanhar o progresso no painel de tarefas recentes.

@@ -22,7 +22,7 @@ NOTE: Encerrar as ferramentas do ONTAP para o VMware vSphere excluirá todos os 
 . DesRegistre os provedores VASA de todos os servidores vCenter usando as seguintes etapas:
 +
 .. Nas ferramentas do ONTAP, selecione *Definições* > *Definições do fornecedor VASA* > *Desregistar* na parte inferior do ecrã.
-.. Na página *Unregister VASA provider*, forneça as credenciais do utilizador da aplicação e selecione *Unregister*.
+.. Na página *Unregister VASA Provider*, forneça as credenciais do utilizador da aplicação e selecione *Unregister*.
 
 
 . Desassocie todos os backends de armazenamento da instância do vCenter Server. link:../manage/manage-vcenter.html["Associe ou dissocie os backends de armazenamento com a instância do vCenter Server"]Consulte a .

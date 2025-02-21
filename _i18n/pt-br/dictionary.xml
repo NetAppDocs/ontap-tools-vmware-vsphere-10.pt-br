@@ -364,7 +364,6 @@
   <block id="70443b52a86c20ad89a6e02da197f589" category="list-text">Repita as etapas 4 e 5 para todos os controladores de armazenamento com<block ref="b7aa7656b58c3a7862a86f5f8cd10336" prefix=" " category="inline-code"></block> status.</block>
   <block id="d36370265b821278bdb427bcfead17f8" category="paragraph">Depois que o processo de descoberta estiver concluído, execute as seguintes ações:</block>
   <block id="2ee9c34a8861ffd8a60faa90dfe4eaea" category="list-text">Forneça as credenciais do sistema de storage.</block>
-  <block id="0b249e5cb515a51c79589c2459adbaf6" category="summary">Você pode definir tempos limite e outros valores nos hosts ESXi usando as ferramentas do ONTAP para VMware vSphere para garantir o melhor desempenho e o failover bem-sucedido. Os valores que as ferramentas do ONTAP para VMware vSphere definem são baseados no teste interno do NetApp.</block>
   <block id="a883deebdfbfeb611d06d3f55178ccbf" category="doc">Defina os valores do host ESXi</block>
   <block id="9232ab7e918fc93452c2dc7c8fab1b8c" category="paragraph">Você pode definir os seguintes valores em um host ESXi:</block>
   <block id="ab9d8dfb65807487a899df1683e128fa" category="section-title">Definições do adaptador HBA/CNA</block>
@@ -1166,7 +1165,6 @@
   <block id="6956cfc9382ccb41c8ac57f99255b409" category="sidebar">Verifique os sistemas de storage replicados</block>
   <block id="5dd03e8d039863e563e049be198c3fd3" category="sidebar">Notas de versão</block>
   <block id="ed8359854c43609fca7bc8a46cca9eac" category="sidebar">Comparação de recursos das ferramentas ONTAP 9 e ONTAP 10</block>
-  <block id="598d1a03a9fabe277211c3c65adbfbc6" category="admonition">O nome de usuário e a senha do aplicativo são definidos durante a implantação de ferramentas do ONTAP. Isto é necessário para o registo do fornecedor/SRA da VASA.</block>
   <block id="1bf63b567c68de7fcd78fcc89f42f93c" category="sidebar">Proteger usando a proteção do cluster de host</block>
   <block id="d8ddfdd9298e5862ca00168195c4be29" category="sidebar">Proteja usando proteção SRA</block>
   <block id="a2635d75789f249837881cc5136979e1" category="paragraph">*Depois de terminar*</block>
@@ -1290,7 +1288,6 @@
   <block id="f0585a6acfa5b4078673a8a1c0d350ac" category="cell">22 (TCP)</block>
   <block id="07ac8d53698f067d7d278deb303748d3" category="cell">O Ansible usa essa porta SSH para comunicação durante o provisionamento de cluster. Essa porta é necessária para funcionalidades como alterar a senha do usuário de manutenção, mensagens de status e atualizar valores em todos os três nós no caso de configuração de HA.</block>
   <block id="5d778c994f28bde711dfc3896d087acc" category="cell">443 (TCP)</block>
-  <block id="13a1c454aee21c16e72ab8733d5644a5" category="cell">Esta é a porta de passagem para comunicação de entrada para o serviço do fornecedor VASA. O certificado auto-assinado do provedor VASA e o certificado CA personalizado são hospedados nesta porta.</block>
   <block id="51e1729ebe78aa6583c2806bd5982eb7" category="cell">8443 (TCP)</block>
   <block id="05820e7e588ce97dc4656c92f1b83966" category="cell">Essa porta hospeda a documentação da API por meio do Swagger e do aplicativo de interface de usuário do Manager.</block>
   <block id="2a03194d164e0f03a76cc41099ff8988" category="cell">2379 (TCP)</block>
@@ -1302,7 +1299,6 @@
   <block id="8c340be6a89ca97c4af7b42628cbc335" category="cell">7946 (TCP/UDP)</block>
   <block id="d0c5d9fb3af3553dbc8aa2d531b38b8f" category="cell">Essa porta é usada para a descoberta de rede de contentores do docker.</block>
   <block id="4669594dac40249be880d63ece4e60fd" category="cell">9083 (TCP)</block>
-  <block id="65edc2a79bfdeeed4b3c0d4383d7abda" category="cell">Esta porta é uma porta de serviço usada internamente para o serviço do fornecedor VASA.</block>
   <block id="e44129481d47005dcb6572a5d35961cb" category="cell">1162 (UDP)</block>
   <block id="ef2d924bd68e8697255e5349875213c7" category="cell">Esta é a porta de pacotes de trap SNMP.</block>
   <block id="219b39abc603cd5da84b03eac4802e2b" category="cell">6443 (TCP)</block>
@@ -1370,7 +1366,6 @@
   <block id="b6b9d4100dc66eb2a9d44485b61f0fba" category="paragraph">A página de listagem do vCenter Server mostra o número associado de backends de armazenamento. Cada instância do vCenter Server tem a opção de associar ou desassociar a um back-end de armazenamento. Essa tarefa ajuda você a criar um mapeamento entre o back-end de storage e a instância integrada do vCenter Server globalmente.</block>
   <block id="425455a0df6d10586a41711a1553bfae" category="inline-link">Criando uma Máquina Virtual para Clonagem</block>
   <block id="681d233e491ad7e8ec82fd9193581181" category="paragraph"><block ref="276aed995f6320cbafa4bfe03cc7ac04" category="inline-link-rx"></block>Consulte para obter mais detalhes.</block>
-  <block id="67d8055ce447427d2190d1100319cddc" category="paragraph">Para o Windows VM com tipo de armazenamento ASA R2, quando você tirar um instantâneo da máquina virtual, ele será um instantâneo somente leitura. Quando há uma chamada de ativação para a VM, o provedor VASA cria um LUN usando o snapshot somente leitura e, em seguida, ele o habilita para IOPS. Durante a solicitação de desligamento, o provedor VASA exclui o LUN que foi criado e desativa o IOPS.</block>
   <block id="70a4eccd665ed7fc2f16889dd9f717de" category="paragraph">Você pode acompanhar o progresso no painel de tarefas recentes.</block>
   <block id="a1a77ce2be2c879d158a13c22d948645" category="admonition">A operação do armazenamento de dados do vVols não é compatível com o armazenamento de dados vVols baseado no ASA R2.</block>
   <block id="e3ad07a7efc1e8b336d03741c1f32de2" category="doc">Relatórios de ferramentas do ONTAP</block>
@@ -1756,12 +1751,9 @@
   <block id="d7c513071870643e06bdd5a2952a3848" category="list-text">Selecione o botão *Protect*.</block>
   <block id="5522fdca4065fd1e9ed7b389f3a8e7b2" category="paragraph">Uma tarefa do vCenter é criada com detalhes de ID da tarefa e seu progresso é mostrado no painel tarefas recentes. Esta é uma tarefa assíncrona; a interface do usuário mostra apenas o status de envio da solicitação e não espera que a tarefa seja concluída.</block>
   <block id="ded8026201084be2fda01a73c0b6a45c" category="summary">Você pode Registrar o provedor VASA com uma instância do vCenter Server usando as ferramentas do ONTAP para a interface de plug-in remota do VMware vSphere.</block>
-  <block id="609d93e638a93ef3fbaff21b075792f5" category="paragraph">Você pode Registrar o provedor VASA com uma instância do vCenter Server usando as ferramentas do ONTAP para VMware vSphere. A seção Configurações do provedor VASA exibe o status de Registro do provedor VASA para o vCenter Server selecionado.</block>
   <block id="dbf218ab7bc36005b7fdd93dda1f6eda" category="list-text">Selecione *Atalhos* &gt; *Ferramentas do NetApp ONTAP* na seção plug-ins.</block>
   <block id="1767c8dcd2dacb5056d2a398b5761669" category="list-text">Selecione *Definições* &gt; *Definições do fornecedor VASA*. O estado de registo do fornecedor VASA será apresentado como não registado.</block>
   <block id="600ff4b29760f4ad12573092ddf700ed" category="list-text">Selecione o botão *Register* para registar o Fornecedor VASA.</block>
-  <block id="df1a39c4f4e7ca54718d4638a0fbe196" category="list-text">Insira um nome para o provedor VASA e forneça ferramentas ONTAP para credenciais de usuário do aplicativo VMware vSphere e selecione *Registrar*.</block>
-  <block id="f4a7e7e14fab1c3d711985600e2ee7f0" category="list-text">Após um registo e atualização de página bem-sucedidos, o estado, o nome e a versão do fornecedor VASA registado são apresentados. Após o registo, a ação de cancelamento de registo é ativada.</block>
   <block id="2a8d2860baf78d6dcd2ba9cf54828350" category="paragraph">Verifique se o provedor VASA integrado está listado no provedor VASA do cliente vCenter:</block>
   <block id="b2d759d8409be83670d858be76d08a57" category="list-text">Navegue até a instância do vCenter Server.</block>
   <block id="31cbb70f53b2d4a961916f4f580b9afa" category="list-text">Selecione *fornecedores de armazenamento* &gt; *Configurar*. Verifique se o provedor VASA integrado está listado corretamente.</block>
@@ -1824,9 +1816,7 @@
   <block id="33338c06d0b18b2f71e85923222b72e5" category="paragraph">Siga as instruções nesta seção para encerrar suas ferramentas do ONTAP para a implantação do VMware vSphere com simplicidade.</block>
   <block id="5a542b803059205c8fd2335844a87295" category="admonition">Encerrar as ferramentas do ONTAP para o VMware vSphere excluirá todos os dados das ferramentas.</block>
   <block id="f0833ce92c23eb056dde238669740988" category="list-text"><block ref="523efdef8100699453c6b07ce8f4921c" category="inline-link-macro-rx"></block> Criado nas ferramentas do ONTAP para VMware vSphere.</block>
-  <block id="1e51d74fa593c2d20970490a2e9adbe0" category="list-text">DesRegistre os provedores VASA de todos os servidores vCenter usando as seguintes etapas:</block>
   <block id="446b6ba7fba75a7ecc60d88a968956a4" category="list-text">Nas ferramentas do ONTAP, selecione *Definições* &gt; *Definições do fornecedor VASA* &gt; *Desregistar* na parte inferior do ecrã.</block>
-  <block id="ff58dfdcb939738020bc3b48ae83b617" category="list-text">Na página *Unregister VASA provider*, forneça as credenciais do utilizador da aplicação e selecione *Unregister*.</block>
   <block id="60ba17bf2537f7f153738b7a53985263" category="list-text">Desassocie todos os backends de armazenamento da instância do vCenter Server. <block ref="8743d7af4f3d1585e8a908d41950b1ae" category="inline-link-macro-rx"></block>Consulte a .</block>
   <block id="b2aac3a919762e9dd0f89ef1b3999500" category="list-text">Excluir todos os backends de armazenamento. <block ref="c97897721457f9108ce9caf2b3f0d235" category="inline-link-macro-rx"></block>Consulte a .</block>
   <block id="39ebf4e5b2fe43c5d1e039f8afb8a330" category="list-text">Remova o adaptador SRA do VMware Live Site Recovery:</block>
@@ -1934,14 +1924,12 @@
   <block id="2da89430805560f209041c63cfb2f20f" category="list-text">Na janela pop-up, carregue o certificado do servidor, a chave privada do certificado do servidor, o certificado da CA raiz e os ficheiros de certificado intermédios.</block>
   <block id="ca148a970e5b5a81a77ce6e27a1e6a55" category="list-text">Introduza o nome de domínio para o qual gerou este certificado e atualize o certificado.</block>
   <block id="96e25bc2ea7c946d5cb80df5623b04f4" category="admonition">O sistema estará offline até que a atualização esteja concluída, e você será desconetado da interface do Gerenciador de ferramentas do ONTAP.</block>
-  <block id="b0c94213de0564c17f37b032d9d91905" category="open-title">Atualize o certificado do fornecedor VASA</block>
   <block id="4d8920fb51dbe2e0eeb3d23c3b11224b" category="paragraph">As ferramentas do ONTAP para o VMware vSphere são implantadas com um certificado autoassinado para o provedor VASA. Com isso, apenas uma instância do vCenter Server pode ser gerenciada para armazenamentos de dados vVols. Quando você gerencia várias instâncias do vCenter Server e deseja habilitar o recurso vVols nelas, você precisa alterar o certificado autoassinado para um certificado de CA personalizado.</block>
   <block id="81914abf558d30aee207170f7eb62743" category="list-text">Selecione *certificados* &gt; *Fornecedor VASA* ou *Ferramentas ONTAP* &gt; *renovar* para renovar os certificados.</block>
   <block id="fafffe2e2a76baaa761981b13de575ba" category="list-text">Selecione *certificados* &gt; *Fornecedor VASA* ou *Ferramentas ONTAP* &gt; *Upgrade para CA* para atualizar o certificado auto-assinado para certificado CA personalizado.</block>
   <block id="6ab10f666dd4d5c8df15f3d1ec4b0587" category="list-text">Selecione *alterar* para implementar as alterações.</block>
   <block id="3d7fb394c85bb4d38079573b5a7dd241" category="paragraph">A sessão de início de sessão permanece válida apenas até à meia-noite do dia seguinte.</block>
   <block id="4a724ef496ce3cb45c0d4dd43ce4a1cf" category="doc">Modifique as configurações do host ESXi usando as ferramentas do ONTAP</block>
-  <block id="e275b0caaa6d0402ee0e31d7da910bcf" category="paragraph"><block ref="e275b0caaa6d0402ee0e31d7da910bcf" category="inline-link-macro-rx"></block></block>
   <block id="cc307b25622cbd7026f0a8c0e553a4df" category="list-text">Selecione *Salvar* depois de fazer as alterações necessárias.</block>
   <block id="20d541172ecc7e2d477ce2738120938c" category="list-text">Selecione *Protect*.</block>
   <block id="ec4a1dbd6ed28379905f9f6ea733a254" category="list-text">Selecione um formato de disco virtual, uma Política de armazenamento de VM e um datastore da evolução que corresponda aos recursos do datastore que você está migrando.</block>
@@ -2006,7 +1994,6 @@
   <block id="cecfed09fac678ab192681a3f210d345" category="list-text">A opção Mount datastore é desativada quando o cluster de host é protegido com configurações uniformes.</block>
   <block id="39037b551a4495c32d5aa53bb3952e75" category="list-text">No painel de navegação esquerdo, selecione os data centers que contêm os hosts.</block>
   <block id="54862297571dca9382bb198a79d53cf3" category="list-text">Para montar datastores NFS/VMFS no cluster de host ou host, clique com o botão direito do Mouse e selecione *Ferramentas NetApp ONTAP* &gt; *montar datastores*.</block>
-  <block id="c28ad89693a8ed5dd2d20a231db5b96f" category="paragraph">Para redefinir a senha do Gerenciador, você precisa gerar o token de redefinição usando as ferramentas do ONTAP para o console de manutenção do VMware vSphere. .. No vCenter Server, abra o console de manutenção .. Digite '2' para selecionar a opção Configuração do sistema .. Introduza '3' para alterar a palavra-passe do utilizador 'não'.</block>
   <block id="fa946c7b8b00ac3d8f1845bdcf279074" category="paragraph">Não é possível desmontar o datastore de todos os hosts. A interface do usuário sugere que você use a operação delete datastore em vez disso.</block>
   <block id="0cd5eb24f781f0b49a6c666e5220c98c" category="list-text">Os armazenamentos de dados NFS e VMFS migrados das ferramentas do ONTAP para o VMware vSphere 9.xx ficam visíveis nas ferramentas do ONTAP para o VMware vSphere 10,3 somente após a ativação da tarefa de descoberta do datastore, o que pode levar até 30 minutos para ser acionada. Verifique se os armazenamentos de dados estão visíveis na página Visão geral das ferramentas do ONTAP para a página de interface de usuário do plug-in VMware vSphere.</block>
   <block id="a0e42a34ad94909291f9863e606095c3" category="list-text">Execute as seguintes etapas para excluir as ferramentas do ONTAP para o adaptador SRA de versão do VMware vSphere 9.xx na interface de usuário do VMware Live Site Recovery:</block>
@@ -2019,4 +2006,19 @@
   <block id="4de1c4f6191ac837f89defd159014d4f" category="sidebar">Configurar as ferramentas do ONTAP para o VMware vSphere</block>
   <block id="dc2afa03f9d9070dcc18808c51d3b403" category="sidebar">Gerenciar as ferramentas do ONTAP para VMware vSphere</block>
   <block id="dd018bb6638d4453bb4643baac23fad3" category="sidebar">Atualize as ferramentas do ONTAP para o VMware vSphere</block>
+  <block id="8ce287b63bedf11bff1339b770533de1" category="paragraph">Você pode Registrar o provedor VASA com uma instância do vCenter Server usando as ferramentas do ONTAP para VMware vSphere. A seção Configurações do provedor VASA exibe o status de Registro do provedor VASA para o vCenter Server selecionado.</block>
+  <block id="30219dec23be3c12e0dc980cd1686912" category="list-text">Insira um nome para o provedor VASA e forneça ferramentas ONTAP para credenciais de usuário do aplicativo VMware vSphere e selecione *Registrar*.</block>
+  <block id="9d097d858bfbec2ad77c2f37fa3f2b14" category="list-text">Depois de um registo e atualização de página bem-sucedidos, o estado, o nome e a versão do fornecedor VASA registado são apresentados. Após o registo, a ação de cancelamento de registo é ativada.</block>
+  <block id="9bb143d7a2036a80e106dc066c6b01f2" category="cell">Esta é a porta de passagem para a comunicação de entrada para o serviço do fornecedor VASA. O certificado auto-assinado do Fornecedor VASA e o certificado CA personalizado estão alojados nesta porta.</block>
+  <block id="131790b08b90f216c8731a6e1a071001" category="cell">Esta porta é uma porta de serviço usada internamente para o serviço do fornecedor VASA.</block>
+  <block id="f86285920a635060c5823a8276628377" category="open-title">Atualize o certificado do fornecedor VASA</block>
+  <block id="bfa75497fc09ee1e1a68a164c43dbf33" category="paragraph"><block ref="bfa75497fc09ee1e1a68a164c43dbf33" category="inline-link-macro-rx"></block></block>
+  <block id="7276496c35fbec54a8fb3dface57c5bb" category="paragraph">Para o Windows VM com tipo de armazenamento ASA R2, quando você tirar um instantâneo da máquina virtual, ele será um instantâneo somente leitura. Quando há uma chamada de ativação para a VM, o provedor VASA cria um LUN usando o snapshot somente leitura e, em seguida, ele o habilita para IOPS. Durante a solicitação de desligamento, o provedor VASA exclui o LUN que foi criado e desativa o IOPS.</block>
+  <block id="378348480ef2745d6f8b174eaac75780" category="paragraph">Para redefinir a senha do Gerenciador, você precisa gerar o token de redefinição usando as ferramentas do ONTAP para o console de manutenção do VMware vSphere.</block>
+  <block id="35baad0cee1a9c308249049e655932ff" category="list-text">No vCenter Server, abra o console de manutenção</block>
+  <block id="0728c65962557eb1d00ebeef0418b72c" category="list-text">Introduza "2" para selecionar a opção System Configuration (Configuração do sistema)</block>
+  <block id="5c4950449fdd46ff4c3981422e3fd6ff" category="list-text">Introduza '3' para alterar a palavra-passe do utilizador 'não'.</block>
+  <block id="27668debe2a46165745d80fe01711790" category="list-text">DesRegistre os provedores VASA de todos os servidores vCenter usando as seguintes etapas:</block>
+  <block id="89cc07c4865380b62ec83b09b399b504" category="list-text">Na página *Unregister VASA Provider*, forneça as credenciais do utilizador da aplicação e selecione *Unregister*.</block>
+  <block id="4dbcaa40dfd796f9c86fd033df9508db" category="admonition">O nome de usuário e a senha do aplicativo são definidos durante a implantação de ferramentas do ONTAP. Isto é necessário para o registo do fornecedor/SRA da VASA.</block>
 </blocks>

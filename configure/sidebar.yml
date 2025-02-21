@@ -9,11 +9,7 @@ entries:
 - title: Instale o plug-in NFS VAAI
   url: "/configure/install-nfs-vaai-plug-in.html"
 - title: Configure as configurações do host ESXi
-  entries:
-  - title: Configure as configurações multipath e timeout do servidor ESXi
-    url: "/configure/configure-esx-server-multipath-and-timeout-settings.html"
-  - title: Defina os valores do host ESXi
-    url: "/configure/esxi-host-values.html"
+  url: "/configure/configure-esx-server-multipath-and-timeout-settings.html"
 - title: Configurar as funções de usuário do ONTAP e o Privileges
   url: "/configure/configure-user-role-and-privileges.html"
 - title: Adicionar um back-end de storage
