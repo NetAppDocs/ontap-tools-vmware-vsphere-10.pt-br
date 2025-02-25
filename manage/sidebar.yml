@@ -6,7 +6,9 @@ entries:
   url: "/configure/dashboard-overview.html"
 - title: Interface de usuário do Gerenciador de ferramentas do ONTAP
   url: "/configure/manager-user-interface.html"
-- title: Edite as definições do dispositivo
+- title: Habilite as ferramentas do ONTAP para os serviços do VMware vSphere
+  url: "/manage/enable-services.html"
+- title: Alterar as ferramentas do ONTAP para a configuração do VMware vSphere
   url: "/manage/edit-appliance-settings.html"
 - title: Gerenciar armazenamentos de dados
   entries:
@@ -80,6 +82,10 @@ entries:
     url: "/manage/edit-hostcluster-protection.html"
   - title: Remova a proteção do cluster do host
     url: "/manage/delete-hostcluster-protection.html"
+- title: Desative o AutoSupport
+  url: "/manage/disable-autosupport.html"
+- title: Atualize o URL do proxy do AutoSupport
+  url: "/manage/update-proxyurl.html"
 - title: Perto de RPO zero
   url: "/manage/enable-backup.html"
 - title: Desinstalar a implantação de ferramentas do ONTAP

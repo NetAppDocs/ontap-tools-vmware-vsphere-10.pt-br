@@ -11,53 +11,25 @@ summary: A visualização de storage do ONTAP na guia configurar de uma ferramen
 
 
 [role="lead"]
-A visualização de storage do ONTAP na guia configurar das ferramentas do ONTAP para VMware vSphere fornece dados relacionados aos datastores e ao volume deles. Essa exibição fornece a visualização do lado do armazenamento de dados.
-
-
-
-== Visualizações de storage do ONTAP para armazenamentos de dados NFS
+As ferramentas do ONTAP para VMware vSphere mostram a visualização lateral do storage do ONTAP dos datastores e seus volumes na guia configure.
 
 .Passos
-. No vSphere Client, navegue até o armazenamento de dados NFS.
+. No cliente vSphere, navegue até o datastore.
 . Selecione a guia *Configure* no painel direito.
-. Selecione *Ferramentas NetApp ONTAP* > *armazenamento ONTAP*. Os *Detalhes de armazenamento* e *detalhes de NFS* aparecem no painel direito.
-+
-** A página de detalhes de armazenamento contém informações sobre backends de armazenamento, agregado e volume.
-** A página de detalhes do NFS contém dados relacionados ao armazenamento de dados NFS.
+. Selecione *Ferramentas NetApp ONTAP* > *armazenamento ONTAP*. Dependendo do tipo de armazenamento de dados, a exibição muda. Consulte a tabela abaixo para obter informações:
 
 
+|===
 
 
+| *Tipo de datastore* | *Informação disponível* 
 
 
-== Visualizações de storage do ONTAP para datastores VMFS
-
-.Passos
-. No vSphere Client, navegue até o datastore do VMFS.
-. Selecione a guia *Configure* no painel direito.
-. Selecione *Ferramentas NetApp ONTAP* > *armazenamento ONTAP*. Os *Detalhes do armazenamento* e *detalhes do LUN* ou *detalhes do namespace* dependendo do protocolo aparecem no painel direito.
-+
-** A página de detalhes de armazenamento contém informações sobre backends de armazenamento, agregado e volume.
-** A página de detalhes do LUN contém dados relacionados ao LUN.
-** Ao usar o protocolo NVMe/TCP ou NVMe/FC para armazenamento de dados VMFS, a página de detalhes do namespace contém dados relacionados ao namespace.
-** Os detalhes de volume e agregado não são exibidos para datastores baseados no sistema ASA R2.
+| Armazenamento de dados NFS | A página *Detalhes do armazenamento* contém backends de armazenamento, informações agregadas e de volume. A página de detalhes do NFS contém dados relacionados ao armazenamento de dados NFS. 
 
 
+| Armazenamentos de dados VMFS | A página *Detalhes do armazenamento* contém informações de back-end, agregado e volume de armazenamento. A página *detalhes do LUN* contém dados relacionados ao LUN. A página *detalhes do namespace* contém dados relacionados ao namespace quando o datastore VMFS usa o protocolo NVMe/TCP ou NVMe/FC. Os detalhes de volume e agregado não são exibidos para armazenamentos de dados baseados no sistema de storage ASA R2. 
 
 
-
-
-== Visualizações de storage do ONTAP para armazenamentos de dados vVols
-
-
-NOTE: Essa exibição não é suportada para o armazenamento de dados vVols baseado no ASA R2.
-
-.Passos
-. No vSphere Client, navegue até o armazenamento de dados vVols.
-. Selecione a guia *Configure* no painel direito.
-. Selecione *Ferramentas NetApp ONTAP* > *armazenamento ONTAP*.
-. A visualização de armazenamento do ONTAP lista todos os volumes. Você pode expandir ou remover o armazenamento do painel de armazenamento do ONTAP.
-+
-Siga as instruções na link:../manage/expand-storage-of-vvol-datastore.html["Expanda o armazenamento de dados vVols"]seção para adicionar o datastore vVols e link:../manage/remove-storage-from-a-vvols-datastore.html["Diminua o armazenamento de dados do vVols"] a seção para excluir o datastore.
-
-
+| Armazenamentos de dados vVols | Lista todos os volumes. Você pode expandir ou remover o armazenamento do painel de armazenamento do ONTAP. Essa exibição não é compatível com o armazenamento de dados vVols baseado no sistema do ASA R2. 
+|===
