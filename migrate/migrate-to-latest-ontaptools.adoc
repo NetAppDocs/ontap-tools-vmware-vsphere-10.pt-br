@@ -173,35 +173,14 @@ NOTE: uuid é a migração uuid retornada na resposta da API pós migração.
 Depois que a API de migração de patches for executada com sucesso, todas as VMs estarão em conformidade com a política de armazenamento.
 
 ====
-. A API de exclusão para migração é:
 +
-[]
-====
-|===
-
-
-| *Método HTTP* | *Caminho* 
-
-
-| ELIMINAR | /api/v1 
-|===
-*Tipo de processamento*
-
-Assíncrono
-
-*Curl exemplo*
-
-/api/v1/vcenters//vcguid/migration-jobs//migration_id
-
-Essa API exclui a migração por ID de migração e exclui a migração no vCenter Server fornecido.
-
-====
-
-
 Após a migração bem-sucedida e depois de Registrar as ferramentas do ONTAP 10,3 no vCenter Server, faça o seguinte:
 
-* Atualize o certificado em todos os hosts.
-* Aguarde algum tempo antes de executar operações de datastore (DS) e Virtual Machine (VM). O tempo de espera depende do número de hosts, DS e VMs na configuração. Quando você não espera, as operações podem falhar intermitentemente.
++
+** Atualize o certificado em todos os hosts.
+** Aguarde algum tempo antes de executar operações de datastore (DS) e Virtual Machine (VM). O tempo de espera depende do número de hosts, DS e VMs na configuração. Quando você não espera, as operações podem falhar intermitentemente.
+
+
 
 
 *Depois de terminar*

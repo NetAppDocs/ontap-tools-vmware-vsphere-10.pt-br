@@ -25,8 +25,7 @@ NOTE: Para ativar a implantação de HA mais tarde, a máquina virtual que hospe
 
 Se você ainda não tiver uma biblioteca de conteúdo adequada, crie uma usando as seguintes etapas:
 
-
-NOTE: Se você pretende usar apenas uma implantação de nó único pequeno, não é necessário criar uma biblioteca de conteúdo.
+*Criar biblioteca de conteúdo* se você pretende usar apenas uma implantação de nó único pequeno, não é necessário criar uma biblioteca de conteúdo.
 
 . Faça o download do `.zip` arquivo que contém binários (_.ova_) e certificados assinados para ferramentas do ONTAP para VMware vSphere no https://mysupport.netapp.com/site/products/all/details/otv/downloads-tab["Site de suporte da NetApp"^] .
 . Faça login no cliente vSphere usando `\https://<vcenterip>/<ui>`

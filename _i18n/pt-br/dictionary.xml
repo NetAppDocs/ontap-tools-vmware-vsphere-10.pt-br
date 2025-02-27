@@ -869,8 +869,6 @@
   <block id="41e9abb5d58ca11ff36c3067c273a762" category="paragraph">PATCH "/API/v1/vcenters/56d373bd-4163-44f9-a872-9adabb008ca9/migration-jobs/84dr73bd-9173-65R7-w345-8ufdbb887d43</block>
   <block id="bdfee7ad87d9004e1091e6e1762d0e84" category="paragraph">* Exemplo de entrada JSON*</block>
   <block id="603041e40db447bbdd32fd4b4c2f994d" category="admonition">uuid é a migração uuid retornada na resposta da API pós migração.</block>
-  <block id="07fdc7a244250b2e1c9e6533ff0ea4e0" category="list-text">A API de exclusão para migração é:</block>
-  <block id="cef9fa1aa0d8c4bd89bf89cf8cbb5cae" category="paragraph">/api/v1/vcenters//vcguid/migration-jobs//migration_id</block>
   <block id="6b50b8836085008a8950ddeafeb7453a" category="list-text">Atualize o certificado em todos os hosts.</block>
   <block id="0b3582622e579cb352e246015d6ca171" category="summary">Você pode configurar o Storage Replication Adapter (SRA) usando o assistente Array Manager do VMware Live Site Recovery para habilitar interações entre o VMware Live Site Recovery e máquinas virtuais de armazenamento (SVMs).</block>
   <block id="e19aa5b1d5cc9af071d6a8aaa3d6133b" category="doc">Configure o SRA usando o gerenciador de array</block>
@@ -1128,7 +1126,6 @@
   <block id="3b878279a04dc47d60932cb294d96259" category="sidebar">Visão geral</block>
   <block id="6bc1d2c44eecf063e620d732e6c3e492" category="sidebar">Permissões do vCenter Server</block>
   <block id="a9f3de4f2df78227aea2ac4a6b2e7aef" category="sidebar">Funções recomendadas do ONTAP</block>
-  <block id="c93b5a9d65c77be9a5dfa309362afe22" category="sidebar">Adicione o vCenter Server</block>
   <block id="1030a4736944c363305ecfdc816d75b0" category="sidebar">Configure as configurações do host ESXi</block>
   <block id="174e0bb9fd863076b8b78d2ca9e0dd08" category="sidebar">Montar o armazenamento de dados NFS e VMFS</block>
   <block id="41d4fa725cfb558559b7183adeea1e30" category="sidebar">Desmonte o armazenamento de dados NFS e VMFS</block>
@@ -1154,7 +1151,6 @@
   <block id="5aa0457cc95965b125467f8be60fadcf" category="list-text">Para configurar as funções de ferramentas do cluster SVM ONTAP, selecione *Storage SVM* &gt; *Configurações* &gt; *usuários e funções* painel</block>
   <block id="ef0a0294be4f16882c4e18df7a17b72f" category="paragraph">Você pode desativar o AutoSupport usando a opção do console de manutenção *Configuração do aplicativo* &gt; *Desativar o AutoSupport*. Recomenda-se que o deixe ativado. Ativar o AutoSupport ajuda a acelerar a deteção de problemas e ajuda a alcançar uma resolução mais rápida. O sistema coleta informações do AutoSupport e as armazena localmente, mesmo quando o AutoSupport está desativado. No entanto, ele não envia o relatório para nenhuma rede. Você precisa fornecer o url do proxy usando o console de manutenção da primeira VM. Use a opção *Configuração do aplicativo* &gt; *Atualizar URL do proxy AutoSupport* para inserir o URL do proxy.</block>
   <block id="e995d56efd9e31d97825dd79be4d1383" category="inline-link">Saiba mais sobre os sistemas de armazenamento ASA R2</block>
-  <block id="5b1c546117e368c44e82ae035c45be9d" category="paragraph">Os novos sistemas NetApp ASA R2 (ASA A1K, ASA A70 e ASA A90) fornecem uma solução unificada de hardware e software que cria uma experiência simplificada específica para as necessidades dos clientes somente de SAN.<block ref="f9c69c3c94cab41a57233cdf7452c3d6" category="inline-link-rx"></block>.</block>
   <block id="e3d3af7525d3e3fb797e7dad595bc6a3" category="section-title">Objetivo do ponto de recuperação (RPO)</block>
   <block id="881eb19c557d05be93005ed4bcf1f120" category="paragraph">RPO é uma medida da frequência com que o backup ou a replicação dos dados. Ele representa o ponto no tempo para o qual os dados devem ser recuperados após uma interrupção para retomar as operações de negócios. Por exemplo, se uma organização tiver um RPO de 4 horas, poderá tolerar a perda de até 4 horas de dados em caso de desastre.</block>
   <block id="1f8552f10eb7513163cf1762849c2bcd" category="list-text">Faça login no cluster com admin Privileges. Para configurar um usuário, execute as seguintes etapas:</block>
@@ -1175,7 +1171,6 @@
   <block id="3ce635f0fbf3a9f1cd9709aa0a4edb7d" category="section-title">Atualize as ferramentas do ONTAP para o usuário do VMware vSphere 10,1 para o usuário 10,3</block>
   <block id="1e881b0096e32efd8f76e57798bfb5be" category="paragraph">Se as ferramentas do ONTAP para o usuário do VMware vSphere 10,1 forem um usuário com escopo de cluster criado usando o arquivo json, execute os seguintes comandos na CLI do ONTAP usando o usuário admin para atualizar para a versão 10,3.</block>
   <block id="59ce3cdcb64efaf0360e7ca205dc328e" category="paragraph">Se as ferramentas do ONTAP para o usuário do VMware vSphere 10,1 forem um usuário com escopo SVM criado usando o arquivo json, execute os seguintes comandos na CLI do ONTAP usando o usuário admin para atualizar para a versão 10,3.</block>
-  <block id="86d82f563697cadf4cd70dd1f81981f5" category="paragraph">O assistente de ação criar armazenamento de dados dá suporte à criação de armazenamentos de dados NFS, VMFS e vVols.</block>
   <block id="0f8e6a0c5a16a490062aa9802999b596" category="list-text">Você só pode criar um datastores VMFS em um cluster protegido. Quando você adiciona um datastore VMFS a um cluster protegido, o datastore fica protegido automaticamente.</block>
   <block id="9ff5d4b4efce8f3dada6ea961efce12d" category="list-text">Você pode criar um datastore VMFS em um host, somente quando ele tiver uma relação assíncrona.</block>
   <block id="99ffb35f7a315e5b9ff4015fcee0ac1b" category="paragraph">A partir das ferramentas do ONTAP para VMware vSphere 10,3, você pode criar um armazenamento de dados vVols usando o tipo de armazenamento ONTAP do ASA R2. O datastore vVols criado nos sistemas ASA R2 é criado com eficiência de espaço como thin.vVol. O VASA Provider cria um contentor e os endpoints de protocolo desejados durante o fluxo de trabalho do Create VVol datastore. Este contentor não terá quaisquer volumes de apoio.</block>
@@ -1227,7 +1222,6 @@
   <block id="aa4b6b62ba667064e973028ccfaba3af" category="admonition">Você deve armazenar a biblioteca de conteúdo em um datastore compartilhado, de modo que todos os hosts em um cluster possam acessá-la. Você precisa criar uma biblioteca de conteúdo para armazenar o OVA antes de alterar as configurações do dispositivo para a configuração HA. O modelo de biblioteca de conteúdo, uma vez carregado, não deve ser excluído após a implantação.</block>
   <block id="3d408fd9ee71e5590c9d127632f486ff" category="admonition">Para ativar a implantação de HA mais tarde, a máquina virtual que hospeda as ferramentas do ONTAP não deve ser implantada diretamente em um host ESXi. Em vez disso, ele deve ser implantado em um cluster ou em um pool de recursos.</block>
   <block id="8fc66c32d9085d19a2b350fb78e96657" category="paragraph">Se você ainda não tiver uma biblioteca de conteúdo adequada, crie uma usando as seguintes etapas:</block>
-  <block id="8f059bfa91977298a44c980b287d6091" category="admonition">Se você pretende usar apenas uma implantação de nó único pequeno, não é necessário criar uma biblioteca de conteúdo.</block>
   <block id="75e558b408663f8095495e2f3ccd77f2" category="paragraph">Certifique-se de que importou o OVA para a sua biblioteca de conteúdo.</block>
   <block id="2866bbf24409f82bd4b074e071e1aa1b" category="list-text">Faça o download do<block ref="daf4de58883c030f033f07e61debf025" prefix=" " category="inline-code"></block> arquivo que contém binários (_.ova_) e certificados assinados para ferramentas do ONTAP para VMware vSphere no<block ref="c28762f698ce57f013f1f9dff01575ab" category="inline-link-rx"></block> . Se você tiver importado o OVA para a biblioteca de conteúdo, você pode pular esta etapa e prosseguir com a próxima etapa, pois pode implantar diretamente a partir da biblioteca de conteúdo.</block>
   <block id="a8dd039d7118472ec1580db699aa661d" category="admonition">Nunca armazene ferramentas do ONTAP para máquinas virtuais VMware vSphere em armazenamentos de dados vVols que eles gerenciam.</block>
@@ -1611,7 +1605,6 @@
   <block id="ba5c200a0d4600ec4fe2ef79c26593b8" category="list-text">Execute a migração de patches usando a seguinte API:</block>
   <block id="f663ec26fcc5dbf0e82a2df73c30a3e3" category="paragraph">O corpo da solicitação está vazio para operação de patch.</block>
   <block id="e4453a0aab117b65b26edb59d78793fd" category="paragraph">Depois que a API de migração de patches for executada com sucesso, todas as VMs estarão em conformidade com a política de armazenamento.</block>
-  <block id="cd6f62989595e510d57e7b407691336a" category="paragraph">Essa API exclui a migração por ID de migração e exclui a migração no vCenter Server fornecido.</block>
   <block id="9a43f64b9545dfa5ddfcc70dbc73d001" category="list-text">Aguarde algum tempo antes de executar operações de datastore (DS) e Virtual Machine (VM). O tempo de espera depende do número de hosts, DS e VMs na configuração. Quando você não espera, as operações podem falhar intermitentemente.</block>
   <block id="422c2a3517291219d45e5d0be95be9d1" category="paragraph">Após a atualização, se o estado de conformidade da máquina virtual estiver desatualizado, reaplique a política de armazenamento da máquina virtual usando as seguintes etapas:</block>
   <block id="15e560ab707fa2bf2b7b0833adbe8bb9" category="list-text">Navegue até o datastore e selecione *Summary* &gt; *VM Storage Policies*.</block>
@@ -2019,4 +2012,7 @@
   <block id="9f147a250dd9a5cd9d9745eb3f5f7668" category="paragraph">Atualize o URL do proxy AutoSupport para garantir o funcionamento adequado do recurso AutoSupport em cenários em que um servidor proxy é usado para controle de acesso à rede ou medidas de segurança. Ele permite que os dados do AutoSupport sejam roteados através do proxy apropriado, permitindo transmissão e conformidade seguras.</block>
   <block id="8b1bce08d5421e10a7f1c336b269cbd5" category="list-text">Digite 4 para selecionar *Atualizar o URL do proxy AutoSupport*.</block>
   <block id="24bbb6c78509566d72fa3e18de92a0fe" category="list-text">Insira o URL do proxy.</block>
+  <block id="cea51b5f4b8c25d096d54257d5d0348e" category="paragraph">Os novos sistemas NetApp ASA R2 fornecem uma solução unificada de hardware e software que cria uma experiência simplificada específica para as necessidades dos clientes somente de SAN.<block ref="f9c69c3c94cab41a57233cdf7452c3d6" category="inline-link-rx"></block>.</block>
+  <block id="9401e344ca7f0cbda5f2f0b48709397f" category="paragraph">Quando você cria um datastore no nível do cluster do host, o datastore é criado e montado em todos os hosts de destino. Você pode ver essa opção somente se você tiver o Privileges necessário.</block>
+  <block id="1dd9aa2a5203b6e1a1980842e9af2082" category="paragraph">*Criar biblioteca de conteúdo* se você pretende usar apenas uma implantação de nó único pequeno, não é necessário criar uma biblioteca de conteúdo.</block>
 </blocks>
