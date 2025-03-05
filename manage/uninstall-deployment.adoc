@@ -22,7 +22,7 @@ A desinstalação das ferramentas do ONTAP para VMware vSphere exclui todos os d
 .. Na página *Unregister VASA Provider*, forneça as credenciais do utilizador da aplicação e selecione *Unregister*.
 
 
-. Desassocie todos os backends de armazenamento da instância do vCenter Server. link:../manage/manage-vcenter.html["Associe ou dissocie os backends de armazenamento com a instância do vCenter Server"]Consulte a .
+. Desassocie todos os backends de armazenamento da instância do vCenter Server. link:../manage/manage-vcenter.html["Dissociar os backends de armazenamento com a instância do vCenter Server"]Consulte a .
 . Excluir todos os backends de armazenamento. link:../manage/storage-backend.html["Gerenciar backends de armazenamento"]Consulte a .
 . Remova o adaptador SRA do VMware Live Site Recovery:
 +

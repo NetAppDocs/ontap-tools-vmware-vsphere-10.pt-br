@@ -15,16 +15,16 @@ As instâncias do vCenter Server são plataformas de gerenciamento central que p
 
 
 
-== Associe ou dissocie os backends de armazenamento com a instância do vCenter Server
+== Dissociar os backends de armazenamento com a instância do vCenter Server
 
-A página de listagem do vCenter Server mostra o número associado de backends de armazenamento. Cada instância do vCenter Server tem a opção de associar ou desassociar a um back-end de armazenamento. Essa tarefa ajuda você a criar um mapeamento entre o back-end de storage e a instância integrada do vCenter Server globalmente.
+A página de listagem do vCenter Server mostra o número associado de backends de armazenamento. Cada instância do vCenter Server tem a opção de associar ou desassociar a um back-end de armazenamento.
 
 .Passos
 . Inicie o Gerenciador de ferramentas do ONTAP a partir de um navegador da Web: `\https://loadBalancerIP:8443/virtualization/ui/`
 . Faça login com as ferramentas do ONTAP para as credenciais de administrador do VMware vSphere fornecidas durante a implantação.
 . Selecione a instância do vCenter Server necessária na barra lateral.
 . Selecione as elipses verticais em relação ao vCenter Server que você deseja associar ou dissociar com backends de armazenamento.
-. Selecione *associar ou dissociar o back-end de armazenamento* dependendo da ação que você deseja executar.
+. Selecione *dissociar o back-end de armazenamento*.
 
 
 

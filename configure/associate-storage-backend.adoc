@@ -18,6 +18,5 @@ Associe um back-end de storage ao vCenter Server para criar um mapeamento entre 
 . Faça login com as ferramentas do ONTAP para as credenciais de administrador do VMware vSphere fornecidas durante a implantação.
 . Selecione vCenter na barra lateral.
 . Selecione as elipses verticais na instância do vCenter Server que você deseja associar aos backends de armazenamento.
-. Selecione back-end de armazenamento no menu suspenso na janela pop-up.
-. Selecione o back-end de armazenamento no menu suspenso e associe a instância do vCenter Server ao back-end de armazenamento necessário.
+. Selecione o back-end de armazenamento no menu suspenso para associar a instância do vCenter Server ao back-end de armazenamento necessário.
 
