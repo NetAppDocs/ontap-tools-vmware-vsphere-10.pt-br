@@ -49,9 +49,6 @@ O campo *Role* é preenchido automaticamente com base na capacidade do produto s
 A nova função e o usuário são adicionados e você pode ver o Privileges detalhado na função que você configurou.
 
 
-NOTE: A operação de desinstalação não remove as funções das ferramentas do ONTAP, mas remove os nomes localizados para o Privileges específico das ferramentas do ONTAP e anexa o prefixo `XXX missing privilege` a elas. Quando você reinstalar as ferramentas do ONTAP para o VMware vSphere ou atualizar para uma versão mais recente, todas as ferramentas padrão do ONTAP para as funções do VMware vSphere e as Privileges específicas das ferramentas do ONTAP são restauradas.
-
-
 
 == Requisitos de mapeamento de agregados da SVM
 

@@ -20,7 +20,7 @@ indexpage:
   - title: Use as ferramentas do ONTAP para VMware vSphere
     links:
     - title: Configurar controles de acesso baseados em função
-      url: "/concepts/vcenter-server-role-based-access-control-features.html"
+      url: "/concepts/rbac-learn-about.html"
     - title: Configure o diagnóstico remoto
       url: "/manage/configure-remote-diagnostic-access.html"
     - title: Alta disponibilidade para ferramentas ONTAP para VMware vSphere
@@ -29,10 +29,6 @@ indexpage:
       url: "/protect/enable-storage-replication-adapter.html"
   - title: Mais recursos
     links:
-    - title: Documentação das ferramentas do ONTAP para VMware vSphere 10,2
-      url: https://docs.netapp.com/us-en/ontap-tools-vmware-vsphere-102/index.html
-    - title: Documentação das ferramentas do ONTAP para VMware vSphere 10,1
-      url: https://docs.netapp.com/us-en/ontap-tools-vmware-vsphere-101/index.html
     - title: Documentação para versões anteriores das ferramentas do ONTAP para VMware
         vSphere 9
       url: https://mysupport.netapp.com/documentation/productlibrary/index.html?productID=63792
