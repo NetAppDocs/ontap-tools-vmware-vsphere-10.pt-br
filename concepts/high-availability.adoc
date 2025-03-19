@@ -18,7 +18,7 @@ A solução de alta disponibilidade (HA) oferece recuperação rápida de interr
 * Falha do host
 +
 
-NOTE: Somente falha de nó único é suportada.
+NOTE: Apenas é suportada uma falha de nó único.
 
 * Falha de rede
 * Falha da máquina virtual (falha do sistema operacional convidado)

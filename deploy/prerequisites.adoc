@@ -100,8 +100,6 @@ Você pode usar a tabela a seguir como um guia para configurar as ferramentas do
 
 | Alta disponibilidade | Grande (L) | 100k | 256 [NOTA] o número de hosts na tabela mostra o número total de hosts de vários vCenters. 
 |===
-Para obter detalhes sobre os requisitos de dimensionamento do sistema host por nó, link:../deploy/prerequisites.html["Pré-requisitos para implantar ferramentas do ONTAP para VMware vSphere"]consulte .
-
 
 
 == Ferramentas do ONTAP para VMware vSphere - adaptador de replicação de armazenamento (SRA)
@@ -200,16 +198,3 @@ A tabela a seguir descreve as portas de rede que o NetApp usa e seus propósitos
 
 | 123 (TCP) | O ntpd usa essa porta para executar a validação do servidor ntp. 
 |===
-
-
-== Verificações de pré-implantação
-
-Certifique-se de que os itens a seguir estão implementados antes de prosseguir com a implantação:
-
-* O ambiente do vCenter Server está configurado e configurado.
-* As credenciais do vCenter Server pai para implantar o OVA estão em vigor.
-* Você tem as credenciais de login para sua instância do vCenter Server à qual as ferramentas do ONTAP para VMware vSphere se conetarão ao pós-implantação, para Registro.
-* O cache do navegador é excluído.
-* Verifique se você tem três endereços IP gratuitos disponíveis para implantação sem HA: Um endereço IP gratuito para balanceador de carga e um endereço IP gratuito para o plano de controle do Kubernetes e um endereço IP para nó. Para a implantação de HA, juntamente com esses três endereços IP, você precisará de mais dois endereços IP para segundo e terceiro nós. Os nomes de host devem ser mapeados para os endereços IP gratuitos no DNS antes de atribuir. Todos os cinco endereços IP devem estar na mesma VLAN selecionada para implantação.
-* Certifique-se de que o nome do domínio no qual o certificado é emitido esteja mapeado para o endereço IP virtual em uma implantação multi-vCenter onde os certificados de CA personalizados são obrigatórios. _Nslookup_ verifica se o nome de domínio está sendo resolvido para o endereço IP pretendido. Os certificados devem ser criados com nome de domínio e endereço IP do endereço IP do balanceador de carga.
-

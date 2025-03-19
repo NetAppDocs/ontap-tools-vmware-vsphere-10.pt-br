@@ -1,9 +1,3 @@
----
-permalink: configure/configure-network-access.html 
-sidebar: sidebar 
-keywords:  
-summary: Você pode optar por permitir alguns endereços de host ESXi específicos para operação de montagem de datastore. 
----
 = Configurar o acesso à rede
 :allow-uri-read: 
 :icons: font
@@ -11,16 +5,14 @@ summary: Você pode optar por permitir alguns endereços de host ESXi específic
 
 
 [role="lead"]
-Quando você tem vários endereços IP de host ESXi, todos os endereços IP descobertos do host são adicionados a uma política de exportação por padrão. Se você não quiser adicionar todos os endereços IP a uma política de exportação, forneça uma configuração para permitir endereços IP específicos em uma lista ou intervalo separados por vírgulas ou CIDR, ou uma combinação de todos os três para cada vCenter.
-
-Você pode optar por permitir alguns endereços de host ESXi específicos para operação de montagem de datastore. Se a configuração não for fornecida, a política de exportação adicionará todos os endereços IP descobertos na etapa de pré-montagem. Se a configuração for fornecida, as ferramentas do ONTAP para VMware vSphere adicionarão apenas as que se enquadram nos endereços IP ou intervalo listados. Se nenhum dos endereços IP de um host pertencer aos endereços IP listados, a montagem nesse host falhará.
+Se você não tiver configurado o acesso à rede, todos os endereços IP descobertos do host ESXi serão adicionados à política de exportação por padrão. Você pode configurá-lo para adicionar alguns endereços IP específicos à política de exportação e excluir o restante. No entanto, quando você executa uma operação de montagem nos hosts ESXi excluídos, a operação falha.
 
 .Passos
-. Faça login no cliente vSphere usando `\https://<vcenterip>/<ui>`
-. Na página atalhos, selecione *Ferramentas do NetApp ONTAP* na seção plug-ins.
+. Faça login no cliente vSphere.
+. Selecione *Ferramentas do NetApp ONTAP* na página de atalhos na seção plug-ins.
 . No painel esquerdo das ferramentas do ONTAP, navegue até *Configurações* > *Gerenciar acesso à rede* > *Editar*.
 +
-Use uma vírgula (,) para separar os endereços IP. Você pode especificar um endereço IP específico ou um intervalo de endereços IP ou endereços IPv6.
+Para adicionar vários endereços IP, separe a lista com vírgulas, intervalo, CIDR (Classless Inter-Domain Routing) ou uma combinação de todos os três.
 
 . Selecione *Guardar*.
 
