@@ -14,7 +14,7 @@ summary: Você pode alterar a senha do administrador usando o Gerenciador de fer
 Gerenciador para habilitar serviços como o provedor VASA, importação de configuração vVols e recuperação de desastres (SRA) usando o Gerenciador de ferramentas do ONTAP.
 
 .Passos
-. Inicie o Gerenciador de ferramentas do ONTAP a partir de um navegador da Web: `\https://loadBalancerIP:8443/virtualization/ui/`
+. Inicie o Gerenciador de ferramentas do ONTAP a partir de um navegador da Web: `\https://<ONTAPtoolsIP>:8443/virtualization/ui/`
 . Faça login com as ferramentas do ONTAP para as credenciais de administrador do VMware vSphere fornecidas durante a implantação.
 . Selecione *Edit Appliance Settings* (Editar definições do dispositivo) na secção Overview (Descrição geral).
 . Na seção *Serviços*, você pode habilitar serviços opcionais como o provedor VASA, a importação de configuração vVols e a recuperação de desastres (SRA) de acordo com suas necessidades.

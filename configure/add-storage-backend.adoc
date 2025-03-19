@@ -27,7 +27,7 @@ Para adicionar um back-end de storage a um cluster com escopo local, adicione se
 NOTE: Em uma configuração de alocação a vários clientes, é possível adicionar um cluster de back-end de storage globalmente e SVM localmente para usar as credenciais de usuário do SVM.
 
 .Passos
-. Inicie o Gerenciador de ferramentas do ONTAP a partir de um navegador da Web: `\https://loadBalancerIP:8443/virtualization/ui/`
+. Inicie o Gerenciador de ferramentas do ONTAP a partir de um navegador da Web: `\https://<ONTAPtoolsIP>:8443/virtualization/ui/`
 . Faça login com as ferramentas do ONTAP para as credenciais de administrador do VMware vSphere fornecidas durante a implantação.
 . Selecione *backends de armazenamento* na barra lateral.
 . Adicione o back-end de armazenamento e forneça o endereço IP do servidor ou FQDN, nome de usuário e detalhes de senha.

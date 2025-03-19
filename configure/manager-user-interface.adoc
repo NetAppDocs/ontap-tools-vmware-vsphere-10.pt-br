@@ -22,7 +22,7 @@ O Gerenciador de ferramentas do ONTAP ajuda a:
 * Gerenciamento de senhas - Redefina a senha do aplicativo OVA do usuário.
 
 
-Para acessar o Gerenciador de ferramentas do ONTAP, inicie a `\https://loadBalancerIP:8443/virtualization/ui/` partir do navegador e faça login com as ferramentas do ONTAP para as credenciais de administrador do VMware vSphere fornecidas durante a implantação.
+Para acessar o Gerenciador de ferramentas do ONTAP, inicie a `\https://<ONTAPtoolsIP>:8443/virtualization/ui/` partir do navegador e faça login com as ferramentas do ONTAP para as credenciais de administrador do VMware vSphere fornecidas durante a implantação.
 
 A seção de visão geral do Gerenciador de ferramentas do ONTAP ajuda a gerenciar a configuração do dispositivo, como gerenciamento de serviços, aumento do tamanho dos nós e capacitação de alta disponibilidade (HA). Você também pode monitorar as informações gerais das ferramentas do ONTAP relacionadas aos nós, como integridade, detalhes da rede e alertas.
 

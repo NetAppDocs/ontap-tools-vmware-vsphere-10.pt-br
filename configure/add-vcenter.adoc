@@ -18,7 +18,7 @@ Adicione instâncias do vCenter Server às ferramentas do ONTAP para o VMware vS
 Ao integrar-se ao vCenter, as ferramentas do ONTAP permitem que você execute tarefas de storage como provisionamento, snapshots e proteção de dados diretamente do cliente vSphere, eliminando a necessidade de alternar para consoles de gerenciamento de storage separados.
 
 .Passos
-. Abra um navegador da Web e navegue até o URL: `\https://loadBalancerIP:8443/virtualization/ui/`
+. Abra um navegador da Web e navegue até o URL: `\https://<ONTAPtoolsIP>:8443/virtualization/ui/`
 . Faça login com as ferramentas do ONTAP para as credenciais de administrador do VMware vSphere fornecidas durante a implantação.
 . Selecione *vCenters* > *Add* para integrar as instâncias do vCenter Server. Forneça seu endereço IP ou nome de host do vCenter, nome de usuário, senha e detalhes da porta.
 

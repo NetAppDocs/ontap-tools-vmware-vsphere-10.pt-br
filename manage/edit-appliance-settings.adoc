@@ -18,7 +18,7 @@ Usando o Gerenciador de ferramentas do ONTAP, faça a escalabilidade vertical da
 Certifique-se de que o modelo OVA fornecido tem a mesma versão OVA que o nó 1. O nó 1 é o nó padrão em que as ferramentas do ONTAP para o VMware vSphere OVA são implantadas inicialmente.
 
 .Passos
-. Inicie o Gerenciador de ferramentas do ONTAP a partir de um navegador da Web: `\https://loadBalancerIP:8443/virtualization/ui/`
+. Inicie o Gerenciador de ferramentas do ONTAP a partir de um navegador da Web: `\https://<ONTAPtoolsIP>:8443/virtualization/ui/`
 . Faça login com as ferramentas do ONTAP para as credenciais de administrador do VMware vSphere fornecidas durante a implantação.
 . Selecione *Edit Appliance Settings* (Editar definições do dispositivo) na secção Overview (Descrição geral).
 . Na seção *Configuração*, você pode fazer a escalabilidade vertical para aumentar o tamanho do nó e ativar a configuração de HA de acordo com suas necessidades. Você precisa das credenciais do vCenter Server para fazer quaisquer alterações.
