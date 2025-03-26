@@ -15,7 +15,15 @@ Usando o Gerenciador de ferramentas do ONTAP, faça a escalabilidade vertical da
 
 *Antes de começar*
 
-Certifique-se de que o modelo OVA fornecido tem a mesma versão OVA que o nó 1. O nó 1 é o nó padrão em que as ferramentas do ONTAP para o VMware vSphere OVA são implantadas inicialmente.
+* Certifique-se de que o seu MODELO OVA tem a mesma versão OVA que o nó 1. O nó 1 é o nó padrão em que as ferramentas do ONTAP para o VMware vSphere OVA são implantadas inicialmente.
+* Certifique-se de que o hot add e o hot plug de memória da CPU estejam ativados durante a implantação. Você pode ativá-los no menu do vCenter client se eles não tiverem sido ativados durante a implantação. Siga estas instruções para habilitá-los a partir do cliente vCenter:
++
+** Navegue até as ferramentas do ONTAP para a máquina virtual VMware vSphere em *inventários* e selecione *Editar configurações*.
+** Nas opções *CPU*, marque a caixa de seleção *Enable CPU hot add*
+** Nas opções *memória*, marque a caixa de seleção *Ativar* contra *Memory hot plug*.
+
+
+
 
 .Passos
 . Inicie o Gerenciador de ferramentas do ONTAP a partir de um navegador da Web: `\https://<ONTAPtoolsIP>:8443/virtualization/ui/`

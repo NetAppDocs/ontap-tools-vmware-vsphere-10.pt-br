@@ -383,11 +383,9 @@
   <block id="2a03ee5b0887b8a6bf23fd52456544db" category="doc">Implantar as ferramentas do ONTAP para o VMware vSphere</block>
   <block id="9d2169c1c2855b78a7aeaa4f42d27dc7" category="inline-link">Site de suporte da NetApp</block>
   <block id="c9d092386ae73a6340bdea88112319d0" category="list-text">Faça login no servidor vSphere.</block>
-  <block id="f0e6ca4faaee2f8ba40b1d44ce65e0a0" category="list-text">Clique com o botão direito do rato no local pretendido e selecione *Deploy OVF template...*.</block>
   <block id="310f705969896b4d59368edab71d1d87" category="list-text">Revise os detalhes na janela *Pronto para concluir*, selecione *concluir*.</block>
   <block id="2982d64d666813e553487acfc3139e7b" category="paragraph">À medida que a tarefa de implantação é criada, o progresso é mostrado na barra de tarefas do vSphere.</block>
   <block id="23b73d362123204bbb0b2e4f075436e0" category="list-text">Ligue a VM após a conclusão da tarefa.</block>
-  <block id="ba734a1904c4fc52c9466c4911723e0d" category="list-text">Selecione as elipses horizontais ao lado do cliente vSphere e selecione *Content Library*.</block>
   <block id="ab912edc5760deb33b4733d3d0cd7edc" category="list-text">Selecione *criar* à direita da página.</block>
   <block id="fc7420289587a37ba45ec23cf35bfe1b" category="list-text">Forneça um nome para a biblioteca e crie a biblioteca de conteúdo.</block>
   <block id="3af4e075c858acd892ef2371752970d3" category="list-text">Navegue até a biblioteca de conteúdo que você criou.</block>
@@ -1577,11 +1575,8 @@
   <block id="2a8d2860baf78d6dcd2ba9cf54828350" category="paragraph">Verifique se o provedor VASA integrado está listado no provedor VASA do cliente vCenter:</block>
   <block id="b2d759d8409be83670d858be76d08a57" category="list-text">Navegue até a instância do vCenter Server.</block>
   <block id="31cbb70f53b2d4a961916f4f580b9afa" category="list-text">Selecione *fornecedores de armazenamento* &gt; *Configurar*. Verifique se o provedor VASA integrado está listado corretamente.</block>
-  <block id="7e2b29fab046b14f9ba1bfc2251f4af8" category="list-text">Vá para sua biblioteca de conteúdo e selecione o item da biblioteca que você deseja implantar.</block>
-  <block id="4d3c2178c8b4d1172e4a40d3eea7bca5" category="list-text">Selecione *ações* &gt; *Nova VM a partir deste modelo*</block>
   <block id="4fa11816241a033e46d7ef0e6bb9c98c" category="list-text">Revise os detalhes do modelo e selecione *Next*.</block>
   <block id="db5ae9b3dd501309f26eea92d5f05e2b" category="list-text">Leia e aceite o contrato de licença e selecione *Next*.</block>
-  <block id="c26e3cc6a042c9880f33d1c3ad1e1f05" category="list-text">Selecione o armazenamento para a configuração e os arquivos de disco e selecione *Next*.</block>
   <block id="65ab872e40a57d468184122e5d0784c0" category="list-text">Selecione a rede de destino para cada rede de origem e selecione *seguinte*.</block>
   <block id="25cf3eb120c48489f9ac5e6faaf3e1b8" category="list-text">Na janela *Personalizar modelo*, preencha os campos obrigatórios e selecione *seguinte*.</block>
   <block id="59d5c19f1f3c5f065c5ee15d4ace3947" category="list-text">Selecione o ícone *administrador* no canto superior direito da tela e selecione *alterar senha*.</block>
@@ -1818,7 +1813,6 @@
   <block id="3e4abab771250e025c846376cbe14b39" category="list-text">Insira y na caixa de diálogo de confirmação.</block>
   <block id="cbd662f4329d81667a2e3c676911b7ad" category="doc">Alterar as ferramentas do ONTAP para a configuração do VMware vSphere</block>
   <block id="9d9ea313f70ebddbbc3d882af75f5e27" category="paragraph">Usando o Gerenciador de ferramentas do ONTAP, faça a escalabilidade vertical das ferramentas do ONTAP para a configuração do VMware vSphere para aumentar o número de nós na implantação ou alterar a configuração para a configuração de alta disponibilidade (HA). As ferramentas do ONTAP para o dispositivo VMware vSphere são implantadas inicialmente em uma configuração de nó único que não é de HA.</block>
-  <block id="0f3db6cd288538bd8913cae2009ae58f" category="paragraph">Certifique-se de que o modelo OVA fornecido tem a mesma versão OVA que o nó 1. O nó 1 é o nó padrão em que as ferramentas do ONTAP para o VMware vSphere OVA são implantadas inicialmente.</block>
   <block id="05cbe0f49011bed719b6be221d77d648" category="list-text">Na seção *Configuração*, você pode fazer a escalabilidade vertical para aumentar o tamanho do nó e ativar a configuração de HA de acordo com suas necessidades. Você precisa das credenciais do vCenter Server para fazer quaisquer alterações.</block>
   <block id="8f3fa52cb4355e5e1cb508d287692baf" category="paragraph">Quando as ferramentas do ONTAP estão na configuração HA, você pode alterar os detalhes da biblioteca de conteúdo. Você deve fornecer a senha novamente para o novo envio de edição.</block>
   <block id="29e10939f239223d92fb1a283cba3d1d" category="admonition">Nas ferramentas do ONTAP para VMware vSphere, você só tem permissão para aumentar o tamanho do nó; não pode reduzir o tamanho do nó. Em uma configuração não HA, apenas uma configuração de tamanho médio é suportada. Em uma configuração de HA, configurações médias e grandes são suportadas.</block>
@@ -2005,14 +1999,10 @@
   <block id="af0ada25f4fd07661e572cca28b961df" category="list-text">Faça o download do<block ref="daf4de58883c030f033f07e61debf025" prefix=" " category="inline-code"></block> arquivo que contém binários (_.ova_) e certificados assinados para ferramentas do ONTAP para VMware vSphere no<block ref="db8756d7f65d6a8e593e69ba45adbb2e" category="inline-link-rx"></block> . Se você tiver importado o OVA para a biblioteca de conteúdo, você pode pular esta etapa e prosseguir com a próxima etapa.</block>
   <block id="8e872493652df7e9ffefc076dc59c381" category="list-text">Navegue até o pool de recursos, cluster ou host onde você pretende implantar o OVA.</block>
   <block id="49e56c9b53ad658c96d55bc65668259a" category="admonition">Nunca armazene as ferramentas do ONTAP para a máquina virtual VMware vSphere em armazenamentos de dados vVols que ele gerencia.</block>
-  <block id="4fdb7cc6a102e7695431c2e8d64d4c72" category="list-text">Escolha o ARQUIVO OVA no URL ou navegue até seu local e selecione *Next*.</block>
-  <block id="b7891769d1bdbe1506f5809941f4a308" category="list-text">Para implantar as ferramentas do ONTAP para VMware vSphere a partir da biblioteca de conteúdo:</block>
-  <block id="f8bdabd1321026a72dec95bc1266dee7" category="list-text">No campo *Selecione um nome e pasta*, insira o nome da máquina virtual e escolha sua localização. Se você selecionar a caixa de seleção *Personalizar o hardware desta máquina virtual*, uma etapa adicional chamada *Personalizar hardware* será ativada antes de chegar à janela *Pronto para concluir*.</block>
   <block id="413560adb5f032ce013265b1080e4df5" category="list-text">Selecione um recurso de computador e selecione *Next*. Opcionalmente, marque a caixa para *ligar automaticamente a VM implantada*.</block>
   <block id="4c91382e492707f0779f372fcc750396" category="list-text">As informações são validadas durante a instalação. Se houver uma discrepância, uma mensagem de erro será exibida no console da Web e você será solicitado a corrigi-la.</block>
   <block id="2760ddae8a52ae77e6711ac97cdeff45" category="list-text">Os nomes de host devem incluir letras (A-Z, a-z), dígitos (0-9) e hífens (-). Para configurar a pilha dupla, especifique o nome do host mapeado para o endereço IPv6.</block>
   <block id="a1f2c5d218a3501d9d0831dccea5dbc3" category="admonition">O Pure IPv6 não é compatível. O modo misto é suportado com VLAN contendo endereços IPv6 e IPv4.</block>
-  <block id="8f620054c41b3449afa692f8379d810a" category="list-text">Na janela *Personalizar hardware*, ative o hot add da CPU e o hot plugin de memória.</block>
   <block id="1651a6277f4f59f0128c7be036557e5d" category="paragraph">Se houver discrepâncias no formulário OVF, uma caixa de diálogo solicitará uma ação corretiva. Use o botão Tab para navegar, fazer as alterações necessárias e selecione "OK.você tem três tentativas para resolver quaisquer problemas. Se os problemas continuarem após três tentativas, o processo de instalação será interrompido e é aconselhável tentar novamente a instalação em uma nova máquina virtual.</block>
   <block id="fc670824c9b9087edaedbd8931be914a" category="doc">Remover volumes FlexVol</block>
   <block id="94ba231101263cc02a5bbd35865c2569" category="paragraph">Quando você usa um cluster ONTAP dedicado para ferramentas do ONTAP para implantação do VMware, ele cria muitos volumes FlexVol não utilizados. Depois de remover as ferramentas do ONTAP para VMware vSphere, você deve remover os volumes do FlexVol para evitar possíveis impactos no desempenho.</block>
@@ -2041,4 +2031,21 @@
   <block id="af97740fd99b637615a0fe129d5fc42f" category="list-text">Inicie o Gerenciador de ferramentas do ONTAP a partir de um navegador da Web:<block ref="a2fad8db83c338dbc95675bd05c70607" prefix=" " category="inline-code"></block></block>
   <block id="3fe306eaabad41057c3375dc9d2105d0" category="list-text">Abra um navegador da Web e navegue até o URL:<block ref="a2fad8db83c338dbc95675bd05c70607" prefix=" " category="inline-code"></block></block>
   <block id="76bb3525c98b82b9b4baedca4379aa0d" category="paragraph">Para acessar o Gerenciador de ferramentas do ONTAP, inicie a<block ref="a2fad8db83c338dbc95675bd05c70607" prefix=" " category="inline-code"></block> partir do navegador e faça login com as ferramentas do ONTAP para as credenciais de administrador do VMware vSphere fornecidas durante a implantação.</block>
+  <block id="d74a40c70cc0ce39ee0a63d9809a8cb2" category="paragraph">Para habilitar o recurso HA, o hot add e o hot plug de memória da CPU devem ser ativados durante a implantação ou posteriormente nas ferramentas do ONTAP para as configurações de VM do VMware vSphere.</block>
+  <block id="0d8e6f4e10df466752fe81f2900011de" category="summary">Se você não tiver configurado o acesso à rede, todos os endereços IP descobertos do host ESXi serão adicionados à política de exportação por padrão.</block>
+  <block id="9a68ed4eca42d8b38ad99492d29e8ab3" category="list-text">Selecione o menu do cliente vSphere e selecione *bibliotecas de conteúdo*.</block>
+  <block id="82b1e70d021d2ae63524015247494128" category="paragraph">As ferramentas do ONTAP para o VMware vSphere são inicialmente implantadas como uma configuração não HA. Para escalar para implantação HA, você precisará ativar o hot plug-in da CPU e o hot plug-in da memória. Você pode executar esta etapa como parte do processo de implantação ou editar as configurações da VM após a implantação.</block>
+  <block id="6868e47bbc3a8cf87041d4fea17b993d" category="list-text">Você pode implantar o OVA da biblioteca de conteúdo ou do sistema local.</block>
+  <block id="0b044bf45314e5d20c59ab7b578f7495" category="cell">Do sistema local</block>
+  <block id="0aac2e2d60f56941b22e0c247b2e8606" category="cell">Da biblioteca de conteúdo</block>
+  <block id="7b8fae4ee3f2f1e2d2d1cd158ca75e12" category="cell">a. clique com o botão direito do Mouse e selecione *Deploy OVF template...*. b. escolha o arquivo OVA no URL ou navegue até seu local e selecione *Next*.</block>
+  <block id="575d924a41fdcb33b439a56a8275b46b" category="cell">r. vá para a biblioteca de conteúdo e selecione o item da biblioteca que você deseja implantar. b. Selecione *ações* &gt; *Nova VM a partir deste modelo*</block>
+  <block id="d59f2559d7708fc33ba709f85d5f7d8d" category="list-text">No campo *Selecione um nome e pasta*, insira o nome da máquina virtual e escolha sua localização. Para habilitar a capacidade de usar o recurso HA, selecione a opção *Personalizar o hardware desta máquina virtual*, que ativará uma etapa adicional chamada *Personalizar hardware* antes de prosseguir para a janela *Pronto para concluir*.</block>
+  <block id="b13ea8b192f2e4c057e60ddf543e1bc9" category="list-text">Selecione o armazenamento para a configuração e o formato do disco e selecione *Next*.</block>
+  <block id="a64b411fa059b361156bb9aff3333ea7" category="list-text">Na janela *Customize hardware*, ative as opções *CPU hot add* e *Memory hot plug* para permitir a funcionalidade HA.</block>
+  <block id="0b6be1b11b1b2491526a1a563ceb2a11" category="list-text">Certifique-se de que o seu MODELO OVA tem a mesma versão OVA que o nó 1. O nó 1 é o nó padrão em que as ferramentas do ONTAP para o VMware vSphere OVA são implantadas inicialmente.</block>
+  <block id="af4cd60bf02a555034a6503c98fdc067" category="list-text">Certifique-se de que o hot add e o hot plug de memória da CPU estejam ativados durante a implantação. Você pode ativá-los no menu do vCenter client se eles não tiverem sido ativados durante a implantação. Siga estas instruções para habilitá-los a partir do cliente vCenter:</block>
+  <block id="de91beac7bb1bb4fbe105fce9753292d" category="list-text">Navegue até as ferramentas do ONTAP para a máquina virtual VMware vSphere em *inventários* e selecione *Editar configurações*.</block>
+  <block id="f7681620b9623a6169557749d3cd3b06" category="list-text">Nas opções *CPU*, marque a caixa de seleção *Enable CPU hot add*</block>
+  <block id="e964c4252671b09bcb1a48909d126115" category="list-text">Nas opções *memória*, marque a caixa de seleção *Ativar* contra *Memory hot plug*.</block>
 </blocks>

@@ -29,3 +29,5 @@ Nenhuma configuração adicional é necessária para que as ferramentas do ONTAP
 
 
 NOTE: As ferramentas do ONTAP para VMware vSphere não são compatíveis com o vCenter HA.
+
+Para habilitar o recurso HA, o hot add e o hot plug de memória da CPU devem ser ativados durante a implantação ou posteriormente nas ferramentas do ONTAP para as configurações de VM do VMware vSphere.
