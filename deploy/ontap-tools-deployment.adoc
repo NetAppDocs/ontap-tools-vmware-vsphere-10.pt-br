@@ -62,7 +62,12 @@ NOTE: Nunca armazene as ferramentas do ONTAP para a máquina virtual VMware vSph
 
 | a. clique com o botão direito do Mouse e selecione *Deploy OVF template...*. b. escolha o arquivo OVA no URL ou navegue até seu local e selecione *Next*. | r. vá para a biblioteca de conteúdo e selecione o item da biblioteca que você deseja implantar. b. Selecione *ações* > *Nova VM a partir deste modelo* 
 |===
-. No campo *Selecione um nome e pasta*, insira o nome da máquina virtual e escolha sua localização. Para habilitar a capacidade de usar o recurso HA, selecione a opção *Personalizar o hardware desta máquina virtual*, que ativará uma etapa adicional chamada *Personalizar hardware* antes de prosseguir para a janela *Pronto para concluir*.
+. No campo *Selecione um nome e pasta*, insira o nome da máquina virtual e escolha sua localização.
++
+** Se você estiver usando a versão do vCenter Server 8.0.3, selecione a opção *Personalizar o hardware da máquina virtual*, que ativará uma etapa adicional chamada *Personalizar hardware* antes de prosseguir para a janela *Pronto para concluir*.
+** Se você estiver usando a versão do vCenter Server 7.0.3, siga as etapas na seção *o que vem a seguir?* no final da implantação.
+
+
 . Selecione um recurso de computador e selecione *Next*. Opcionalmente, marque a caixa para *ligar automaticamente a VM implantada*.
 . Revise os detalhes do modelo e selecione *Next*.
 . Leia e aceite o contrato de licença e selecione *Next*.
@@ -78,7 +83,7 @@ NOTE: O Pure IPv6 não é compatível. O modo misto é suportado com VLAN conten
 
 
 
-. Na janela *Customize hardware*, ative as opções *CPU hot add* e *Memory hot plug* para permitir a funcionalidade HA.
+. Ao usar a versão do vCenter Server 8.0.3, na janela *Personalizar hardware*, ative as opções *hot add* da CPU e *Memory hot plug* para permitir a funcionalidade HA.
 . Revise os detalhes na janela *Pronto para concluir*, selecione *concluir*.
 +
 À medida que a tarefa de implantação é criada, o progresso é mostrado na barra de tarefas do vSphere.
@@ -89,3 +94,12 @@ NOTE: O Pure IPv6 não é compatível. O modo misto é suportado com VLAN conten
 Você pode acompanhar o andamento da instalação no console da Web da VM.
 
 Se houver discrepâncias no formulário OVF, uma caixa de diálogo solicitará uma ação corretiva. Use o botão Tab para navegar, fazer as alterações necessárias e selecione "OK.você tem três tentativas para resolver quaisquer problemas. Se os problemas continuarem após três tentativas, o processo de instalação será interrompido e é aconselhável tentar novamente a instalação em uma nova máquina virtual.
+
+.O que vem a seguir?
+Se você tiver ferramentas de implantação do ONTAP para o VMware vSphere com o vCenter Server 7,0.3, siga estas etapas após a implantação.
+
+. Faça login no cliente vCenter
+. Navegue até as ferramentas do ONTAP para a máquina virtual VMware vSphere em *inventários* e selecione a opção *Editar configurações*.
+. Nas opções *CPU*, marque a caixa de seleção *Enable CPU hot add*
+. Nas opções *memória*, marque a caixa de seleção *Ativar* contra *Memory hot plug*.
+

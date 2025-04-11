@@ -2040,12 +2040,118 @@
   <block id="0aac2e2d60f56941b22e0c247b2e8606" category="cell">Da biblioteca de conteúdo</block>
   <block id="7b8fae4ee3f2f1e2d2d1cd158ca75e12" category="cell">a. clique com o botão direito do Mouse e selecione *Deploy OVF template...*. b. escolha o arquivo OVA no URL ou navegue até seu local e selecione *Next*.</block>
   <block id="575d924a41fdcb33b439a56a8275b46b" category="cell">r. vá para a biblioteca de conteúdo e selecione o item da biblioteca que você deseja implantar. b. Selecione *ações* &gt; *Nova VM a partir deste modelo*</block>
-  <block id="d59f2559d7708fc33ba709f85d5f7d8d" category="list-text">No campo *Selecione um nome e pasta*, insira o nome da máquina virtual e escolha sua localização. Para habilitar a capacidade de usar o recurso HA, selecione a opção *Personalizar o hardware desta máquina virtual*, que ativará uma etapa adicional chamada *Personalizar hardware* antes de prosseguir para a janela *Pronto para concluir*.</block>
   <block id="b13ea8b192f2e4c057e60ddf543e1bc9" category="list-text">Selecione o armazenamento para a configuração e o formato do disco e selecione *Next*.</block>
-  <block id="a64b411fa059b361156bb9aff3333ea7" category="list-text">Na janela *Customize hardware*, ative as opções *CPU hot add* e *Memory hot plug* para permitir a funcionalidade HA.</block>
   <block id="0b6be1b11b1b2491526a1a563ceb2a11" category="list-text">Certifique-se de que o seu MODELO OVA tem a mesma versão OVA que o nó 1. O nó 1 é o nó padrão em que as ferramentas do ONTAP para o VMware vSphere OVA são implantadas inicialmente.</block>
-  <block id="af4cd60bf02a555034a6503c98fdc067" category="list-text">Certifique-se de que o hot add e o hot plug de memória da CPU estejam ativados durante a implantação. Você pode ativá-los no menu do vCenter client se eles não tiverem sido ativados durante a implantação. Siga estas instruções para habilitá-los a partir do cliente vCenter:</block>
-  <block id="de91beac7bb1bb4fbe105fce9753292d" category="list-text">Navegue até as ferramentas do ONTAP para a máquina virtual VMware vSphere em *inventários* e selecione *Editar configurações*.</block>
   <block id="f7681620b9623a6169557749d3cd3b06" category="list-text">Nas opções *CPU*, marque a caixa de seleção *Enable CPU hot add*</block>
   <block id="e964c4252671b09bcb1a48909d126115" category="list-text">Nas opções *memória*, marque a caixa de seleção *Ativar* contra *Memory hot plug*.</block>
+  <block id="5857f06e072b3f06a2eb3afb539401ad" category="summary">Os primeiros passos com as ferramentas do ONTAP para VMware vSphere incluem algumas etapas.</block>
+  <block id="351db6e1fb020f982e8d1e2e04a3bbff" category="doc">Fluxo de trabalho de implantação de alta disponibilidade (HA)</block>
+  <block id="5796a1458099f301d4addee1a242df6f" category="paragraph">Se você estiver usando armazenamentos de dados vVols, será necessário expandir a implantação inicial de ferramentas do ONTAP para uma configuração de alta disponibilidade (HA) e ativar os serviços do provedor VASA.</block>
+  <block id="06c2cea18679d64399783748fa367bdd" category="inline-image-macro">Um</block>
+  <block id="ef559753bb37f5c75302bc058bd8ef18" category="paragraph-title"><block ref="58f667aaf05f87159670e12bd9bc076b" category="inline-image-macro-rx" type="image"></block> Faça a escalabilidade vertical da implantação</block>
+  <block id="f38c69c61a8659b3b04805a82b98a406" category="paragraph">É possível escalar as ferramentas do ONTAP para a configuração do VMware vSphere para aumentar o número de nós na implantação e alterar a configuração para uma configuração de HA.</block>
+  <block id="80841c66bc065a4621fdb8223573f180" category="list-text"><block ref="80841c66bc065a4621fdb8223573f180" category="inline-link-macro-rx"></block></block>
+  <block id="aada29daee1d64ed0fe907043855cb7e" category="inline-image-macro">Dois</block>
+  <block id="e81b0e6462481fcd3413377a49eef929" category="paragraph-title"><block ref="54f425ce8d89f4ed6b8a546561af5d60" category="inline-image-macro-rx" type="image"></block> Ativar serviços</block>
+  <block id="c056ecd855e5405820342c3949fe830c" category="paragraph">Para configurar o datastore vVols, você deve habilitar o serviço provedor VASA. Registre o provedor VASA no vCenter e garanta que suas políticas de armazenamento atendam aos requisitos de HA, incluindo configurações adequadas de rede e armazenamento.</block>
+  <block id="3fbec94821f3d895b930a04dc44657cc" category="paragraph">Ative os serviços SRA para usar as ferramentas ONTAP Storage Replication Adapter (SRA) para VMware Site Recovery Manager (SRM) ou VMware Live Site Recovery (VLSR).</block>
+  <block id="d9fa12637706812af1872dd61fc64453" category="inline-link-macro">Ative os serviços Vasa Provider e SRA</block>
+  <block id="c838d1e4bdb7f26f5aa0d841f7268233" category="list-text"><block ref="c838d1e4bdb7f26f5aa0d841f7268233" category="inline-link-macro-rx"></block></block>
+  <block id="ca8a2087e5557e317599344687a57391" category="inline-image-macro">Três</block>
+  <block id="294b56b882b4cc00251358d85e1743e5" category="paragraph-title"><block ref="05b2444faffd66d76e88602ea7dd353f" category="inline-image-macro-rx" type="image"></block> Atualize os certificados</block>
+  <block id="5394bde54cbbfc5ed2c3a7059ca709c6" category="paragraph">Se você estiver usando datastores vVol com várias instâncias do vCenter Server, atualize o certificado autoassinado para um certificado assinado pela autoridade de certificação (CA).</block>
+  <block id="096078a372ad8b6c0fcc7c22ffe9a147" category="list-text"><block ref="096078a372ad8b6c0fcc7c22ffe9a147" category="inline-link-macro-rx"></block></block>
+  <block id="955e2530b35bd36732551d894e503a00" category="list-text">No campo *Selecione um nome e pasta*, insira o nome da máquina virtual e escolha sua localização.</block>
+  <block id="02793e3182fbe0f0f175da7ab3e93d73" category="list-text">Se você estiver usando a versão do vCenter Server 8.0.3, selecione a opção *Personalizar o hardware da máquina virtual*, que ativará uma etapa adicional chamada *Personalizar hardware* antes de prosseguir para a janela *Pronto para concluir*.</block>
+  <block id="023e2f3d2e9fc24fbfa345f951d3739f" category="list-text">Se você estiver usando a versão do vCenter Server 7.0.3, siga as etapas na seção *o que vem a seguir?* no final da implantação.</block>
+  <block id="6086b7cf0ed3f66a8f067f2609990958" category="list-text">Ao usar a versão do vCenter Server 8.0.3, na janela *Personalizar hardware*, ative as opções *hot add* da CPU e *Memory hot plug* para permitir a funcionalidade HA.</block>
+  <block id="97b6810eb76df77c1b712c70d530f60a" category="paragraph">Se você tiver ferramentas de implantação do ONTAP para o VMware vSphere com o vCenter Server 7,0.3, siga estas etapas após a implantação.</block>
+  <block id="d2a87194163daac768f661ff8d1d3300" category="list-text">Faça login no cliente vCenter</block>
+  <block id="da93f5e9af6870a18b0865c5a2c7f8c4" category="list-text">Navegue até as ferramentas do ONTAP para a máquina virtual VMware vSphere em *inventários* e selecione a opção *Editar configurações*.</block>
+  <block id="9569971b9e4c597112b89f4886d293d8" category="doc">Antes de começar...​</block>
+  <block id="92f29cff34d92bf4fc543c08273931a8" category="paragraph">Certifique-se de que os seguintes requisitos sejam atendidos antes de prosseguir com a implantação:</block>
+  <block id="5a2ebfb8baa378cfcfcba58bbb1380c2" category="cell">Requisitos</block>
+  <block id="160341e19f4199f98bae44696b547c48" category="cell">O seu estado</block>
+  <block id="585f30e88e1aeab9267bdca1c7fb9b51" category="cell">A versão do vSphere, a versão do ONTAP e a versão do host ESXi são compatíveis com a versão das ferramentas do ONTP.</block>
+  <block id="4902520b0fcc342236dd72f6de2ddae3" category="cell">❏ Sim ❏ não</block>
+  <block id="8b7366926ee4d89536f11f5177addb76" category="cell">O ambiente do vCenter Server está configurado e configurado</block>
+  <block id="da6a71f9d8e8c5292268f9ff7340889b" category="cell">O cache do navegador é excluído</block>
+  <block id="cf8aabec008f017accfa8137e7cf2adb" category="cell">Você tem as credenciais do vCenter Server pai</block>
+  <block id="8ac6a0d49e78c74c5c49f22d390c353f" category="cell">Você tem as credenciais de login para a instância do vCenter Server, à qual as ferramentas do ONTAP para VMware vSphere conetarão após a implantação para Registro</block>
+  <block id="85bdb53ff90d5bbf90d739c48c458177" category="cell">O nome de domínio no qual o certificado é emitido é mapeado para o endereço IP virtual em uma implantação multi-vCenter onde certificados de CA personalizados são obrigatórios.</block>
+  <block id="c4903ebf8ac3e9e53d927ca4855aeab7" category="cell">Você executou a verificação nslookup no nome de domínio para verificar se o domínio está sendo resolvido para o endereço IP pretendido.</block>
+  <block id="006efd6c70d1fd5109a917632ca7d1f0" category="cell">O certificado é criado com o nome de domínio e o endereço IP das ferramentas ONTAP.</block>
+  <block id="d828b14ed2b96fa8bafdeeab2e9bbb25" category="cell">O aplicativo e os serviços internos das ferramentas do ONTAP podem ser acessados a partir do vCenter Server.</block>
+  <block id="6285108ef2b20a382584e76cf96a61fb" category="cell">Ao usar SVMs de alocação a vários clientes, você tem um LIF de gerenciamento da SVM em cada SVM.</block>
+  <block id="12da9e1a2888efc8f1956c95e7801089" category="section-title">Folha de cálculo de implementação</block>
+  <block id="6d40840d55c07c7f9a1396724662354b" category="section-title">Para implantação de nó único</block>
+  <block id="bbd46d16a0b9c56c79719db1f0a2b9a8" category="paragraph">Use a seguinte Planilha para reunir as informações necessárias para as ferramentas do ONTAP para a implantação inicial do VMware vSphere: Para as ferramentas do ONTAP para a implantação inicial do VMware vSphere:</block>
+  <block id="9b97b7bd5e0a87be7bf218224ada83cf" category="cell">Requisito</block>
+  <block id="d9fa81fca11f55d9fd9f33b399ab9cd6" category="cell">O seu valor</block>
+  <block id="89d40dff7639b41cbef7fe2a44f484ba" category="cell">Endereço IP do aplicativo ONTAP Tools</block>
+  <block id="8a446ff962c6ec80c26cad578454c2af" category="cell">Endereço IP da interconexão do nó para comunicação entre nós</block>
+  <block id="5759f8c1a9261b4c6c0c86f5089433b5" category="cell">Nome de host DNS para o primeiro nó</block>
+  <block id="68eeeed01bf11dc7edb656408cbfd0b6" category="cell">Servidor DNS primário</block>
+  <block id="9fab0542abb763e3e75e782994d85d07" category="cell">Servidor DNS secundário</block>
+  <block id="a8887a6c969074f8ef768152e95c492b" category="cell">Domínio de pesquisa DNS</block>
+  <block id="b2aa01474bea61170041c002c6ac208a" category="cell">Endereço IPv4 para o nó principal</block>
+  <block id="8e7f18a32aaa409ac6db22c6061404a7" category="cell">Máscara de sub-rede para o endereço IPv4</block>
+  <block id="6eb16330b386af07329e0c9d0a1c2421" category="cell">Gateway padrão para o endereço IPv4</block>
+  <block id="92abdbc0e1cb9b88fc2be7c70ef79e37" category="cell">Endereço IPv6 (opcional)</block>
+  <block id="30eddb064c9ce9ee65db8631bcdd298e" category="cell">Comprimento do prefixo IPv6 (opcional)</block>
+  <block id="9c43cfe7668de6e1c829cb71613695fd" category="cell">Gateway para o endereço IPv6 (opcional)</block>
+  <block id="5d9db3dc067e65b15c415367aa49d088" category="paragraph">Crie Registros DNS para todos os endereços IP acima. Antes de atribuir nomes de host, mapeie-os para os endereços IP gratuitos no DNS. Todos os endereços IP devem estar na mesma VLAN selecionada para implantação.</block>
+  <block id="d787ab527a9696ea7563facce1bb1001" category="section-title">Para implantação de alta disponibilidade (HA)</block>
+  <block id="9abf7bed343e21874d5cd1ae37e04b89" category="paragraph">Além dos requisitos de implantação de nó único, você precisará das seguintes informações para implantação de HA:</block>
+  <block id="4f8c36cf923055f6ff175e557e968782" category="cell">Nome de host DNS para o segundo nó</block>
+  <block id="3d86836a361e223ea8d773b7ff7df4a0" category="cell">Endereço IP para o segundo nó</block>
+  <block id="670ea5f87243240203f65d4597b5720d" category="cell">Nome de host DNS para o terceiro nó</block>
+  <block id="b1b53041846844c0718e8af2d6f3e14c" category="cell">Endereço IP para o terceiro nó</block>
+  <block id="c45c6f4bee2108d6c980be118d3da754" category="section-title">Configuração de firewall de rede</block>
+  <block id="15d12f4a88d7b390ab6d863be5684e1a" category="paragraph">Abra as portas necessárias para os endereços IP no firewall da rede. As ferramentas do ONTAP devem ser capazes de alcançar esse LIF pela porta 443. <block ref="7a521441c6d35a506dc75f134ab3c694" category="inline-link-macro-rx"></block>Consulte para obter as atualizações mais recentes.</block>
+  <block id="410dbf8e1f100ad53deb3ca66cb8ec8b" category="doc">Início rápido das ferramentas do ONTAP para VMware vSphere</block>
+  <block id="86339f91ab8e0352f8b9f8c35611a4ee" category="paragraph">Os primeiros passos com as ferramentas do ONTAP para VMware vSphere incluem algumas etapas. Esse início rápido leva você pela configuração inicial das ferramentas do ONTAP para o VMware vSphere.</block>
+  <block id="7261b4472f18d3e8c4584d0bb039ec79" category="inline-link-macro">Fluxo de trabalho DE IMPLANTAÇÃO DE HA</block>
+  <block id="b95e3b604f6a59d80c159f8bcc30d45e" category="paragraph">Inicialmente, você implantará as ferramentas do ONTAP para o VMware vSphere como uma configuração de nó único de pequeno porte que fornece serviços essenciais para dar suporte a armazenamentos de dados NFS e VMFS. Se você precisar expandir sua configuração para usar o armazenamento de dados vVols e a alta disponibilidade (HA), você fará isso depois de concluir esse fluxo de trabalho. Para obter mais informações, consulte o <block ref="9ef467ebb813ac9bfc1579e0ba7d9e65" category="inline-link-macro-rx"></block>.</block>
+  <block id="3b46ad0549cc1ae15c466e1539cac6cc" category="paragraph-title"><block ref="58f667aaf05f87159670e12bd9bc076b" category="inline-image-macro-rx" type="image"></block> Planeje sua implantação</block>
+  <block id="235431ffa3dee921fa339768f9c9a6c1" category="paragraph">Verifique se as versões do host vSphere, ONTAP e ESXi são compatíveis com a versão das ferramentas do ONTAP. Alocar CPU, memória e espaço em disco suficientes. Dependendo das suas políticas de segurança, pode ser necessário configurar firewalls ou outros dispositivos de segurança para permitir o tráfego de rede.</block>
+  <block id="9ebdb7921f7484cee5e22c5bfd2470c8" category="paragraph">Certifique-se de que o vCenter Server esteja instalado e acessível.</block>
+  <block id="34f56f271329ad2edd7685e71f328b53" category="list-text"><block ref="34f56f271329ad2edd7685e71f328b53" category="inline-link-rx"></block></block>
+  <block id="726c2dd94c40576d98fa58765ada32a2" category="list-text"><block ref="726c2dd94c40576d98fa58765ada32a2" category="inline-link-macro-rx"></block></block>
+  <block id="8fece025a1a8fef7018449bf104a2527" category="inline-link-macro">Antes de começar</block>
+  <block id="1497fccb0979c83f7f0501efa49af88e" category="list-text"><block ref="1497fccb0979c83f7f0501efa49af88e" category="inline-link-macro-rx"></block></block>
+  <block id="69182d9cdaae4040cb12f338633b33c7" category="paragraph-title"><block ref="54f425ce8d89f4ed6b8a546561af5d60" category="inline-image-macro-rx" type="image"></block> Implantar as ferramentas do ONTAP para o VMware vSphere</block>
+  <block id="f8c086dad42ca07bf14eb7f233920f24" category="paragraph">Inicialmente, você implantará as ferramentas do ONTAP para o VMware vSphere como uma configuração de nó único de pequeno porte que fornece serviços essenciais para dar suporte a armazenamentos de dados NFS e VMFS. Se você planeja expandir sua configuração para usar armazenamentos de dados vVols e alta disponibilidade (HA), você fará isso depois de concluir esse fluxo de trabalho. Para expandir com êxito para uma configuração de HA, você deve garantir que as opções de hot-add e hot-plug de memória da CPU estejam ativadas.</block>
+  <block id="e5470d0dab088b9c8b712af4be3801de" category="list-text"><block ref="e5470d0dab088b9c8b712af4be3801de" category="inline-link-macro-rx"></block></block>
+  <block id="d6f4de0e60c9b74a0f06b9c8cb7e5556" category="paragraph-title"><block ref="05b2444faffd66d76e88602ea7dd353f" category="inline-image-macro-rx" type="image"></block> Adicione instâncias do vCenter Server</block>
+  <block id="b78f334f60c6b78034f4d3b7cf13f767" category="paragraph">Adicione uma ou mais instâncias do vCenter Server às ferramentas do ONTAP para o VMware vSphere para configurar, gerenciar e proteger seus datastores virtuais no ambiente do vCenter Server.</block>
+  <block id="fbc3413db4202f1fe331f16af6b38f13" category="list-text"><block ref="fbc3413db4202f1fe331f16af6b38f13" category="inline-link-macro-rx"></block></block>
+  <block id="981b8fcee42e1e726a67a2b9a98ea6e9" category="inline-image-macro">Quatro</block>
+  <block id="f876a7cbd467b5fe36bfff5b237cab15" category="paragraph-title"><block ref="beadfa85a2fdca06b91edc1131c603e6" category="inline-image-macro-rx" type="image"></block> Configurar as funções de usuário do ONTAP e o Privileges</block>
+  <block id="a3dce2225c6773b6233d6d06ca6524a1" category="paragraph">Configure novas funções de usuário e o Privileges para gerenciar backends de storage usando o arquivo JSON fornecido com as ferramentas do ONTAP para VMware vSphere.</block>
+  <block id="b3debf9a0a4da8901422599f88761e9e" category="list-text"><block ref="b3debf9a0a4da8901422599f88761e9e" category="inline-link-macro-rx"></block></block>
+  <block id="e5d9de39f7ca1ba2637e5640af3ae8aa" category="inline-image-macro">Cinco</block>
+  <block id="78a9753ae84f65cfc93b9190109fdbe1" category="paragraph-title"><block ref="99e8b2f00e172bfcff96afdce69907bc" category="inline-image-macro-rx" type="image"></block> Configure os backends de armazenamento</block>
+  <block id="151c3727ca69fe365d30ca8b00d0ef02" category="paragraph">Adicionar um back-end de storage a um cluster do ONTAP. Para configurações de alocação a vários clientes em que o vCenter atua como locatário de um SVM associado, use o Gerenciador de ferramentas do ONTAP para adicionar o cluster. Associe o back-end de storage ao vCenter Server para mapeá-lo globalmente para a instância integrada do vCenter Server.</block>
+  <block id="623727ddcf21460c69461e09290ff6e3" category="paragraph">Adicione os back-ends de storage local com credenciais de cluster ou SVM usando a interface de usuário das ferramentas do ONTAP. Esses backends de armazenamento estão limitados a um único vCenter. Ao usar credenciais de cluster localmente, os SVMs associados mapeiam automaticamente para o vCenter para gerenciar vVols ou VMFS. Para o gerenciamento do VMFS, incluindo SRA, as ferramentas do ONTAP são compatíveis com credenciais SVM sem a necessidade de um cluster global.</block>
+  <block id="5e15cfab5137c8c5b07a50f9eb816e0a" category="list-text"><block ref="5e15cfab5137c8c5b07a50f9eb816e0a" category="inline-link-macro-rx"></block></block>
+  <block id="d0c12810d8bb376bdd62e0a7dcb8f3ef" category="inline-link-macro">Associar o back-end de storage a uma instância do vCenter Server</block>
+  <block id="349dea55081cba7988d2e74a569b149b" category="list-text"><block ref="349dea55081cba7988d2e74a569b149b" category="inline-link-macro-rx"></block></block>
+  <block id="e6fbc0b9673f8c86726688d7607fc8f5" category="inline-image-macro">Seis</block>
+  <block id="acfa27b57a294a787f715e773cc9d67b" category="paragraph-title"><block ref="ef78558f80439832e0f51cc22cee8b8c" category="inline-image-macro-rx" type="image"></block> Atualize os certificados se você estiver trabalhando com vários vCenter Servers</block>
+  <block id="7a141a550c6b7316b61d038ab322ca86" category="paragraph">Ao trabalhar com vários vCenter Servers, atualize o certificado autoassinado para um certificado assinado pela autoridade de certificação (CA).</block>
+  <block id="12e67aac3e7f9227cc35f8f047d7dc74" category="inline-image-macro">Sete</block>
+  <block id="85fa32c6f1935c07720a211f20305579" category="paragraph-title"><block ref="36915574c413876eaa75cbd48f69fd00" category="inline-image-macro-rx" type="image"></block> (Opcional) ative a proteção SRA</block>
+  <block id="461016ffd7a6c7ca138e75fad0c9b7ce" category="paragraph">Habilite o recurso SRA para configurar a recuperação de desastres e proteger armazenamentos de dados NFS ou VMFS.</block>
+  <block id="9b6610ae0d9b3f2df042445cc8433cf4" category="list-text"><block ref="9b6610ae0d9b3f2df042445cc8433cf4" category="inline-link-macro-rx"></block></block>
+  <block id="24d27c169c2c881eb09a065116f2aa5c" category="inline-image-macro">oito</block>
+  <block id="1f3c2366ee78e590a43f78ce3ec33af9" category="paragraph-title"><block ref="bf2dc80b0d3f76e4f77c4fce580f56c0" category="inline-image-macro-rx" type="image"></block> (Opcional) ative a proteção de sincronização ativa do SnapMirror</block>
+  <block id="ae57d8d2be38d4fab048ad6bd6a53746" category="paragraph">Configure as ferramentas do ONTAP para o VMware vSphere para gerenciar a proteção do cluster de host para a sincronização ativa do SnapMirror. Emparelhe os clusters de origem e destino e o SVM para SnapMirror active Sync. Isso se aplica somente aos datastores VMFS.</block>
+  <block id="5c77c00bef7fd2d8fb97abc8f2ff015a" category="list-text"><block ref="5c77c00bef7fd2d8fb97abc8f2ff015a" category="inline-link-macro-rx"></block></block>
+  <block id="24db11216549ee55172c33cf3def2f3f" category="inline-image-macro">Nove</block>
+  <block id="c5ee3ef473a8e2d4f3f8b40330e2bcd2" category="paragraph-title"><block ref="b37b448eff4f65237cf47b29bdd2817c" category="inline-image-macro-rx" type="image"></block> Configure o backup e a recuperação para suas ferramentas do ONTAP para a implantação do VMware vSphere</block>
+  <block id="88b80af2218eb2102e518b088dd9ed76" category="paragraph">Programe backups de suas ferramentas do ONTAP para a configuração do VMware vSphere que você pode usar para recuperar a configuração em caso de falha.</block>
+  <block id="67f34b44c083004610f6d70a0140a9aa" category="inline-link-macro">Crie backup e recupere a configuração das ferramentas do ONTAP</block>
+  <block id="a99f72442060cbc9b70a30a0deceb5ac" category="list-text"><block ref="a99f72442060cbc9b70a30a0deceb5ac" category="inline-link-macro-rx"></block></block>
+  <block id="4073f6bd126ab1197095ddfaadcb200f" category="list-text">Certifique-se de que o hot add e o hot plug de memória da CPU estejam ativados.</block>
 </blocks>
