@@ -31,8 +31,6 @@ Configuração da aplicação
  a| 
 . Apresentar resumo do estado do servidor
 . Altere o nível DE LOG para os Serviços de fornecedores VASA e Serviços SRA
-. Desative o AutoSupport
-. Atualize o URL do proxy do AutoSupport
 
 
 
@@ -44,7 +42,6 @@ Configuração do sistema
 . Encerre a máquina virtual
 . Altere a palavra-passe do utilizador 'não'
 . Alterar fuso horário
-. Adicionar novo servidor NTP
 . Aumentar o tamanho do disco de cadeia (/jail)
 . Atualização
 . Instale o VMware Tools

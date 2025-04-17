@@ -26,7 +26,7 @@ Você pode executar as seguintes tarefas como parte da proteção de modificaç�
 Use este procedimento para monitorar o status da proteção do cluster do host. Você pode monitorar cada cluster de host protegido, juntamente com seu estado de proteção, relacionamentos do SnapMirror, datastores e o status SnapMirror correspondente.
 
 .Passos
-. Faça login no cliente vSphere usando `\https://<vcenterip>/<ui>`
+. Faça login no cliente vSphere.
 . Navegue até *Ferramentas do NetApp ONTAP* > *proteção* > *relacionamentos de cluster do host*.
 +
 O ícone sob a coluna de proteção mostra o status da proteção
@@ -41,7 +41,7 @@ O ícone sob a coluna de proteção mostra o status da proteção
 Use este procedimento para proteger os armazenamentos de dados ou hosts recém-adicionados. Você pode adicionar novos hosts ao cluster protegido ou criar novos datastores no cluster de host usando a interface de usuário nativa do vCenter.
 
 .Passos
-. Faça login no cliente vSphere usando `\https://<vcenterip>/<ui>`
+. Faça login no cliente vSphere.
 . Para editar as propriedades de um cluster protegido, é possível
 +
 .. Navegue até *Ferramentas do NetApp ONTAP* > *proteção* > *relacionamentos de cluster do host*, selecione o menu de elipse no cluster e selecione *Editar* ou
@@ -65,7 +65,7 @@ Uma tarefa do vCenter é criada e você pode acompanhar o progresso no painel *t
 == Adicione uma nova relação do SnapMirror
 
 .Passos
-. Faça login no cliente vSphere usando `\https://<vcenterip>/<ui>`
+. Faça login no cliente vSphere.
 . Para editar as propriedades de um cluster protegido, é possível
 +
 .. Navegue até *Ferramentas do NetApp ONTAP* > *proteção* > *relacionamentos de cluster do host*, selecione o menu de elipse no cluster e selecione *Editar* ou
@@ -91,7 +91,7 @@ Para excluir uma relação assíncrona do SnapMirror, o SVM ou cluster do local 
 A exclusão da relação aciona uma nova verificação no site secundário para remover o LUN não mapeado como caminho ativo dos hosts.
 
 .Passos
-. Faça login no cliente vSphere usando `\https://<vcenterip>/<ui>`
+. Faça login no cliente vSphere.
 . Para editar as propriedades de um cluster protegido, é possível
 +
 .. Navegue até *Ferramentas do NetApp ONTAP* > *proteção* > *relacionamentos de cluster do host*, selecione o menu de elipse no cluster e selecione *Editar* ou
@@ -113,7 +113,7 @@ Para modificar uma relação assíncrona do SnapMirror, o SVM ou cluster do loca
 NOTE: Não é possível editar uma relação de SnapMirror assíncrona existente.
 
 .Passos
-. Faça login no cliente vSphere usando `\https://<vcenterip>/<ui>`
+. Faça login no cliente vSphere.
 . Para editar as propriedades de um cluster protegido, é possível
 +
 .. Navegue até *Ferramentas do NetApp ONTAP* > *proteção* > *relacionamentos de cluster do host*, selecione o menu de elipse no cluster e selecione *Editar* ou

@@ -63,6 +63,9 @@ Os últimos três dígitos do código de erro indicam o erro de fluxo de trabalh
 | *Código de erro de implantação* | *Fluxo de trabalho* | *Resolução* 
 
 
+| 049 | Para rede e validação, o script perl irá atribuí-los também em breve | - 
+
+
 | 050 | Falha na geração da chave SSH | Reinicie a máquina virtual principal (VM). 
 
 
@@ -75,7 +78,7 @@ Os últimos três dígitos do código de erro indicam o erro de fluxo de trabalh
 | 055 | Falha ao implantar o Registro | Se o pod de Registro estiver presente, aguarde que o pod esteja pronto e reinicie a VM principal ou então reimplante. 
 
 
-| 059 | A implantação do KubeVip falhou | Certifique-se de que o endereço IP virtual do plano de controle do Kubernetes e o endereço IP do balanceador de carga fornecidos durante a implantação pertencem à mesma VLAN e são endereços IP livres. Reinicie se todos os pontos anteriores estiverem corretos. Caso contrário, reimplante. 
+| 059 | A implantação do KubeVip falhou | Certifique-se de que o endereço IP virtual para o plano de controle do Kubernetes e as ferramentas do ONTAP o endereço IP fornecido durante a implantação pertencem à mesma VLAN e são endereços IP livres. Reinicie se todos os pontos anteriores estiverem corretos. Caso contrário, reimplante. 
 
 
 | 060 | A implantação do operador falhou | Reinicie 

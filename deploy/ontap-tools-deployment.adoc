@@ -11,10 +11,9 @@ summary: As ferramentas do ONTAP para o dispositivo VMware vSphere são implanta
 
 
 [role="lead"]
-As ferramentas do ONTAP para o dispositivo VMware vSphere são implantadas como nó único de pequeno porte com serviços básicos para dar suporte a armazenamentos de dados NFS e VMFS.
+As ferramentas do ONTAP para o dispositivo VMware vSphere são implantadas como nó único de pequeno porte com serviços básicos para dar suporte a armazenamentos de dados NFS e VMFS. O processo de implantação de ferramentas do ONTAP pode levar até 45 minutos.
 
-*Antes de começar*
-
+.Antes de começar
 Uma biblioteca de conteúdo no VMware é um objeto de contentor que armazena modelos de VM, modelos vApp e outros tipos de arquivos. A implantação com biblioteca de conteúdo oferece uma experiência perfeita, pois não depende da conetividade de rede.
 
 
@@ -28,7 +27,7 @@ Se você não tiver uma biblioteca de conteúdo, siga estas etapas para criar um
 *Criar biblioteca de conteúdo* no seu plano de usar apenas uma pequena implantação de nó único, não é necessário criar uma biblioteca de conteúdo.
 
 . Faça o download do `.zip` arquivo que contém binários (_.ova_) e certificados assinados para ferramentas do ONTAP para VMware vSphere no https://mysupport.netapp.com/site/products/all/details/otv10/downloads-tab["Site de suporte da NetApp"^] .
-. Faça login no cliente vSphere usando `\https://<vcenterip>/<ui>`
+. Faça login no cliente vSphere
 . Selecione o menu do cliente vSphere e selecione *bibliotecas de conteúdo*.
 . Selecione *criar* à direita da página.
 . Forneça um nome para a biblioteca e crie a biblioteca de conteúdo.
@@ -88,7 +87,7 @@ NOTE: O Pure IPv6 não é compatível. O modo misto é suportado com VLAN conten
 +
 À medida que a tarefa de implantação é criada, o progresso é mostrado na barra de tarefas do vSphere.
 
-. Ligue a VM após a conclusão da tarefa.
+. Ligue a VM depois de concluir a tarefa se a opção de ligar automaticamente a VM não tiver sido selecionada.
 
 
 Você pode acompanhar o andamento da instalação no console da Web da VM.
@@ -99,6 +98,7 @@ Se houver discrepâncias no formulário OVF, uma caixa de diálogo solicitará u
 Se você tiver ferramentas de implantação do ONTAP para o VMware vSphere com o vCenter Server 7,0.3, siga estas etapas após a implantação.
 
 . Faça login no cliente vCenter
+. Desligue o nó de ferramentas do ONTAP.
 . Navegue até as ferramentas do ONTAP para a máquina virtual VMware vSphere em *inventários* e selecione a opção *Editar configurações*.
 . Nas opções *CPU*, marque a caixa de seleção *Enable CPU hot add*
 . Nas opções *memória*, marque a caixa de seleção *Ativar* contra *Memory hot plug*.

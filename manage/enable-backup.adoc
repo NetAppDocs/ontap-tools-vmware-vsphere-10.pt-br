@@ -2,16 +2,19 @@
 permalink: manage/enable-backup.html 
 sidebar: sidebar 
 keywords:  
-summary: Como as ferramentas do ONTAP para o VMware vSphere 10,3 usam provisionador de storage dinâmico, você não pode alcançar RPO zero. No entanto, você pode alcançar RPO quase zero. 
+summary: A partir das ferramentas do ONTAP para VMware vSphere 10,3, o dispositivo usa provisionador de storage dinâmico, não é possível alcançar RPO zero. No entanto, você pode alcançar RPO quase zero. 
 ---
-= Crie backup e recupere a configuração
+= Crie backup e recupere a configuração das ferramentas do ONTAP
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-Como as ferramentas do ONTAP para o VMware vSphere 10,3 usam provisionador de storage dinâmico, você não pode alcançar RPO zero. No entanto, você pode alcançar RPO quase zero. Para alcançar quase zero-RPO, você precisa criar backup da instalação e restaurá-lo em uma nova máquina virtual.
+A partir das ferramentas do ONTAP para VMware vSphere 10,3, o dispositivo usa provisionador de storage dinâmico, não é possível alcançar RPO zero. No entanto, você pode alcançar RPO quase zero. Para alcançar quase zero-RPO, você precisa criar backup da instalação e restaurá-lo em uma nova máquina virtual.
+
+
+NOTE: Para migrar para a HA quando o backup não-HA estiver ativado, desative primeiro o backup e reative-o após a migração.
 
 
 
@@ -42,7 +45,7 @@ Na secção ficheiro, pode ver o diretório. O nome do diretório será o endere
 
 Para recuperar a configuração, desligue a máquina virtual existente e implante uma nova máquina virtual usando o OVA que foi usado na implantação inicial.
 
-Você precisa usar o mesmo endereço IP das ferramentas ONTAP (IP do balanceador de carga) para a nova máquina virtual e a configuração do sistema, como serviços habilitados, tamanho do nó e modo HA, deve ser igual à implantação inicial.
+Você precisa usar o mesmo endereço IP das ferramentas ONTAP para a nova máquina virtual e a configuração do sistema, como serviços habilitados, tamanho do nó e modo HA, deve ser igual à implantação inicial.
 
 Execute as etapas a seguir para recuperar a configuração do arquivo de backup.
 

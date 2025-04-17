@@ -58,9 +58,10 @@ A tabela a seguir lista os códigos de erro e os nomes de arquivo correspondente
 Os últimos três dígitos do código de erro indicam o erro de fluxo de trabalho específico dentro do script:
 
 |===
-
-
 | *Código de erro de atualização* | *Fluxo de trabalho* | *Resolução* 
+
+
+| 052 | O ISO pode ser o mesmo que a versão atual ou duas versões acima da versão atual. | Utilize uma versão ISO compatível para atualizar a partir da sua versão atual. 
 
 
 | 068 | A reversão de pacotes Debian falhou | Use a recuperação baseada em snapshot ou zero RPO e tente fazer a atualização novamente. 
@@ -117,12 +118,6 @@ Os últimos três dígitos do código de erro indicam o erro de fluxo de trabalh
 | 089 | A alteração da propriedade do registo de resumo, o ficheiro de configuração de rotação falhou | Tente novamente a atualização. 
 
 
-| 093 | A atualização do provisionador de storage dinâmico falhou | Tente novamente a atualização. 
-
-
-| 094 | A reversão do provisionador de storage dinâmico falhou | Tente novamente a atualização. 
-
-
 | 095 | Falha na atualização DO SO | Sem recuperação para atualização do SO. Os serviços de ferramentas do ONTAP são atualizados e novos pods serão executados. 
 
 
@@ -154,8 +149,20 @@ Os últimos três dígitos do código de erro indicam o erro de fluxo de trabalh
 
 
 | 113 | A atualização de recursos em nós secundários falhou | Verifique os logs de atualização e tente atualizar novamente. 
+
+
+| 104 | A reinicialização do nó secundário falhou | Reinicie os nós manualmente um por um 
+
+
+| 100 | a reversão do kernel falhou | - 
+
+
+| 051 | a atualização do provisionador de storage dinâmico falhou | Verifique os logs de atualização e tente atualizar novamente. 
+
+
+| 056 | a eliminação da cópia de segurança de migração falhou | NA 
 |===
 
-NOTE: As ferramentas do ONTAP para VMware vSphere 10,3 são compatíveis com RPO zero.
+NOTE: A partir das ferramentas do ONTAP para VMware vSphere 10,3 zero RPO não é suportado.
 
 Saiba mais sobre https://kb.netapp.com/data-mgmt/OTV/VSC_Kbs/How_to_restore_ONTAP_tools_for_VMware_vSphere_if_upgrade_fails_from_version_10.0_to_10.1["Como restaurar as ferramentas do ONTAP para VMware vSphere se a atualização falhar da versão 10,0 para a 10,1"]

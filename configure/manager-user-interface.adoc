@@ -38,5 +38,11 @@ image:../media/ontap-tools-manager-overview.png["Visão geral do painel do Geren
 | Cartão de alertas | A placa Alertas lista os alertas das ferramentas do ONTAP por tipo, incluindo os alertas no nível do nó de HA. Pode ver a lista de alertas selecionando no texto de contagem (hiperligação). A ligação encaminha-o para a página de visualização de alertas filtrada pelo tipo selecionado. 
 
 
+| VCenters | O vCenter card mostra o status de integridade dos vCenters no sistema. 
+
+
+| Back-ends de armazenamento | O cartão Storage Backends mostra o status de integridade dos backends Storage no sistema. 
+
+
 | Placa de nós de ferramentas do ONTAP | A placa de nós de ferramentas do ONTAP mostra a lista de nós com nome do nó, nome da VM do nó, status e todos os dados relacionados à rede. Você pode selecionar em *Exibir detalhes* para exibir os detalhes adicionais relacionados ao nó selecionado. [NOTA] em uma configuração que não seja de HA, somente um nó é exibido. Na configuração de HA, três nós são mostrados. 
 |===

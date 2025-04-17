@@ -13,8 +13,10 @@ summary: Você pode alterar a senha do administrador usando o Gerenciador de fer
 [role="lead"]
 Usando o Gerenciador de ferramentas do ONTAP, faça a escalabilidade vertical das ferramentas do ONTAP para a configuração do VMware vSphere para aumentar o número de nós na implantação ou alterar a configuração para a configuração de alta disponibilidade (HA). As ferramentas do ONTAP para o dispositivo VMware vSphere são implantadas inicialmente em uma configuração de nó único que não é de HA.
 
-*Antes de começar*
 
+NOTE: Para migrar para a HA quando o backup não-HA estiver ativado, desative primeiro o backup e reative-o após a migração.
+
+.Antes de começar
 * Certifique-se de que o seu MODELO OVA tem a mesma versão OVA que o nó 1. O nó 1 é o nó padrão em que as ferramentas do ONTAP para o VMware vSphere OVA são implantadas inicialmente.
 * Certifique-se de que o hot add e o hot plug de memória da CPU estejam ativados.
 

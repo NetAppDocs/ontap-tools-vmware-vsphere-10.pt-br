@@ -22,7 +22,7 @@ Os backends de armazenamento são sistemas que os hosts ESXi usam para armazenam
 Siga os passos abaixo para descobrir os backends de armazenamento.
 
 .Passos
-. Faça login no cliente vSphere usando `\https://<vcenterip>/<ui>`
+. Faça login no cliente vSphere.
 . Na página atalhos, selecione *Ferramentas do NetApp ONTAP* na seção plug-ins.
 . No painel esquerdo das ferramentas do ONTAP, navegue até *backends de armazenamento* e selecione um back-end de armazenamento.
 . Selecione o menu elipses verticais e selecione *Discover storage*
@@ -36,7 +36,7 @@ Você pode acompanhar o progresso no painel tarefas recentes.
 
 Siga as etapas nesta seção para modificar um back-end de armazenamento.
 
-. Faça login no cliente vSphere usando `\https://<vcenterip>/<ui>`
+. Faça login no cliente vSphere.
 . Na página atalhos, selecione *Ferramentas do NetApp ONTAP* na seção plug-ins.
 . No painel esquerdo das ferramentas do ONTAP, navegue até *backends de armazenamento* e selecione um back-end de armazenamento.
 . Selecione o menu reticências verticais e selecione *Modificar* para modificar as credenciais ou o nome da porta. Você pode acompanhar o progresso no painel tarefas recentes.
@@ -58,7 +58,7 @@ Você pode executar a operação Modificar para clusters globais do ONTAP usando
 
 Você precisa excluir todos os datastores anexados ao back-end de armazenamento antes de remover o back-end de armazenamento. Siga as etapas abaixo para remover um back-end de armazenamento.
 
-. Faça login no cliente vSphere usando `\https://<vcenterip>/<ui>`
+. Faça login no cliente vSphere.
 . Na página atalhos, selecione *Ferramentas do NetApp ONTAP* na seção plug-ins.
 . No painel esquerdo das ferramentas do ONTAP, navegue até *backends de armazenamento* e selecione um back-end de armazenamento.
 . Selecione o menu elipses verticais e selecione *Remover*. Certifique-se de que o back-end de armazenamento não contenha nenhum datastore. Você pode acompanhar o progresso no painel tarefas recentes.
@@ -88,7 +88,7 @@ A página de resumo fornece os seguintes detalhes:
 * Informações básicas sobre a VM
 * Informações de rede, como o endereço IP e a porta da rede. Para o SVM filho, as informações serão as mesmas que o back-end de storage pai.
 * Privileges permitido e restrito para o back-end de storage. Para o SVM filho, as informações serão as mesmas que o back-end de storage pai. Os Privileges são exibidos apenas nos backends de armazenamento baseados em cluster. Se você adicionar SVM como back-end de storage, as informações do Privileges não serão exibidas.
-* A visualização de detalhamento do cluster do ASA R2 não inclui a guia camadas locais quando a propriedade desagregada for definida como "verdadeira" para o SVM ou para o cluster.
+* A visualização de detalhamento do cluster do sistema ASA R2 não inclui a guia camadas locais quando a propriedade desagregada for definida como "verdadeira" para o SVM ou para o cluster.
 * Para sistemas ASA R2 SVM, o portlet de capacidade não é mostrado. O portal de capacidade só é necessário quando a propriedade desagregada é definida como "verdadeiro" para o SVM ou cluster.
 * Para sistemas ASA R2 SVM, a seção de informações básicas mostra o tipo de plataforma.
 

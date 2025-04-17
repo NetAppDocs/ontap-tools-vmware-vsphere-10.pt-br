@@ -4,53 +4,30 @@ sidebar: sidebar
 keywords: upgrade 
 summary: A atualização é compatível com implantações de HA e não HA. 
 ---
-= Atualize das ferramentas do ONTAP para o VMware vSphere 10.x para o 10,3
+= Atualize das ferramentas do ONTAP para o VMware vSphere 10.x para o 10,4
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-A atualização é compatível com implantações de HA e não HA. Os caminhos de atualização suportados são:
+Você pode fazer upgrade das ferramentas do ONTAP para VMware vSphere 10,2 ou 10,3 para 10,4. No entanto, a atualização direta das ferramentas ONTAP 10,0 ou 10,1 para 10,4 não é suportada.
 
-|===
+NOTA:
 
-
-| Das ferramentas do ONTAP para a configuração do VMware vSphere 10,1 e 10,2 | Para as ferramentas do ONTAP para a configuração do VMware vSphere 10,3 
-
-
-| Não-HA pequeno | Não-HA e pequeno avançado 
+* Nos sistemas ASA R2, você deve atualizar para as ferramentas do ONTAP para VMware vSphere 10,4 com ONTAP 9.16.1 antes de adicionar mais zonas de disponibilidade de storage (SAZs).
+* Se a atualização das ferramentas do ONTAP para o VMware vSphere 10,2 ou 10,3 para a versão 10,4 falhar, a reversão não será suportada. Para recuperar a configuração, use as ferramentas RPO for ONTAP para VMware vSphere 10,2 e RPO quase zero ou recuperação de snapshot para ferramentas do ONTAP para VMware vSphere 10,3.
 
 
-| Meio não-HA | Não-HA e meio avançado 
-
-
-| Avançado pequeno | Não-HA e pequeno avançado 
-
-
-| Meio avançado | Não-HA e meio avançado 
-
-
-| HA pequena | HA pequena 
-
-
-| HA médio | HA médio 
-
-
-| HA grande | HA grande 
-|===
-
-NOTE: Atualizações das ferramentas do ONTAP para VMware vSphere 10,1 e 10,2 para 10,3 são suportadas. Atualizações diretas das ferramentas ONTAP 10,0 para 10,3 não são suportadas.
-
-*Antes de começar*
-
+.Antes de começar
 Para uma atualização sem HA, desligue a VM do ONTAP Tools e, para uma atualização de HA, desligue o primeiro nó antes de fazer as seguintes alterações nas configurações da máquina virtual (VM).
 
-* Adicione um disco rígido adicional de 100 GB a cada nó, pois os dados do serviço são armazenados localmente na VM.
-* Altere a CPU e a memória da VM desligada de acordo com o sabor da sua implementação. Ative o hot plugin para CPU e RAM.
-+
+Se você estiver atualizando a partir das ferramentas do ONTAP para VMware vSphere 10,2 ou 10,3, precisará concluir as etapas a seguir antes de prosseguir com a tarefa de atualização: * Adicione um disco rígido adicional de 100 GB a cada nó, pois os dados do serviço são armazenados localmente na VM. * Altere a CPU e a memória para a VM desligada de acordo com o sabor da sua implantação. Ative o hot plugin para CPU e RAM.
+
+E
+
 |===
-| Tipo de implantação do 10,3 | CPU (núcleo) por nó | Memória (GB) por nó | Espaço em disco (GB) por nó | CPU total (núcleo) | Memória (GB) | Espaço total em disco (GB) 
+| Tipo de implantação | CPU (núcleo) por nó | Memória (GB) por nó | Espaço em disco (GB) por nó | CPU total (núcleo) | Memória (GB) | Espaço total em disco (GB) 
 
 
 | Não-HA pequeno | 9 | 18 | 350 | 9 | 18 | 350 
@@ -69,12 +46,10 @@ Para uma atualização sem HA, desligue a VM do ONTAP Tools e, para uma atualiza
 |===
 * LIGUE a VM depois que as alterações forem feitas e aguarde que os serviços cheguem ao estado em execução.
 * Em caso de implantação de HA, faça as alterações de recursos, ative o hot plugin para CPU e RAM e adicione discos rígidos de 100 GB para o segundo e terceiro nó também. Não há necessidade de reinicializar esses nós.
-* Se o dispositivo foi implantado como um caminho local (implantação fácil) com as ferramentas 10,1 ou 10,2 do ONTAP, você precisa fazer um snapshot do quiesce antes de atualizar.
+* Se o dispositivo foi implantado como um caminho local (implantação fácil) com as ferramentas do ONTAP 10,2, você precisa fazer um snapshot do quiesce antes de atualizar.
 
 
-Se você estiver atualizando das ferramentas do ONTAP para VMware vSphere 10,0 para 10,1, precisará concluir as etapas a seguir antes de prosseguir com a tarefa de atualização:
-
-*Ativar diagnóstico*
+Se você estiver atualizando das ferramentas do ONTAP para VMware vSphere 10,0 para 10,1, precisará concluir as etapas a seguir antes de prosseguir com a tarefa de atualização: *Ativar diagnósticos*
 
 . No vCenter Server, abra um console para as ferramentas do ONTAP.
 . Inicie sessão como utilizador de manutenção.
@@ -143,7 +118,7 @@ Será criado um novo HDD. O provisionador de storage dinâmico usa esse HDD para
 
 
 
-Depois de atualizar para as ferramentas do ONTAP para o VMware vSphere 10,3, você pode:
+Depois de atualizar para as ferramentas do ONTAP para o VMware vSphere 10,4, você pode:
 
 * Desative os serviços da interface de usuário do gerenciador
 * Passar de uma configuração que não seja HA para uma configuração HA
@@ -151,9 +126,8 @@ Depois de atualizar para as ferramentas do ONTAP para o VMware vSphere 10,3, voc
 * No caso de uma atualização que não seja de HA, reinicie a VM das ferramentas do ONTAP para refletir as alterações. No caso de uma atualização de HA, reinicie o primeiro nó para refletir as alterações no nó.
 
 
-*Depois de terminar*
-
-Depois de atualizar de versões anteriores das ferramentas do ONTAP para o VMware vSphere para o 10,3, volte a digitalizar os adaptadores SRA para verificar se os detalhes estão atualizados na página adaptadores de replicação de armazenamento de recuperação de site do VMware Live.
+.O que vem a seguir
+Depois de atualizar de versões anteriores das ferramentas do ONTAP para o VMware vSphere para o 10,4, volte a digitalizar os adaptadores SRA para verificar se os detalhes estão atualizados na página adaptadores de replicação de armazenamento de recuperação de site do VMware Live.
 
 Depois de atualizar com êxito, exclua os volumes Trident do ONTAP manualmente usando o seguinte procedimento:
 
@@ -175,6 +149,5 @@ sudo python3 /home/maint/scripts/ontap_cleanup.py
 
 Isso exclui todos os volumes do Trident no ONTAP usados nas ferramentas do ONTAP para VMware vSphere 10,1/10,2.
 
-*Informações relacionadas*
-
-link:../migrate/migrate-to-latest-ontaptools.html["Migrar das ferramentas do ONTAP para o VMware vSphere 9.x para o 10,3"]
+.Informações relacionadas
+link:../migrate/migrate-to-latest-ontaptools.html["Migrar das ferramentas do ONTAP para o VMware vSphere 9.x para o 10,4"]

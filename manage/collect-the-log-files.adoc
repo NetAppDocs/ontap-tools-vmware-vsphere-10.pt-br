@@ -33,7 +33,7 @@ Baixe o arquivo tar.gz e envie-o para o suporte técnico.
 Siga as etapas abaixo para gerar o pacote de log usando a interface do usuário do cliente vCenter:
 
 .Passos
-. Faça login no cliente vSphere usando `\https://<vcenterip>/<ui>`
+. Faça login no cliente vSphere.
 . Na página inicial do vSphere Client, vá para *Support* > *Log bundle* > *Generate*.
 . Forneça o rótulo do pacote de log e gere o pacote de log. Você pode ver a opção de download quando os arquivos são gerados. O download pode levar algum tempo.
 

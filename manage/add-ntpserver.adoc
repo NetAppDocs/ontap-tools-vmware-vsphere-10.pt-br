@@ -1,0 +1,24 @@
+---
+permalink: manage/add-ntpserver.html 
+sidebar: sidebar 
+keywords:  
+summary: Digite os detalhes do servidor NTP para sincronizar os relógios de hora do utilitário ONTAP Tools. 
+---
+= Adicione servidores NTP
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Insira os detalhes do servidor NTP para sincronizar os relógios de hora do utilitário ONTAP Tools.
+
+.Passos
+. Inicie o Gerenciador de ferramentas do ONTAP a partir de um navegador da Web: `\https://<ONTAPtoolsIP>:8443/virtualization/ui/`
+. Faça login com as ferramentas do ONTAP para as credenciais de administrador do VMware vSphere fornecidas durante a implantação.
+. Selecione a opção *Settings* > *NTP Server* > *Edit*.
+. Insira os endereços FQDN (nome de domínio totalmente qualificado), IPv4 ou IPv6 separados por vírgulas.
++
+Atualize para o ecrã para ver os valores atualizados.
+
+

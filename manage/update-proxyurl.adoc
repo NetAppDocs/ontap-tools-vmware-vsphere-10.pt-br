@@ -14,9 +14,12 @@ summary: 'Você pode coletar arquivos de log para as ferramentas do ONTAP para V
 Atualize o URL do proxy AutoSupport para garantir o funcionamento adequado do recurso AutoSupport em cenários em que um servidor proxy é usado para controle de acesso à rede ou medidas de segurança. Ele permite que os dados do AutoSupport sejam roteados através do proxy apropriado, permitindo transmissão e conformidade seguras.
 
 .Passos
-. No vCenter Server, abra o console de manutenção.
-. Inicie sessão como utilizador de manutenção.
-. Introduza 1 para selecionar *Configuração da aplicação*.
-. Digite 4 para selecionar *Atualizar o URL do proxy AutoSupport*.
-. Insira o URL do proxy.
+. Inicie o Gerenciador de ferramentas do ONTAP a partir de um navegador da Web: `\https://<ONTAPtoolsIP>:8443/virtualization/ui/`
+. Faça login com as ferramentas do ONTAP para as credenciais de administrador do VMware vSphere fornecidas durante a implantação.
+. Selecione *Configurações* na barra lateral.
+. Selecione a opção *Settings* > *Telemetry* > *Edit*.
+. Insira um *URL Proxy* válido e salve as alterações.
++
+Se você desabilitar o AutoSupport, o URL do proxy também será desativado.
+
 

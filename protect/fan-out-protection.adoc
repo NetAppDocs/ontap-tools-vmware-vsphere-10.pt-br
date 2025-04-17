@@ -1,0 +1,45 @@
+---
+permalink: protect/fan-out-protection.html 
+sidebar: sidebar 
+keywords:  
+summary: Em uma proteção de fan-out, o grupo de consistência é protegido duas vezes com relação síncrona no primeiro cluster do ONTAP de destino e com relação assíncrona no segundo cluster do ONTAP de destino. 
+---
+= Proteção contra saída da ventoinha
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Em uma proteção de fan-out, o grupo de consistência é protegido duas vezes com relação síncrona no primeiro cluster do ONTAP de destino e com relação assíncrona no segundo cluster do ONTAP de destino. Os fluxos de trabalho de proteção de sincronização ativa para criar, editar e excluir SnapMirror mantêm a proteção síncrona. Failover do SRM e reproteger os fluxos de trabalho mantêm a proteção assíncrona.
+
+Para estabelecer uma proteção contra fan-out, você precisa identificar três clusters de site e SVMs.
+
+Exemplo:
+
+|===
+
+
+| Se | então 
+
+
+ a| 
+* O grupo de consistência de origem está nos clusters C1 e svm1
+* O primeiro grupo de consistência de destino está no cluster C2 e SVM svm2 e.
+* O segundo grupo de consistência de destino está no cluster C3 e SVM svm3
+
+ a| 
+* O peering de cluster no cluster ONTAP de origem será (C1, C2) e (C1, C3).
+* O peering de cluster no primeiro cluster ONTAP de destino será (C2, C1) e (C2, C3) e.
+* O peering de cluster no segundo cluster ONTAP de destino será (C3, C1) e (C3, C2).
+* O peering SVM na SVM de origem será (svm1, svm2) e (svm1, svm3).
+* O peering SVM no primeiro SVM de destino será (svm2, svm1) e (svm2, svm3) e.
+* O peering SVM no segundo svm de destino será (svm3, svm1) e (svm3, svm2).
+
+
+|===
+*Passos*
+
+. Crie um novo armazenamento de dados de suporte de local. Consulte https://docs.vmware.com/en/Site-Recovery-Manager/8.7/com.vmware.srm.admin.doc/GUID-5D4C9F38-37CA-47D1-B43A-A1FED48A05A3.html["Selecione um armazenamento de dados do marcador de posição"]
+. Adicionar datastore à proteção do cluster do host link:../manage/edit-hostcluster-protection.html["Modificar cluster de host protegido"]. Você precisa adicionar tipos de diretiva assíncrona e síncrona.
+

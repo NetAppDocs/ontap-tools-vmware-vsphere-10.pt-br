@@ -26,7 +26,7 @@ Excluir tarefa de armazenamento de dados das ferramentas do ONTAP para VMware vS
 Siga as etapas abaixo para excluir o armazenamento de dados NFS, VMFS ou vVOL de ferramentas do ONTAP do vCenter Server:
 
 .Passos
-. Faça login no cliente vSphere usando `\https://<vcenterip>/<ui>`
+. Faça login no cliente vSphere.
 . Clique com o botão direito do Mouse em um sistema host ou em um cluster de host ou em um data center e selecione *NetApp ONTAP Tools* > *Delete datastore*.
 +
 

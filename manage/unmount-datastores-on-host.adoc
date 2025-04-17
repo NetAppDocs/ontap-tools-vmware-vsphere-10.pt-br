@@ -14,7 +14,7 @@ summary: A ação desmontar datastore desmonta um datastore NFS ou VMFS dos host
 A ação desmontar datastore desmonta um datastore NFS ou VMFS dos hosts ESXi. A ação desmontar datastore está habilitada para armazenamentos de dados NFS e VMFS que são descobertos ou gerenciados pelas ferramentas do ONTAP para VMware vSphere.
 
 .Passos
-. Faça login no cliente vSphere usando `\https://<vcenterip>/<ui>`
+. Faça login no cliente vSphere.
 . Clique com o botão direito em um objeto de armazenamento de dados NFS ou VMFS e selecione *Unmount datastore*.
 +
 Uma caixa de diálogo é aberta e lista os hosts ESXi nos quais o datastore está montado. Quando a operação é executada em um datastore protegido, uma mensagem de aviso é exibida na tela.

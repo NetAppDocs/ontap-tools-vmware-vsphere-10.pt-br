@@ -14,7 +14,7 @@ summary: A ação Excluir datastore exclui o datastore quando não há vVols no 
 A ação Excluir datastore exclui o datastore quando não há vVols no datastore selecionado.
 
 
-NOTE: A operação do armazenamento de dados do vVols não é compatível com o armazenamento de dados vVols baseado no ASA R2.
+NOTE: A operação do armazenamento de dados do vVols não é compatível com o armazenamento de dados vVols baseado no sistema ASA R2.
 
 .Passos
 . Na página inicial do vSphere Client, selecione *hosts and clusters*.

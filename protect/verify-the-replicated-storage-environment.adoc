@@ -13,8 +13,7 @@ summary: 'Você deve verificar se o site protegido e o site de recuperação est
 [role="lead"]
 Você deve verificar se o site protegido e o site de recuperação foram emparelhados com êxito após a configuração do adaptador de replicação de armazenamento (SRA). O sistema de storage replicado deve ser detetável tanto pelo local protegido quanto pelo local de recuperação.
 
-*Antes de começar*
-
+.Antes de começar
 * Você deve ter configurado seu sistema de storage.
 * Você deve ter emparelhado o site protegido e o site de recuperação usando o gerenciador de array do VMware Live Site Recovery.
 * Você deve ter habilitado a licença FlexClone e a licença SnapMirror antes de executar a operação de failover de teste e a operação de failover para SRA.
