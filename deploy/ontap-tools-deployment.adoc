@@ -80,6 +80,8 @@ NOTE: Nunca armazene as ferramentas do ONTAP para a máquina virtual VMware vSph
 
 NOTE: O Pure IPv6 não é compatível. O modo misto é suportado com VLAN contendo endereços IPv6 e IPv4.
 
+** O endereço IP das ferramentas do ONTAP é a principal interface para comunicação com as ferramentas do ONTAP
+** O IPv4 é o componente de endereço IP da configuração do nó, que pode ser utilizado para habilitar o acesso de shell de diagnóstico e SSH no nó para fins de depuração e manutenção.
 
 
 . Ao usar a versão do vCenter Server 8.0.3, na janela *Personalizar hardware*, ative as opções *hot add* da CPU e *Memory hot plug* para permitir a funcionalidade HA.

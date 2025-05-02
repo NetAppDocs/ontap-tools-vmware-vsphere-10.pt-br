@@ -15,11 +15,9 @@ A adição de um back-end de storage permite a integração de um cluster do ONT
 
 *Sobre esta tarefa*
 
-Adicionar back-end de storage a um cluster ONTAP. Para configurações de alocação a vários clientes em que o vCenter atua como locatário do SVM associado, use o Gerenciador de ferramentas do ONTAP para adicionar o cluster. Depois de adicionar o back-end de storage ao cluster global, você deve associar o cluster aos locatários do vCenter desejados. O locatário do vCenter deve integrar as máquinas virtuais de storage (SVMs) desejadas. Isso permite que um usuário do SVM provisione o vVols datastore. É possível adicionar storage ao vCenter usando o SVM.
+No caso de configurações de alocação a vários clientes em que o vCenter atua como locatário de um SVM associado, use o Gerenciador de ferramentas do ONTAP para adicionar o cluster. Associe o back-end de storage ao vCenter Server para mapeá-lo globalmente para a instância integrada do vCenter Server. O locatário do vCenter deve integrar as máquinas virtuais de storage (SVMs) desejadas. Isso permite que um usuário do SVM provisione o vVols datastore. É possível adicionar storage ao vCenter usando o SVM.
 
-Para adicionar um back-end de storage a um cluster local, use o plug-in de ferramentas do ONTAP no servidor vCenter.
-
-link:../concepts/ontap-tools-concepts-terms.html["Principais conceitos e termos"] fornece mais informações sobre os termos usados nesta seção.
+Adicione os back-ends de storage local com credenciais de cluster ou SVM usando a interface de usuário das ferramentas do ONTAP. Esses backends de armazenamento estão limitados a um único vCenter. Ao usar credenciais de cluster localmente, os SVMs associados mapeiam automaticamente para o vCenter para gerenciar vVols ou VMFS. Para o gerenciamento do VMFS, incluindo SRA, as ferramentas do ONTAP são compatíveis com credenciais SVM sem a necessidade de um cluster global.
 
 [role="tabbed-block"]
 ====
