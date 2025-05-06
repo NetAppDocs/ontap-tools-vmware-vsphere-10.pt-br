@@ -51,13 +51,14 @@ NOTE: Não inicie a migração se o failover tiver sido concluído, mas a reprot
 .. Vá para a seção *Storage Replication Adapter*.
 .. No menu de elipses, selecione *Reset Configuration*.
 .. No menu de elipses, selecione *Delete*.
+
+
+. Execute estas etapas nos locais de proteção e recuperação.
 +
-Execute estas etapas nos locais de proteção e recuperação.
+.. Instale as ferramentas do ONTAP para o adaptador VMware vSphere 10,4 SRA usando as etapas em link:../protect/configure-on-srm-appliance.html["Configure o SRA no VMware Live Site Recovery Appliance"].
+.. Na página de interface de usuário do VMware Live Site Recovery, execute as operações *Discover Arrays* e *Discover Devices* e confirme se os dispositivos são exibidos como antes da migração.
 
 
-
-. Instale as ferramentas do ONTAP para o adaptador VMware vSphere 10,4 SRA usando as etapas em link:../protect/configure-on-srm-appliance.html["Configure o SRA no VMware Live Site Recovery Appliance"].
-. Na página de interface de usuário do VMware Live Site Recovery, execute as operações *Discover Arrays* e *Discover Devices* e confirme se os dispositivos são exibidos como antes da migração.
 
 
 
@@ -73,7 +74,13 @@ iptables -I INPUT 1 -p tcp --dport 1527 -j ACCEPT
 . Implantar as ferramentas OVA para ONTAP para VMware vSphere 10,4.
 . Adicione a instância do vCenter Server que você deseja migrar para as ferramentas do ONTAP para a versão do VMware vSphere 10,4. link:../configure/add-vcenter.html["Adicione uma instância do vCenter Server"]Consulte para obter mais informações.
 . Back-end de storage integrado localmente a partir das APIs do servidor vCenter para o plug-in de ferramentas do ONTAP.
-. Emita a seguinte API do Swagger ou no Postman para migrar:
+. Emita a seguinte API do Swagger ou no Postman para migrar.
++
+Curl -X POST https://xx.xx.xx.xx:8443/virtualization/api/v1/vcenters/{vcguid}/migration[]
+
++
+Você pode acessar o Swagger através deste URL: 'https://$FQDN_IP_PORT/, por exemplo https://10.61.25.33:8443/[]: .
+
 +
 []
 ====
@@ -95,7 +102,7 @@ Assíncrono
 
 *Curl exemplo*
 
-/api/v1/vcenters/ /vcguid/migration-jobs
+Curl -X POST https://xx.xx.xx.xx:8443/virtualization/api/v1/vcenters/{vcguid}/migration-jobs[]
 
 * Exemplo de entrada JSON*
 
@@ -114,11 +121,11 @@ Um objeto de tarefa é retornado. Você deve salvar o identificador do trabalho 
 [id]: 123, "migration_id": "d50073ce-35b4-4c51-9d2e-4ce66f802c35", "status": "running"
 
 ====
-. Use o seguinte URI para verificar o status:
+. Use o seguinte URI no Swagger para verificar o status:
 +
 [listing]
 ----
-https://xx.xx.xx.xxx:8443/virtualization/api/jobmanager/v2/jobs/<JobID>?includeSubJobsAndTasks=true
+curl https://xx.xx.xx.xxx:8443/virtualization/api/jobmanager/v2/jobs/<JobID>?includeSubJobsAndTasks=true
 ----
 +
 Depois de concluir o trabalho, reveja o relatório de migração. Este relatório está incluído nos dados do trabalho e pode ser acedido a partir da resposta do trabalho.
@@ -132,8 +139,8 @@ Não elimine o fornecedor VASA.
 +
 Depois que o antigo provedor VASA é interrompido, o vCenter Server faz failover para as ferramentas do ONTAP para VMware vSphere. Todos os armazenamentos de dados e VMs ficam acessíveis e são servidos a partir das ferramentas do ONTAP para VMware vSphere.
 
-. Os armazenamentos de dados NFS e VMFS migrados das ferramentas do ONTAP para o VMware vSphere 9.xx são visíveis nas ferramentas do ONTAP para o VMware vSphere 10,4 somente após a ativação do job de descoberta do datastore, o que pode levar até 30 minutos para ser concluído. Verifique se os armazenamentos de dados estão visíveis na página Visão geral das ferramentas do ONTAP para a página de interface de usuário do plug-in VMware vSphere.
-. Execute a migração de patches usando a seguinte API:
+. Os armazenamentos de dados NFS e VMFS migrados das ferramentas do ONTAP para o VMware vSphere 9.xx são visíveis nas ferramentas do ONTAP para o VMware vSphere 10,4 somente após a ativação do job de descoberta do datastore, o que pode levar até 30 minutos para ser concluído. Verifique se os armazenamentos de dados estão visíveis na página de visão geral das ferramentas do ONTAP para a página de interface de usuário do plug-in VMware vSphere.
+. Execute a migração de patch usando a seguinte API no Swagger ou no Postman:
 +
 []
 ====
@@ -155,7 +162,7 @@ Assíncrono
 
 *Curl exemplo*
 
-PATCH "/API/v1/vcenters/56d373bd-4163-44f9-a872-9adabb008ca9/migration-jobs/84dr73bd-9173-65R7-w345-8ufdbb887d43
+Curl -X PATCH  https://xx.xx.xx.xx:8443/virtualization/api/v1/vcenters/56d373bd-4163-44f9-a872-9adabb008ca9/migration-jobs/84dr73bd-9173-65r7-w345-8ufdbb887d43[]
 
 * Exemplo de entrada JSON*
 
@@ -180,7 +187,7 @@ Depois de executar a API de migração de patches, todas as VMs estão em confor
 .O que vem a seguir
 Após concluir a migração e o Registro das ferramentas do ONTAP 10,4 para o vCenter Server, siga estas etapas:
 
-* Atualize o certificado em todos os hosts.
+* Aguarde que *Discovery* seja concluído, os certificados serão atualizados automaticamente em todos os hosts.
 * Permita tempo suficiente antes de iniciar operações de datastore e máquina virtual. O período de espera necessário varia de acordo com o número de hosts, datastores e máquinas virtuais dentro da configuração. A falha na espera pode resultar em falhas operacionais intermitentes.
 
 

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: virtual volume datastores 
 summary: Quando você clica com o botão direito do Mouse no objeto datastore na visualização de objetos do vCenter, as ferramentas do ONTAP para ações compatíveis com o VMware vSphere são mostradas na seção plug-in. 
 ---
-= Expanda o armazenamento de dados vVols
+= Expanda armazenamentos de dados vVols
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -14,7 +14,7 @@ summary: Quando você clica com o botão direito do Mouse no objeto datastore na
 Quando você clica com o botão direito do Mouse no objeto datastore na visualização de objetos do vCenter, as ferramentas do ONTAP para ações compatíveis com o VMware vSphere são mostradas na seção plug-in. Ações específicas são ativadas dependendo do tipo de armazenamento de dados e do usuário atual Privileges.
 
 
-NOTE: A operação do armazenamento de dados Expand vVols não é aplicável ao armazenamento de dados vVols baseado no sistema ASA R2.
+NOTE: A operação do armazenamento de dados Expand vVols não é aplicável aos armazenamentos de dados vVols baseados no sistema ASA R2.
 
 .Passos
 . Na página inicial do vSphere Client, selecione *hosts and clusters*.

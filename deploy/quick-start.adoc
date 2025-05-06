@@ -13,7 +13,7 @@ summary: Os primeiros passos com as ferramentas do ONTAP para VMware vSphere inc
 [role="lead"]
 Os primeiros passos com as ferramentas do ONTAP para VMware vSphere incluem algumas etapas. Esse início rápido leva você pela configuração inicial das ferramentas do ONTAP para o VMware vSphere.
 
-Inicialmente, você implantará as ferramentas do ONTAP para o VMware vSphere como uma configuração de nó único de pequeno porte que fornece serviços essenciais para dar suporte a armazenamentos de dados NFS e VMFS. Se você precisar expandir sua configuração para usar o armazenamento de dados vVols e a alta disponibilidade (HA), você fará isso depois de concluir esse fluxo de trabalho. Para obter mais informações, consulte o link:../deploy/ha-workflow.html["Fluxo de trabalho DE IMPLANTAÇÃO DE HA"].
+Inicialmente, você implantará as ferramentas do ONTAP para o VMware vSphere como uma configuração de nó único de pequeno porte que fornece serviços essenciais para dar suporte a armazenamentos de dados NFS e VMFS. Se você precisar expandir sua configuração para usar armazenamentos de dados vVols e alta disponibilidade (HA), você fará isso depois de concluir esse fluxo de trabalho. Para obter mais informações, consulte o link:../deploy/ha-workflow.html["Fluxo de trabalho DE IMPLANTAÇÃO DE HA"].
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png["Um"] Planeje sua implantação
 [role="quick-margin-para"]

@@ -15,7 +15,7 @@ A adição de um back-end de storage permite a integração de um cluster do ONT
 
 *Sobre esta tarefa*
 
-No caso de configurações de alocação a vários clientes em que o vCenter atua como locatário de um SVM associado, use o Gerenciador de ferramentas do ONTAP para adicionar o cluster. Associe o back-end de storage ao vCenter Server para mapeá-lo globalmente para a instância integrada do vCenter Server. O locatário do vCenter deve integrar as máquinas virtuais de storage (SVMs) desejadas. Isso permite que um usuário do SVM provisione o vVols datastore. É possível adicionar storage ao vCenter usando o SVM.
+No caso de configurações de alocação a vários clientes em que o vCenter atua como locatário de um SVM associado, use o Gerenciador de ferramentas do ONTAP para adicionar o cluster. Associe o back-end de storage ao vCenter Server para mapeá-lo globalmente para a instância integrada do vCenter Server. O locatário do vCenter deve integrar as máquinas virtuais de storage (SVMs) desejadas. Isso permite que um usuário do SVM provisione armazenamentos de dados vVols. É possível adicionar storage ao vCenter usando o SVM.
 
 Adicione os back-ends de storage local com credenciais de cluster ou SVM usando a interface de usuário das ferramentas do ONTAP. Esses backends de armazenamento estão limitados a um único vCenter. Ao usar credenciais de cluster localmente, os SVMs associados mapeiam automaticamente para o vCenter para gerenciar vVols ou VMFS. Para o gerenciamento do VMFS, incluindo SRA, as ferramentas do ONTAP são compatíveis com credenciais SVM sem a necessidade de um cluster global.
 
@@ -41,7 +41,7 @@ NOTE: LIFs de gerenciamento de endereços IPv4 e IPv6 são compatíveis.
 .Usando a interface de usuário do cliente vSphere
 --
 
-NOTE: Ao configurar um back-end de storage por meio da interface de usuário do cliente vSphere, é importante observar que o armazenamento de dados vVols não oferece suporte à adição direta de um usuário SVM.
+NOTE: Ao configurar um back-end de storage por meio da interface de usuário do cliente vSphere, é importante observar que os datastores vVols não suportam a adição direta de um usuário SVM.
 
 . Faça login no cliente vSphere.
 . Na página atalhos, selecione *Ferramentas do NetApp ONTAP* na seção plug-ins.
