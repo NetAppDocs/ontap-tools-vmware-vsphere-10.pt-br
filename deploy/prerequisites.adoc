@@ -25,28 +25,22 @@ Você pode usar as ferramentas do ONTAP para VMware vSphere com o VMware vCenter
 ** 348 GB para instalações com provisionamento espesso
 
 
-* *Requisitos de dimensionamento do sistema anfitrião* a memória recomendada de acordo com o tamanho da implementação é como mostrado na tabela abaixo:
+* *Requisitos de dimensionamento do sistema anfitrião* a memória recomendada de acordo com o tamanho da implementação é como mostrado na tabela abaixo. Para implantar a alta disponibilidade (HA), você precisará de três vezes o tamanho do dispositivo especificado na tabela.
 
 
 |===
 
 
-| *Tipo de implantação* | *CPUs* | *Memória (GB)* | *Espaço em disco (GB) com espessura provisionada* 
+| *Tipo de implantação* | *CPUs por nó* | *Memória (GB) por nó* | *Espaço em disco (GB) de espessura provisionado por nó* 
 
 
-| Não-HA pequeno | 9 | 18 | 350 
+| Pequeno | 9 | 18 | 350 
 
 
-| Meio não-HA | 13 | 26 | 350 
+| Média | 13 | 26 | 350 
 
 
-| Ha pequena (cumulativa de três nós) | 27 | 54 | 1050 
-
-
-| Meio HA (cumulativo de três nós) | 39 | 78 | 1050 
-
-
-| Ha grande (cumulativo de três nós) | 51 | 102 | 1050 
+| OBSERVAÇÃO: A implantação grande é apenas para configuração de HA. | 17 | 34 | 350 
 |===
 
 NOTE: Quando o backup está habilitado, cada cluster de ferramentas do ONTAP precisa de mais 50GB MB de espaço no armazenamento de dados onde as VMs são implantadas. Portanto, o não-HA requer 400 GB e o HA requer 1100 GB de espaço no total.
