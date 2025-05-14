@@ -35,7 +35,7 @@ Começando com as ferramentas do ONTAP para VMware vSphere 10,3, você pode cria
 NOTE: O sistema ASA R2 dá suporte aos protocolos iSCSI e FC para vVols.
 
 . Selecione a VM de armazenamento onde você deseja criar o datastore.
-. Selecione uma política de exportação personalizada para o protocolo NFS ou um nome de grupo de iniciadores personalizado para os protocolos iSCSI e FC nas *Opções avançadas*.
+. Em opções avançadas, você pode selecionar *Política de exportação personalizada* para o protocolo NFS ou um nome de grupo de iniciadores personalizados para os protocolos iSCSI e FC, mas não é recomendado. Se você usar essa opção, certifique-se de executar a descoberta no vCenter para todos os objetos.
 +
 
 NOTE: No ASA R2, tipo de sistema de storage SVM, unidades de storage (LUN/namespace) não são criadas, pois o armazenamento de dados é apenas um contêiner lógico.
@@ -62,7 +62,7 @@ Um armazenamento de dados NFS (Network File System) do VMware usa o protocolo NF
 NOTE: A autenticação Kerberos só está disponível quando o protocolo NFS 4,1 está selecionado.
 
 . Selecione *Plataforma* e *Storage VM* no painel *Storage*.
-. Escolha *Política de exportação personalizada* em opções avançadas, se necessário, mas não é recomendado. Se usado, certifique-se de executar a descoberta no vCenter para todos os objetos.
+. Você pode selecionar uma política de exportação personalizada em opções avançadas, mas não é recomendado. Se usado, certifique-se de executar a descoberta no vCenter para todos os objetos.
 +
 
 NOTE: Você não pode criar um armazenamento de dados NFS usando a política de volume raiz/padrão do SVM.

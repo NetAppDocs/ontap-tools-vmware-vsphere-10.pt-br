@@ -19,7 +19,7 @@ Você pode alterar a senha do administrador usando o Gerenciador de ferramentas 
 . Selecione *Edit Appliance Settings* (Editar definições do dispositivo) na secção Overview (Descrição geral).
 . Na seção *Serviços*, você pode habilitar serviços opcionais como o provedor VASA, a importação de configuração vVols e a recuperação de desastres (SRA) de acordo com suas necessidades.
 +
-Ao ativar os serviços pela primeira vez, você deve criar as credenciais do provedor VASA e do SRA. Eles são usados para Registrar ou habilitar o provedor VASA e os serviços SRA no vCenter Server.
+Ao ativar os serviços pela primeira vez, você deve criar as credenciais do provedor VASA e do SRA. Eles são usados para Registrar ou habilitar o provedor VASA e os serviços SRA no vCenter Server. O nome de usuário só pode conter letras, números e sublinhados. O comprimento da palavra-passe deve ter entre 8 e 256 carateres.
 
 +
 

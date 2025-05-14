@@ -667,7 +667,6 @@
   <block id="6d710894cd1d83594944bdb2f558f3dd" category="paragraph">Você pode usar a opção 'Gerenciar colunas' para ocultar ou mostrar diferentes colunas.</block>
   <block id="135dda3ac3096b9bd31ceb04b513c216" category="section-title">Etapas comuns de migração</block>
   <block id="a556515aafd07bfe4c2dfa6abbaa4ccb" category="section-title">Etapas de migração do SRA</block>
-  <block id="de7cd16aa682868ad900edd519b06059" category="list-text">Vá para a página de gerenciamento de configuração do VMware Live Site Recovery</block>
   <block id="77efba168b5a2059c2d20a1e2673f5d1" category="paragraph">Execute estas etapas nos locais de proteção e recuperação.</block>
   <block id="a8534b379980a6bb97915d2890ad3522" category="inline-link-macro">Adicione uma instância do vCenter Server</block>
   <block id="4b2e39d58448cd6246edaab6e2789245" category="paragraph">*Método HTTP e endpoint*</block>
@@ -1467,15 +1466,10 @@
   <block id="6a56526090ecb77854d07be849799242" category="paragraph">Configurações MPIO definem os caminhos preferidos para sistemas de armazenamento NetApp. Eles determinam quais dos caminhos disponíveis são otimizados (em vez de caminhos não otimizados que atravessam o cabo de interconexão) e definem o caminho preferido para um desses caminhos.</block>
   <block id="89f7633ad6a1e114cebf9902aa42fd5c" category="paragraph">O plug-in NFS vStorage API for Array Integration (NFS VAAI) é um componente de software que integra os storage arrays VMware vSphere e NFS. Instale o plug-in NFS VAAI usando as ferramentas do ONTAP para VMware vSphere a fim de aproveitar os recursos avançados do seu storage array NFS para descarregar determinadas operações relacionadas ao storage dos hosts ESXi para o próprio storage array.</block>
   <block id="f9fcb823ee6471ecceb63c9625d2c8fc" category="list-text">Baixe o<block ref="e6fae45561f1786d6f3534aff65b3377" category="inline-link-rx"></block> pacote de instalação.</block>
-  <block id="e27bb3e78ef59cd560e56215a182f3b3" category="list-text">Verifique se você tem o patch mais recente do host ESXi 7.0U3 ou versões posteriores e o ONTAP 9.14.1 ou versões posteriores.</block>
   <block id="a585389d21dd9fbdbdc15072bd5d7010" category="list-text">Montar um armazenamento de dados NFS.</block>
-  <block id="3efe2db5c0b83bc2774d6061359381ed" category="list-text">Defina os valores das configurações do host DataMover.HardwareAcceleratedMove, DataMover.HardwareAcceleratedInit e VMFS3.HardwareAcceleratedLocking como "1". Para definir esses valores automaticamente, aplique as configurações recomendadas do host EXSi. <block ref="a13757a488cc72436349db8983ce6613" category="inline-link-macro-rx"></block>Consulte a .</block>
-  <block id="957daa20d20cf15a7839d7e44ecdb2ab" category="list-text">Ative a opção vstorage na máquina virtual de armazenamento (SVM) usando o comando vserver nfs MODIY -vserver vserver_name -vstorage enabled.</block>
-  <block id="d5676260c3a3d58c4d9ebd79f3558bac" category="list-text">Certifique-se de ter as versões de patch mais recentes do vSphere 7.0U3.</block>
   <block id="0e57b7b27807ae2427ad1a654eca765e" category="list-text">Selecione *Settings* &gt; *NFS VAAI Tools*.</block>
   <block id="75650b415bb2c723c71117c59992e489" category="list-text">Selecione *Instalar no host ESXI*, selecione o host ESXi no qual você deseja instalar o plug-in NFS VAAI e, em seguida, selecione *Instalar*.</block>
   <block id="681ca77b2652713f7e6d867f281733ec" category="paragraph">Somente os hosts ESXi elegíveis para a instalação do plug-in são exibidos. Você pode monitorar o progresso da instalação na seção tarefas recentes do vSphere Web Client.</block>
-  <block id="4969bf5d68bb071342161a9b29a23f5c" category="list-text">Você deve reiniciar manualmente o host ESXi depois que a instalação terminar.</block>
   <block id="d15e664257aa2207434ef9543a593a8d" category="paragraph">Quando o administrador do VMware reinicia o host ESXi, as ferramentas do ONTAP para VMware vSphere detectam e ativam automaticamente o plug-in NFS VAAI.</block>
   <block id="58eaebf972358f1cf03d386a4ade1a0f" category="paragraph-title">O que se segue?</block>
   <block id="90ba1578c2c367413063e7228d8586b5" category="paragraph">Depois de instalar o plug-in NFS VAAI e reiniciar seu host ESXi, você precisa configurar as políticas de exportação NFS corretas para a descarga de cópia VAAI. Ao configurar o VAAI em um ambiente NFS, configure as regras de política de exportação com os seguintes requisitos em mente:</block>
@@ -1564,7 +1558,6 @@
   <block id="dc2afa03f9d9070dcc18808c51d3b403" category="sidebar">Gerenciar as ferramentas do ONTAP para VMware vSphere</block>
   <block id="dd018bb6638d4453bb4643baac23fad3" category="sidebar">Atualize as ferramentas do ONTAP para o VMware vSphere</block>
   <block id="8ce287b63bedf11bff1339b770533de1" category="paragraph">Você pode Registrar o provedor VASA com uma instância do vCenter Server usando as ferramentas do ONTAP para VMware vSphere. A seção Configurações do provedor VASA exibe o status de Registro do provedor VASA para o vCenter Server selecionado.</block>
-  <block id="30219dec23be3c12e0dc980cd1686912" category="list-text">Insira um nome para o provedor VASA e forneça ferramentas ONTAP para credenciais de usuário do aplicativo VMware vSphere e selecione *Registrar*.</block>
   <block id="9d097d858bfbec2ad77c2f37fa3f2b14" category="list-text">Depois de um registo e atualização de página bem-sucedidos, o estado, o nome e a versão do fornecedor VASA registado são apresentados. Após o registo, a ação de cancelamento de registo é ativada.</block>
   <block id="9bb143d7a2036a80e106dc066c6b01f2" category="cell">Esta é a porta de passagem para a comunicação de entrada para o serviço do fornecedor VASA. O certificado auto-assinado do Fornecedor VASA e o certificado CA personalizado estão alojados nesta porta.</block>
   <block id="131790b08b90f216c8731a6e1a071001" category="cell">Esta porta é uma porta de serviço usada internamente para o serviço do fornecedor VASA.</block>
@@ -1594,7 +1587,6 @@
   <block id="949ade5949e752c9b4f748b78767cb9b" category="admonition">A maioria das opções de entrada são pré-preenchidas com os detalhes da rede do nó 1 para facilitar o fluxo de trabalho. No entanto, você pode editar os dados de entrada antes de navegar para a página final do assistente. Você pode inserir detalhes de endereço IPv6 para os outros dois nós somente quando o endereço IPv6 estiver ativado no primeiro nó.</block>
   <block id="5a3dd06e1dba58a23c8b8e8cc1b07e40" category="list-text">Revise os detalhes na seção *Resumo* e *Salvar* as alterações.</block>
   <block id="4625cf8c2cfd4d7299bf041ace164a9e" category="doc">Habilite as ferramentas do ONTAP para os serviços do VMware vSphere</block>
-  <block id="8c0d7661d66e379665cc68d77a595468" category="paragraph">Ao ativar os serviços pela primeira vez, você deve criar as credenciais do provedor VASA e do SRA. Eles são usados para Registrar ou habilitar o provedor VASA e os serviços SRA no vCenter Server.</block>
   <block id="7e436228231add180554f1acd06b74fc" category="admonition">Antes de desativar quaisquer serviços opcionais, certifique-se de que as ferramentas vCenter Servers gerenciados pelo ONTAP não os usem.</block>
   <block id="ef1116c9ce2e3567875a69b012a5c5d8" category="list-text">A opção Mount datastore é desativada quando o cluster de host é protegido com configurações uniformes.</block>
   <block id="f234e66a493b1542c97d72433c0faca6" category="paragraph">As ferramentas do ONTAP para VMware vSphere mostram a visualização lateral do storage do ONTAP dos datastores e seus volumes na guia configure.</block>
@@ -1961,7 +1953,6 @@
   <block id="1870a2aa0cd0290ddebdd4f60c121814" category="list-text">Insira as informações *nome do datastore* e *Protocolo*.</block>
   <block id="44a6b64ae3a7fef2f349f72cf3e32eb2" category="admonition">O sistema ASA R2 dá suporte aos protocolos iSCSI e FC para vVols.</block>
   <block id="8dde1f10223f65a679d998e569d238c3" category="list-text">Selecione a VM de armazenamento onde você deseja criar o datastore.</block>
-  <block id="80d67086677891099603cd75cd0a26e8" category="list-text">Selecione uma política de exportação personalizada para o protocolo NFS ou um nome de grupo de iniciadores personalizado para os protocolos iSCSI e FC nas *Opções avançadas*.</block>
   <block id="fd81895c9b4eb40921c7e241c091a1cd" category="admonition">No ASA R2, tipo de sistema de storage SVM, unidades de storage (LUN/namespace) não são criadas, pois o armazenamento de dados é apenas um contêiner lógico.</block>
   <block id="e31f7e9745380863f95d73e48e2fabbf" category="list-text">No painel *atributos de armazenamento*, você pode criar novos volumes ou usar os volumes existentes. No entanto, você não pode combinar esses dois tipos de volumes para criar um datastore vVols.</block>
   <block id="39355798de4906f96b13a31fd76a15e6" category="paragraph">Ao criar um novo volume, você pode ativar a QoS no datastore. Por padrão, um volume é criado para cada solicitação criada pelo LUN. Esta etapa não se aplica aos armazenamentos de dados vVols que usam os sistemas de storage ASA R2.</block>
@@ -1971,7 +1962,6 @@
   <block id="002da57ee8bba82828c8058c7d6cfecf" category="list-text">Insira o nome, o tamanho e as informações do protocolo do datastore no painel *Nome e protocolo*. Selecione *datastore cluster* e *Kerberos Authentication* nas opções avançadas.</block>
   <block id="8d4768d2ffaf314b3ea87a21a27f7ec4" category="admonition">A autenticação Kerberos só está disponível quando o protocolo NFS 4,1 está selecionado.</block>
   <block id="7b2c27e8d2aac8a15e90a619cd860d4d" category="list-text">Selecione *Plataforma* e *Storage VM* no painel *Storage*.</block>
-  <block id="b48e3fbf26333d26d1456ba93f1a6c8f" category="list-text">Escolha *Política de exportação personalizada* em opções avançadas, se necessário, mas não é recomendado. Se usado, certifique-se de executar a descoberta no vCenter para todos os objetos.</block>
   <block id="97e5c74d2bd0f78816caf0c5c9036a82" category="admonition">Você não pode criar um armazenamento de dados NFS usando a política de volume raiz/padrão do SVM.</block>
   <block id="42d1ce422f23ede57a5c2e13f8855890" category="list-text">Nas opções avançadas, o botão de alternância *assimétrico* fica visível apenas se o desempenho ou a capacidade estiver selecionado na lista suspensa da plataforma.</block>
   <block id="fa6c3148403311b0d64dfc44a5925b3a" category="list-text">Quando você escolhe a opção *any* no menu suspenso da plataforma, você pode ver os SVMs que fazem parte do vCenter, independentemente da plataforma ou do sinalizador assimétrico.</block>
@@ -2184,7 +2174,6 @@
   <block id="0c72f5748e7c096b829fa8c13bdb6b7f" category="list-text">O IPv4 é o componente de endereço IP da configuração do nó, que pode ser utilizado para habilitar o acesso de shell de diagnóstico e SSH no nó para fins de depuração e manutenção.</block>
   <block id="b2594cd127874498d2bbfa55ff19c5f5" category="cell">Endereço IP virtual das ferramentas ONTAP para comunicação interna</block>
   <block id="a9919517205886b598c13e9032a09059" category="paragraph">Durante a migração de dados de storage, os back-ends de storage são integrados manualmente usando APIS REST. A migração de dados do provedor VASA envolve exportar dados do banco de dados Derby existente e importá-los para o banco de dados MongoDB.</block>
-  <block id="9060074cf56d9aadb36767f42ea21b34" category="admonition">Depois de migrar das ferramentas do ONTAP para o VMware vSphere 9.x para o 10,4, os armazenamentos de dados vVols que usam o protocolo NVMe/FC tornam-se não operacionais porque o ONTAP Tools 10,4 oferece suporte ao protocolo NVMe-of somente com datastores VMFS.</block>
   <block id="38376c135168fabdcdde30ebd8337b3c" category="paragraph">Você pode migrar das ferramentas do ONTAP para as versões do VMware vSphere 9.12D1, 9.13D2 e 9.13P2 para as ferramentas do ONTAP para o VMware vSphere 10,4.</block>
   <block id="8b8b53606264e9f2f6b3466d202a79e7" category="admonition">Você deve fazer backup da implantação de suas ferramentas atuais do ONTAP antes de atualizar para as versões de patch.</block>
   <block id="bf24d37a98e4819aab4f021ae207e4a2" category="list-text">Adicione a instância do vCenter Server que você deseja migrar para as ferramentas do ONTAP para a versão do VMware vSphere 10,4. <block ref="fbc3413db4202f1fe331f16af6b38f13" category="inline-link-macro-rx"></block>Consulte para obter mais informações.</block>
@@ -2192,7 +2181,6 @@
   <block id="46ec37b71ccf8c993dcbf7cb78fe2af7" category="admonition">Não inicie a migração se o failover tiver sido concluído, mas a reproteção estiver pendente. Certifique-se de que o processo de reproteção está concluído antes de prosseguir com a migração. Se um failover de teste estiver em andamento, limpe o failover de teste e inicie a migração.</block>
   <block id="da2f48d729eae4ca1010b4a077b66b02" category="list-text">Siga estas etapas para excluir o adaptador SRA das ferramentas do ONTAP para VMware vSphere 9.xx na recuperação de site da VMware:</block>
   <block id="b2c26a87d051d5889e6d2e4ab1fc79de" category="list-text">Vá para a seção *Storage Replication Adapter*.</block>
-  <block id="b80a5fe26546f4090c014df2108347ab" category="list-text">No menu de elipses, selecione *Reset Configuration*.</block>
   <block id="1ab7bd22ce5077185a70517ea0db34ec" category="list-text">No menu de elipses, selecione *Delete*.</block>
   <block id="63fbd3cb55ffabae3747cd50140f1b47" category="list-text">Instale as ferramentas do ONTAP para o adaptador VMware vSphere 10,4 SRA usando as etapas em <block ref="9b6610ae0d9b3f2df042445cc8433cf4" category="inline-link-macro-rx"></block>.</block>
   <block id="e3e32085ef48d00b185f9ae05a428520" category="list-text">Na página de interface de usuário do VMware Live Site Recovery, execute as operações *Discover Arrays* e *Discover Devices* e confirme se os dispositivos são exibidos como antes da migração.</block>
@@ -2242,8 +2230,18 @@
   <block id="8bf7814538fb554d339918e8af1041b7" category="cell">*Espaço em disco (GB) de espessura provisionado por nó*</block>
   <block id="8e1b11ef4c2ef1e1f2b2b515cc7d496b" category="cell">OBSERVAÇÃO: A implantação grande é apenas para configuração de HA.</block>
   <block id="1e1982b2e5b48af62e0f42cbc47ece79" category="admonition">Quando o backup está habilitado, cada cluster de ferramentas do ONTAP precisa de mais 50GB MB de espaço no armazenamento de dados onde as VMs são implantadas. Portanto, o não-HA requer 400 GB e o HA requer 1100 GB de espaço no total.</block>
-  <block id="6b20aec4ce81da173c6f34628ae6d34d" category="admonition">A migração de ferramentas do ONTAP para o VMware vSphere 9.XX só é necessária quando se usa o provedor VASA e vVols. Os datastores NFS e VMFS são descobertos durante o processo de descoberta de storage.</block>
   <block id="a30b2082cc14c7d77fb279a7ebc7b82a" category="cell"><block ref="a30b2082cc14c7d77fb279a7ebc7b82a" category="inline-link-macro-rx"></block></block>
   <block id="104f0fc4c7f350b84c4cabfd2d187d9a" category="cell"><block ref="104f0fc4c7f350b84c4cabfd2d187d9a" category="inline-link-macro-rx"></block></block>
   <block id="b2eac513dd0bf503b21a9173bc9d6a72" category="cell"><block ref="b2eac513dd0bf503b21a9173bc9d6a72" category="inline-link-macro-rx"></block></block>
+  <block id="310c2012d9e31c7b5fdc7c1d18ec2a5e" category="list-text">Em opções avançadas, você pode selecionar *Política de exportação personalizada* para o protocolo NFS ou um nome de grupo de iniciadores personalizados para os protocolos iSCSI e FC, mas não é recomendado. Se você usar essa opção, certifique-se de executar a descoberta no vCenter para todos os objetos.</block>
+  <block id="f8337e74d8f6e6f2215578fb2c3707d0" category="list-text">Você pode selecionar uma política de exportação personalizada em opções avançadas, mas não é recomendado. Se usado, certifique-se de executar a descoberta no vCenter para todos os objetos.</block>
+  <block id="0882ef7c28701c98bdd62f72da8634a7" category="list-text">Verifique se você tem o host ESXi e o patch mais recente do vSphere 7.0U3 ou versões posteriores e o ONTAP 9.14.1 ou versões posteriores.</block>
+  <block id="2bf603021962a26e3bcb2bea93110c9f" category="list-text">Reinicie o host ESXi manualmente após a instalação.</block>
+  <block id="ef3669e38cbe7dbc2c1702bdcefb324a" category="list-text">Introduza um nome e credenciais para o Fornecedor VASA. O nome de usuário só pode conter letras, números e sublinhados. O comprimento da palavra-passe deve ter entre 8 e 256 carateres.</block>
+  <block id="b5249314aff5fae6b6de54ce7f13f16b" category="list-text">Selecione *Registe-se*.</block>
+  <block id="7589490ed5e2b68e2f28beb45ecf3fca" category="paragraph">Ao ativar os serviços pela primeira vez, você deve criar as credenciais do provedor VASA e do SRA. Eles são usados para Registrar ou habilitar o provedor VASA e os serviços SRA no vCenter Server. O nome de usuário só pode conter letras, números e sublinhados. O comprimento da palavra-passe deve ter entre 8 e 256 carateres.</block>
+  <block id="67b08defea5ec6059f6e7c54a1da7e7d" category="admonition">Após a migração das ferramentas do ONTAP para o VMware vSphere 9 para o 10,4, os armazenamentos de dados vVols que usam o protocolo NVMe/FC ficam não operacionais porque o ONTAP Tools 10,4 oferece suporte ao protocolo NVMe-of somente com datastores VMFS.</block>
+  <block id="7c4cc8f57df0d72a910b2adf9c1dfc8a" category="list-text">Vá para a página de gerenciamento de configuração do VMware Live Site Recovery</block>
+  <block id="3f6debbe365887c1e9cead81caac7ed5" category="list-text">No menu de elipses, selecione *Reset Configuration*.</block>
+  <block id="89262eb49fd08637032ae5b8afc51a41" category="admonition">A migração de ferramentas do ONTAP para o VMware vSphere 9 só é necessária quando se usa o provedor VASA e vVols. Os datastores NFS e VMFS são descobertos durante o processo de descoberta de storage.</block>
 </blocks>
