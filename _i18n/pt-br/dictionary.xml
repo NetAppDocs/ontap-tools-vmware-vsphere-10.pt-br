@@ -227,14 +227,12 @@
   <block id="a883deebdfbfeb611d06d3f55178ccbf" category="doc">Defina os valores do host ESXi</block>
   <block id="9232ab7e918fc93452c2dc7c8fab1b8c" category="paragraph">Você pode definir os seguintes valores em um host ESXi:</block>
   <block id="ab9d8dfb65807487a899df1683e128fa" category="section-title">Definições do adaptador HBA/CNA</block>
-  <block id="d3c41b5a4cf556f3a598cc1221e08ee4" category="paragraph">Define as definições de tempo limite de HBA recomendadas para sistemas de armazenamento NetApp.</block>
   <block id="c803cf4eb4cbf3a6b12b1e1cc3443970" category="section-title">Definições MPIO</block>
   <block id="d16644a258624270fbc604b4a9c10811" category="paragraph">Em ambientes de alto desempenho, ou quando você estiver testando o desempenho com um único armazenamento de dados LUN, considere alterar a configuração de balanceamento de carga da política de seleção de caminho (PSP) de round-robin (VMW_PSP_RR) da configuração padrão de IOPS de 1000 para um valor de 1.</block>
   <block id="5fc0e54193f8c3ad7e67febc376fc805" category="section-title">Definições NFS</block>
   <block id="3a0689f041b08d0026691257176a98a0" category="summary">Você pode instalar o plug-in NetApp NFS para VMware vStorage APIs para integração de array (VAAI) usando as ferramentas do ONTAP para VMware vSphere.</block>
   <block id="e1f59101bee140f72feebf78fe15f214" category="doc">Instale o plug-in NFS VAAI</block>
   <block id="bf25ac3fc5bee2b3ec36e32661767682" category="inline-link">Plug-in NFS do NetApp para VMware VAAI</block>
-  <block id="ebfe914a124eb1ec0cc1d8f6d6c420cb" category="list-text">O vSphere 8.x é compatível com o plug-in NetApp NFS VAAI 2,0.1(compilação 16).</block>
   <block id="42e4695fefd280ddc3a6f11124586510" category="list-text">Quando o plug-in VAAI for carregado no vCenter Server, selecione *alterar* na seção *versão existente*. Se um plug-in VAAI não for carregado para o vCenter Server, selecione o botão *Upload*.</block>
   <block id="d9f27aaf5ae6bd3eb465792e14cafec5" category="section-title">Configurar as políticas de exportação de NFS corretas para descarga de cópia VAAI</block>
   <block id="81b7f8451857d47e62047334509e0b36" category="list-text">O usuário raiz deve permanecer como root e NFSv4 deve ser permitido em todos os volumes pai de junção.</block>
@@ -1343,14 +1341,10 @@
   <block id="34708a7ee3c666f413240fedba4b042a" category="cell">Este cartão mostra os 10 principais datastores classificados por uma métrica de desempenho. Você pode selecionar o cabeçalho para obter os 10 principais datastores para a métrica selecionada classificados por ordem ascendente ou descendente. As alterações de classificação e filtragem feitas no cartão persistem até que você altere ou limpe o cache do navegador. Há uma lista suspensa tipo de datastore para selecionar o tipo de datastores - NFS, VMFS ou vVols.</block>
   <block id="4c2183bca6b89d1820fb11f5a1d938c8" category="cell">Esta placa mostra o status geral de conformidade de todos os hosts ESXi (para o vCenter selecionado) com relação às configurações recomendadas do host NetApp por grupo/categoria de configurações. Você pode selecionar o link *Apply Recommended Settings* (aplicar configurações recomendadas) para aplicar as configurações recomendadas. Você pode selecionar o status de conformidade dos hosts para ver a lista de hosts.</block>
   <block id="62938ab037901a948099ef101beec571" category="list-text">Selecione os controladores de armazenamento descobertos que têm o status<block ref="b7aa7656b58c3a7862a86f5f8cd10336" prefix=" " category="inline-code"></block> e selecione *ações* &gt; *Modificar*.</block>
-  <block id="3225a10b07f1580f10dee4abc3779e6c" category="cell">Parâmetros</block>
   <block id="c77eb099ccd3a59aa3a56c3c98c84669" category="cell">Defina este valor para...</block>
   <block id="117704664d6cada78ac3107380f63d23" category="cell">Disk.QFullSampleSize</block>
-  <block id="07b21acb18ec7b34bd91453e33448369" category="cell">32 para todas as configurações. Definir este valor ajuda a evitar erros de e/S.</block>
   <block id="f66a3c183f0e736240b77f8b755c880e" category="cell">Disk.QFullThreshold</block>
-  <block id="ed6604a4485d16e1285db04ae3d4279f" category="cell">8 para todas as configurações. Definir este valor ajuda a evitar erros de e/S.</block>
   <block id="19c08de7404551288e1274186e039ef4" category="cell">Tempos limite Emulex FC HBA</block>
-  <block id="6ea7e3b1d2b04c77c55309b1aaa41f8c" category="cell">Valor padrão.</block>
   <block id="d46cddda4da7ec11f17472d11df95b68" category="cell">Tempos limite do QLogic FC HBA</block>
   <block id="83f499a540b1323009c200d6f8cc9396" category="cell">Parâmetro</block>
   <block id="c3b49a515dd0046685e06092642aa139" category="cell">NET.TcpipHeapSize</block>
@@ -2233,8 +2227,6 @@
   <block id="a30b2082cc14c7d77fb279a7ebc7b82a" category="cell"><block ref="a30b2082cc14c7d77fb279a7ebc7b82a" category="inline-link-macro-rx"></block></block>
   <block id="104f0fc4c7f350b84c4cabfd2d187d9a" category="cell"><block ref="104f0fc4c7f350b84c4cabfd2d187d9a" category="inline-link-macro-rx"></block></block>
   <block id="b2eac513dd0bf503b21a9173bc9d6a72" category="cell"><block ref="b2eac513dd0bf503b21a9173bc9d6a72" category="inline-link-macro-rx"></block></block>
-  <block id="310c2012d9e31c7b5fdc7c1d18ec2a5e" category="list-text">Em opções avançadas, você pode selecionar *Política de exportação personalizada* para o protocolo NFS ou um nome de grupo de iniciadores personalizados para os protocolos iSCSI e FC, mas não é recomendado. Se você usar essa opção, certifique-se de executar a descoberta no vCenter para todos os objetos.</block>
-  <block id="f8337e74d8f6e6f2215578fb2c3707d0" category="list-text">Você pode selecionar uma política de exportação personalizada em opções avançadas, mas não é recomendado. Se usado, certifique-se de executar a descoberta no vCenter para todos os objetos.</block>
   <block id="0882ef7c28701c98bdd62f72da8634a7" category="list-text">Verifique se você tem o host ESXi e o patch mais recente do vSphere 7.0U3 ou versões posteriores e o ONTAP 9.14.1 ou versões posteriores.</block>
   <block id="2bf603021962a26e3bcb2bea93110c9f" category="list-text">Reinicie o host ESXi manualmente após a instalação.</block>
   <block id="ef3669e38cbe7dbc2c1702bdcefb324a" category="list-text">Introduza um nome e credenciais para o Fornecedor VASA. O nome de usuário só pode conter letras, números e sublinhados. O comprimento da palavra-passe deve ter entre 8 e 256 carateres.</block>
@@ -2244,4 +2236,9 @@
   <block id="7c4cc8f57df0d72a910b2adf9c1dfc8a" category="list-text">Vá para a página de gerenciamento de configuração do VMware Live Site Recovery</block>
   <block id="3f6debbe365887c1e9cead81caac7ed5" category="list-text">No menu de elipses, selecione *Reset Configuration*.</block>
   <block id="89262eb49fd08637032ae5b8afc51a41" category="admonition">A migração de ferramentas do ONTAP para o VMware vSphere 9 só é necessária quando se usa o provedor VASA e vVols. Os datastores NFS e VMFS são descobertos durante o processo de descoberta de storage.</block>
+  <block id="395ddb6ca1b9948e32145f8fa1a9201e" category="paragraph">Define os seguintes parâmetros para valores padrão:</block>
+  <block id="be34be4d53796d7420ca7e08ae84df3e" category="list-text">Em opções avançadas:</block>
+  <block id="bb18d56459266886917f70dbe8e01ef4" category="list-text">Se você selecionar a política de exportação *Custom*, certifique-se de executar a descoberta no vCenter para todos os objetos. É recomendável que você não use essa opção.</block>
+  <block id="0b3b86369c55c3299fc4f945d3cc9a8c" category="list-text">Você pode selecionar *Nome do grupo de iniciadores personalizados* para os protocolos iSCSI e FC.</block>
+  <block id="91756c37ce937828e162f58ca53f85a0" category="list-text">Se você selecionar *Política de exportação personalizada* nas opções avançadas, execute a descoberta no vCenter para todos os objetos. É recomendável que você não use essa opção.</block>
 </blocks>
