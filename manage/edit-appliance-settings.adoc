@@ -19,6 +19,8 @@ NOTE: Para migrar para a HA quando o backup não-HA estiver ativado, desative pr
 .Antes de começar
 * Certifique-se de que o seu MODELO OVA tem a mesma versão OVA que o nó 1. O nó 1 é o nó padrão em que as ferramentas do ONTAP para o VMware vSphere OVA são implantadas inicialmente.
 * Certifique-se de que o hot add e o hot plug de memória da CPU estejam ativados.
+* No vCenter Server, defina o nível de automação do Serviço de Recuperação de Desastres (DRS) como parcialmente automatizado. Após implantar o HA, reverta-o para totalmente automatizado.
+* Os nomes de host dos nós na configuração de HA devem estar em letras minúsculas.
 
 
 .Passos

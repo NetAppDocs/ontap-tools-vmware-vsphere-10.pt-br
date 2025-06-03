@@ -13,6 +13,12 @@ summary: Quando você cria um datastore no nível do cluster do host, o datastor
 [role="lead"]
 Quando você cria um datastore no nível do cluster do host, o datastore é criado e montado em todos os hosts do destino e a ação é ativada somente se o usuário atual tiver o privilégio de executar.
 
+*Interoperabilidade entre datastores nativos com vCenter Server e datastores gerenciados por ferramentas ONTAP*
+
+As ferramentas ONTAP para VMware vSphere 10 criam igroups aninhados para datastores, com igroups pais específicos para datastores e igroups filhos mapeados para os hosts. Você pode criar igroups simples a partir do gerenciador de sistemas ONTAP e usá-los para criar datastores VMFS sem usar as ferramentas ONTAP.  https://docs.netapp.com/us-en/ontap/san-admin/manage-san-initiators-task.html["Gerenciar iniciadores SAN e igroups"]Consulte para obter mais informações.
+
+Quando o armazenamento é integrado às ferramentas ONTAP e a descoberta de repositório de dados é executada, igroups simples e repositórios de dados VMFS tornam-se gerenciados pelas ferramentas ONTAP e são convertidos em igroups aninhados. Você não pode usar os igroups simples anteriores para criar novos repositórios de dados; você deve usar a interface de usuário das ferramentas ONTAP ou a API REST para reutilizar os igroups aninhados.
+
 [role="tabbed-block"]
 ====
 .Crie um datastore vVols
@@ -102,11 +108,16 @@ Num cluster protegido:
 * Configure o host ESXi se estiver usando o protocolo NVMe/TCP:
 +
 .. Reveja o. https://www.vmware.com/resources/compatibility/detail.php?deviceCategory=san&productid=49677&releases_filter=589,578,518,508,448&deviceCategory=san&details=1&partner=399&Protocols=1&transportTypes=3&isSVA=0&page=1&display_interval=10&sortColumn=Partner&sortOrder=Asc["Guia de compatibilidade da VMware"]
++
 
+NOTE: O VMware vSphere 7,0 U3 e versões posteriores são compatíveis com o protocolo NVMe/TCP. No entanto, é recomendável usar o VMware vSphere 8,0 e versões posteriores.
 
+.. Valide se o fornecedor da placa de interface de rede (NIC) suporta NIC ESXi com o protocolo NVMe/TCP.
+.. Configure a NIC ESXi para NVMe/TCP de acordo com as especificações do fornecedor da NIC.
+.. Ao usar a versão do VMware vSphere 7, siga as instruções no site da VMware https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere/7-0/vsphere-storage-7-0/about-vmware-nvme-storage/configure-adapters-for-nvme-over-tcp-storage/configure-vmkernel-binding-for-the-tcp-adapter.html["Configure a vinculação VMkernel para o adaptador NVMe sobre TCP"] para configurar a vinculação de portas NVMe/TCP. Ao usar a versão do VMware vSphere 8, siga https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere/8-0/vsphere-storage-8-0/about-vmware-nvme-storage/configuring-nvme-over-tcp-on-esxi.html["Configurando o NVMe em TCP no ESXi"]o , para configurar a vinculação de porta NVMe/TCP.
+.. Para a versão do VMware vSphere 7, siga as instruções na página https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere/7-0/vsphere-storage-7-0/about-vmware-nvme-storage/add-software-nvme-over-rdma-or-nvme-over-tcp-adapters.html["Habilite o NVMe em adaptadores de software RDMA ou NVMe em TCP"] para configurar adaptadores de software NVMe/TCP. Para a versão do VMware vSphere 8, siga https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere/8-0/vsphere-storage-8-0/about-vmware-nvme-storage/configuring-nvme-over-rdma-roce-v2-on-esxi/add-software-nvme-over-rdma-or-nvme-over-tcp-adapters.html["Adicionar software NVMe em adaptadores RDMA ou NVMe em TCP"] para configurar os adaptadores de software NVMe/TCP.
+.. Execute link:../configure/discover-storage-systems-and-hosts.html["Descubra sistemas de storage e hosts"] uma ação no host ESXi. Para obter mais informações, https://community.netapp.com/t5/Tech-ONTAP-Blogs/How-to-Configure-NVMe-TCP-with-vSphere-8-0-Update-1-and-ONTAP-9-13-1-for-VMFS/ba-p/445429["Como configurar o NVMe/TCP com o vSphere 8,0 Update 1 e o ONTAP 9.13,1 para datastores VMFS"] consulte .
 
-
-O VMware vSphere 7,0 U3 e versões posteriores são compatíveis com o protocolo NVMe/TCP. No entanto, é recomendável usar o VMware vSphere 8,0 e versões posteriores. . Valide se o fornecedor da placa de interface de rede (NIC) suporta NIC ESXi com o protocolo NVMe/TCP. . Configure a NIC ESXi para NVMe/TCP de acordo com as especificações do fornecedor da NIC. . Ao usar a versão do VMware vSphere 7, siga as instruções no site da VMware https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere/7-0/vsphere-storage-7-0/about-vmware-nvme-storage/configure-adapters-for-nvme-over-tcp-storage/configure-vmkernel-binding-for-the-tcp-adapter.html["Configure a vinculação VMkernel para o adaptador NVMe sobre TCP"] para configurar a vinculação de portas NVMe/TCP. Ao usar a versão do VMware vSphere 8, siga https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere/8-0/vsphere-storage-8-0/about-vmware-nvme-storage/configuring-nvme-over-tcp-on-esxi.html["Configurando o NVMe em TCP no ESXi"]o , para configurar a vinculação de porta NVMe/TCP. . Para a versão do VMware vSphere 7, siga as instruções na página https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere/7-0/vsphere-storage-7-0/about-vmware-nvme-storage/add-software-nvme-over-rdma-or-nvme-over-tcp-adapters.html["Habilite o NVMe em adaptadores de software RDMA ou NVMe em TCP"] para configurar adaptadores de software NVMe/TCP. Para a versão do VMware vSphere 8, siga https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere/8-0/vsphere-storage-8-0/about-vmware-nvme-storage/configuring-nvme-over-rdma-roce-v2-on-esxi/add-software-nvme-over-rdma-or-nvme-over-tcp-adapters.html["Adicionar software NVMe em adaptadores RDMA ou NVMe em TCP"] para configurar os adaptadores de software NVMe/TCP. . Execute link:../configure/discover-storage-systems-and-hosts.html["Descubra sistemas de storage e hosts"] uma ação no host ESXi. Para obter mais informações, https://community.netapp.com/t5/Tech-ONTAP-Blogs/How-to-Configure-NVMe-TCP-with-vSphere-8-0-Update-1-and-ONTAP-9-13-1-for-VMFS/ba-p/445429["Como configurar o NVMe/TCP com o vSphere 8,0 Update 1 e o ONTAP 9.13,1 para datastores VMFS"] consulte .
 
 * Se você estiver usando o protocolo NVMe/FC, execute as seguintes etapas para configurar o host ESXi:
 +
