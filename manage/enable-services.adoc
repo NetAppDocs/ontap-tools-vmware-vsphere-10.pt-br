@@ -26,6 +26,6 @@ Ao ativar os serviços pela primeira vez, você deve criar as credenciais do pro
 NOTE: Antes de desativar quaisquer serviços opcionais, certifique-se de que as ferramentas vCenter Servers gerenciados pelo ONTAP não os usem.
 
 +
-A opção *Allow import of vVols Configuration* é mostrada somente quando o serviço do provedor VASA está habilitado. Esta opção permite a migração de dados vVols das ferramentas ONTAP 9.x para as ferramentas ONTAP 10,4.
+A opção *Allow import of vVols Configuration* é mostrada somente quando o serviço do provedor VASA está habilitado. Esta opção permite a migração de dados vVols das ferramentas ONTAP 9.xx para as ferramentas ONTAP 10,4.
 
 

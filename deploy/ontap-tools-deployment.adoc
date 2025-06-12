@@ -26,7 +26,7 @@ Se você não tiver uma biblioteca de conteúdo, siga estas etapas para criar um
 
 *Criar biblioteca de conteúdo* no seu plano de usar apenas uma pequena implantação de nó único, não é necessário criar uma biblioteca de conteúdo.
 
-. Faça o download do `.zip` arquivo que contém binários (_.ova_) e certificados assinados para ferramentas do ONTAP para VMware vSphere no https://mysupport.netapp.com/site/products/all/details/otv10/downloads-tab["Site de suporte da NetApp"^] .
+. Baixe o  `.zip` arquivo que contém os binários (_.ova_) e certificados assinados para ferramentas ONTAP para VMware vSphere do  https://mysupport.netapp.com/site/products/all/details/otv10/downloads-tab["Site de suporte da NetApp"^] .
 . Faça login no cliente vSphere
 . Selecione o menu do cliente vSphere e selecione *bibliotecas de conteúdo*.
 . Selecione *criar* à direita da página.
@@ -41,10 +41,10 @@ NOTE: Para obter mais informações, https://blogs.vmware.com/vsphere/2020/01/cr
 
 NOTE: Antes de prosseguir com a implantação, defina o DRS (Distributed Resource Scheduler) do cluster no inventário como 'Conservative'. Isso garante que as VMs não sejam migradas durante a instalação.
 
-As ferramentas do ONTAP para o VMware vSphere são inicialmente implantadas como uma configuração não HA. Para escalar para implantação HA, você precisará ativar o hot plug-in da CPU e o hot plug-in da memória. Você pode executar esta etapa como parte do processo de implantação ou editar as configurações da VM após a implantação.
+As ferramentas ONTAP para VMware vSphere são implantadas inicialmente como uma configuração não HA. Para escalar para implantação HA, você precisará ativar o hot plug-in da CPU e o hot plug-in da memória. Você pode executar esta etapa como parte do processo de implantação ou editar as configurações da VM após a implantação.
 
 .Passos
-. Faça o download do `.zip` arquivo que contém binários (_.ova_) e certificados assinados para ferramentas do ONTAP para VMware vSphere no https://mysupport.netapp.com/site/products/all/details/otv10/downloads-tab["Site de suporte da NetApp"^] . Se você tiver importado o OVA para a biblioteca de conteúdo, você pode pular esta etapa e prosseguir com a próxima etapa.
+. Baixe o  `.zip` arquivo que contém os binários (_.ova_) e certificados assinados para as ferramentas ONTAP para VMware vSphere do  https://mysupport.netapp.com/site/products/all/details/otv10/downloads-tab["Site de suporte da NetApp"^] . Se você tiver importado o OVA para a biblioteca de conteúdo, você pode pular esta etapa e prosseguir com a próxima etapa.
 . Faça login no servidor vSphere.
 . Navegue até o pool de recursos, cluster ou host onde você pretende implantar o OVA.
 +

@@ -68,7 +68,7 @@ NOTE: Quando o backup está habilitado, cada cluster de ferramentas do ONTAP pre
 | Aplicação OVA | 10,4 
 
 
-| Host ESXi para implantar a máquina virtual ONTAP Tools | 7,0, 7.0U1, 7.0U2, 7.0U3, 8,0, 8.0U1 E 8.0U3 
+| Host ESXi para implantar a máquina virtual ONTAP Tools | 7.0U3 e 8.0U3 
 
 
 | VCenter Server para implantar a máquina virtual das ferramentas do ONTAP | 7,0 e 8,0 
