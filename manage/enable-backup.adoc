@@ -26,7 +26,7 @@ NOTE: Para migrar para a HA quando o backup não-HA estiver ativado, desative pr
 . Digite `4` para selecionar *suporte e Diagnóstico*.
 . Digite `3` para selecionar *Ativar Backup do sistema* opção.
 . No caso de não-HA, insira as credenciais do vCenter onde a máquina virtual ONTAP Tools é implantada.
-. Introduza o valor da frequência de cópia de segurança entre 10-60 minutos.
+. Insira o valor da frequência de backup entre 5 e 60 minutos.
 . Pressione *Enter*
 +
 Isso cria o backup e envia o backup para o armazenamento de dados da máquina virtual em um intervalo regular.

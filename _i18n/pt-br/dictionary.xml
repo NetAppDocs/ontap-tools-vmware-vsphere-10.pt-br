@@ -2219,7 +2219,6 @@
   <block id="15f0aef685a07d8a64ee213328fd4abf" category="list-text">Determine as ferramentas ONTAP para o tipo de implantação do VMware vSphere a partir da primeira VM do nó.</block>
   <block id="82cb2fe68a0c35dd310db836d38102d0" category="list-text">No vCenter Server, defina o nível de automação do Serviço de Recuperação de Desastres (DRS) como parcialmente automatizado. Após implantar o HA, reverta-o para totalmente automatizado.</block>
   <block id="b02bbd059e55c04c7db94e76a92bd311" category="list-text">Os nomes de host dos nós na configuração de HA devem estar em letras minúsculas.</block>
-  <block id="a4a802cdddc104ad7f0a14d2bdc2c05e" category="list-text">Introduza o valor da frequência de cópia de segurança entre 10-60 minutos.</block>
   <block id="843e69439f5c77bf5c54644b48190fc1" category="admonition">Para ferramentas ONTAP para implantação do VMware vSphere HA, você deve alterar a senha do usuário do console de manutenção no primeiro nó, que é node1.</block>
   <block id="56564ecb20e9cb45429b432b22f216f4" category="admonition">As configurações de MPIO não se aplicam aos protocolos NVMe, NVMe/FC e NVMe/TCP.</block>
   <block id="07c9ecda15aaf26d8eef3770025ec27c" category="paragraph">Você pode Registrar o provedor VASA com uma instância do vCenter Server usando as ferramentas do ONTAP para VMware vSphere. A seção Configurações do provedor VASA exibe o status de Registro do provedor VASA para o vCenter Server selecionado. Em uma implantação de vários vCenters, certifique-se de ter certificados CA personalizados para cada instância do vCenter Server.</block>
@@ -2260,4 +2259,5 @@
   <block id="b9a7adbda4cb4f1f2ba292b154c6353e" category="sidebar">Migrar as ferramentas do ONTAP para o VMware vSphere 9.xx para o 10,4</block>
   <block id="d619f73b597358ef5140938f37254d97" category="sidebar">Migre para as ferramentas ONTAP mais recentes para VMware vSphere</block>
   <block id="6cd5692bfbed66b11eefcd5a575d4cdd" category="sidebar">Migrar o Provedor VASA e o SRA</block>
+  <block id="51aabaf24027b697520ff09c79c5f552" category="list-text">Insira o valor da frequência de backup entre 5 e 60 minutos.</block>
 </blocks>
