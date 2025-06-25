@@ -246,7 +246,6 @@
   <block id="7642832535ff83a877a05e578e6e55f7" category="list-text">Gerenciamento de back-end de storage: Adicione e gerencie clusters de storage do ONTAP às ferramentas do ONTAP para VMware vSphere e mapeie-os para instâncias integradas do vCenter Server globalmente.</block>
   <block id="ce3d50f0dc891fd49131a5879ff0cfbb" category="list-text">Downloads do pacote de log - coletar arquivos de log para as ferramentas do ONTAP para VMware vSphere.</block>
   <block id="973e35fe570f98dc6e1c5fe1bd6b5876" category="summary">As ferramentas do ONTAP para o VMware vSphere gerenciam a proteção dos clusters de host.</block>
-  <block id="ee68e5b99222bbc29a480fcb0d1d6ee2" category="paragraph-title">Pré-requisitos</block>
   <block id="dd4ee610bd1d035c73bc0cbcd80e46da" category="paragraph">Certifique-se de que os seguintes pré-requisitos são cumpridos:</block>
   <block id="7c923b6532ecd9637deac92eebf7333a" category="list-text">O cluster de host tem armazenamentos de dados somente em uma SVM.</block>
   <block id="abd2c79ea68f2d7802d6d7a46312971e" category="list-text">O datastore montado no cluster de host não deve ser montado em nenhum host fora do cluster.</block>
@@ -943,7 +942,6 @@
   <block id="5aa0457cc95965b125467f8be60fadcf" category="list-text">Para configurar as funções de ferramentas do cluster SVM ONTAP, selecione *Storage SVM* &gt; *Configurações* &gt; *usuários e funções* painel</block>
   <block id="e995d56efd9e31d97825dd79be4d1383" category="inline-link">Saiba mais sobre os sistemas de armazenamento ASA R2</block>
   <block id="e3d3af7525d3e3fb797e7dad595bc6a3" category="section-title">Objetivo do ponto de recuperação (RPO)</block>
-  <block id="881eb19c557d05be93005ed4bcf1f120" category="paragraph">RPO é uma medida da frequência com que o backup ou a replicação dos dados. Ele representa o ponto no tempo para o qual os dados devem ser recuperados após uma interrupção para retomar as operações de negócios. Por exemplo, se uma organização tiver um RPO de 4 horas, poderá tolerar a perda de até 4 horas de dados em caso de desastre.</block>
   <block id="1f8552f10eb7513163cf1762849c2bcd" category="list-text">Faça login no cluster com admin Privileges. Para configurar um usuário, execute as seguintes etapas:</block>
   <block id="bbeec4867a4357c871f33630e5eb711f" category="list-text">Faça login no cluster com admin Privileges.</block>
   <block id="137ef7229d434ea827c18ad48fbf2401" category="cell">/api/security/accounts</block>
@@ -996,7 +994,6 @@
   <block id="97531a7cd0ba37c6f5a07ec1730884d7" category="cell">A alteração da propriedade do registo de resumo, o ficheiro de configuração de rotação falhou.</block>
   <block id="4d6ed6e1a14d2950498160f2f099e40b" category="cell">Reinicie a VM.</block>
   <block id="66e01a394c13b76740f13530a21b08bd" category="paragraph">Uma biblioteca de conteúdo no VMware é um objeto de contentor que armazena modelos de VM, modelos vApp e outros tipos de arquivos. A implantação com biblioteca de conteúdo oferece uma experiência perfeita, pois não depende da conetividade de rede.</block>
-  <block id="ec40e9dacf33c1ee930d1b726ee5d873" category="doc">Pré-requisitos para ferramentas do ONTAP para implantação do VMware vSphere</block>
   <block id="b6aec62078a1c571750099cf3731114a" category="list-text">15 GB para instalações com provisionamento reduzido</block>
   <block id="ce87eaff0d4703df952b0aafebf6a78a" category="list-text">348 GB para instalações com provisionamento espesso</block>
   <block id="45c48cce2e2d7fbdea1afc51c7c6ad26" category="cell">9</block>
@@ -1813,7 +1810,6 @@
   <block id="6285108ef2b20a382584e76cf96a61fb" category="cell">Ao usar SVMs de alocação a vários clientes, você tem um LIF de gerenciamento da SVM em cada SVM.</block>
   <block id="12da9e1a2888efc8f1956c95e7801089" category="section-title">Folha de cálculo de implementação</block>
   <block id="6d40840d55c07c7f9a1396724662354b" category="section-title">Para implantação de nó único</block>
-  <block id="bbd46d16a0b9c56c79719db1f0a2b9a8" category="paragraph">Use a seguinte Planilha para reunir as informações necessárias para as ferramentas do ONTAP para a implantação inicial do VMware vSphere: Para as ferramentas do ONTAP para a implantação inicial do VMware vSphere:</block>
   <block id="9b97b7bd5e0a87be7bf218224ada83cf" category="cell">Requisito</block>
   <block id="d9fa81fca11f55d9fd9f33b399ab9cd6" category="cell">O seu valor</block>
   <block id="5759f8c1a9261b4c6c0c86f5089433b5" category="cell">Nome de host DNS para o primeiro nó</block>
@@ -1833,7 +1829,6 @@
   <block id="670ea5f87243240203f65d4597b5720d" category="cell">Nome de host DNS para o terceiro nó</block>
   <block id="b1b53041846844c0718e8af2d6f3e14c" category="cell">Endereço IP para o terceiro nó</block>
   <block id="c45c6f4bee2108d6c980be118d3da754" category="section-title">Configuração de firewall de rede</block>
-  <block id="15d12f4a88d7b390ab6d863be5684e1a" category="paragraph">Abra as portas necessárias para os endereços IP no firewall da rede. As ferramentas do ONTAP devem ser capazes de alcançar esse LIF pela porta 443. <block ref="7a521441c6d35a506dc75f134ab3c694" category="inline-link-macro-rx"></block>Consulte para obter as atualizações mais recentes.</block>
   <block id="410dbf8e1f100ad53deb3ca66cb8ec8b" category="doc">Início rápido das ferramentas do ONTAP para VMware vSphere</block>
   <block id="86339f91ab8e0352f8b9f8c35611a4ee" category="paragraph">Os primeiros passos com as ferramentas do ONTAP para VMware vSphere incluem algumas etapas. Esse início rápido leva você pela configuração inicial das ferramentas do ONTAP para o VMware vSphere.</block>
   <block id="7261b4472f18d3e8c4584d0bb039ec79" category="inline-link-macro">Fluxo de trabalho DE IMPLANTAÇÃO DE HA</block>
@@ -1841,7 +1836,6 @@
   <block id="235431ffa3dee921fa339768f9c9a6c1" category="paragraph">Verifique se as versões do host vSphere, ONTAP e ESXi são compatíveis com a versão das ferramentas do ONTAP. Alocar CPU, memória e espaço em disco suficientes. Dependendo das suas políticas de segurança, pode ser necessário configurar firewalls ou outros dispositivos de segurança para permitir o tráfego de rede.</block>
   <block id="9ebdb7921f7484cee5e22c5bfd2470c8" category="paragraph">Certifique-se de que o vCenter Server esteja instalado e acessível.</block>
   <block id="34f56f271329ad2edd7685e71f328b53" category="list-text"><block ref="34f56f271329ad2edd7685e71f328b53" category="inline-link-rx"></block></block>
-  <block id="726c2dd94c40576d98fa58765ada32a2" category="list-text"><block ref="726c2dd94c40576d98fa58765ada32a2" category="inline-link-macro-rx"></block></block>
   <block id="8fece025a1a8fef7018449bf104a2527" category="inline-link-macro">Antes de começar</block>
   <block id="1497fccb0979c83f7f0501efa49af88e" category="list-text"><block ref="1497fccb0979c83f7f0501efa49af88e" category="inline-link-macro-rx"></block></block>
   <block id="69182d9cdaae4040cb12f338633b33c7" category="paragraph-title"><block ref="54f425ce8d89f4ed6b8a546561af5d60" category="inline-image-macro-rx" type="image"></block> Implantar as ferramentas do ONTAP para o VMware vSphere</block>
@@ -2358,4 +2352,11 @@
   <block id="c7196e0d279885126e6f1c8cf1f7195f" category="paragraph"><block ref="c7196e0d279885126e6f1c8cf1f7195f" category="inline-link-rx"></block></block>
   <block id="d416ef8edb2844634dbe8cfff2e77f9a" category="sidebar">Entenda igroups e políticas de exportação</block>
   <block id="138a039e4dddf6a33f72d3080556a984" category="paragraph">Nas ferramentas ONTAP para VMware vSphere 9.x, os igroups eram criados e gerenciados em uma estrutura plana, onde cada datastore no vCenter era associado a um único igroup. Esse modelo limitava a flexibilidade e a reutilização de igroups em múltiplos datastores. As ferramentas ONTAP para VMware vSphere 10.x introduzem igroups aninhados, onde cada datastore no vCenter é associado a um igroup pai, enquanto cada host é vinculado a um igroup filho sob esse pai. Você pode definir igroups pais personalizados com nomes definidos pelo usuário para reutilização em vários armazenamentos de dados, permitindo um gerenciamento mais flexível e interconectado de igroups. Entender o fluxo de trabalho dos igroups é essencial para gerenciar LUNs e datastores de forma eficaz nas ferramentas ONTAP para VMware vSphere. Diferentes fluxos de trabalho geram configurações de igroup variadas, como mostrado nos exemplos a seguir:</block>
+  <block id="8233416977fe9ac3bd1460bb64acef70" category="paragraph">O RPO mede a frequência com que você faz backup ou replica dados. Ele especifica o momento exato em que você precisa restaurar os dados após uma interrupção para retomar as operações comerciais. Por exemplo, se uma organização tiver um RPO de 4 horas, poderá tolerar a perda de até 4 horas de dados em caso de desastre.</block>
+  <block id="84654158695aac7865527b63b1f18c59" category="paragraph">Use a planilha a seguir para reunir as informações necessárias para as ferramentas ONTAP para implantação inicial do VMware vSphere:</block>
+  <block id="3c35eabd27e0ec919452833eb16928c2" category="paragraph">Abra as portas necessárias para os endereços IP no firewall da rede. As ferramentas ONTAP devem conseguir acessar esse LIF pela porta 443. <block ref="7a521441c6d35a506dc75f134ab3c694" category="inline-link-macro-rx"></block>Consulte para obter as atualizações mais recentes.</block>
+  <block id="fa8cdf838397737e9844f0c6b13bf641" category="doc">Ferramentas ONTAP para requisitos e limites de configuração do VMware vSphere</block>
+  <block id="dc0055de9b7e911c1f50f49dc1b3ef79" category="inline-link-macro">Ferramentas ONTAP para requisitos e limites de configuração do VMware vSphere</block>
+  <block id="25eb466dd476278d60eabf35f3daa859" category="list-text"><block ref="25eb466dd476278d60eabf35f3daa859" category="inline-link-macro-rx"></block></block>
+  <block id="8afddaa1858f79be24bc3f9dfe03eb86" category="sidebar">Requisitos e limites de configuração das ferramentas ONTAP</block>
 </blocks>
