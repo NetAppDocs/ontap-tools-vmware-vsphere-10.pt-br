@@ -2229,16 +2229,10 @@
   <block id="8b6081846f56ef049557c82e5b444e2d" category="paragraph">Se você tiver datastores NFS e VMFS e nenhum datastores vVols em sua configuração, basta desinstalar o ONTAP Tools 9.xx e implantar o ONTAP Tools 10.x. No entanto, se sua configuração contiver datastores vVols, você terá que passar por um processo de migração do VASA Provider e do SRA.</block>
   <block id="30725e73463cac6869eb16851a0b7f1f" category="paragraph">A tabela a seguir descreve o processo de migração nesses dois cenários diferentes.</block>
   <block id="481ad82ca4c063eed4e75acc5640a962" category="cell">*Se a configuração tiver armazenamentos de dados vVols*</block>
-  <block id="a52ec04716984e73a95a673f19b4381b" category="cell">*Se a configuração não contiver armazenamentos de dados vVols*</block>
-  <block id="612ae34fe355690bba22816577fb8ceb" category="inline-link-macro">Migrar Provedor VASA</block>
-  <block id="b01a9665d854fa0b6f2ee86db8e7e7e5" category="inline-link-macro">Migrar SRA</block>
   <block id="6e4d49fbd70ad4839257ed5ced55d275" category="inline-link">Criar políticas de armazenamento de VM</block>
-  <block id="a1a2f15a55d77fba2d3e9d1ffb9c2d37" category="cell">Passos: 1. <block ref="b948e8148e317c6b3a44b41129efa89c" category="inline-link-macro-rx"></block> 2. <block ref="fd39ed98cbc7c628cdfb8965952c02e6" category="inline-link-macro-rx"></block> 3. <block ref="2f4f76d1186f7e1931e429142840bca6" category="inline-link-rx"></block></block>
   <block id="27116dca14772e71a5f801de216fb934" category="inline-link-macro">Implantar e configurar ferramentas ONTAP para VMware vSphere 10.4</block>
   <block id="ae2e6f54444edfbcea323e8f64be5184" category="inline-link">Como remover o OTV 9.xx do seu ambiente</block>
-  <block id="2de1e904f7a723f3fccf3b29b5d3a892" category="cell">Etapas: 1. Remova as ferramentas ONTAP 9.xx do seu ambiente. Consulte <block ref="9bde8c27ff3ba526e74c5e0434eb2686" category="inline-link-rx"></block> Artigo da Base de conhecimento da NetApp. 2. <block ref="b784a866e80ba41b4fb2f8e0caeb5197" category="inline-link-macro-rx"></block> 3. <block ref="2f4f76d1186f7e1931e429142840bca6" category="inline-link-rx"></block></block>
   <block id="8fba1879056f1b6c411434b65fe61ee9" category="admonition">Depois de migrar das ferramentas do ONTAP para o VMware vSphere 9.xx para o 10,4, os armazenamentos de dados vVols que usam o protocolo NVMe/FC tornam-se não operacionais porque o ONTAP Tools 10,4 oferece suporte ao protocolo NVMe-of somente com datastores VMFS.</block>
-  <block id="61ace5a2518ab1c5ed7b0cdaaff98213" category="doc">Migrar o provedor VASA e o adaptador de replicação de armazenamento (SRA)</block>
   <block id="74a0fcc4fbe41d518dabd4de3a069584" category="section-title">Etapas para migrar o provedor VASA</block>
   <block id="db9ce82f740ff3a9f2ad609cd7d296c9" category="list-text">Integre o backend de armazenamento localmente a partir das APIs do servidor vCenter para o plug-in de ferramentas ONTAP.</block>
   <block id="c31397b4be5939d5bf72a8bb0faf9443" category="paragraph">Você pode acessar o Swagger através deste URL: 'https://$FQDN_IP_PORT/, por exemplo<block ref="31b962e36589b3bd2081bfb7d028723f" category="inline-link-rx"></block>: .</block>
@@ -2246,13 +2240,11 @@
   <block id="684e740f5c7b2c5d6085a2342428c783" category="paragraph">{ "otv_ip": "xx.xx.xx.xx", "vasa_provider_credentials": { "nome de usuário": "xxxxx", "senha": "*******" } }</block>
   <block id="fafb1a9cdf3a5eb6029da27aa9e99060" category="list-text">Adicione as ferramentas ONTAP para o provedor de armazenamento VMware vSphere ao vCenter Server e <block ref="c283b8bc021fee7e6c856fce39783a46" category="inline-link-macro-rx"></block> com ferramentas ONTAP para VMware vSphere.</block>
   <block id="9a75388e84716581ed710b23451155ae" category="list-text">Os armazenamentos de dados NFS e VMFS migrados das ferramentas do ONTAP para o VMware vSphere 9.xxx são visíveis nas ferramentas do ONTAP para o VMware vSphere 10,4 somente após a ativação do job de descoberta do datastore, o que pode levar até 30 minutos para ser concluído. Verifique se os armazenamentos de dados estão visíveis na página de visão geral das ferramentas ONTAP para a página de interface do usuário do plug-in VMware vSphere.</block>
-  <block id="219ce9585531b00b3bd54170f3775f53" category="section-title">Etapas para migrar o SRA</block>
   <block id="507fcd9c144d0cee8403de3b0608fc58" category="paragraph">No plano de recuperação, o site protegido refere-se ao local onde as VMs estão em execução, enquanto o site de recuperação é onde as VMs serão recuperadas. A interface do SRM exibe o estado do plano de recuperação com detalhes sobre os sites protegidos e de recuperação. No plano de recuperação, os botões LIMPAR e REPROTEGER estão desabilitados, enquanto os botões TESTE e EXECUTAR permanecem habilitados. Isso indica que o site está preparado para recuperação de dados. Antes de migrar o SRA, verifique se um site está no estado protegido e o outro no estado de recuperação.</block>
   <block id="d6b99aad2c3ad58ece5306ce3dbab4d3" category="cell">Evolução das ferramentas do ONTAP 10.x em direção à paridade 9.xx, estendendo os limites de alta disponibilidade, desempenho e escala</block>
   <block id="ea974b3b2665a0ede55feb5ef712e4dd" category="paragraph"><block ref="ea974b3b2665a0ede55feb5ef712e4dd" category="inline-link-macro-rx"></block></block>
   <block id="b9a7adbda4cb4f1f2ba292b154c6353e" category="sidebar">Migrar as ferramentas do ONTAP para o VMware vSphere 9.xx para o 10,4</block>
   <block id="d619f73b597358ef5140938f37254d97" category="sidebar">Migre para as ferramentas ONTAP mais recentes para VMware vSphere</block>
-  <block id="6cd5692bfbed66b11eefcd5a575d4cdd" category="sidebar">Migrar o Provedor VASA e o SRA</block>
   <block id="51aabaf24027b697520ff09c79c5f552" category="list-text">Insira o valor da frequência de backup entre 5 e 60 minutos.</block>
   <block id="d12f6b7d9e336bb21523e27a7954a424" category="doc">Entenda igroups e políticas de exportação em ferramentas ONTAP para VMware vSphere</block>
   <block id="27fa3073e12d15edf2d9cd750cf92bd4" category="paragraph">Grupos iniciadores (igroups) são tabelas de nomes de portas mundiais (WWPNs) de hosts de protocolo FC ou nomes de nós qualificados de hosts iSCSI. Você pode definir grupos e mapeá-los para LUNs para controlar quais iniciadores têm acesso a LUNs.</block>
@@ -2359,4 +2351,11 @@
   <block id="dc0055de9b7e911c1f50f49dc1b3ef79" category="inline-link-macro">Ferramentas ONTAP para requisitos e limites de configuração do VMware vSphere</block>
   <block id="25eb466dd476278d60eabf35f3daa859" category="list-text"><block ref="25eb466dd476278d60eabf35f3daa859" category="inline-link-macro-rx"></block></block>
   <block id="8afddaa1858f79be24bc3f9dfe03eb86" category="sidebar">Requisitos e limites de configuração das ferramentas ONTAP</block>
+  <block id="122962cdef914297e7bd27106c4b08ef" category="cell">*Se a configuração contiver apenas armazenamentos de dados NFS e VMFS*</block>
+  <block id="23582373a176f3a1391b91644579b591" category="inline-link-macro">Migrar o provedor VASA</block>
+  <block id="56e81eec05ba3edf697b5613dfbb8977" category="cell">Etapas: 1. <block ref="393201960d4eefccacb06cc7ccdc8cfc" category="inline-link-macro-rx"></block> 2. <block ref="2f4f76d1186f7e1931e429142840bca6" category="inline-link-rx"></block></block>
+  <block id="690fca4891ecdd9975fe5dc5bd2a520b" category="inline-link-macro">Atualize o SRA</block>
+  <block id="b468841971bd972a362e1fdbf6619e6e" category="cell">Etapas: 1. Remova as ferramentas ONTAP 9.xx do seu ambiente. Consulte <block ref="9bde8c27ff3ba526e74c5e0434eb2686" category="inline-link-rx"></block> Artigo da Base de conhecimento da NetApp. 2. <block ref="b784a866e80ba41b4fb2f8e0caeb5197" category="inline-link-macro-rx"></block> 3. <block ref="a29d94f131e388c7ee7c4a56d062be87" category="inline-link-macro-rx"></block> 4. <block ref="2f4f76d1186f7e1931e429142840bca6" category="inline-link-rx"></block></block>
+  <block id="3d73385f16fa6d4daf757e66c8eab31b" category="doc">Migrar o Provedor VASA e atualizar o SRA</block>
+  <block id="3ce8158207209ed6b060c0d6db6b685d" category="section-title">Etapas para atualizar o adaptador de replicação de armazenamento (SRA)</block>
 </blocks>
