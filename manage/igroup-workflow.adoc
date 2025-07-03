@@ -94,7 +94,11 @@ Desmontar um armazenamento de dados de um host
 
 
 
-O host1Igroup é removido da hierarquia. Os igroups filhos não são excluídos explicitamente. A exclusão ocorre sob estas duas condições: • Se nenhum LUN for mapeado, o sistema ONTAP exclui o igroup filho. • Uma tarefa de limpeza agendada remove os igroups filhos pendentes sem mapeamentos de LUN. Esses cenários se aplicam apenas a igroups gerenciados por ferramentas ONTAP, não a igroups criados de forma personalizada.
+O host1Igroup é removido da hierarquia. Os igroups filhos não são excluídos explicitamente. A exclusão ocorre sob estas duas condições:
+
+* Se nenhum LUN for mapeado, o sistema ONTAP excluirá o igroup filho.
+* Uma tarefa de limpeza agendada remove os igroups filhos pendentes sem mapeamentos de LUN. Esses cenários se aplicam apenas a igroups gerenciados por ferramentas ONTAP, não a igroups criados de forma personalizada.
+
 
 .Exemplo 4:
 Excluir armazenamento de dados

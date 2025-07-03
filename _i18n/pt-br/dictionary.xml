@@ -2066,7 +2066,6 @@
   <block id="305675e418fa7f87d5c522fec4e29a3d" category="list-text">Implantar as ferramentas OVA para ONTAP para VMware vSphere 10,4.</block>
   <block id="472d4465d1363ede67b4fdb4c6e0e1ff" category="inline-link-macro">Atualize das ferramentas do ONTAP para o VMware vSphere 10.x para o 10,4</block>
   <block id="601dd8c7000a195659d470e737339c2d" category="paragraph"><block ref="601dd8c7000a195659d470e737339c2d" category="inline-link-macro-rx"></block></block>
-  <block id="de07d353dcc67566b2f1a71fe30ec4aa" category="admonition">O adaptador de replicação de armazenamento (SRA) suporta fan-out com uma relação de sincronização do tipo Duplex de failover automatizado e SnapMirror de relação assíncrona no grupo de consistência. No entanto, o fan-out com dois SnapMirror assíncronos no grupo de consistência ou SnapMirrors no volume não é suportado.</block>
   <block id="cdeb8a4a9786cfc45563b399c91bcce8" category="summary">Em uma proteção de fan-out, o grupo de consistência é protegido duas vezes com relação síncrona no primeiro cluster do ONTAP de destino e com relação assíncrona no segundo cluster do ONTAP de destino.</block>
   <block id="e7fc5cd5d3b281daa6edd76ca9076d38" category="doc">Proteção contra saída da ventoinha</block>
   <block id="7e6b27bdfe27b21cf49c575fe39989af" category="paragraph">Em uma proteção de fan-out, o grupo de consistência é protegido duas vezes com relação síncrona no primeiro cluster do ONTAP de destino e com relação assíncrona no segundo cluster do ONTAP de destino. Os fluxos de trabalho de proteção de sincronização ativa para criar, editar e excluir SnapMirror mantêm a proteção síncrona. Failover do SRM e reproteger os fluxos de trabalho mantêm a proteção assíncrona.</block>
@@ -2281,7 +2280,6 @@
   <block id="2d6cceda29fb927297683321657cc7f7" category="paragraph-title">Exemplo 3:</block>
   <block id="6e0ad0300479c496e85c7f90f364f3da" category="paragraph">Desmontar um armazenamento de dados de um host</block>
   <block id="1042a36d4bd6b198c75db206e253d6a1" category="paragraph">*Fluxo de trabalho*: [Desmontar] DS1 (lun1): host1 (iqn1)</block>
-  <block id="99fb3d64e6243f94e6f41859fd70993d" category="paragraph">O host1Igroup é removido da hierarquia. Os igroups filhos não são excluídos explicitamente. A exclusão ocorre sob estas duas condições: • Se nenhum LUN for mapeado, o sistema ONTAP exclui o igroup filho. • Uma tarefa de limpeza agendada remove os igroups filhos pendentes sem mapeamentos de LUN. Esses cenários se aplicam apenas a igroups gerenciados por ferramentas ONTAP, não a igroups criados de forma personalizada.</block>
   <block id="041ec4ff6ad5f804da8976d697659842" category="paragraph-title">Exemplo 4:</block>
   <block id="e5e28486c61b67fca6b2ef177a5f9359" category="paragraph">Excluir armazenamento de dados</block>
   <block id="4a3642a61d33fc5e86d2b97fb3ec5b26" category="paragraph">*Fluxo de trabalho*: [Excluir] DS1 (lun1): host2 (iqn2)</block>
@@ -2358,4 +2356,8 @@
   <block id="b468841971bd972a362e1fdbf6619e6e" category="cell">Etapas: 1. Remova as ferramentas ONTAP 9.xx do seu ambiente. Consulte <block ref="9bde8c27ff3ba526e74c5e0434eb2686" category="inline-link-rx"></block> Artigo da Base de conhecimento da NetApp. 2. <block ref="b784a866e80ba41b4fb2f8e0caeb5197" category="inline-link-macro-rx"></block> 3. <block ref="a29d94f131e388c7ee7c4a56d062be87" category="inline-link-macro-rx"></block> 4. <block ref="2f4f76d1186f7e1931e429142840bca6" category="inline-link-rx"></block></block>
   <block id="3d73385f16fa6d4daf757e66c8eab31b" category="doc">Migrar o Provedor VASA e atualizar o SRA</block>
   <block id="3ce8158207209ed6b060c0d6db6b685d" category="section-title">Etapas para atualizar o adaptador de replicação de armazenamento (SRA)</block>
+  <block id="6b384d855656d218511c98e4bb3a3c1a" category="paragraph">O host1Igroup é removido da hierarquia. Os igroups filhos não são excluídos explicitamente. A exclusão ocorre sob estas duas condições:</block>
+  <block id="3650a37003fea5e62220604565648a36" category="list-text">Se nenhum LUN for mapeado, o sistema ONTAP excluirá o igroup filho.</block>
+  <block id="58f346f8b1d31103f78fd7d4298e390b" category="list-text">Uma tarefa de limpeza agendada remove os igroups filhos pendentes sem mapeamentos de LUN. Esses cenários se aplicam apenas a igroups gerenciados por ferramentas ONTAP, não a igroups criados de forma personalizada.</block>
+  <block id="fcebdc1d37d884dcdadc2c706178b160" category="admonition">O Adaptador de Replicação de Armazenamento (SRA) oferece suporte a fan-out com um relacionamento de sincronização do tipo Failover Duplex Automatizado e relacionamento assíncrono SnapMirror no grupo de consistência. No entanto, o fan-out com dois SnapMirror assíncronos no grupo de consistência ou SnapMirrors no volume não é suportado.</block>
 </blocks>
