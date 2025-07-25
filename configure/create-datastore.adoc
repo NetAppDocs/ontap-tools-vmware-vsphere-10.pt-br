@@ -26,7 +26,7 @@ Quando o armazenamento é integrado às ferramentas ONTAP e a descoberta de repo
 Começando com as ferramentas do ONTAP para VMware vSphere 10,3, você pode criar um datastore vVols em sistemas ASA R2 com eficiência de espaço tão fina. O provedor VASA cria um contentor e os endpoints de protocolo desejados, ao mesmo tempo em que cria o datastore da evolução. Este contentor não terá quaisquer volumes de apoio.
 
 .Antes de começar
-* Certifique-se de que os agregados de raiz não sejam mapeados para o SVM.
+* Certifique-se de que os agregados raiz não sejam mapeados para SVM.
 * Certifique-se de que o Fornecedor VASA está registado no vCenter selecionado.
 * No sistema de storage ASA R2, o SVM deve ser mapeado para agregado ao usuário do SVM.
 
@@ -47,7 +47,7 @@ NOTE: O sistema ASA R2 dá suporte aos protocolos iSCSI e FC para vVols.
 ** Você pode selecionar *Nome do grupo de iniciadores personalizados* para os protocolos iSCSI e FC.
 +
 
-NOTE: No ASA R2, tipo de sistema de storage SVM, unidades de storage (LUN/namespace) não são criadas, pois o armazenamento de dados é apenas um contêiner lógico.
+NOTE: No sistema de armazenamento ASA r2 tipo SVM, as unidades de armazenamento (LUN/namespace) não são criadas porque o armazenamento de dados é apenas um contêiner lógico.
 
 
 
@@ -148,7 +148,7 @@ Quando o protocolo NVMe/FC ou NVMe/TCP é selecionado, um novo subsistema de nam
 .. Selecione *agregar* nas opções suspensas.
 +
 
-NOTE: Para sistemas de armazenamento ASA R2, a opção *agregado* não é mostrada porque o armazenamento ASA R2 é um armazenamento desagregado. Quando você escolhe um tipo de sistema de storage ASA R2, a página atributos de storage mostra as opções para ativar a QoS.
+NOTE: Para sistemas de armazenamento ASA r2, a opção *Agregar* não é exibida porque o armazenamento ASA r2 é desagregado. Ao escolher um sistema de armazenamento ASA r2 do tipo SVM, a página de atributos de armazenamento mostra as opções para habilitar a QoS.
 
 .. De acordo com o protocolo selecionado, uma unidade de armazenamento (LUN/namespace) é criada com uma reserva de espaço do tipo thin.
 +

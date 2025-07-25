@@ -52,7 +52,7 @@ Você precisa remover todos os backends de armazenamento conetados ao vCenter Se
 . Selecione as elipses verticais em relação ao vCenter Server que você deseja remover e selecione *Remover*.
 +
 
-NOTE: Depois de remover instâncias do vCenter Server, elas não serão mais mantidas pelo aplicativo.
+NOTE: Após remover instâncias do vCenter Server, elas não serão mais mantidas pelo aplicativo.
 
 
 

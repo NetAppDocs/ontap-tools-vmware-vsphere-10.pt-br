@@ -2,7 +2,7 @@
 permalink: manage/delete-deployment.html 
 sidebar: sidebar 
 keywords: ONTAP tools,Storage Replication Adapter 
-summary: Depois de excluir as ferramentas do ONTAP para a implantação do VMware vSphere, você deve limpar o FlexVolumes criado durante a implantação. Se você usou um cluster ONTAP dedicado para implantações, deve limpar o FlexVolumes à medida que a implantação cria muitos FlexVolumes que não são utilizados, resultando em desempenho reduzido. 
+summary: Após excluir as ONTAP tools for VMware vSphere , você deve limpar os FlexVolumes criados durante a implantação. Se você usou um cluster ONTAP dedicado para implantações, limpe os FlexVolumes, pois a implantação cria muitos FlexVolumes não utilizados, resultando em desempenho reduzido. 
 ---
 = Remover volumes FlexVol
 :allow-uri-read: 

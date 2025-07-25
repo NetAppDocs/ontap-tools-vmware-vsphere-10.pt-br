@@ -20,7 +20,7 @@ Na página de visão geral, você pode executar a ação *Discovery*. A ação d
 
 NOTE: O botão Action (Ação) só será ativado se tiver o privilégio de executar a ação de descoberta.
 
-Depois que a solicitação de descoberta for enviada, você poderá acompanhar o andamento da ação no painel tarefas recentes.
+Após o envio da solicitação de descoberta, você pode acompanhar o andamento da ação no painel de tarefas recentes.
 
 O painel de instrumentos tem vários cartões que mostram diferentes elementos do sistema. A tabela a seguir mostra as diferentes cartas e o que elas representam.
 
@@ -33,7 +33,7 @@ O painel de instrumentos tem vários cartões que mostram diferentes elementos d
 | Estado | O cartão Status mostra o número de backends de armazenamento e o status geral dos backends de armazenamento e do provedor VASA. O status dos backends de armazenamento mostra *saudável* quando todo o status dos backends de armazenamento é normal e mostra *insalubre* se algum dos backends de armazenamento tiver um problema (status desconhecido/inalcançável/degradado). Selecione a dica da ferramenta para abrir os detalhes de status dos backends de armazenamento. Você pode selecionar qualquer back-end de armazenamento para obter mais detalhes. *O link outros estados do provedor VASA* mostra o estado atual do provedor VASA registrado no vCenter Server. 
 
 
-| Back-ends de armazenamento - capacidade | Este cartão mostra a capacidade agregada usada e disponível de todos os backends de armazenamento para a instância do vCenter Server selecionada. No caso de sistemas de storage ASA R2, os dados de capacidade não são exibidos, pois são sistemas desagregados. 
+| Back-ends de armazenamento - capacidade | Este cartão mostra a capacidade agregada utilizada e disponível de todos os backends de armazenamento para a instância selecionada do vCenter Server. No caso de sistemas de armazenamento ASA r2, os dados de capacidade não são exibidos por se tratar de um sistema desagregado. 
 
 
 | Máquinas virtuais | Esta placa mostra as 10 principais VMs classificadas por métrica de desempenho. Você pode selecionar o cabeçalho para obter as 10 principais VMs para a métrica selecionada ordenadas por ordem crescente ou decrescente. As alterações de classificação e filtragem feitas no cartão persistem até que você altere ou limpe o cache do navegador. 

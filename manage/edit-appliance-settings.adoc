@@ -41,7 +41,7 @@ NOTE: Nas ferramentas do ONTAP para VMware vSphere, você só tem permissão par
 ** A máquina virtual que hospeda as ferramentas do ONTAP não é implantada diretamente em um host ESXi. A VM deve ser implantada em um cluster ou em um pool de recursos.
 +
 
-NOTE: Depois que a configuração de HA estiver ativada, você não poderá reverter para uma configuração de nó único que não seja de HA.
+NOTE: Depois que a configuração de HA for habilitada, não será possível reverter para uma configuração de nó único que não seja de HA.
 
 
 

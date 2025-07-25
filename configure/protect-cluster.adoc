@@ -18,7 +18,7 @@ Certifique-se de que os seguintes pré-requisitos são cumpridos:
 
 * O cluster de host tem armazenamentos de dados somente em uma SVM.
 * O datastore montado no cluster de host não deve ser montado em nenhum host fora do cluster.
-* Todos os armazenamentos de dados montados no cluster de host precisam ser armazenamentos de dados VMFS com protocolo iSCSI/FC. Armazenamentos de dados vVols, NFS ou VMFS com protocolos NVMe/FC e NVMe/TCP não são compatíveis.
+* Todos os Datastores montados no cluster host devem ser datastores VMFS com protocolo iSCSI/FC. Datastores vVols, NFS ou VMFS com protocolos NVMe/FC e NVMe/TCP não são suportados.
 * Armazenamentos de dados de formação de FlexVol/LUN montados no cluster de host não devem fazer parte de nenhum grupo de consistência existente (CG).
 * Armazenamentos de dados de formação de FlexVol/LUN montados no cluster de host não devem fazer parte de qualquer relacionamento existente com o SnapMirror.
 * O cluster de host deve ter pelo menos um datastore.

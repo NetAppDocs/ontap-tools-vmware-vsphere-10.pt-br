@@ -2,7 +2,7 @@
 permalink: protect/configure-placeholder-datastores.html 
 sidebar: sidebar 
 keywords:  
-summary: 'Você deve configurar um datastore de espaço reservado para manter um lugar no inventário do vCenter no site de recuperação para a máquina virtual protegida (VM). O datastore de espaço reservado não precisa ser grande, pois as VMs de espaço reservado são pequenas e usam apenas algumas centenas ou menos kilobytes.' 
+summary: 'Você deve configurar um repositório de dados de espaço reservado para armazenar um espaço no inventário do vCenter no local de recuperação da máquina virtual protegida (VM). O repositório de dados de espaço reservado não precisa ser grande, pois as VMs de espaço reservado são pequenas e ocupam apenas algumas centenas de quilobytes ou menos.' 
 ---
 = Configurar datastores de espaço reservado
 :allow-uri-read: 
@@ -11,7 +11,7 @@ summary: 'Você deve configurar um datastore de espaço reservado para manter um
 
 
 [role="lead"]
-Você deve configurar um datastore de espaço reservado para manter um lugar no inventário do vCenter no site de recuperação da máquina virtual protegida (VM). O datastore de espaço reservado não precisa ser grande, pois as VMs de espaço reservado são pequenas e usam apenas algumas centenas ou menos kilobytes.
+Você deve configurar um repositório de dados de espaço reservado para armazenar um espaço no inventário do vCenter no local de recuperação da máquina virtual (VM) protegida. O repositório de dados de espaço reservado não precisa ser grande, pois as VMs de espaço reservado são pequenas e ocupam apenas algumas centenas de quilobytes ou menos.
 
 .Antes de começar
 * Você deve ter conetado os sites protegidos e de recuperação.

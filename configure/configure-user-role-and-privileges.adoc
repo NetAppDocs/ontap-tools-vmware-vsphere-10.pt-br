@@ -36,7 +36,7 @@ NOTE: Você pode criar usuários no cluster ou diretamente no nível de máquina
 +
 O campo produto é preenchido automaticamente.
 
-.. Selecione a capacidade do produto como VSC, fornecedor VASA ou SRA na lista pendente.
+.. Selecione a capacidade do produto como *VSC, VASA Provider e SRA* no menu suspenso.
 +
 O campo *Role* é preenchido automaticamente com base na capacidade do produto selecionada.
 
@@ -105,7 +105,7 @@ Adicione o *REST API Path* e o respetivo acesso a partir da lista suspensa.
 
 === Lista de Privileges mínimo necessário para usuário de cluster com escopo global não administrador
 
-O Privileges mínimo necessário para usuários de cluster com escopo global não admin criados sem usar o arquivo JSON de usuários são listados nesta seção. Se um cluster for adicionado ao escopo local, é recomendável usar o arquivo JSON para criar os usuários, já que as ferramentas do ONTAP para VMware vSphere exigem mais do que apenas o Read Privileges para provisionamento no ONTAP.
+Os privilégios mínimos necessários para usuários de cluster com escopo global não administrativo, criados sem usar o arquivo JSON dos usuários, estão listados nesta seção. Se um cluster for adicionado no escopo local, é recomendável usar o arquivo JSON para criar os usuários, pois as ONTAP tools for VMware vSphere exigem mais do que apenas os privilégios de leitura para provisionamento no ONTAP.
 
 Usando APIs:
 

@@ -39,7 +39,7 @@ Você pode separar um disco de dados conetado a uma máquina virtual quando não
 . Mova o ponteiro sobre o disco e selecione *Remover*.
 +
 
-NOTE: O disco é removido da máquina virtual. Se outras máquinas virtuais compartilharem o disco, os arquivos de disco não serão excluídos.
+NOTE: O disco é removido da máquina virtual. Se outras máquinas virtuais compartilharem o disco, os arquivos do disco não serão excluídos.
 
 
 

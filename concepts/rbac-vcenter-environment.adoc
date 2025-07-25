@@ -56,4 +56,4 @@ Esses são Privileges personalizados exclusivos das ferramentas do ONTAP para VM
 
 === Usuários e grupos
 
-Você pode definir usuários e grupos usando o ative Directory ou a instância local do vCenter Server. Combinado com uma função, você pode criar uma permissão em um objeto na hierarquia de objetos do vSphere. A permissão concede acesso com base no Privileges na função associada. Observe que as funções não são atribuídas diretamente aos usuários isoladamente. Em vez disso, usuários e grupos obtêm acesso a um objeto por meio do Role Privileges como parte da permissão maior do vCenter Server.
+Você pode definir usuários e grupos usando o Active Directory ou a instância local do vCenter Server. Combinado com uma função, você pode criar uma permissão para um objeto na hierarquia de objetos do vSphere. A permissão concede acesso com base nos privilégios da função associada. Observe que as funções não são atribuídas diretamente aos usuários isoladamente. Em vez disso, usuários e grupos obtêm acesso a um objeto por meio de privilégios de função como parte da permissão mais ampla do vCenter Server.

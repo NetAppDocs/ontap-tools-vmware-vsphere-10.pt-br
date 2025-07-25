@@ -61,7 +61,7 @@ Os últimos três dígitos do código de erro indicam o erro de fluxo de trabalh
 | *Código de erro de atualização* | *Fluxo de trabalho* | *Resolução* 
 
 
-| 052 | O ISO pode ser o mesmo que a versão atual ou duas versões acima da versão atual. | Utilize uma versão ISO compatível para atualizar a partir da sua versão atual. 
+| 052 | O ISO pode ser o mesmo da versão atual ou duas versões acima da versão atual. | Utilize uma versão ISO compatível para atualizar a partir da sua versão atual. 
 
 
 | 068 | A reversão de pacotes Debian falhou | Use a recuperação baseada em snapshot ou zero RPO e tente fazer a atualização novamente. 

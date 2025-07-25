@@ -11,10 +11,10 @@ summary: As ferramentas do ONTAP para o dispositivo VMware vSphere são implanta
 
 
 [role="lead"]
-As ferramentas do ONTAP para o dispositivo VMware vSphere são implantadas como nó único de pequeno porte com serviços básicos para dar suporte a armazenamentos de dados NFS e VMFS. O processo de implantação de ferramentas do ONTAP pode levar até 45 minutos.
+O dispositivo ONTAP tools for VMware vSphere é implantado como um nó único de pequeno porte com serviços principais para oferecer suporte a datastores NFS e VMFS. O processo de implantação do ONTAP Tools pode levar até 45 minutos.
 
 .Antes de começar
-Uma biblioteca de conteúdo no VMware é um objeto de contentor que armazena modelos de VM, modelos vApp e outros tipos de arquivos. A implantação com biblioteca de conteúdo oferece uma experiência perfeita, pois não depende da conetividade de rede.
+Uma biblioteca de conteúdo no VMware é um objeto de contêiner que armazena modelos de VM, modelos de vApp e outros tipos de arquivos. A implantação com biblioteca de conteúdo proporciona uma experiência fluida, pois não depende da conectividade de rede.
 
 
 NOTE: Você deve armazenar a biblioteca de conteúdo em um datastore compartilhado para que todos os hosts dentro de um cluster possam acessá-la. Crie uma biblioteca de conteúdo para armazenar o OVA antes de configurar o dispositivo para a configuração HA. Não exclua o modelo de biblioteca de conteúdo após a implantação.

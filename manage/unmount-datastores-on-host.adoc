@@ -30,7 +30,7 @@ Se o datastore fizer parte de um cluster de host protegido, uma mensagem de avis
 
 
 
-NOTE: Se o datastore protegido estiver desmontado, a configuração de proteção de saída pode resultar em proteção parcial. link:../manage/edit-hostcluster-protection.html["Modificar cluster de host protegido"]Consulte para ativar a proteção completa.
+NOTE: Se o armazenamento de dados protegido for desmontado, a configuração de proteção existente poderá resultar em proteção parcial. Consulte link:../manage/edit-hostcluster-protection.html["Modificar cluster de host protegido"] para permitir proteção completa.
 
 .O que se segue?
 Você pode acompanhar o progresso no painel tarefas recentes.

@@ -153,7 +153,7 @@ Exclua um armazenamento de dados em um igroup pai personalizado.
 
 * Mesmo que CustomIgroup1 não seja reutilizado, ele não é excluído.
 * Se nenhum LUN for mapeado, o sistema ONTAP excluirá o host2Igroup.
-* O host1Igroup não é excluído, pois é mapeado para lun3 do DS3. Igroups personalizados nunca são excluídos, independentemente do status de reutilização.
+* O host1Igroup não é excluído porque está mapeado para lun3 do DS3. Igroups personalizados nunca são excluídos, independentemente do status de reutilização.
 
 
 .Exemplo 7:

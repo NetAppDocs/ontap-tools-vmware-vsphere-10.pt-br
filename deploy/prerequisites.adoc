@@ -84,7 +84,7 @@ https://imt.netapp.com/matrix/imt.jsp?components=105475;&solution=1777&isHWU&src
 
 == Requisitos portuários
 
-A tabela a seguir descreve as portas de rede que o NetApp usa e seus propósitos. Certifique-se de que estas portas estão abertas e acessíveis para facilitar o funcionamento e a comunicação adequados dentro do sistema. Certifique-se de que as configurações de rede necessárias estão em vigor para permitir que o tráfego nessas portas funcione corretamente. Dependendo das suas políticas de segurança, pode ser necessário configurar firewalls ou outros dispositivos de segurança para permitir esse tráfego na sua rede.
+A tabela a seguir descreve as portas de rede utilizadas pela NetApp e suas finalidades. Certifique-se de que essas portas estejam abertas e acessíveis para facilitar a operação e a comunicação adequadas dentro do sistema. Certifique-se de que as configurações de rede necessárias estejam implementadas para permitir o tráfego nessas portas e o funcionamento correto dos serviços associados. Dependendo das suas políticas de segurança, pode ser necessário configurar firewalls ou outros dispositivos de segurança para permitir esse tráfego na sua rede.
 
 |===
 

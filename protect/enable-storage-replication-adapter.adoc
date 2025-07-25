@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:  
 summary: As ferramentas do ONTAP para VMware vSphere oferecem a opção de habilitar o recurso SRA para configurar a recuperação de desastres. 
 ---
-= Ative o SRA para proteger datastores
+= Configurar SRA para proteger armazenamentos de dados
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -18,6 +18,7 @@ As ferramentas do ONTAP para VMware vSphere oferecem a opção de habilitar o re
 * Você deve ter implantado as ferramentas do ONTAP para o VMware vSphere.
 * Você deve ter baixado o arquivo do adaptador SRA `.tar.gz` do https://mysupport.netapp.com/site/products/all/details/otv10/downloads-tab["Site de suporte da NetApp"^].
 * Os clusters do ONTAP de origem e destino devem ter as mesmas programações personalizadas do SnapMirror criadas antes de executar os workflows do SRA.
+* link:../manage/enable-services.html["Habilite as ferramentas do ONTAP para os serviços do VMware vSphere"] para habilitar a capacidade SRA.
 
 
 .Passos

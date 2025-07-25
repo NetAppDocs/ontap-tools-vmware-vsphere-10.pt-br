@@ -38,10 +38,7 @@ NOTE: Ao configurar o gerenciador de array, você deve usar a mesma conexão (en
 
 
 
-.. Se você estiver se conetando a um cluster, digite o nome do SVM no campo *Nome do SVM*.
-+
-Você também pode deixar este campo em branco.
-
+.. Se estiver se conectando a um cluster, especifique o nome da SVM no campo *Nome da SVM* ou deixe-o em branco para gerenciar todas as SVMs no cluster.
 .. Insira os volumes a serem descobertos no campo *Lista de inclusão de volume*.
 +
 Você pode inserir o volume de origem no local protegido e o volume de destino replicado no local de recuperação.

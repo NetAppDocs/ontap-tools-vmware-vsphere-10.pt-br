@@ -25,7 +25,7 @@ O modelo padrão RBAC consiste em várias tecnologias de implementação ou fase
 Em alto nível, existem vários componentes que geralmente são incluídos em cada implementação do RBAC. Estes componentes estão ligados de diferentes formas como parte da definição dos processos de autorização.
 
 .Privileges
-Um _privilégio_ é uma ação ou capacidade que pode ser permitida ou negada. Pode ser algo simples, como a capacidade de ler um arquivo ou pode ser uma operação mais abstrata específica para um determinado sistema de software. O Privileges também pode ser definido para restringir o acesso a endpoints de API REST e comandos CLI. Cada implementação do RBAC inclui Privileges pré-definido e também pode permitir que os administradores criem Privileges personalizados.
+Um _privilégio_ é uma ação ou capacidade que pode ser permitida ou negada. Pode ser algo simples, como a capacidade de ler um arquivo, ou uma operação mais abstrata específica de um determinado sistema de software. Privileges também podem ser definidos para restringir o acesso a endpoints da API REST e comandos CLI. Cada implementação do RBAC inclui privilégios predefinidos e também pode permitir que os administradores criem privilégios personalizados.
 
 .Funções
 Um _role_ é um contentor que inclui um ou mais Privileges. As funções são geralmente definidas com base em tarefas específicas ou funções de trabalho. Quando uma função é atribuída a um usuário, o usuário recebe todos os Privileges contidos na função. E, como acontece com o Privileges, as implementações incluem funções pré-definidas e geralmente permitem que funções personalizadas sejam criadas.

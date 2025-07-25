@@ -22,7 +22,7 @@ NOTA:
 .Antes de começar
 Para uma atualização sem HA, desligue a VM do ONTAP Tools e, para uma atualização de HA, desligue o primeiro nó antes de fazer as seguintes alterações nas configurações da máquina virtual (VM).
 
-Se você estiver atualizando a partir das ferramentas do ONTAP para VMware vSphere 10,2 ou 10,3, precisará concluir as etapas a seguir antes de prosseguir com a tarefa de atualização: * Adicione um disco rígido adicional de 100 GB a cada nó, pois os dados do serviço são armazenados localmente na VM. * Altere a CPU e a memória para a VM desligada de acordo com o sabor da sua implantação. Ative o hot plugin para CPU e RAM.
+Se você estiver atualizando a partir das ONTAP tools for VMware vSphere 10.2 ou 10.3, precisará concluir as seguintes etapas antes de prosseguir com a tarefa de atualização: * Adicione um disco rígido adicional de 100 GB a cada nó, pois os dados do serviço são armazenados localmente na VM. * Altere a CPU e a memória da VM desligada de acordo com a sua implantação. Habilite o plugin ativo para CPU e RAM.
 
 E
 
