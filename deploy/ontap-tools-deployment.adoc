@@ -44,7 +44,7 @@ NOTE: Antes de prosseguir com a implantação, defina o DRS (Distributed Resourc
 As ferramentas ONTAP para VMware vSphere são implantadas inicialmente como uma configuração não HA. Para escalar para implantação HA, você precisará ativar o hot plug-in da CPU e o hot plug-in da memória. Você pode executar esta etapa como parte do processo de implantação ou editar as configurações da VM após a implantação.
 
 .Passos
-. Baixe o  `.zip` arquivo que contém os binários (_.ova_) e certificados assinados para as ferramentas ONTAP para VMware vSphere do  https://mysupport.netapp.com/site/products/all/details/otv10/downloads-tab["Site de suporte da NetApp"^] . Se você tiver importado o OVA para a biblioteca de conteúdo, você pode pular esta etapa e prosseguir com a próxima etapa.
+. Baixe o arquivo que contém os binários (_.ova_) e os certificados assinados para as ONTAP tools for VMware vSphere do  https://mysupport.netapp.com/site/products/all/details/otv10/downloads-tab["Site de suporte da NetApp"^] . Se você importou o OVA para a biblioteca de conteúdo, pode pular esta etapa e prosseguir para a próxima.
 . Faça login no servidor vSphere.
 . Navegue até o pool de recursos, cluster ou host onde você pretende implantar o OVA.
 +
