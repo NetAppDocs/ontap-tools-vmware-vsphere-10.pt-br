@@ -2,7 +2,7 @@
 permalink: manage/attach-detach-disk.html 
 sidebar: sidebar 
 keywords:  
-summary: - 
+summary: Anexe um disco de dados a uma máquina virtual para expandir a capacidade de armazenamento. 
 ---
 = Anexe ou separe um disco de dados de uma máquina virtual
 :allow-uri-read: 

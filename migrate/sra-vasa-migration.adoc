@@ -25,10 +25,10 @@ iptables -I INPUT 1 -p tcp --dport 1527 -j ACCEPT
 . Integre o backend de armazenamento localmente a partir das APIs do servidor vCenter para o plug-in de ferramentas ONTAP.
 . Emita a seguinte API do Swagger ou no Postman para migrar.
 +
-Curl -X POST https://xx.xx.xx.xx:8443/virtualization/api/v1/vcenters/{vcguid}/migration-jobs[]
+curl -X POST  `\https://xx.xx.xx.xx:8443/virtualization/api/v1/vcenters/{vcguid}/migration-jobs``
 
 +
-Você pode acessar o Swagger através deste URL: 'https://$FQDN_IP_PORT/, por exemplo https://10.67.25.33:8443/[]: .
+Você pode acessar o Swagger através deste URL:  `\https://$FQDN_IP_PORT/', for example: `\https://10.67.25.33:8443` .
 
 +
 []
@@ -68,7 +68,7 @@ Um objeto de tarefa é retornado. Você deve salvar o identificador do trabalho 
 +
 [listing]
 ----
-curl https://xx.xx.xx.xxx:8443/virtualization/api/jobmanager/v2/jobs/<JobID>?includeSubJobsAndTasks=true
+curl `\https://xx.xx.xx.xxx:8443/virtualization/api/jobmanager/v2/jobs/<JobID>?includeSubJobsAndTasks=true`
 ----
 +
 Depois de concluir o trabalho, reveja o relatório de migração. Este relatório está incluído nos dados do trabalho e pode ser acedido a partir da resposta do trabalho.
@@ -105,7 +105,7 @@ Assíncrono
 
 *Curl exemplo*
 
-Curl -X PATCH  https://xx.xx.xx.xx:8443/virtualization/api/v1/vcenters/56d373bd-4163-44f9-a872-9adabb008ca9/migration-jobs/84dr73bd-9173-65r7-w345-8ufdbb887d43[]
+curl -X PATCH  `\https://xx.xx.xx.xx:8443/virtualization/api/v1/vcenters/56d373bd-4163-44f9-a872-9adabb008ca9/migration-jobs/84dr73bd-9173-65r7-w345-8ufdbb887d43`
 
 * Exemplo de saída JSON*
 
@@ -168,7 +168,7 @@ NOTE: Não inicie a migração se o failover tiver sido concluído, mas a reprot
 
 . Execute estas etapas nos locais de proteção e recuperação.
 +
-.. link:../manage/enable-services.adoc["Habilite as ferramentas do ONTAP para os serviços do VMware vSphere"]
+.. link:../manage/enable-services.html["Habilite as ferramentas do ONTAP para os serviços do VMware vSphere"]
 .. Instale as ferramentas do ONTAP para o adaptador VMware vSphere 10,4 SRA usando as etapas em link:../protect/configure-on-srm-appliance.html["Configure o SRA no VMware Live Site Recovery Appliance"].
 .. Na página de interface de usuário do VMware Live Site Recovery, execute as operações *Discover Arrays* e *Discover Devices* e confirme se os dispositivos são exibidos como antes da migração.
 
