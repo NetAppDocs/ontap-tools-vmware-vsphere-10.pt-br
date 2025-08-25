@@ -95,7 +95,8 @@ Use a planilha a seguir para reunir as informações necessárias para as ferram
 
 | Gateway para o endereço IPv6 (opcional) |  
 |===
-Crie Registros DNS para todos os endereços IP acima. Antes de atribuir nomes de host, mapeie-os para os endereços IP gratuitos no DNS. Todos os endereços IP devem estar na mesma VLAN selecionada para implantação.
+
+NOTE: Crie Registros DNS para todos os endereços IP acima. Antes de atribuir nomes de host, mapeie-os para os endereços IP gratuitos no DNS. Todos os endereços IP devem estar na mesma VLAN selecionada para implantação.
 
 
 

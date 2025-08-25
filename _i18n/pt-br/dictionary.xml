@@ -693,7 +693,6 @@
   <block id="5dca53226c3a1262b461c063e61fd9e1" category="list-text">Execute o comando<block ref="ab64b2f5839594835c3c4d3e3c725c7c" prefix=" " category="inline-code"></block> para navegar para o diretório de log.</block>
   <block id="1678c2984a8ccc5f17124abb9acb5bb8" category="list-text">No local do log, digite o comando para obter o ID do docker usado pelo SRA:<block ref="c3933049d26fccba0396e7760f0fba06" prefix=" " category="inline-code"></block></block>
   <block id="d5d2ad55b774ba92aef91e985c285c4b" category="list-text">Para fazer login no ID do contentor, digite o comando:<block ref="1b6eefce0212551da88d489c9ed8f5e9" prefix=" " category="inline-code"></block></block>
-  <block id="eec423b8c8e795c4422b564b889c72ba" category="admonition">Você precisa fornecer o valor da senha dentro de aspas simples para garantir que o script Perl não leia os carateres especiais na senha como delimitador da entrada.</block>
   <block id="3e06c9490934f18ce97a637bf06b781e" category="paragraph">Uma mensagem de sucesso confirmando que as credenciais de armazenamento são armazenadas é exibida. O SRA pode se comunicar com o servidor SRA usando o endereço IP, porta e credenciais fornecidos.</block>
   <block id="a079415d00c6083e09f585ea2ed56548" category="doc">Configurar datastores de espaço reservado</block>
   <block id="953e6b615a5a31e17c7240dfe25d81c3" category="list-text">Você deve ter conetado os sites protegidos e de recuperação.</block>
@@ -807,7 +806,6 @@
   <block id="ab83860ed087a089d00a21810f2a0bf7" category="cell">Proposta de valor chave</block>
   <block id="4273cb76acdc3e1de02819d037c77ad4" category="cell">Simplifique e simplifique as operações do dia 0 ao dia 2 com recursos aprimorados de segurança, conformidade e automação</block>
   <block id="92d3c85edd0fa69062ef2c7cca594814" category="cell">Qualificação de lançamento do ONTAP</block>
-  <block id="f69940d2c889c5ba58609514e4ec4bff" category="cell">ONTAP 9.9,1 para ONTAP 9.15,1</block>
   <block id="d4dcb3d0be17e55a6784a2f961f93bc2" category="cell">ONTAP 9.12,1 para ONTAP 9.14,1</block>
   <block id="d67ece44624c7aa69b0f38715d1ac2fb" category="cell">Suporte ao lançamento da VMware</block>
   <block id="af0223f5c63fe0b5a6e75d3087868abd" category="cell">VSphere 7.x-8.x VMware Site Recovery Manager (SRM) 8,5 para VMware Live Site Recovery 9,0</block>
@@ -985,7 +983,6 @@
   <block id="d67d8ab4f4c10bf22aa353e27879133c" category="cell">39</block>
   <block id="35f4a8d465e6e1edc05f3d8ab658c551" category="cell">78</block>
   <block id="2838023a778dfaecdc212708f721b788" category="cell">51</block>
-  <block id="0451c056108f9b7a3d2a5ab1fc561256" category="cell">9.14.1, 9.15.1 e 9.16.0. FAS, ASA A-Series, ASA C-Series, AFF A-Series, AFF C-Series e ASA R2.</block>
   <block id="b2dd36bd4918e00f8b2e15e6d62a4b94" category="cell">Fornecedor VASA</block>
   <block id="41b07b979210ee3b74b8321a449a902e" category="cell">Não HA</block>
   <block id="76841410d8f9a6881e0b96f150e9cedf" category="section-title">Requisitos portuários</block>
@@ -1471,7 +1468,6 @@
   <block id="ee0537075fce44e6ac2bade1dbb6ebbe" category="list-text">No assistente criar mapeamento de rede, faça o seguinte:</block>
   <block id="e0b7ac4ee5dae1212e32e99c489c4e53" category="list-text">Selecione *Mapeamentos de recursos* &gt; *novo* na guia gerenciar para criar um novo mapeamento de recursos.</block>
   <block id="ed8dc3baa490877497f62cd225d8531a" category="list-text">Selecione *Objects* &gt; *actions* &gt; *Pair Sites*.</block>
-  <block id="a1b0bb7b5d54e1fb2449b091677a7277" category="paragraph">Saiba se a migração das ferramentas do ONTAP para o VMware vSphere 9 para as ferramentas do ONTAP para o VMware vSphere 10,1 ou versões posteriores é ideal para você. Para obter as informações de compatibilidade mais atualizadas,<block ref="0aaf04254af18646f3d246cd4a4b417d" category="inline-link-rx"></block> consulte .</block>
   <block id="ed05024ef185f71f630610fa2998b97c" category="list-text">Vá para a guia instantâneos e selecione o botão *tirar instantâneo*. Faça um snapshot bloqueado da VM. <block ref="cfbcb02d8f4029fded9e80960c9fdffc" category="inline-link-rx"></block>Consulte para obter detalhes.</block>
   <block id="edeaa9dc153db64cc7a139687f690234" category="paragraph">Você pode acessar as ferramentas do ONTAP para a documentação da API REST do VMware vSphere 10 on-line por meio da interface de usuário do Swagger. Você precisa do endereço IP ou FQDN das ferramentas do ONTAP para o serviço de gateway VMware vSphere 10, bem como da porta.</block>
   <block id="fde1abb5537b55c34521d414267b3f70" category="section-title">Sistemas ASA R2</block>
@@ -2038,7 +2034,6 @@
   <block id="6f815e1b2741159d76d3d66389878de5" category="inline-link">Selecione um armazenamento de dados do marcador de posição</block>
   <block id="55092f0f894ce14245043edf4beb8b6e" category="list-text">Crie um novo armazenamento de dados de suporte de local. Consulte<block ref="be1fd24d4dcaa49fc51bb9d037dbfbe3" category="inline-link-rx"></block></block>
   <block id="fb9b74f07a06ab47cb2865075f009b08" category="list-text">Adicionar datastore à proteção do cluster do host <block ref="7f22d9c478ecf91907e72215f8fe7f7b" category="inline-link-macro-rx"></block>. Você precisa adicionar tipos de diretiva assíncrona e síncrona.</block>
-  <block id="0af8d7332d302602a2cbf947d60fb54f" category="cell">ONTAP 9.12.1 para ONTAP 9.15.1 para ferramentas ONTAP 10,2 ONTAP 9.14.1, 9.15.1 e 9.16.0 para ferramentas ONTAP 10,3. ONTAP 9.14.1, 9.15.1, 9.16.0 e 9.16.1 para ferramentas ONTAP 10,4</block>
   <block id="820b87be8b0ea0cbf45b52e4cfcb6b29" category="paragraph">Saiba mais sobre os novos e aprimorados recursos disponíveis nas ferramentas do ONTAP para VMware vSphere 10,4.</block>
   <block id="75d7a3fca31675c888d80d62c6b5e5b6" category="inline-xref-macro">Novidades nas ferramentas do ONTAP para VMware vSphere 10,4</block>
   <block id="d0ac2643534ae45f244af907f2ec0f1d" category="paragraph">Para obter uma lista completa de novos recursos e aprimoramentos, <block ref="b243962e5f3c5df9db6e6c1d7b921996" category="inline-xref-macro-rx"></block>consulte .</block>
@@ -2339,15 +2334,10 @@
   <block id="2f1a00cebb4ee36563713e73cd552aad" category="list-text">Se estiver se conectando a um cluster, especifique o nome da SVM no campo *Nome da SVM* ou deixe-o em branco para gerenciar todas as SVMs no cluster.</block>
   <block id="5921d19c5073db0cf91d2f7a19cb58b3" category="summary">Após implantar o dispositivo VMware Live Site Recovery, configure o Storage Replication Adapter (SRA) para habilitar o gerenciamento de recuperação de desastres.</block>
   <block id="5f917c11d7a2e921fe58d07dc5187d72" category="paragraph">Configurar o SRA no dispositivo VMware Live Site Recovery salva as ONTAP tools for VMware vSphere no dispositivo, permitindo a comunicação entre o VMware Live Site Recovery e o SRA.</block>
-  <block id="e9a219391bfd642946283be2ece24a3b" category="list-text">Certifique-se de ter baixado o arquivo _.tar.gz_ do <block ref="2daaad32389df9c23111b0df1c3a53df" category="inline-link-rx"></block> .</block>
-  <block id="0068350f0fc50f1616858f2cba6f1763" category="list-text">Certifique-se de ter habilitado os serviços SRA no Gerenciador de ferramentas ONTAP . Para obter mais informações, consulte <block ref="3d67f96eb2aec81f92bfe17a27594d9f" category="inline-link-macro-rx"></block> seção.</block>
   <block id="ef2fe3429619b34c69b3aa8b7f57ad24" category="inline-link-macro">Adicionar servidores vCenter</block>
-  <block id="2d2ef0c383dfac0a2b15d6a147a46763" category="list-text">Certifique-se de ter adicionado os servidores vCenter às ferramentas ONTATP para o dispositivo VMware vSphere. Para obter mais informações, consulte <block ref="3dbde986d1342171f2ded3fc331c93f7" category="inline-link-macro-rx"></block> seção.</block>
   <block id="3f00a64bb3c00d2246ae2d95f4b893b7" category="inline-link-macro">Adicionar backends de armazenamento</block>
-  <block id="04d8d44368bf9be2bef4c5d4cc264e26" category="list-text">Certifique-se de ter adicionado backends de armazenamento às ONTAP tools for VMware vSphere. Para obter mais informações, consulte <block ref="a4b852b9645b4ce1db7f6b1fa35e7953" category="inline-link-macro-rx"></block> seção.</block>
   <block id="bddb7e060422ad436bb9edd35c8f2167" category="list-text">Efetue login no dispositivo VMware Live Site Recovery usando uma conta de administrador por meio de um cliente SSH, como o PuTTY.</block>
   <block id="2c7add525a76391c3239448662da8345" category="list-text">Configure o VMware Live Site Recovery com ONTAP tools for VMware vSphere usando o comando: <block ref="ce28c8331c9b796533aeb9eede5d84a1" prefix=" " category="inline-code"></block></block>
-  <block id="a600c5020a62aeefa8b01f241dde3b5a" category="admonition">Você pode definir o nome de usuário e a senha do aplicativo (Provedor VASA/SRA) no Gerenciador de ferramentas ONTAP ao habilitar esses serviços pela primeira vez. Essas credenciais são necessárias para registrar o SRA no dispositivo VMware Live Site Recovery.</block>
   <block id="ca7bfd38b313f85cbc464d0faa80e338" category="list-text">Examine novamente os adaptadores para confirmar se os detalhes atualizados aparecem na página Adaptadores de replicação de armazenamento do VMware Live Site Recovery.</block>
   <block id="fd69c5cf902969e6fb71d043085ddee6" category="paragraph-title">Resultados</block>
   <block id="4ee1e2d8938db64566ac7e0106a4abda" category="paragraph">Uma mensagem de confirmação é exibida indicando que as credenciais de armazenamento foram salvas. O SRA agora pode se comunicar com o servidor SRA usando o endereço IP, a porta e as credenciais especificados.</block>
@@ -2368,4 +2358,17 @@
   <block id="df0e042574783c577a323cad7e00d03f" category="paragraph">curl -X POST <block ref="60b2cf26de252a4c9c938a4ded6aed78" prefix=" " category="inline-code"></block></block>
   <block id="1899392092401675b3ca134eaf0dae0e" category="paragraph">Você pode acessar o Swagger através deste URL: <block ref="2b09eb15e8e904ff30adf6fd75069681" prefix=" " category="inline-code"></block> .</block>
   <block id="90299a7739327ddb8f7bdb36ab48e642" category="paragraph">curl -X PATCH <block ref="8083d85a2708038b6e3e98616b6fee1c" prefix=" " category="inline-code"></block></block>
+  <block id="77e564d8c0f5ec6dede938fe5a17d9a1" category="cell">9.14.1, 9.15.1, 9.16.0, 9.16.1 e 9.16.1P3 FAS, ASA Série A, ASA Série C, AFF Série A, AFF Série C e ASA r2.</block>
+  <block id="c62fd71650b79a708d2aea68a976eb92" category="list-text">Baixe o arquivo _.tar.gz_ do<block ref="2daaad32389df9c23111b0df1c3a53df" category="inline-link-rx"></block> .</block>
+  <block id="75aa555a056f749aa9ee7740122cad64" category="inline-link-macro">Habilitar serviços</block>
+  <block id="9ca7ca368d6194771f74b129172a2268" category="list-text">Habilite serviços SRA no Gerenciador de ferramentas ONTAP . Para obter mais informações, consulte <block ref="39b62016395601556cd6c6d261d293be" category="inline-link-macro-rx"></block> seção.</block>
+  <block id="2086d584e6b7fbcd00b9b947fb489102" category="list-text">Adicione servidores vCenter às ferramentas ONTATP para o dispositivo VMware vSphere. Para obter mais informações, consulte <block ref="3dbde986d1342171f2ded3fc331c93f7" category="inline-link-macro-rx"></block> seção.</block>
+  <block id="30c5929e404d9dbd7a9e1d71ee536a31" category="list-text">Adicione backends de armazenamento às ONTAP tools for VMware vSphere. Para obter mais informações, consulte <block ref="a4b852b9645b4ce1db7f6b1fa35e7953" category="inline-link-macro-rx"></block> seção.</block>
+  <block id="11b53d47cc3bc8ac7b32144fd5d53a34" category="list-text">Forneça a senha entre aspas simples para que o script Perl trate caracteres especiais como parte da senha, não como delimitadores.</block>
+  <block id="5d329ddc09def6a0630f09ed2db2fc17" category="list-text">Você pode definir o nome de usuário e a senha do aplicativo (Provedor VASA/SRA) no Gerenciador de ferramentas ONTAP ao habilitar esses serviços pela primeira vez. Use essas credenciais para registrar o SRA com o VMware Live Site Recovery.</block>
+  <block id="039129c8b27af13e3375adc9b3085189" category="list-text">Para localizar o GUID do vCenter, acesse a página do vCenter Server no Gerenciador de ferramentas ONTAP depois de adicionar sua instância do vCenter.  Consulte<block ref="3dbde986d1342171f2ded3fc331c93f7" category="inline-link-macro-rx"></block> seção.</block>
+  <block id="fd8b04882884dbacb7d08aaec57efdcb" category="paragraph">Saiba se a migração das ONTAP tools for VMware vSphere 9 para as ONTAP tools for VMware vSphere 10.1 ou versões posteriores é ideal para você.</block>
+  <block id="ec08a84e1743fa84ea31f88ca3a008ea" category="admonition">Para obter as informações de compatibilidade mais atualizadas, consulte<block ref="0aaf04254af18646f3d246cd4a4b417d" category="inline-link-rx"></block> .</block>
+  <block id="f41628526d2ecef49849a9d54aec2d46" category="cell">ONTAP 9.9.1 para ONTAP 9.16.1</block>
+  <block id="18adf16502c1eb6879520f01503df225" category="cell">ONTAP 9.12.1 para ONTAP 9.15.1 para ferramentas ONTAP 10.2.  ONTAP 9.14.1, 9.15.1, 9.16.0 e 9.16.1 para ferramentas ONTAP 10.3.  ONTAP 9.14.1, 9.15.1, 9.16.0 e 9.16.1 para ferramentas ONTAP 10.4.  ONTAP 9.16.1P3 e posterior é necessário para as ferramentas ONTAP 10.4 ao usar sistemas ASA r2.</block>
 </blocks>
