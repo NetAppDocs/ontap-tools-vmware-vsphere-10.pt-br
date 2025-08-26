@@ -1337,7 +1337,6 @@
   <block id="4fa11816241a033e46d7ef0e6bb9c98c" category="list-text">Revise os detalhes do modelo e selecione *Next*.</block>
   <block id="db5ae9b3dd501309f26eea92d5f05e2b" category="list-text">Leia e aceite o contrato de licença e selecione *Next*.</block>
   <block id="65ab872e40a57d468184122e5d0784c0" category="list-text">Selecione a rede de destino para cada rede de origem e selecione *seguinte*.</block>
-  <block id="25cf3eb120c48489f9ac5e6faaf3e1b8" category="list-text">Na janela *Personalizar modelo*, preencha os campos obrigatórios e selecione *seguinte*.</block>
   <block id="59d5c19f1f3c5f065c5ee15d4ace3947" category="list-text">Selecione o ícone *administrador* no canto superior direito da tela e selecione *alterar senha*.</block>
   <block id="ccd07bc5ed1ed05e8e27350cb1a41b7f" category="list-text">Na janela *Host cluster protection*, selecione o menu de elipse contra o cluster e, em seguida, selecione *Remove protection*.</block>
   <block id="27385d25f49e4eeebab01eda70b36576" category="list-text">Selecione *Edit Appliance Settings* (Editar definições do dispositivo) na secção Overview (Descrição geral).</block>
@@ -1749,8 +1748,6 @@
   <block id="096078a372ad8b6c0fcc7c22ffe9a147" category="list-text"><block ref="096078a372ad8b6c0fcc7c22ffe9a147" category="inline-link-macro-rx"></block></block>
   <block id="955e2530b35bd36732551d894e503a00" category="list-text">No campo *Selecione um nome e pasta*, insira o nome da máquina virtual e escolha sua localização.</block>
   <block id="02793e3182fbe0f0f175da7ab3e93d73" category="list-text">Se você estiver usando a versão do vCenter Server 8.0.3, selecione a opção *Personalizar o hardware da máquina virtual*, que ativará uma etapa adicional chamada *Personalizar hardware* antes de prosseguir para a janela *Pronto para concluir*.</block>
-  <block id="023e2f3d2e9fc24fbfa345f951d3739f" category="list-text">Se você estiver usando a versão do vCenter Server 7.0.3, siga as etapas na seção *o que vem a seguir?* no final da implantação.</block>
-  <block id="6086b7cf0ed3f66a8f067f2609990958" category="list-text">Ao usar a versão do vCenter Server 8.0.3, na janela *Personalizar hardware*, ative as opções *hot add* da CPU e *Memory hot plug* para permitir a funcionalidade HA.</block>
   <block id="97b6810eb76df77c1b712c70d530f60a" category="paragraph">Se você tiver ferramentas de implantação do ONTAP para o VMware vSphere com o vCenter Server 7,0.3, siga estas etapas após a implantação.</block>
   <block id="d2a87194163daac768f661ff8d1d3300" category="list-text">Faça login no cliente vCenter</block>
   <block id="da93f5e9af6870a18b0865c5a2c7f8c4" category="list-text">Navegue até as ferramentas do ONTAP para a máquina virtual VMware vSphere em *inventários* e selecione a opção *Editar configurações*.</block>
@@ -1967,7 +1964,6 @@
   <block id="66497dafb11e4eb14a710aba82842f2a" category="section-title">Definições de armazenamento ONTAP</block>
   <block id="b1f65147a07338ddacacf797fa8f8068" category="paragraph">Para garantir a integração perfeita do storage ONTAP com as ferramentas do ONTAP para VMware vSphere, considere as seguintes configurações:</block>
   <block id="89dcc1d78edaf637785c6ecfca413588" category="inline-link">Saiba mais sobre o zoneamento FC e FCoE com os sistemas ONTAP</block>
-  <block id="70b4e2df1c2bfeb98be224b551dbb572" category="list-text">Se você estiver usando o Fibre Channel (FC) para conectividade de storage, configure o zoneamento em seus switches FC para conetar os hosts ESXi aos LIFs FC da SVM.<block ref="b7794521bd71e03bf277ba88ec7edd58" category="inline-link-rx"></block></block>
   <block id="172a02306231a2a4f49511d5b78568bd" category="inline-link">Relacionamentos de peers de clusters do ONTAP</block>
   <block id="01409d70514dee021d7a19fe33614d67" category="inline-link">ONTAP SVM entre clusters e relacionamentos de pares</block>
   <block id="896541ee85adff34fb9f5a9c75ef9d3d" category="list-text">Para usar a replicação SnapMirror gerenciada por ferramentas do ONTAP, o administrador de storage do ONTAP deve<block ref="c6246851dd06c6faec212d662b844298" category="inline-link-rx"></block> criar e<block ref="8c2edb06b2585f1e066ba3419010ff37" category="inline-link-rx"></block> no ONTAP antes de usar o SnapMirror.</block>
@@ -2371,4 +2367,11 @@
   <block id="ec08a84e1743fa84ea31f88ca3a008ea" category="admonition">Para obter as informações de compatibilidade mais atualizadas, consulte<block ref="0aaf04254af18646f3d246cd4a4b417d" category="inline-link-rx"></block> .</block>
   <block id="f41628526d2ecef49849a9d54aec2d46" category="cell">ONTAP 9.9.1 para ONTAP 9.16.1</block>
   <block id="18adf16502c1eb6879520f01503df225" category="cell">ONTAP 9.12.1 para ONTAP 9.15.1 para ferramentas ONTAP 10.2.  ONTAP 9.14.1, 9.15.1, 9.16.0 e 9.16.1 para ferramentas ONTAP 10.3.  ONTAP 9.14.1, 9.15.1, 9.16.0 e 9.16.1 para ferramentas ONTAP 10.4.  ONTAP 9.16.1P3 e posterior é necessário para as ferramentas ONTAP 10.4 ao usar sistemas ASA r2.</block>
+  <block id="2de89f426cb40a40a73e0dc57ba1d0b0" category="inline-image-macro">Selecione um nome e uma pasta</block>
+  <block id="797b9d658e154cdf3e14cfdbdb0fc337" category="list-text">Se você estiver usando a versão vCenter Server 7.0.3, siga as etapas na seção *o que vem a seguir?* no final da implantação.<block ref="10901421e1b49cc7648423e4186ee13b" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="47d44ed4727a9bed10ad17773b1b922e" category="inline-image-macro">Personalizar modelo</block>
+  <block id="603b3c719f65dafb1976e068ef1f8d45" category="list-text">Na janela *Personalizar modelo*, preencha os campos obrigatórios e selecione *Avançar*.<block ref="bfa0729b2fed6181848e39628c495247" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="63629b02d982d9e4fe0f19501143ce17" category="inline-image-macro">Personalizar hardware</block>
+  <block id="2a2d465455150512141b1402a600df32" category="list-text">Ao usar a versão vCenter Server 8.0.3, na janela *Personalizar hardware*, ative as opções *CPU hot add* e *Memory hot plug* para permitir a funcionalidade HA.<block ref="93c02f5316fc65f2262959de5552f7c0" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="936fb178b14835844700bc06aa5ab952" category="list-text">Se você estiver usando o Fibre Channel (FC) para conectividade de armazenamento, configure o zoneamento em seus switches FC para conectar os hosts ESXi com os LIFs FC do SVM.<block ref="56d435991bafd2bcca9f59739e2992e7" category="inline-link-rx"></block></block>
 </blocks>

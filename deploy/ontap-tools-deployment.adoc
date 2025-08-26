@@ -64,7 +64,7 @@ NOTE: Nunca armazene as ferramentas do ONTAP para a máquina virtual VMware vSph
 . No campo *Selecione um nome e pasta*, insira o nome da máquina virtual e escolha sua localização.
 +
 ** Se você estiver usando a versão do vCenter Server 8.0.3, selecione a opção *Personalizar o hardware da máquina virtual*, que ativará uma etapa adicional chamada *Personalizar hardware* antes de prosseguir para a janela *Pronto para concluir*.
-** Se você estiver usando a versão do vCenter Server 7.0.3, siga as etapas na seção *o que vem a seguir?* no final da implantação.
+** Se você estiver usando a versão vCenter Server 7.0.3, siga as etapas na seção *o que vem a seguir?* no final da implantação.image:../media/select-name.png["Selecione um nome e uma pasta"]
 
 
 . Selecione um recurso de computador e selecione *Next*. Opcionalmente, marque a caixa para *ligar automaticamente a VM implantada*.
@@ -72,7 +72,7 @@ NOTE: Nunca armazene as ferramentas do ONTAP para a máquina virtual VMware vSph
 . Leia e aceite o contrato de licença e selecione *Next*.
 . Selecione o armazenamento para a configuração e o formato do disco e selecione *Next*.
 . Selecione a rede de destino para cada rede de origem e selecione *seguinte*.
-. Na janela *Personalizar modelo*, preencha os campos obrigatórios e selecione *seguinte*.
+. Na janela *Personalizar modelo*, preencha os campos obrigatórios e selecione *Avançar*.image:../media/customize-temp.png["Personalizar modelo"]
 +
 ** As informações são validadas durante a instalação. Se houver uma discrepância, uma mensagem de erro será exibida no console da Web e você será solicitado a corrigi-la.
 ** Os nomes de host devem incluir letras (A-Z, a-z), dígitos (0-9) e hífens (-). Para configurar a pilha dupla, especifique o nome do host mapeado para o endereço IPv6.
@@ -84,7 +84,7 @@ NOTE: O Pure IPv6 não é compatível. O modo misto é suportado com VLAN conten
 ** O IPv4 é o componente de endereço IP da configuração do nó, que pode ser utilizado para habilitar o acesso de shell de diagnóstico e SSH no nó para fins de depuração e manutenção.
 
 
-. Ao usar a versão do vCenter Server 8.0.3, na janela *Personalizar hardware*, ative as opções *hot add* da CPU e *Memory hot plug* para permitir a funcionalidade HA.
+. Ao usar a versão vCenter Server 8.0.3, na janela *Personalizar hardware*, ative as opções *CPU hot add* e *Memory hot plug* para permitir a funcionalidade HA.image:../media/customize-hw.png["Personalizar hardware"]
 . Revise os detalhes na janela *Pronto para concluir*, selecione *concluir*.
 +
 À medida que a tarefa de implantação é criada, o progresso é mostrado na barra de tarefas do vSphere.
