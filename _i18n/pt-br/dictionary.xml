@@ -1451,7 +1451,6 @@
   <block id="fdbd4c13a762f69f21a098a7dd8e55ad" category="list-text">Selecione *Reset* para implementar as alterações.</block>
   <block id="39a4d1dfe549518e18a4188e13768079" category="list-text">Selecione *Reset* para implementar as alterações. Na redefinição bem-sucedida da senha, você pode usar a nova senha para fazer login.</block>
   <block id="3ac063bd7a8e9b85e1a6cc3c07a304c3" category="list-text">Selecione a guia *Configure* no painel direito.</block>
-  <block id="41e0fa10828ee2d85cfd4c0ff833ac64" category="inline-link">Storage vMotion</block>
   <block id="6981bfa872a319e4f266c3733ce4e5c3" category="list-text">Selecione a guia *Monitor* no painel direito.</block>
   <block id="e6cd86d61f4639c8a27006c6c29b3e9f" category="list-text">Selecione *seguinte*.</block>
   <block id="03c100e80bdd94d3eb4d85dffe4eaecb" category="list-text">Selecione *datastores de espaço* &gt; *novo* na guia gerenciar para criar um novo datastore de espaço reservado.</block>
@@ -1693,7 +1692,6 @@
   <block id="4c91382e492707f0779f372fcc750396" category="list-text">As informações são validadas durante a instalação. Se houver uma discrepância, uma mensagem de erro será exibida no console da Web e você será solicitado a corrigi-la.</block>
   <block id="2760ddae8a52ae77e6711ac97cdeff45" category="list-text">Os nomes de host devem incluir letras (A-Z, a-z), dígitos (0-9) e hífens (-). Para configurar a pilha dupla, especifique o nome do host mapeado para o endereço IPv6.</block>
   <block id="a1f2c5d218a3501d9d0831dccea5dbc3" category="admonition">O Pure IPv6 não é compatível. O modo misto é suportado com VLAN contendo endereços IPv6 e IPv4.</block>
-  <block id="1651a6277f4f59f0128c7be036557e5d" category="paragraph">Se houver discrepâncias no formulário OVF, uma caixa de diálogo solicitará uma ação corretiva. Use o botão Tab para navegar, fazer as alterações necessárias e selecione "OK.você tem três tentativas para resolver quaisquer problemas. Se os problemas continuarem após três tentativas, o processo de instalação será interrompido e é aconselhável tentar novamente a instalação em uma nova máquina virtual.</block>
   <block id="fc670824c9b9087edaedbd8931be914a" category="doc">Remover volumes FlexVol</block>
   <block id="94ba231101263cc02a5bbd35865c2569" category="paragraph">Quando você usa um cluster ONTAP dedicado para ferramentas do ONTAP para implantação do VMware, ele cria muitos volumes FlexVol não utilizados. Depois de remover as ferramentas do ONTAP para VMware vSphere, você deve remover os volumes do FlexVol para evitar possíveis impactos no desempenho.</block>
   <block id="3fcb4ec0988a47a419299691b19d04fa" category="paragraph">Se for uma implantação iSCSI, você precisa excluir os grupos também.</block>
@@ -1706,7 +1704,6 @@
   <block id="23829b8d6575f7cd3e20a5e92b475a9e" category="doc">Desinstale as ferramentas do ONTAP para o VMware vSphere</block>
   <block id="82a00fc1c0ae6d437f6d942c64bee898" category="list-text">Remova ou mova todas as máquinas virtuais das ferramentas do ONTAP para armazenamentos de dados gerenciados do VMware vSphere.</block>
   <block id="4ad237c48098cfd8973e73475bded403" category="list-text">Para remover as máquinas virtuais, consulte<block ref="c16fb322315174fa2c9720c74541cf45" category="inline-link-rx"></block></block>
-  <block id="937380d419246adf3fdb369397226f82" category="list-text">Para movê-los para um datastore não gerenciado, consulte<block ref="5c1e2b1dd1aaa388da4191e5a966b959" category="inline-link-rx"></block></block>
   <block id="1d920979688b28c7b10ef84d14436f95" category="list-text">Se você ativou o provedor VASA, selecione *Configurações* &gt; *Configurações do provedor VASA* &gt; *DesRegistrar* nas ferramentas do ONTAP para cancelar o Registro dos provedores VASA de todos os servidores vCenter.</block>
   <block id="cdb9fe2a322209ab095ba01e8388697d" category="list-text">Remova o adaptador SRA do VMware Live Site Recovery:</block>
   <block id="1435a5cf1efdb19e83d0f140a2ca4f4f" category="list-text">Faça login como administrador na interface de gerenciamento do VMware Live Site Recovery Appliance usando a porta 5480.</block>
@@ -2374,4 +2371,7 @@
   <block id="63629b02d982d9e4fe0f19501143ce17" category="inline-image-macro">Personalizar hardware</block>
   <block id="2a2d465455150512141b1402a600df32" category="list-text">Ao usar a versão vCenter Server 8.0.3, na janela *Personalizar hardware*, ative as opções *CPU hot add* e *Memory hot plug* para permitir a funcionalidade HA.<block ref="93c02f5316fc65f2262959de5552f7c0" category="inline-image-macro-rx" type="image"></block></block>
   <block id="936fb178b14835844700bc06aa5ab952" category="list-text">Se você estiver usando o Fibre Channel (FC) para conectividade de armazenamento, configure o zoneamento em seus switches FC para conectar os hosts ESXi com os LIFs FC do SVM.<block ref="56d435991bafd2bcca9f59739e2992e7" category="inline-link-rx"></block></block>
+  <block id="396603bc11e32e1c8be473d2a79f1d2a" category="paragraph">Se houver discrepâncias no formulário OVF, uma caixa de diálogo solicitará uma ação corretiva.  Use o botão tab para navegar, faça as alterações necessárias e selecione *OK*.  Você tem três tentativas para resolver qualquer problema.  Se os problemas persistirem após três tentativas, o processo de instalação será interrompido e é aconselhável tentar novamente a instalação em uma nova máquina virtual.</block>
+  <block id="59dd8a5d1e9605907341901d2760c087" category="inline-link">Como migrar sua máquina virtual com o Storage vMotion</block>
+  <block id="0166be8b4848389c414e9e383efe9111" category="list-text">Para movê-los para um armazenamento de dados não gerenciado, consulte<block ref="920cfb03e9def61d5164fb56cf050dd9" category="inline-link-rx"></block></block>
 </blocks>

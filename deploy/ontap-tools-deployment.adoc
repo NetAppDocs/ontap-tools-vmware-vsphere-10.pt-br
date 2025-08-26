@@ -94,7 +94,7 @@ NOTE: O Pure IPv6 não é compatível. O modo misto é suportado com VLAN conten
 
 Você pode acompanhar o andamento da instalação no console da Web da VM.
 
-Se houver discrepâncias no formulário OVF, uma caixa de diálogo solicitará uma ação corretiva. Use o botão Tab para navegar, fazer as alterações necessárias e selecione "OK.você tem três tentativas para resolver quaisquer problemas. Se os problemas continuarem após três tentativas, o processo de instalação será interrompido e é aconselhável tentar novamente a instalação em uma nova máquina virtual.
+Se houver discrepâncias no formulário OVF, uma caixa de diálogo solicitará uma ação corretiva.  Use o botão tab para navegar, faça as alterações necessárias e selecione *OK*.  Você tem três tentativas para resolver qualquer problema.  Se os problemas persistirem após três tentativas, o processo de instalação será interrompido e é aconselhável tentar novamente a instalação em uma nova máquina virtual.
 
 .O que vem a seguir?
 Se você tiver ferramentas de implantação do ONTAP para o VMware vSphere com o vCenter Server 7,0.3, siga estas etapas após a implantação.
