@@ -8,6 +8,8 @@ entries:
   url: "/configure/manager-user-interface.html"
 - title: Entenda igroups e políticas de exportação
   url: "/manage/igroup-workflow.html"
+- title: Entenda os igroups gerenciados pelas ferramentas ONTAP
+  url: "/manage/nested-igroups.html"
 - title: Habilite as ferramentas do ONTAP para os serviços do VMware vSphere
   url: "/manage/enable-services.html"
 - title: Alterar as ferramentas do ONTAP para a configuração do VMware vSphere

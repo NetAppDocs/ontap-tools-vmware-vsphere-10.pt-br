@@ -42,6 +42,6 @@ O diagrama a seguir mostra a configuração de proteção da saída da ventoinha
 
 *Passos*
 
-. Crie um novo armazenamento de dados de suporte de local. Consulte https://docs.vmware.com/en/Site-Recovery-Manager/8.7/com.vmware.srm.admin.doc/GUID-5D4C9F38-37CA-47D1-B43A-A1FED48A05A3.html["Selecione um armazenamento de dados do marcador de posição"]
+. Crie um novo repositório de dados de espaço reservado. Referir https://techdocs.broadcom.com/us/en/vmware-cis/live-recovery/site-recovery-manager/8-8/site-recovery-manager-administration-8-8/about-placeholder-virtual-machines/configure-a-placeholder-datastore.html["Selecione um armazenamento de dados do marcador de posição"]
 . Adicionar datastore à proteção do cluster do host link:../manage/edit-hostcluster-protection.html["Modificar cluster de host protegido"]. Você precisa adicionar tipos de diretiva assíncrona e síncrona.
 
