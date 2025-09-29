@@ -133,9 +133,6 @@ Os últimos três dígitos do código de erro indicam o erro de fluxo de trabalh
 | 099 | Falha ao validar a nova adição de HDD | Adicione o novo HDD a todos os nós no caso de HA e a um nó em caso de implantação não HA. 
 
 
-| 108 | Falha no script de semeadura | - 
-
-
 | 109 | o backup de dados de volume persistentes falhou | Verifique os logs de atualização e tente atualizar novamente. 
 
 
@@ -161,6 +158,9 @@ Os últimos três dígitos do código de erro indicam o erro de fluxo de trabalh
 
 
 | 056 | a eliminação da cópia de segurança de migração falhou | NA 
+
+
+| 090 | falha na validação do certificado para backends de armazenamento e vCenter | Verifique os logs de atualização e o arquivo de log em /var/log/cert_validation_error.log e tente atualizar novamente. 
 |===
 
 NOTE: A partir das ferramentas do ONTAP para VMware vSphere 10,3 zero RPO não é suportado.

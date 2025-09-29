@@ -20,23 +20,17 @@ Você deve configurar os sistemas de armazenamento antes de executar o Storage R
 .Antes de começar
 Você deve ter os seguintes programas instalados no site protegido e no site de recuperação:
 
-* Recuperação do VMware Live Site
-+
-A documentação sobre a instalação do VMware Live Site Recovery está no site da VMware.
-
+* VMware Live Site Recovery: O site da VMware fornece documentação de instalação para o VMware Live Site Recovery.
 +
 https://techdocs.broadcom.com/us/en/vmware-cis/live-recovery/live-site-recovery/9-0/about-vmware-live-site-recovery-installation-and-configuration.html["Sobre o VMware Live Site Recovery"]
 
-* SRA
-+
-O adaptador é instalado no VMware Live Site Recovery.
-
+* SRA: Instale o adaptador no VMware Live Site Recovery.
 
 
 .Passos
 . Verifique se os hosts ESXi primários estão conetados aos LUNs no sistema de armazenamento primário no local protegido.
 . Verifique se os LUNS estão em grupos que têm a `ostype` opção definida como _VMware_ no sistema de armazenamento primário.
-. Verifique se os hosts ESXi no local de recuperação têm conetividade iSCSI adequada à máquina virtual de armazenamento (SVM). Os hosts ESXi do local secundário devem ter acesso ao armazenamento do local secundário e os hosts ESXi do local principal devem ter acesso ao armazenamento do local primário.
+. Verifique se os hosts ESXi no site de recuperação têm conectividade iSCSI e Fibre Channel apropriadas para a máquina virtual de armazenamento (SVM).  Os hosts ESXi do site secundário devem ter acesso ao armazenamento do site secundário, e os hosts ESXi do site primário devem ter acesso ao armazenamento do site primário.
 +
 Você pode fazer isso verificando se os hosts ESXi têm LUNs locais conetados na SVM ou o comando nas SVMs `iscsi show initiators`. Verifique o acesso LUN para os LUNs mapeados no host ESXi para verificar a conetividade iSCSI.
 
@@ -49,17 +43,8 @@ Você pode fazer isso verificando se os hosts ESXi têm LUNs locais conetados na
 .Antes de começar
 Você deve ter os seguintes programas instalados no site protegido e no site de recuperação:
 
-* Recuperação do VMware Live Site
-+
-A documentação sobre a instalação do VMware Live Site Recovery pode ser encontrada no site da VMware.
-
-+
-https://techdocs.broadcom.com/us/en/vmware-cis/live-recovery/live-site-recovery/9-0/about-vmware-live-site-recovery-installation-and-configuration.html["Sobre o VMware Live Site Recovery"]
-
-* SRA
-+
-O adaptador é instalado no VMware Live Site Recovery e no servidor SRA.
-
+* VMware Live Site Recovery: Você pode encontrar a documentação de instalação do VMware Live Site Recovery no site da VMware - https://techdocs.broadcom.com/us/en/vmware-cis/live-recovery/live-site-recovery/9-0/about-vmware-live-site-recovery-installation-and-configuration.html["Sobre o VMware Live Site Recovery"]
+* SRA: Instale o adaptador no VMware Live Site Recovery e no servidor SRA.
 
 
 .Passos

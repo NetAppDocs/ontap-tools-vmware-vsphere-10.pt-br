@@ -4,16 +4,56 @@ sidebar: sidebar
 keywords: upgrade 
 summary: Esta página descreve os códigos de erro para as operações de implantação, reinicialização e recuperação de ferramentas do ONTAP para o sistema VMware vSphere. 
 ---
-= Códigos de erro de implantação
+= Solucionar erros de implantação
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
+Se você tiver problemas de implantação, revise os logs e códigos de erro para diagnosticar e resolver problemas.  A partir das ONTAP tools for VMware vSphere 10.5, os pacotes de log coletados dos pods incluem logs do MongoDB, RabbitMQ e Vault, juntamente com o status e as descrições de todos os pods.  Eles são fornecidos além dos logs de serviço das ferramentas ONTAP existentes, melhorando a capacidade de suporte e a solução de problemas.
+
+
+
+== Recolha os ficheiros de registo
+
+Você pode coletar arquivos de log para as ferramentas do ONTAP para VMware vSphere a partir das opções disponíveis na interface de usuário do Gerenciador de ferramentas do ONTAP. O suporte técnico pode solicitar que você colete os arquivos de log para ajudar a solucionar um problema.
+
+
+NOTE: A geração de logs a partir do Gerenciador de ferramentas do ONTAP inclui todos os logs para todas as instâncias do vCenter Server. A geração de logs a partir da interface de usuário do cliente vCenter é definida para o vCenter Server selecionado.
+
+.Passos
+. Inicie o Gerenciador de ferramentas do ONTAP a partir de um navegador da Web: `\https://<ONTAPtoolsIP>:8443/virtualization/ui/`
+. Faça login com as ferramentas do ONTAP para as credenciais de administrador do VMware vSphere fornecidas durante a implantação.
+. Selecione *Log Bundles* na barra lateral.
++
+Esta operação pode demorar vários minutos.
+
+. Selecione *Generate* para gerar os arquivos de log.
+. Insira o rótulo do Pacote de Log e selecione *Generate*.
++
+Baixe o arquivo tar.gz e envie-o para o suporte técnico.
+
+
+
+Siga as etapas abaixo para gerar o pacote de log usando a interface do usuário do cliente vCenter:
+
+.Passos
+. Faça login no cliente vSphere.
+. Na página inicial do vSphere Client, vá para *Support* > *Log bundle* > *Generate*.
+. Forneça o rótulo do pacote de log e gere o pacote de log. Você verá a opção de download quando os arquivos forem gerados. O download pode levar algum tempo.
+
+
+
+NOTE: O pacote de log gerado substitui o pacote de log gerado nos últimos 3 dias ou 72 horas.
+
+
+
+== Códigos de erro de implantação
+
 Você pode encontrar códigos de erro durante as ferramentas do ONTAP para operações de implantação, reinicialização e recuperação do VMware vSphere. Os códigos de erro têm cinco dígitos, onde os dois primeiros dígitos representam o script que encontrou o problema, e os últimos três dígitos representam o fluxo de trabalho específico dentro desse script.
 
-Todos os logs de erros são registrados no arquivo ansible-perl-errors.log para facilitar o rastreamento e a resolução de problemas. Esse arquivo de log contém o código de erro e a tarefa Ansible com falha.
+Todos os logs de erros são registrados no arquivo ansible-perl-errors.log no diretório /var/log para facilitar o rastreamento e a resolução de problemas.  Este arquivo de log contém o código de erro e a tarefa Ansible com falha.
 
 
 NOTE: Os códigos de erro fornecidos nesta página são apenas para referência. Entre em Contato com a equipe de suporte se o erro persistir ou se não houver nenhuma resolução mencionada.

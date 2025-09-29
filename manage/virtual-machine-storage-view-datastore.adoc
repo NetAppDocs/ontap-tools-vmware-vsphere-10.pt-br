@@ -17,7 +17,7 @@ A visualização de armazenamento mostra a lista de vVols criados pela máquina 
 NOTE: Essa exibição é aplicável à VM que tem pelo menos uma ferramenta ONTAP para o disco relacionado ao armazenamento de dados vVols gerenciado do VMware vSphere montado nele.
 
 .Passos
-. No vSphere Client, navegue até a máquina virtual.
+. No vSphere Client, vá para a máquina virtual.
 . Selecione a guia *Monitor* no painel direito.
 . Selecione *Ferramentas NetApp ONTAP* > *armazenamento*. Os detalhes *Storage* aparecem no painel direito. Você pode ver a lista de vVols que estão presentes na VM.
 +

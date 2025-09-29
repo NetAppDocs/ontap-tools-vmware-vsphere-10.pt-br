@@ -18,7 +18,7 @@ Anexe um disco de dados a uma máquina virtual para expandir a capacidade de arm
 
 .Passos
 . Faça login no cliente vSphere.
-. Clique com o botão direito do Mouse em uma máquina virtual no inventário e selecione *Editar configurações*.
+. Clique com o botão direito do mouse em uma máquina virtual no inventário e selecione *Editar configurações*.
 . Na guia *hardware Virtual*, selecione *disco rígido existente*.
 . Selecione a máquina virtual onde o disco existe.
 . Selecione o disco que deseja anexar e selecione *OK*
@@ -35,7 +35,7 @@ Você pode separar um disco de dados conetado a uma máquina virtual quando não
 
 .Passos
 . Faça login no cliente vSphere.
-. Clique com o botão direito do Mouse em uma máquina virtual no inventário e selecione *Editar configurações*.
+. Clique com o botão direito do mouse em uma máquina virtual no inventário e selecione *Editar configurações*.
 . Mova o ponteiro sobre o disco e selecione *Remover*.
 +
 

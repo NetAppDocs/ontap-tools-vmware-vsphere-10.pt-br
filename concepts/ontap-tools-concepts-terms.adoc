@@ -15,21 +15,15 @@ A seção a seguir descreve os principais conceitos e termos usados no documento
 
 
 
-=== Sistemas ASA R2
-
-Os novos sistemas NetApp ASA R2 fornecem uma solução unificada de hardware e software que cria uma experiência simplificada específica para as necessidades dos clientes somente de SAN. https://docs.netapp.com/us-en/asa-r2/get-started/learn-about.html["Saiba mais sobre os sistemas de armazenamento ASA R2"].
-
-
-
 === Autoridade de certificação (CA)
 
 A CA é uma entidade confiável que emite certificados SSL (Secure Sockets Layer).
 
 
 
-=== Grupo de consistência (CG)
+=== Grupo de consistência
 
-Um grupo de consistência é uma coleção de volumes gerenciados como uma única unidade. Os CGS são sincronizados para consistência de dados em unidades de armazenamento e volumes. No ONTAP, eles fornecem gerenciamento fácil e uma garantia de proteção para um workload de aplicações que abrange vários volumes. Saiba mais https://docs.netapp.com/us-en/ontap/consistency-groups/index.html["grupos de consistência"] sobre o .
+Um grupo de consistência é uma coleção de volumes gerenciados como uma única unidade. Grupos de consistência são sincronizados para consistência de dados em unidades de armazenamento e volumes. No ONTAP, eles fornecem gerenciamento fácil e uma garantia de proteção para uma carga de trabalho de aplicativo abrangendo vários volumes.  Saiba mais sobre https://docs.netapp.com/us-en/ontap/consistency-groups/index.html["grupos de consistência"] .
 
 
 
@@ -125,7 +119,7 @@ O VMFS é um sistema de arquivos em cluster projetado para armazenar arquivos de
 
 === Volumes virtuais (vVols)
 
-Os vVols fornecem uma abstração em nível de volume para armazenamento usado por uma máquina virtual. Ele inclui vários benefícios e fornece uma alternativa ao uso de um LUN tradicional. Um datastore da VVol é normalmente associado a um único LUN que atua como um contentor para os vVols.
+vVols fornecem uma abstração em nível de volume para armazenamento usado por uma máquina virtual.  Ele inclui vários benefícios e fornece uma alternativa ao uso de um LUN tradicional.  Um armazenamento de dados vVol normalmente é associado a um único LUN que atua como um contêiner para vVols.
 
 
 

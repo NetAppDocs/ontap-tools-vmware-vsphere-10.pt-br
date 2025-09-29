@@ -11,10 +11,7 @@ summary: Você pode alterar a senha do administrador usando o Gerenciador de fer
 
 
 [role="lead"]
-Usando o Gerenciador de ferramentas do ONTAP, faça a escalabilidade vertical das ferramentas do ONTAP para a configuração do VMware vSphere para aumentar o número de nós na implantação ou alterar a configuração para a configuração de alta disponibilidade (HA). As ferramentas do ONTAP para o dispositivo VMware vSphere são implantadas inicialmente em uma configuração de nó único que não é de HA.
-
-
-NOTE: Para migrar para a HA quando o backup não-HA estiver ativado, desative primeiro o backup e reative-o após a migração.
+Use o ONTAP Tools Manager para ampliar as ONTAP tools for VMware vSphere , aumentando o número de nós ou habilitando a Alta Disponibilidade (HA).  Por padrão, o dispositivo ONTAP tools for VMware vSphere é implantado como uma configuração de nó único, sem alta disponibilidade.
 
 .Antes de começar
 * Certifique-se de que o seu MODELO OVA tem a mesma versão OVA que o nó 1. O nó 1 é o nó padrão em que as ferramentas do ONTAP para o VMware vSphere OVA são implantadas inicialmente.
@@ -33,7 +30,7 @@ Quando as ferramentas do ONTAP estão na configuração HA, você pode alterar o
 
 +
 
-NOTE: Nas ferramentas do ONTAP para VMware vSphere, você só tem permissão para aumentar o tamanho do nó; não pode reduzir o tamanho do nó. Em uma configuração não HA, apenas uma configuração de tamanho médio é suportada. Em uma configuração de HA, configurações médias e grandes são suportadas.
+NOTE: Nas ONTAP tools for VMware vSphere, você só pode aumentar o tamanho do nó; não pode reduzi-lo.  Em uma configuração sem HA, somente uma configuração de tamanho médio é suportada.  Em uma configuração de HA, configurações médias e grandes são suportadas.
 
 . Utilize o botão de alternância HA para ativar a configuração HA. Na página *HA settings*, certifique-se de que:
 +
@@ -48,7 +45,7 @@ NOTE: Depois que a configuração de HA for habilitada, não será possível rev
 . Na seção *HA settings* da janela *Edit Appliance Settings* (Editar configurações do dispositivo), você pode inserir os detalhes dos nós 2 e 3. As ferramentas do ONTAP para VMware vSphere são compatíveis com três nós na configuração de HA.
 +
 
-NOTE: A maioria das opções de entrada são pré-preenchidas com os detalhes da rede do nó 1 para facilitar o fluxo de trabalho. No entanto, você pode editar os dados de entrada antes de navegar para a página final do assistente. Você pode inserir detalhes de endereço IPv6 para os outros dois nós somente quando o endereço IPv6 estiver ativado no primeiro nó.
+NOTE: A maioria das opções de entrada são pré-preenchidas com detalhes da rede do Nó 1 para facilitar o fluxo de trabalho.  No entanto, você pode editar os dados de entrada antes de navegar para a página final do assistente.  Você pode inserir detalhes do endereço IPv6 para os outros dois nós somente quando o endereço IPv6 estiver habilitado no nó de gerenciamento de ferramentas ONTAP .
 
 +
 Certifique-se de que um host ESXi contenha apenas uma VM de ferramentas ONTAP. As entradas são validadas cada vez que você passa para a próxima janela.

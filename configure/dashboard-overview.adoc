@@ -11,14 +11,14 @@ summary: Quando você seleciona o ícone de plug-in das ferramentas do ONTAP par
 
 
 [role="lead"]
-Quando você seleciona o ícone de plug-in das ferramentas do ONTAP para VMware vSphere na seção de atalhos no cliente vCenter, a interface do usuário navega para a página de visão geral. Essa página funciona como o painel que fornece o resumo das ferramentas do ONTAP para o plug-in do VMware vSphere.
+Selecionar o ícone do plug-in ONTAP tools for VMware vSphere na seção de atalhos no cliente vCenter abre a página de visão geral.  Este painel fornece um resumo das ONTAP tools for VMware vSphere .
 
-No caso da configuração Enhanced Linked Mode (ELM), o menu suspenso vCenter Server SELECT (seleção do vCenter Server) é exibido e você pode selecionar um vCenter Server desejado para ver os dados relevantes a ele. Esta lista suspensa está disponível para todas as outras visualizações de listagem do plugin. A seleção do vCenter Server feita em uma página persiste nas guias do plug-in. image:../media/remote-plugin-dashboard.png["Descrição geral do painel"]
+No caso da configuração do Modo Vinculado Aprimorado (ELM), o menu suspenso de seleção do vCenter Server aparece e você pode selecionar um vCenter Server desejado para ver os dados relevantes a ele.  Este menu suspenso está disponível para todas as outras visualizações de listagem do plug-in. A seleção do vCenter Server feita em uma página persiste em todas as guias do plug-in.image:../media/remote-plugin-dashboard.png["Descrição geral do painel"]
 
 Na página de visão geral, você pode executar a ação *Discovery*. A ação de descoberta executa a descoberta no nível do vCenter para detetar quaisquer backends de storage, hosts, datastores e status/relacionamentos de proteção recém-adicionados ou atualizados. Você pode executar uma descoberta sob demanda de entidades sem ter que esperar pela descoberta agendada.
 
 
-NOTE: O botão Action (Ação) só será ativado se tiver o privilégio de executar a ação de descoberta.
+NOTE: O botão de ação *Descoberta* será habilitado somente se você tiver o privilégio necessário para executar a ação de descoberta.
 
 Após o envio da solicitação de descoberta, você pode acompanhar o andamento da ação no painel de tarefas recentes.
 

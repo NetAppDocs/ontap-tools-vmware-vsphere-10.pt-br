@@ -11,7 +11,7 @@ summary: Os primeiros passos com as ferramentas do ONTAP para VMware vSphere inc
 
 
 [role="lead"]
-Se você estiver usando armazenamentos de dados vVols, será necessário expandir a implantação inicial de ferramentas do ONTAP para uma configuração de alta disponibilidade (HA) e ativar os serviços do provedor VASA.
+Para aumentar a resiliência e oferecer suporte a mais contêineres por serviço, expanda sua implantação inicial de ferramentas ONTAP para uma configuração de alta disponibilidade (HA).  A habilitação do serviço do Provedor VASA é necessária para armazenamentos de dados vVols em uma configuração de HA.
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png["Um"] Faça a escalabilidade vertical da implantação
 [role="quick-margin-para"]
@@ -23,7 +23,7 @@ Se você estiver usando armazenamentos de dados vVols, será necessário expandi
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png["Dois"] Ativar serviços
 [role="quick-margin-para"]
-Para configurar os datastores vVols, você deve habilitar o serviço provedor VASA. Registre o provedor VASA no vCenter e garanta que suas políticas de armazenamento atendam aos requisitos de HA, incluindo configurações adequadas de rede e armazenamento.
+Para configurar os armazenamentos de dados vVols , você deve habilitar o serviço VASA Provider.  Registre o provedor VASA no vCenter e garanta que suas políticas de armazenamento atendam aos requisitos de HA, incluindo configurações adequadas de rede e armazenamento.
 
 [role="quick-margin-para"]
 Ative os serviços SRA para usar as ferramentas ONTAP Storage Replication Adapter (SRA) para VMware Site Recovery Manager (SRM) ou VMware Live Site Recovery (VLSR).

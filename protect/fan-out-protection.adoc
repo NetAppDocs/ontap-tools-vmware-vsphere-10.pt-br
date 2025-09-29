@@ -2,18 +2,21 @@
 permalink: protect/fan-out-protection.html 
 sidebar: sidebar 
 keywords:  
-summary: Em uma proteção de fan-out, o grupo de consistência é protegido duas vezes com relação síncrona no primeiro cluster do ONTAP de destino e com relação assíncrona no segundo cluster do ONTAP de destino. 
+summary: Em um cenário de proteção fan-out, o grupo de consistência é duplamente protegido com relacionamento síncrono no primeiro cluster ONTAP de destino e com relacionamento assíncrono no segundo cluster ONTAP de destino. 
 ---
-= Proteção contra saída da ventoinha
+= Proteção contra dispersão
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-Em uma proteção de fan-out, o grupo de consistência é protegido duas vezes com relação síncrona no primeiro cluster do ONTAP de destino e com relação assíncrona no segundo cluster do ONTAP de destino. Os fluxos de trabalho de proteção de sincronização ativa para criar, editar e excluir SnapMirror mantêm a proteção síncrona. Failover do SRM e reproteger os fluxos de trabalho mantêm a proteção assíncrona.
+Em um cenário de proteção fan-out, o grupo de consistência é duplamente protegido com relacionamento síncrono no primeiro cluster ONTAP de destino e com relacionamento assíncrono no segundo cluster ONTAP de destino.  Os fluxos de trabalho de criação, edição e exclusão da proteção de sincronização ativa do SnapMirror mantêm a proteção síncrona.  Os fluxos de trabalho de failover e reproteção do dispositivo VMware Live Site Recovery mantêm a proteção assíncrona.
 
-Para estabelecer uma proteção contra fan-out, você precisa identificar três clusters de site e SVMs.
+
+NOTE: O fan-out não é suportado pelo usuário SVM.
+
+Para configurar a proteção de fan-out, faça o peering dos três clusters de sites e SVMs.
 
 Exemplo:
 
@@ -38,10 +41,17 @@ Exemplo:
 
 
 |===
-O diagrama a seguir mostra a configuração de proteção da saída da ventoinha: image:../media/fan-out-protection.png["Configuração da proteção de saída da ventoinha"] image:../media/fan-out-protection-relationship.png["Relação de proteção de saída de ventilador"]
+O diagrama a seguir mostra a configuração de proteção fan-out:image:../media/fan-out-protection.png["Configuração de proteção fan-out"] image:../media/fan-out-protection-relationship.png["Relação de proteção fan-out"]
 
-*Passos*
+.Passos
+. Selecione um novo repositório de dados de espaço reservado.  Os critérios de seleção do armazenamento de dados de espaço reservado para proteção em fases são:
++
+** Não coloque o armazenamento de espaço reservado no cluster de host que você está protegendo.
+** Se você precisar incluir o armazenamento de dados de espaço reservado no cluster do host, adicione-o ao dispositivo VMware Live Site Recovery antes de configurar a proteção de sincronização ativa do SnapMirror .  Com essa configuração, você pode deixar o armazenamento de dados de espaço reservado fora de proteção.
++
+Para mais informações, consulte https://techdocs.broadcom.com/us/en/vmware-cis/live-recovery/site-recovery-manager/8-8/site-recovery-manager-administration-8-8/about-placeholder-virtual-machines/configure-a-placeholder-datastore.html["Selecione um armazenamento de dados do marcador de posição"]
 
-. Crie um novo repositório de dados de espaço reservado. Referir https://techdocs.broadcom.com/us/en/vmware-cis/live-recovery/site-recovery-manager/8-8/site-recovery-manager-administration-8-8/about-placeholder-virtual-machines/configure-a-placeholder-datastore.html["Selecione um armazenamento de dados do marcador de posição"]
-. Adicionar datastore à proteção do cluster do host link:../manage/edit-hostcluster-protection.html["Modificar cluster de host protegido"]. Você precisa adicionar tipos de diretiva assíncrona e síncrona.
+
+
+. Adicione o armazenamento de dados à proteção do cluster do host seguindo estas etapas:link:../manage/edit-hostcluster-protection.html["Modificar cluster de host protegido"] .  Adicione tipos de políticas assíncronas e síncronas.
 

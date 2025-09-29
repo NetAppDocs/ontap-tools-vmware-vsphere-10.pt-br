@@ -127,7 +127,7 @@ Os códigos de status HTTP usados pela API REST são descritos abaixo.
 | 403 | Proibido | O acesso é negado devido a um erro de autorização. 
 
 
-| 404 | Não encontrado | O recurso referido na solicitação não existe. 
+| 404 | Não encontrado | O recurso mencionado na solicitação não existe. 
 
 
 | 409 | Conflito | Uma tentativa de criar um objeto falhou porque o objeto já existe. 

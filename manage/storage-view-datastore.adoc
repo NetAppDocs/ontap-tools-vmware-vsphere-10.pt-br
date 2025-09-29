@@ -14,7 +14,7 @@ summary: A visualização de storage do ONTAP na guia configurar de uma ferramen
 As ferramentas do ONTAP para VMware vSphere mostram a visualização lateral do storage do ONTAP dos datastores e seus volumes na guia configure.
 
 .Passos
-. No cliente vSphere, navegue até o datastore.
+. No cliente vSphere, acesse o armazenamento de dados.
 . Selecione a guia *Configure* no painel direito.
 . Selecione *Ferramentas NetApp ONTAP* > *armazenamento ONTAP*. Dependendo do tipo de armazenamento de dados, a exibição muda. Consulte a tabela abaixo para obter informações:
 

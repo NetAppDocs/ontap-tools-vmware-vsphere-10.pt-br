@@ -17,7 +17,7 @@ As ferramentas do ONTAP para VMware vSphere oferecem a opção de habilitar o re
 * Você deve ter configurado a instância do vCenter Server e configurado o host ESXi.
 * Você deve ter implantado as ferramentas do ONTAP para o VMware vSphere.
 * Você deve ter baixado o arquivo do adaptador SRA `.tar.gz` do https://mysupport.netapp.com/site/products/all/details/otv10/downloads-tab["Site de suporte da NetApp"^].
-* Os clusters do ONTAP de origem e destino devem ter as mesmas programações personalizadas do SnapMirror criadas antes de executar os workflows do SRA.
+* Você deve ter os mesmos agendamentos personalizados do SnapMirror nos clusters ONTAP de origem e de destino antes de executar os fluxos de trabalho do SRA.
 * link:../manage/enable-services.html["Habilite as ferramentas do ONTAP para os serviços do VMware vSphere"] para habilitar a capacidade SRA.
 
 
@@ -27,3 +27,16 @@ As ferramentas do ONTAP para VMware vSphere oferecem a opção de habilitar o re
 . Carregue o instalador _.tar.gz_ para o plug-in SRA para o VMware Live Site Recovery.
 . Volte a verificar os adaptadores para verificar se os detalhes estão atualizados na página adaptadores de replicação de armazenamento de recuperação de site do VMware Live.
 
+
+
+NOTE: Após um failover, ações como expandir, montar e excluir podem não estar disponíveis para armazenamentos de dados.  Execute a descoberta do armazenamento de dados para atualizar e exibir as ações apropriadas do menu de contexto.
+
+
+NOTE: Após cada operação de reproteção, você deve executar a descoberta de armazenamento em ambos os sites.
+
+Em uma nova configuração com proteção SRA, sempre execute um failover de teste.  Ignorar o failover de teste pode fazer com que a operação de reproteção falhe.
+
+Em uma configuração de fan-out, após um failover do SnapMirror Active Sync em que a origem do SnapMirror muda para o site B para Automated Failover Duplex e Asynchronous SnapMirror, execute um failover de teste entre os sites B e C. Ignorar esta etapa pode resultar em uma operação de reproteção com falha.
+
+.Informações relacionadas
+https://docs.netapp.com/us-en/netapp-solutions-virtualization/vmware/vmw-nfs-vlsr.html#scenario-overview["Configurar recuperação de desastres para armazenamentos de dados NFS usando o VMware Site Recovery Manager"]

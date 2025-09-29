@@ -30,7 +30,8 @@ Você deve usar a guia *Resumo* das ferramentas do ONTAP implantadas para o VMwa
 Configuração da aplicação
  a| 
 . Apresentar resumo do estado do servidor
-. Altere o nível DE LOG para os Serviços de fornecedores VASA e Serviços SRA
+. Alterar nível de LOG para serviços de ferramentas ONTAP
+. Alterar sinalizador de validação de certificado
 
 
 

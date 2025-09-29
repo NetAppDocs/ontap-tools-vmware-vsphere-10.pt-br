@@ -47,4 +47,4 @@ link:https://www.netapp.com/company/legal/privacy-policy/["https://www.netapp.co
 
 Os arquivos de aviso fornecem informações sobre direitos autorais de terceiros e licenças usadas no software NetApp.
 
-https://library.netapp.com/ecm/ecm_download_file/ECMLP3343866["Aviso para as ferramentas do ONTAP para VMware vSphere 10,4"^]
+https://library.netapp.com/ecm/ecm_download_file/ECMLP3358877["Aviso para ONTAP tools for VMware vSphere 10.5"^]

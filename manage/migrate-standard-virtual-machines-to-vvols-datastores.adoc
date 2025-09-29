@@ -23,6 +23,6 @@ Quando você migra de um datastore NFS e VMFS para um datastore vVols, o vCenter
 .Passos
 . Clique com o botão direito do rato na máquina virtual que pretende migrar e selecione *migrar*.
 . Selecione *Change storage only* (alterar apenas armazenamento) e, em seguida, selecione *Next* (seguinte).
-. Selecione um formato de disco virtual, uma Política de armazenamento de VM e um datastore da evolução que corresponda aos recursos do datastore que você está migrando.
+. Selecione um formato de disco virtual, uma Política de Armazenamento de VM e um armazenamento de dados vVol que corresponda aos recursos do armazenamento de dados que você está migrando.
 . Revise as configurações e selecione *Finish*.
 

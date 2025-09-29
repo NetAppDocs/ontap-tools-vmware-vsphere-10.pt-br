@@ -30,7 +30,7 @@ NOTE: O Adaptador de Replicação de Armazenamento (SRA) oferece suporte a fan-o
 
 
 .Passos
-. Clique duas vezes em *Site Recovery* na página inicial do vSphere Client e selecione *Sites*.
+. Na página inicial do vSphere Client, clique duas vezes no ícone *Site Recovery* e selecione *Sites*.
 . Selecione *Objects* > *actions* > *Pair Sites*.
 . Na caixa de diálogo *Emparelhar servidores do Gestor de recuperação de Site*, introduza o endereço do controlador de Serviços de Plataforma do site protegido e, em seguida, selecione *seguinte*.
 . Na seção Selecionar vCenter Server, faça o seguinte:
@@ -43,7 +43,7 @@ NOTE: O Adaptador de Replicação de Armazenamento (SRA) oferece suporte a fan-o
 
 
 .Resultado
-Os locais protegidos e de recuperação aparecerão na caixa de diálogo objetos.
+A caixa de diálogo *Objetos* exibe os sites protegidos e de recuperação.
 
 
 

@@ -13,7 +13,7 @@ summary: Configure ONTAP tools for VMware vSphere com esta seção de início r�
 [role="lead"]
 Configure ONTAP tools for VMware vSphere com esta seção de início rápido.
 
-Inicialmente, você implantará as ferramentas do ONTAP para o VMware vSphere como uma configuração de nó único de pequeno porte que fornece serviços essenciais para dar suporte a armazenamentos de dados NFS e VMFS. Se você precisar expandir sua configuração para usar armazenamentos de dados vVols e alta disponibilidade (HA), você fará isso depois de concluir esse fluxo de trabalho. Para obter mais informações, consulte o link:../deploy/ha-workflow.html["Fluxo de trabalho DE IMPLANTAÇÃO DE HA"].
+Inicialmente, você implantará ONTAP tools for VMware vSphere como uma configuração de nó único de pequeno porte que fornece serviços essenciais para dar suporte a armazenamentos de dados NFS e VMFS.  Para expandir sua configuração para contêineres adicionais por serviço, resiliência aprimorada ou usar datastores vVols e alta disponibilidade (HA), conclua este fluxo de trabalho primeiro e depois prossiga com as etapas de expansão. Para mais informações, consulte o link:../deploy/ha-workflow.html["Fluxo de trabalho DE IMPLANTAÇÃO DE HA"] .
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png["Um"] Planeje sua implantação
 [role="quick-margin-para"]
@@ -91,8 +91,9 @@ Configure as ferramentas do ONTAP para o VMware vSphere para gerenciar a proteç
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-9.png["Nove"] Configure o backup e a recuperação para suas ferramentas do ONTAP para a implantação do VMware vSphere
 [role="quick-margin-para"]
-Programe backups de suas ferramentas do ONTAP para a configuração do VMware vSphere que você pode usar para recuperar a configuração em caso de falha.
+O backup é habilitado por padrão nas ONTAP tools for VMware vSphere 10.5 e ocorre a cada 10 minutos.  Agende backups das suas ONTAP tools for VMware vSphere , que você pode usar para recuperar a configuração em caso de falha.
 
 [role="quick-margin-list"]
-* link:../manage/enable-backup.html["Crie backup e recupere a configuração das ferramentas do ONTAP"]
+* link:../manage/backup-settings.html["Editar as configurações de backup"]
+* link:../manage/recover-backup.html["Recuperar a configuração das ferramentas ONTAP"]
 

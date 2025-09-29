@@ -11,7 +11,7 @@ summary: As ferramentas do ONTAP para VMware vSphere verificam e definem as conf
 
 
 [role="lead"]
-A configuração das configurações de multipath e timeout do servidor ESXi garante alta disponibilidade e integridade de dados, permitindo alternar perfeitamente para um caminho de armazenamento de backup se um caminho primário falhar.
+Configurar as configurações de multicaminho e tempo limite do servidor ESXi ajuda a manter a disponibilidade e a integridade dos dados.  Ele permite o failover automático para um caminho de armazenamento de backup se o caminho principal ficar indisponível.
 
 
 
@@ -19,17 +19,15 @@ A configuração das configurações de multipath e timeout do servidor ESXi gar
 
 As ferramentas do ONTAP para VMware vSphere verificam e definem as configurações de multipath do host ESXi e as configurações de tempo limite do HBA que funcionam melhor com os sistemas de armazenamento NetApp.
 
-*Sobre esta tarefa*
-
-Dependendo da configuração e da carga do sistema, esse processo pode levar muito tempo. O progresso da tarefa é exibido no painel tarefas recentes.
+.Sobre esta tarefa
+Esse processo pode levar algum tempo, dependendo da sua configuração e da carga do sistema.  Você pode ver o progresso no painel Tarefas recentes.
 
 .Passos
 . Na página inicial do VMware vSphere Web client, selecione *hosts and clusters*.
-. Clique com o botão direito do Mouse em um host e selecione *Ferramentas do NetApp ONTAP* > *Atualizar dados do host*.
 . Na página de atalhos do cliente da Web VMware vSphere, selecione *Ferramentas do NetApp ONTAP* na seção plug-ins.
 . Vá para a placa *ESXi Host Compliance* na visão geral (painel) das ferramentas do ONTAP para o plug-in VMware vSphere.
 . Selecione o link *Apply Recommended Settings* (aplicar configurações recomendadas).
-. Na janela *Apply Recommended host settings* (aplicar configurações de host recomendadas), selecione os hosts que você deseja atualizar para estar em conformidade com as configurações recomendadas do NetApp e selecione *Next* (Avançar).
+. Na janela *Aplicar configurações de host recomendadas*, selecione os hosts que você deseja atualizar para usar as configurações recomendadas da NetApp e selecione *Avançar*.
 +
 
 NOTE: Você pode expandir o host ESXi para ver os valores atuais.
@@ -42,7 +40,7 @@ NOTE: Você pode expandir o host ESXi para ver os valores atuais.
 
 == Defina os valores do host ESXi
 
-Usando as ferramentas do ONTAP para VMware vSphere, você pode definir tempos limite e outros valores nos hosts ESXi para garantir o melhor desempenho e o failover bem-sucedido. Os valores que as ferramentas do ONTAP para VMware vSphere definem são baseados no teste interno do NetApp.
+Use ONTAP tools for VMware vSphere para definir tempos limite e outros valores em hosts ESXi para desempenho e failover ideais.  Ele define esses valores com base nos testes da NetApp .
 
 Você pode definir os seguintes valores em um host ESXi:
 
@@ -62,9 +60,9 @@ Define os seguintes parâmetros para valores padrão:
 
 === Definições MPIO
 
-Configurações MPIO definem os caminhos preferidos para sistemas de armazenamento NetApp. Eles determinam quais dos caminhos disponíveis são otimizados (em vez de caminhos não otimizados que atravessam o cabo de interconexão) e definem o caminho preferido para um desses caminhos.
+As configurações do MPIO escolhem os melhores caminhos para os sistemas de armazenamento NetApp .  As configurações do MPIO selecionam o melhor caminho e o utilizam.
 
-Em ambientes de alto desempenho, ou quando você estiver testando o desempenho com um único armazenamento de dados LUN, considere alterar a configuração de balanceamento de carga da política de seleção de caminho (PSP) de round-robin (VMW_PSP_RR) da configuração padrão de IOPS de 1000 para um valor de 1.
+Para ambientes de alto desempenho ou ao testar com um único armazenamento de dados LUN, ajuste a configuração de balanceamento de carga da política de seleção de caminho (PSP) round-robin (VMW_PSP_RR) para melhorar o desempenho.  Defina o valor padrão de IOPS de 1000 a 1.
 
 
 NOTE: As configurações de MPIO não se aplicam aos protocolos NVMe, NVMe/FC e NVMe/TCP.

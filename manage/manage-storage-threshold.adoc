@@ -16,6 +16,6 @@ Você pode definir o limite para receber notificações no vCenter Server quando
 .Passos:
 . Faça login no cliente vSphere.
 . Na página atalhos, selecione *Ferramentas do NetApp ONTAP* na seção plug-ins.
-. No painel esquerdo das ferramentas do ONTAP, navegue até *Configurações* > *Configurações de limiar* > *Editar*.
+. No painel esquerdo das ferramentas ONTAP , vá para *Configurações* > *Configurações de limite* > *Editar*.
 . Na janela *Edit Threshold* (Editar limite), forneça os valores desejados nos campos *Near Full* (quase completo) e *Full* (completo) e selecione *Save* (Guardar). Você pode redefinir os números para valores recomendados, que são 80 para quase cheio e 90 para cheio.
 

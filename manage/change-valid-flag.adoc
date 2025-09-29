@@ -1,0 +1,30 @@
+---
+permalink: manage/change-valid-flag.html 
+sidebar: sidebar 
+keywords:  
+summary: Você pode alterar o sinalizador de validação do certificado usando o console de manutenção. 
+---
+= Alterar sinalizador de validação de certificado
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Por padrão, o sinalizador de validação de certificado está habilitado (definido como verdadeiro).  Você pode definir o sinalizador de validação do certificado de backend de armazenamento ONTAP como falso se precisar ignorar as verificações do certificado SAN.  Esta configuração não é aplicável aos certificados do vCenter Server.
+
+.Antes de começar
+Você precisa ter credenciais de login de usuário de manutenção.
+
+.Passos
+. No vCenter Server, abra um console para as ferramentas do ONTAP.
+. Inicie sessão como utilizador de manutenção.
+. Digitar `1` para selecionar o Menu de configuração do aplicativo.
+. Digitar `3` para alterar o sinalizador de validação do certificado.
++
+O console de manutenção mostra o status do sinalizador de validação do certificado e solicita que você o altere.
+
+. Digite 'y' para alternar o sinalizador ou 'n' para cancelar.
+
+
+Se você alternar o sinalizador de validação do certificado de volta para verdadeiro, o sistema executará uma pré-verificação.  Se qualquer backend de armazenamento adicionado usar um certificado sem um SAN, você não poderá habilitar a validação do certificado.  Certifique-se de que todos os backends de armazenamento usem certificados baseados em SAN antes de habilitar este sinalizador.  Se você definir o sinalizador de validação de certificado como falso, o sistema ignorará a validação de certificado para todos os backends de armazenamento adicionados.

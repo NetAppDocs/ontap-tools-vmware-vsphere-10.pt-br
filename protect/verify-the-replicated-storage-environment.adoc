@@ -22,7 +22,7 @@ Você deve verificar se o site protegido e o site de recuperação foram emparel
 
 .Passos
 . Faça login no vCenter Server.
-. Navegue até *Site Recovery* > *Array Based Replication*.
+. Acesse *Recuperação de Site* > *Replicação Baseada em Matriz*.
 . Selecione o par de matrizes necessário e verifique os detalhes correspondentes.
 +
 Os sistemas de armazenamento devem ser descobertos no local protegido e no local de recuperação com o Status como ""habilitado"".

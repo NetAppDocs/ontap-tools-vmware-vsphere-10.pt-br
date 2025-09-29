@@ -60,13 +60,13 @@ Use a planilha a seguir para reunir as informações necessárias para as ferram
 | Requisito | O seu valor 
 
 
-| Endereço IP para o aplicativo ONTAP Tools. Este é o endereço IP para acessar a interface web do ONTAP Tools. |  
+| Endereço IP para o aplicativo de ferramentas ONTAP .  Este é o endereço IP para acessar a interface web das ferramentas ONTAP (balanceador de carga) |  
 
 
-| Endereço IP virtual das ferramentas ONTAP para comunicação interna. Este endereço IP é usado para comunicação interna em uma configuração com várias instâncias das ferramentas ONTAP. Este endereço IP não deve ser o mesmo que o endereço IP do aplicativo das ferramentas ONTAP. |  
+| Ferramentas ONTAP endereço IP virtual para comunicação interna.  Este endereço IP é usado para comunicação interna em uma configuração com várias instâncias de ferramentas ONTAP .  Este endereço IP não deve ser o mesmo que o endereço IP do aplicativo de ferramentas ONTAP . (O Plano de Controle do Kubernetes) |  
 
 
-| Nome de host DNS para o primeiro nó |  
+| Nome do host DNS para o nó de gerenciamento de ferramentas ONTAP |  
 
 
 | Servidor DNS primário |  
@@ -78,7 +78,7 @@ Use a planilha a seguir para reunir as informações necessárias para as ferram
 | Domínio de pesquisa DNS |  
 
 
-| Endereço IPv4 para o primeiro nó. É um endereço IPv4 exclusivo para a interface de gerenciamento do nó na rede de gerenciamento. |  
+| Endereço IPv4 para o nó de gerenciamento de ferramentas ONTAP .  É um endereço IPv4 exclusivo para a interface de gerenciamento de nós na rede de gerenciamento. |  
 
 
 | Máscara de sub-rede para o endereço IPv4 |  
@@ -134,7 +134,7 @@ Além dos requisitos de implantação de nó único, você precisará das seguin
 
 == Configuração de firewall de rede
 
-Abra as portas necessárias para os endereços IP no firewall da rede. As ferramentas ONTAP devem conseguir acessar esse LIF pela porta 443. link:../deploy/prerequisites.html["Requisitos portuários"]Consulte para obter as atualizações mais recentes.
+Certifique-se de que as portas de firewall necessárias estejam abertas para todos os endereços IP relevantes.  As ferramentas ONTAP exigem acesso ao LIF pela porta 443.  Para obter uma lista completa das portas necessárias, consulte a seção de requisitos de porta emlink:../deploy/prerequisites.html["Ferramentas ONTAP para requisitos e limites de configuração do VMware vSphere"] .
 
 
 

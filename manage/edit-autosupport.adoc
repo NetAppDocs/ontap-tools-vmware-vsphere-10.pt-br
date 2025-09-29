@@ -1,0 +1,47 @@
+---
+permalink: manage/edit-autosupport.html 
+sidebar: sidebar 
+keywords:  
+summary: Ao configurar ONTAP tools for VMware vSphere pela primeira vez, o AutoSupport é habilitado por padrão.  Ele envia mensagens ao suporte técnico 24 horas após ser ativado. 
+---
+= Editar configurações do AutoSupport
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Ao configurar ONTAP tools for VMware vSphere pela primeira vez, o AutoSupport é habilitado por padrão.  Ele envia mensagens ao suporte técnico 24 horas após ser ativado.
+
+
+
+== Desative o AutoSupport
+
+Ao desabilitar o AutoSupport, você não receberá mais suporte e monitoramento proativos.
+
+
+NOTE: É recomendável manter o AutoSupport ativado, pois ele ajuda a acelerar a detecção e a resolução de problemas.  Mesmo quando o AutoSupport está desativado, o sistema continua coletando e armazenando informações localmente, mas não envia relatórios pela rede.
+
+.Passos
+. Inicie o Gerenciador de ferramentas do ONTAP a partir de um navegador da Web: `\https://<ONTAPtoolsIP>:8443/virtualization/ui/`
+. Faça login com as ferramentas do ONTAP para as credenciais de administrador do VMware vSphere fornecidas durante a implantação.
+. Selecione a opção *Settings* > *Telemetry* > *Edit*.
+. Desmarque a opção *AutoSupport* e salve as alterações.
+
+
+
+
+== Atualize o URL do proxy do AutoSupport
+
+Atualize o URL do proxy do AutoSupport para que o recurso AutoSupport encaminhe os dados pelo servidor proxy para transmissão segura.
+
+.Passos
+. Inicie o Gerenciador de ferramentas do ONTAP a partir de um navegador da Web: `\https://<ONTAPtoolsIP>:8443/virtualization/ui/`
+. Faça login com as ferramentas do ONTAP para as credenciais de administrador do VMware vSphere fornecidas durante a implantação.
+. Selecione *Configurações* na barra lateral.
+. Selecione a opção *Settings* > *Telemetry* > *Edit*.
+. Insira um *URL Proxy* válido e salve as alterações.
++
+Se você desabilitar o AutoSupport, o URL do proxy também será desativado.
+
+

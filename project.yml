@@ -7,8 +7,10 @@ settings:
     pdf_enabled: true
     harmony_enabled: false
   versions:
-  - version-number: '10.4'
+  - version-number: '10.5'
     url: "/ontap-tools-vmware-vsphere-10"
+  - version-number: '10.4'
+    url: "/ontap-tools-vmware-vsphere-104"
   - version-number: '10.3'
     url: "/ontap-tools-vmware-vsphere-103"
   - version-number: '10.2'
@@ -20,7 +22,7 @@ settings:
   langs: pt-br,us-en,de-de,es-es,fr-fr,it-it,ja-jp,ko-kr,zh-cn,zh-tw
 sidebar:
   entries:
-  - title: Ferramentas do ONTAP para VMware vSphere 10,4
+  - title: ONTAP tools for VMware vSphere 10.5
     url: "/index.html"
   - section: release-notes
   - section: concepts

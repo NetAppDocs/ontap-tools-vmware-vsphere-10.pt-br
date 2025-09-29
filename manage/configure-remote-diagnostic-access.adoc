@@ -20,7 +20,7 @@ A extensão do provedor VASA deve estar habilitada para sua instância do vCente
 
 Usar SSH para acessar a conta de usuário diag tem as seguintes limitações:
 
-* Você só tem permissão para uma conta de login por ativação do SSH.
+* você tem permissão para apenas uma conta de login por ativação de SSH.
 * O acesso SSH à conta de usuário diag é desativado quando uma das seguintes situações acontece:
 +
 ** O tempo expira.
@@ -35,8 +35,8 @@ A sessão de início de sessão permanece válida apenas até à meia-noite do d
 .Passos
 . No vCenter Server, abra um console para o provedor VASA.
 . Inicie sessão como utilizador de manutenção.
-. Entre `4` para selecionar suporte e Diagnóstico.
-. Entre `2` para selecionar Ativar acesso ao diagnóstico remoto.
+. Digite `4` para selecionar *suporte e Diagnóstico*.
+. Digitar `2` para selecionar *Habilitar acesso de diagnóstico remoto*.
 . Introduza `y` na caixa de diálogo confirmação para ativar o acesso de diagnóstico remoto.
 . Introduza uma palavra-passe para acesso remoto ao diagnóstico.
 

@@ -13,10 +13,10 @@ summary:
 [role="lead"]
 Grupos iniciadores (igroups) são tabelas de nomes de portas mundiais (WWPNs) de hosts de protocolo FC ou nomes de nós qualificados de hosts iSCSI. Você pode definir grupos e mapeá-los para LUNs para controlar quais iniciadores têm acesso a LUNs.
 
-Nas ferramentas ONTAP para VMware vSphere 9.x, os igroups eram criados e gerenciados em uma estrutura plana, onde cada datastore no vCenter era associado a um único igroup. Esse modelo limitava a flexibilidade e a reutilização de igroups em múltiplos datastores. As ferramentas ONTAP para VMware vSphere 10.x introduzem igroups aninhados, onde cada datastore no vCenter é associado a um igroup pai, enquanto cada host é vinculado a um igroup filho sob esse pai. Você pode definir igroups pais personalizados com nomes definidos pelo usuário para reutilização em vários armazenamentos de dados, permitindo um gerenciamento mais flexível e interconectado de igroups. Entender o fluxo de trabalho dos igroups é essencial para gerenciar LUNs e datastores de forma eficaz nas ferramentas ONTAP para VMware vSphere. Diferentes fluxos de trabalho geram configurações de igroup variadas, como mostrado nos exemplos a seguir:
+Nas ONTAP tools for VMware vSphere 9.x, os igroups eram criados e gerenciados em uma estrutura simples, onde cada armazenamento de dados no vCenter era associado a um único igroup.  Este modelo limitou a flexibilidade e a reutilização de igroups em vários armazenamentos de dados.  As ONTAP tools for VMware vSphere introduzem igroups aninhados, onde cada armazenamento de dados no vCenter é associado a um igroup pai, enquanto cada host é vinculado a um igroup filho sob esse pai.  Você pode definir igroups pai personalizados com nomes definidos pelo usuário para reutilização em vários armazenamentos de dados, permitindo um gerenciamento mais flexível e interconectado de igroups.  Entender o fluxo de trabalho do igroup é essencial para gerenciar LUNs e datastores de forma eficaz nas ONTAP tools for VMware vSphere.  Diferentes fluxos de trabalho geram configurações de igroup variadas, conforme mostrado nos exemplos a seguir:
 
 
-NOTE: Os nomes mencionados são apenas para fins ilustrativos e não se referem a nomes de igroups reais. Os igroups gerenciados pelas ferramentas ONTAP usam o prefixo "otv_". Igroups personalizados podem receber qualquer nome.
+NOTE: Os nomes mencionados são apenas para fins ilustrativos e não se referem a nomes reais de igroups.  Os igroups gerenciados por ferramentas ONTAP usam o prefixo “otv_”.  Igroups personalizados podem receber qualquer nome.
 
 |===
 
@@ -94,7 +94,7 @@ Desmontar um armazenamento de dados de um host
 
 
 
-O host1Igroup é removido da hierarquia. Os igroups filhos não são excluídos explicitamente. A exclusão ocorre sob estas duas condições:
+O host1Igroup é removido da hierarquia.  Os igroups filhos não são excluídos explicitamente.  A exclusão ocorre sob estas duas condições:
 
 * Se nenhum LUN for mapeado, o sistema ONTAP excluirá o igroup filho.
 * Uma tarefa de limpeza agendada remove os igroups filhos pendentes sem mapeamentos de LUN. Esses cenários se aplicam apenas a igroups gerenciados por ferramentas ONTAP, não a igroups criados de forma personalizada.
@@ -114,7 +114,7 @@ Excluir armazenamento de dados
 
 
 
-Os igroups pai e filho são removidos se outro repositório de dados não reutilizar o igroup pai. Os igroups filhos nunca são excluídos explicitamente.
+Os igroups pai e filho serão removidos se outro armazenamento de dados não reutilizar o igroup pai.  Os igroups filhos nunca são excluídos explicitamente
 
 .Exemplo 5:
 Crie vários armazenamentos de dados em um igroup pai personalizado
@@ -203,7 +203,7 @@ Migração das ferramentas ONTAP 9 para 10 (normalização igroup)
 
 *Fluxo de trabalho*
 
-As ferramentas ONTAP para VMware vSPhere 9.x não oferecem suporte a igroups hierárquicos. Durante a migração para versões 10.3 ou superiores, os igroups devem ser normalizados na estrutura hierárquica.
+As ferramentas ONTAP para versões do VMware vSPhere 9.x não oferecem suporte a igroups hierárquicos.  Durante a migração para versões 10.3 ou superiores, os igroups devem ser normalizados na estrutura hierárquica.
 
 Antes da migração:
 

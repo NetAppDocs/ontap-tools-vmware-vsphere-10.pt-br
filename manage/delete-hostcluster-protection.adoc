@@ -14,9 +14,15 @@ summary: Quando você remove a proteção do cluster de host, os datastores fica
 Quando você remove a proteção do cluster de host, os datastores ficam desprotegidos.
 
 .Passos
-. Para exibir os clusters de host protegidos, navegue até *Ferramentas do NetApp ONTAP* > *proteção* > *relacionamentos de cluster do host*.
+. Para visualizar a lista de clusters de hosts protegidos, acesse * Ferramentas NetApp ONTAP * > * Proteção * > * Relacionamentos de clusters de hosts *.
 +
-Nesta página, você pode monitorar os clusters de host protegidos, juntamente com seu estado de proteção, a relação do SnapMirror e seu status de SnapMirror correspondente.
+Nesta página, monitore clusters de hosts protegidos, estado de proteção, relacionamento do SnapMirror e status.  Selecione grupos de consistência para visualizar capacidade, armazenamentos de dados associados e grupos filho.
 
-. Na janela *Host cluster protection*, selecione o menu de elipse contra o cluster e, em seguida, selecione *Remove protection*.
+. Na janela *Proteção do cluster do host*, selecione o menu de reticências ao lado do cluster e selecione *Remover proteção*.
++
+** Se você remover a proteção de um cluster de host com apenas um relacionamento assíncrono SnapMirror , deverá excluir manualmente os elementos de armazenamento.  Os elementos de armazenamento incluem grupos de consistência, volumes (para sistema ONTAP ), unidades de armazenamento (LUNs) e instantâneos.
+** Se você remover a proteção de um cluster de host com apenas um relacionamento de política SnapMirror baseado em failover duplex automatizado e um grupo de consistência não hierárquico, poderá excluir os elementos de armazenamento associados no armazenamento secundário diretamente da mesma tela.
+** Se você remover a proteção de um cluster de host com políticas do SnapMirror e um grupo de consistência hierárquica para backups, um aviso será exibido sobre os impactos do backup.  Confirme para prosseguir.  Após a confirmação, exclua os elementos de armazenamento associados no armazenamento secundário.  Se você não limpar, os elementos de armazenamento permanecerão no local secundário.
+
+
 
