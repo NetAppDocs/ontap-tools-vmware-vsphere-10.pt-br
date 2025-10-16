@@ -13,7 +13,7 @@ summary:
 [role="lead"]
 Grupos iniciadores (igroups) são tabelas de nomes de portas mundiais (WWPNs) de hosts de protocolo FC ou nomes de nós qualificados de hosts iSCSI. Você pode definir grupos e mapeá-los para LUNs para controlar quais iniciadores têm acesso a LUNs.
 
-Nas ONTAP tools for VMware vSphere 9.x, os igroups eram criados e gerenciados em uma estrutura simples, onde cada armazenamento de dados no vCenter era associado a um único igroup.  Este modelo limitou a flexibilidade e a reutilização de igroups em vários armazenamentos de dados.  As ONTAP tools for VMware vSphere introduzem igroups aninhados, onde cada armazenamento de dados no vCenter é associado a um igroup pai, enquanto cada host é vinculado a um igroup filho sob esse pai.  Você pode definir igroups pai personalizados com nomes definidos pelo usuário para reutilização em vários armazenamentos de dados, permitindo um gerenciamento mais flexível e interconectado de igroups.  Entender o fluxo de trabalho do igroup é essencial para gerenciar LUNs e datastores de forma eficaz nas ONTAP tools for VMware vSphere.  Diferentes fluxos de trabalho geram configurações de igroup variadas, conforme mostrado nos exemplos a seguir:
+Nas ONTAP tools for VMware vSphere 9.x, os igroups eram criados e gerenciados em uma estrutura simples, onde cada armazenamento de dados no vCenter era associado a um único igroup. Este modelo limitou a flexibilidade e a reutilização de igroups em vários armazenamentos de dados. As ONTAP tools for VMware vSphere introduzem igroups aninhados, onde cada armazenamento de dados no vCenter é associado a um igroup pai, enquanto cada host é vinculado a um igroup filho sob esse pai. Você pode definir igroups pai personalizados com nomes definidos pelo usuário para reutilização em armazenamentos de dados para facilitar o gerenciamento de igroups.  Entenda o fluxo de trabalho do igroup para gerenciar LUNs e datastores em ONTAP tools for VMware vSphere. Diferentes fluxos de trabalho geram configurações de igroup variadas, conforme mostrado nos exemplos a seguir:
 
 
 NOTE: Os nomes mencionados são apenas para fins ilustrativos e não se referem a nomes reais de igroups.  Os igroups gerenciados por ferramentas ONTAP usam o prefixo “otv_”.  Igroups personalizados podem receber qualquer nome.
@@ -61,7 +61,7 @@ Crie um armazenamento de dados em um único host com um iniciador
 
 
 
-Um igroup pai, DS1Igroup, é criado nos sistemas ONTAP para DS1, com um igroup filho, host1Igroup, mapeado para lun1. LUNs são sempre mapeados para igroups filhos.
+ONTAP cria o igroup pai DS1Igroup para DS1 e mapeia o igroup filho host1Igroup para lun1.  O sistema sempre mapeia LUNs para igroups filhos.
 
 .Exemplo 2:
 Montar o armazenamento de dados existente em um host adicional
@@ -78,7 +78,7 @@ Montar o armazenamento de dados existente em um host adicional
 
 
 
-Um igroup filho host2Igroup é criado e adicionado ao igroup pai existente DS1Igroup.
+As ONTAP tools for VMware vSphere criam um igroup filho host2Igroup e o adicionam ao igroup pai existente DS1Igroup.
 
 .Exemplo 3:
 Desmontar um armazenamento de dados de um host
@@ -94,7 +94,7 @@ Desmontar um armazenamento de dados de um host
 
 
 
-O host1Igroup é removido da hierarquia.  Os igroups filhos não são excluídos explicitamente.  A exclusão ocorre sob estas duas condições:
+As ONTAP tools for VMware vSphere removem host1Igroup da hierarquia.  O sistema não exclui explicitamente igroups filhos.  Ele os exclui sob estas duas condições:
 
 * Se nenhum LUN for mapeado, o sistema ONTAP excluirá o igroup filho.
 * Uma tarefa de limpeza agendada remove os igroups filhos pendentes sem mapeamentos de LUN. Esses cenários se aplicam apenas a igroups gerenciados por ferramentas ONTAP, não a igroups criados de forma personalizada.
@@ -114,7 +114,7 @@ Excluir armazenamento de dados
 
 
 
-Os igroups pai e filho serão removidos se outro armazenamento de dados não reutilizar o igroup pai.  Os igroups filhos nunca são excluídos explicitamente
+Os igroups pai e filho são removidos, a menos que outro armazenamento de dados reutilize o igroup pai.  Os igroups filhos não são excluídos explicitamente
 
 .Exemplo 5:
 Crie vários armazenamentos de dados em um igroup pai personalizado
@@ -230,13 +230,13 @@ https://docs.netapp.com/us-en/ontap/san-admin/igroups-concept.html["Sobre os gru
 
 == Políticas de exportação
 
-As políticas de exportação controlam o acesso aos datastores NFS nas ferramentas ONTAP para VMware vSphere. Elas definem quais clientes podem acessar os datastores e quais permissões eles têm. As políticas de exportação são criadas e gerenciadas em sistemas ONTAP e podem ser associadas aos datastores NFS para impor o controle de acesso. Cada política de exportação consiste em regras que especificam os clientes (endereços IP ou sub-redes) que têm acesso e as permissões concedidas (somente leitura ou leitura/gravação).
+As políticas de exportação controlam o acesso ao armazenamento de dados NFS e as permissões do cliente nas ONTAP tools for VMware vSphere.  As políticas de exportação são criadas e gerenciadas em sistemas ONTAP e podem ser usadas com armazenamentos de dados NFS para impor o controle de acesso. Cada política de exportação consiste em regras que especificam os clientes (endereços IP ou sub-redes) que têm permissão de acesso e as permissões concedidas (somente leitura ou leitura-gravação).
 
 Ao criar um repositório de dados NFS nas ferramentas ONTAP para VMware vSphere, você pode selecionar uma política de exportação existente ou criar uma nova. A política de exportação é então aplicada ao repositório de dados, garantindo que apenas clientes autorizados possam acessá-lo.
 
 Ao montar um repositório de dados NFS em um novo host ESXi, as ferramentas ONTAP para VMware vSphere adicionam o endereço IP do host à política de exportação existente associada ao repositório de dados. Isso permite que o novo host acesse o repositório de dados sem criar uma nova política de exportação.
 
-Ao excluir ou desmontar um repositório de dados NFS de um host ESXi, o ONTAP Tools for VMware vSphere remove o endereço IP do host da política de exportação. Se nenhum outro host estiver usando essa política de exportação, ela será excluída. Ao excluir um repositório de dados NFS, o ONTAP Tools for VMware vSphere remove a política de exportação associada a esse repositório de dados se ela não for reutilizada por outros repositórios de dados. Se a política de exportação for reutilizada, ela manterá o endereço IP do host e permanecerá inalterada. Ao excluir os repositórios de dados, a política de exportação desatribui o endereço IP do host e atribui uma política de exportação padrão, para que os sistemas ONTAP possam acessá-los, se necessário.
+Quando você exclui ou desmonta um armazenamento de dados NFS de um host ESXi, as ONTAP tools for VMware vSphere removem o endereço IP do host da política de exportação. Se nenhum outro host estiver usando essa política de exportação, ela será excluída. Quando você exclui um armazenamento de dados NFS, as ONTAP tools for VMware vSphere removem a política de exportação associada a esse armazenamento de dados se ela não for reutilizada por nenhum outro armazenamento de dados. Se a política de exportação for reutilizada, ela manterá o endereço IP do host e não será alterada. Quando você exclui os armazenamentos de dados, a política de exportação cancela a atribuição do endereço IP do host e atribui uma política de exportação padrão, para que os sistemas ONTAP possam acessá-los, se necessário.
 
 A atribuição da política de exportação difere quando ela é reutilizada em diferentes repositórios de dados. Ao reutilizar a política de exportação, você pode anexá-la ao novo endereço IP do host. Ao excluir ou desmontar um repositório de dados que usa uma política de exportação compartilhada, a política não será excluída. Ela permanece inalterada e o endereço IP do host não é removido, pois é compartilhado com os outros repositórios de dados. A reutilização de políticas de exportação não é recomendada, pois pode levar a problemas de acesso e latência.
 

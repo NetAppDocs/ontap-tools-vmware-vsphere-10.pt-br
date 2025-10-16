@@ -22,7 +22,7 @@ Ao adicionar um novo repositório de dados, você pode incluí-lo no grupo de re
 Você deve emparelhar os sites protegidos e de recuperação criados usando o vSphere Client para habilitar o Storage Replication Adapter (SRA) para descobrir os sistemas de armazenamento.
 
 
-NOTE: O Adaptador de Replicação de Armazenamento (SRA) oferece suporte a fan-out com um relacionamento de sincronização do tipo Failover Duplex Automatizado e relacionamento assíncrono SnapMirror no grupo de consistência. No entanto, o fan-out com dois SnapMirror assíncronos no grupo de consistência ou SnapMirrors no volume não é suportado.
+NOTE: O Adaptador de Replicação de Armazenamento (SRA) oferece suporte a fan-out com um relacionamento de sincronização do tipo Automated Failover Duplex e relacionamento assíncrono SnapMirror no grupo de consistência. No entanto, o fan-out com dois SnapMirror assíncronos no grupo de consistência ou fan-out de SnapMirrors no volume não é suportado. Os relacionamentos SnapMirror do tipo Vault não são considerados dentro dessas restrições de distribuição.
 
 .Antes de começar
 * Você deve ter o VMware Live Site Recovery instalado nos sites protegidos e de recuperação.

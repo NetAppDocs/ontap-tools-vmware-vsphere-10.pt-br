@@ -13,15 +13,16 @@ summary: A atualização é compatível com implantações de HA e não HA.
 [role="lead"]
 Você pode atualizar as ONTAP tools for VMware vSphere 10.3 ou 10.4 para 10.5.  No entanto, para atualizar das ferramentas ONTAP 10.0, 10.1 ou 10.2 para 10.5, você deve primeiro atualizar para 10.3 ou 10.4 antes de prosseguir para 10.5.
 
-NOTA:
-
+[NOTE]
+====
 * Para sistemas ASA r2, certifique-se de atualizar para as ONTAP tools for VMware vSphere para 10.5 e ONTAP para 9.16.1, antes de configurar mais zonas de disponibilidade de armazenamento (SAZs).
-* Se a atualização das ONTAP tools for VMware vSphere 10.3 ou 10.4 para 10.5 falhar, não será possível reverter.  Use RPO baixo ou recuperação de instantâneo para restaurar a configuração.  Para ONTAP tools for VMware vSphere 10.2 e anteriores, use RPO zero para restaurar a configuração.
+* Se a atualização das ONTAP tools for VMware vSphere 10.3 ou 10.4 para 10.5 falhar, você não poderá reverter. Use RPO baixo ou recuperação de instantâneo para restaurar a configuração. Para ONTAP tools for VMware vSphere 10.2 e anteriores, use RPO zero para restaurar a configuração.
 
 
+====
 .Antes de começar
-* Certifique-se de que o certificado do sistema ONTAP e os certificados vCenter integrados sejam válidos por pelo menos 5 dias.  Se expirar antes, a atualização falhará.
-* Para garantir uma atualização segura, verifique se seus certificados incluem entradas de Nome Alternativo do Assunto (SAN).  Se seus certificados não tiverem entradas SAN e você precisar prosseguir com a atualização, poderá definir o sinalizador de validação de certificado como falso para ignorar as verificações SAN no prompt durante a atualização.
+* Certifique-se de que o certificado do sistema ONTAP e os certificados vCenter integrados sejam válidos por pelo menos 5 dias. Se os certificados expirarem antes, a atualização falhará.
+* Para garantir uma atualização segura, verifique se seus certificados incluem entradas de Nome Alternativo do Assunto (SAN). Se os certificados não tiverem entradas SAN, defina o sinalizador de validação do certificado como falso para ignorar as verificações SAN durante a atualização.
 * Certifique-se de ter um quinto disco com capacidade de 100 GB em todos os nós.
 * Verifique se a configuração do nó corresponde às especificações na tabela abaixo.
 

@@ -44,3 +44,5 @@ NOTE: Você não pode excluir um armazenamento de dados usado por máquinas virt
 NOTE: Para armazenamentos de dados VMFS no armazenamento ONTAP unificado que fazem parte de um cluster de host protegido, não é possível excluir o volume do cluster ONTAP .
 
 
+
+Quando você exclui um armazenamento de dados NFS, VMFS ou vVols , os igroups pais permanecem no sistema ONTAP .  Os igroups filho que não são mapeados para nenhum LUN são excluídos automaticamente.  As ferramentas ONTAP realizam uma limpeza diária para remover igroups pai padrão não mapeados.  Os igroups pai personalizados devem ser excluídos manualmente no ONTAP.  Todos os igroups pais restantes se tornam obsoletos e não podem ser reutilizados pelas ferramentas ONTAP .

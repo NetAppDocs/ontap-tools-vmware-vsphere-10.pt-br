@@ -11,9 +11,9 @@ summary:
 
 
 [role="lead"]
-Ao gerenciar VMs de ferramentas ONTAP e sistemas de armazenamento ONTAP , entender o comportamento do igroup é essencial, especialmente ao migrar armazenamentos de dados de ambientes não ONTAP para o gerenciamento de ferramentas ONTAP .  Esta seção descreve como os igroups são atualizados durante essa transição.
+Se você gerencia VMs de ferramentas ONTAP e sistemas de armazenamento ONTAP , é importante entender como os igroups se comportam, especialmente ao mover armazenamentos de dados de ambientes não gerenciados por ferramentas ONTAP para aqueles que são.  Esta seção explica como os igroups são atualizados durante esse processo.
 
-A partir das ONTAP tools for VMware vSphere 10.4, o gerenciamento do armazenamento de dados é simplificado pela criação e manutenção automáticas de objetos ONTAP e vCenter em ambientes de datacenter VMware.
+As ONTAP tools for VMware vSphere 10.4 e versões posteriores criam e mantêm automaticamente objetos ONTAP e vCenter para simplificar o gerenciamento de armazenamento de dados em ambientes de data center VMware.
 
 As ONTAP tools for VMware vSphere interpretam igroups em dois contextos diferentes:
 
@@ -41,7 +41,7 @@ Com a abordagem de igroup aninhado, os LUNs são mapeados apenas para os igroups
 
 *Quando você cria um armazenamento de dados com um nome de igroup personalizado*
 
-Durante a criação do armazenamento de dados nas ferramentas ONTAP , você pode inserir um nome de igroup personalizado em vez de selecionar no menu suspenso.  As ferramentas ONTAP então criam um igroup pai no nível do armazenamento de dados usando o nome especificado.  Se o mesmo host for usado para vários armazenamentos de dados, o igroup (filho) de nível de host existente será reutilizado.  Como resultado, o LUN para o novo armazenamento de dados é mapeado para esse igroup filho existente, que agora pode ser associado a vários igroups pais (um para cada armazenamento de dados).  A lista de armazenamento de dados da interface do usuário do vCenter Server confirma a criação bem-sucedida do novo armazenamento de dados com o nome do igroup personalizado.
+Durante a criação do armazenamento de dados nas ferramentas ONTAP , você pode inserir um nome de igroup personalizado em vez de selecionar no menu suspenso. As ferramentas ONTAP então criam um igroup pai no nível do armazenamento de dados usando o nome especificado. Se o mesmo host for usado para vários armazenamentos de dados, o igroup (filho) de nível de host existente será reutilizado. Como resultado, o LUN para o novo armazenamento de dados é mapeado para esse igroup filho existente, que agora pode ser associado a vários igroups pais (um para cada armazenamento de dados). Você pode ver o novo armazenamento de dados com o nome do igroup personalizado na interface do vCenter Server.
 
 *Quando você reutiliza o nome do igroup durante a criação do armazenamento de dados*
 
@@ -59,10 +59,10 @@ Para gerenciar um armazenamento de dados e um igroup existentes com ferramentas 
 
 image:../media/otv-ds.png["Datastore e igroup gerenciados por ferramentas ONTAP"]
 
-Você pode criar um armazenamento de dados diretamente no vCenter Server e depois colocá-lo sob o gerenciamento de ferramentas ONTAP .  Primeiro, crie um igroup simples em sistemas ONTAP e mapeie um LUN para ele.  Após executar a descoberta do armazenamento de dados nas ferramentas ONTAP , o igroup plano é convertido em uma estrutura aninhada.  As ferramentas ONTAP então gerenciam o igroup, renomeando-o com o prefixo 'otv_'.  O LUN permanece mapeado para o mesmo igroup durante todo esse processo.
+Depois de executar a descoberta do armazenamento de dados nas ferramentas ONTAP , as ferramentas ONTAP convertem o igroup plano em uma estrutura aninhada. As ferramentas ONTAP então gerenciam o igroup, renomeando-o com o prefixo 'otv_'. O LUN permanece mapeado para o mesmo igroup durante todo esse processo.
 
 *Como as ferramentas ONTAP reutilizam igroups criados nativamente*
 
-Você pode provisionar um armazenamento de dados em ferramentas ONTAP usando um igroup criado originalmente em sistemas ONTAP , depois que ele for gerenciado por ferramentas ONTAP .  Esses igroups aparecem na lista suspensa de nomes de grupos iniciadores personalizados.  O novo LUN para o armazenamento de dados é então mapeado para o igroup filho normalizado correspondente, como "otv_NativeIgroup1".
+Você pode criar um armazenamento de dados nas ferramentas ONTAP usando um igroup que foi criado primeiro nos sistemas ONTAP , depois que as ferramentas ONTAP o gerenciam. Esses igroups aparecem na lista suspensa de nomes de grupos iniciadores personalizados. O novo LUN para o armazenamento de dados é então mapeado para o igroup filho normalizado correspondente, como "otv_NativeIgroup1".
 
 As ONTAP tools for VMware vSphere não detectam nem usam igroups criados no sistema ONTAP que não são gerenciados pelas ferramentas ONTAP ou vinculados a um armazenamento de dados.
