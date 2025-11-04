@@ -104,7 +104,7 @@ Adicione o *Caminho da API REST* e escolha o acesso na lista suspensa.
 
 === Lista de Privileges mínimo necessário para usuário de cluster com escopo global não administrador
 
-Esta seção lista os privilégios mínimos necessários para um usuário de cluster de escopo global não administrador sem um arquivo JSON.  Se um cluster estiver no escopo local, use o arquivo JSON para criar usuários porque as ONTAP tools for VMware vSphere precisam de mais do que apenas privilégios de leitura para provisionamento no ONTAP.
+Esta página lista os privilégios mínimos necessários para um usuário de cluster com escopo global que não seja administrador e que não possua um arquivo JSON. Se um cluster estiver no escopo local, use o arquivo JSON para criar usuários porque as ONTAP tools for VMware vSphere precisam de mais do que apenas privilégios de leitura para provisionamento no ONTAP.
 
 Você pode acessar a funcionalidade usando APIs:
 

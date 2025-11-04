@@ -11,7 +11,7 @@ summary: A ação Excluir datastore exclui o datastore. No caso do armazenamento
 
 
 [role="lead"]
-Esta seção descreve como excluir armazenamentos de dados NFS, VMFS ou vVols usando ferramentas ONTAP no vCenter Server.
+Esta página descreve como excluir datastores NFS, VMFS ou vVols usando as ferramentas ONTAP no vCenter Server.
 
 Quando você exclui um armazenamento de dados, as seguintes ações são executadas dependendo do tipo de armazenamento de dados:
 
@@ -33,7 +33,7 @@ NOTE: Você não pode excluir um armazenamento de dados usado por máquinas virt
 +
 .. No caso de um armazenamento de dados NFS ou VMFS, uma caixa de diálogo é exibida com a lista de VMs usando o armazenamento de dados.
 .. Se nenhuma máquina virtual estiver associada a um armazenamento de dados VMFS, você verá uma caixa de diálogo de confirmação.  Se a proteção do cluster do host estiver habilitada e houver um relacionamento AFD, você poderá limpar elementos de armazenamento secundários.
-.. Para armazenamentos de dados VMFS protegidos em sistemas ASA r2, certifique-se de que a proteção seja removida antes da exclusão.  A partir do ONTAP 9.17.1 e das ONTAP tools for VMware vSphere 10.5, você pode excluir um armazenamento de dados protegido.  Se for o único armazenamento de dados no grupo de proteção, a proteção do cluster do host será removida automaticamente.
+.. Para datastores VMFS protegidos em sistemas ASA r2, remova a proteção antes de excluir. A partir do ONTAP 9.17.1 e das ONTAP tools for VMware vSphere 10.5, você pode excluir um armazenamento de dados protegido.  Se for o único armazenamento de dados no grupo de proteção, a proteção do cluster de hosts será removida automaticamente.
 .. Para armazenamentos de dados vVols , você pode excluir o armazenamento de dados somente se não houver vVols presentes.  A caixa de diálogo *Excluir armazenamento de dados* inclui uma opção para remover volumes do cluster ONTAP .
 .. Para datastores vVols em sistemas ASA r2, não é possível excluir os volumes de suporte do ONTAP usando a opção *Excluir datastore*.
 
@@ -45,4 +45,4 @@ NOTE: Para armazenamentos de dados VMFS no armazenamento ONTAP unificado que faz
 
 
 
-Quando você exclui um armazenamento de dados NFS, VMFS ou vVols , os igroups pais permanecem no sistema ONTAP .  Os igroups filho que não são mapeados para nenhum LUN são excluídos automaticamente.  As ferramentas ONTAP realizam uma limpeza diária para remover igroups pai padrão não mapeados.  Os igroups pai personalizados devem ser excluídos manualmente no ONTAP.  Todos os igroups pais restantes se tornam obsoletos e não podem ser reutilizados pelas ferramentas ONTAP .
+Quando você exclui um armazenamento de dados NFS, VMFS ou vVols , os igroups pais permanecem no sistema ONTAP . Os igroups filho que não são mapeados para nenhum LUN são excluídos automaticamente. As ferramentas ONTAP realizam uma limpeza diária para remover igroups pai padrão não mapeados. Exclua manualmente os grupos de instâncias (igroups) pai personalizados no ONTAP.  As ferramentas ONTAP não podem reutilizar grupos de instâncias (igroups) pai obsoletos.

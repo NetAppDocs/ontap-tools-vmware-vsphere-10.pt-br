@@ -16,7 +16,7 @@ As ferramentas do ONTAP para VMware vSphere mostram a visualização lateral do 
 .Passos
 . No cliente vSphere, acesse o armazenamento de dados.
 . Selecione a guia *Configure* no painel direito.
-. Selecione *Ferramentas NetApp ONTAP* > *armazenamento ONTAP*. Dependendo do tipo de armazenamento de dados, a exibição muda. Consulte a tabela abaixo para obter informações:
+. Selecione * Ferramentas NetApp ONTAP * > * Armazenamento ONTAP *. A visualização muda de acordo com o tipo de armazenamento de dados.  Veja a tabela abaixo:
 
 
 |===
@@ -31,5 +31,5 @@ As ferramentas do ONTAP para VMware vSphere mostram a visualização lateral do 
 | Armazenamentos de dados VMFS | A página *Detalhes do armazenamento* contém detalhes de back-end, agregado, volume e zona de disponibilidade de armazenamento (SAZ). A página *Detalhes da unidade de armazenamento* contém detalhes da unidade de armazenamento. 
 
 
-| Armazenamentos de dados vVols | Lista todos os volumes. Você pode expandir ou remover o armazenamento do painel de armazenamento do ONTAP. Essa exibição não é compatível com o armazenamento de dados vVols baseado no sistema do ASA R2. 
+| Armazenamentos de dados vVols | Lista todos os volumes. Você pode expandir ou remover o armazenamento do painel de armazenamento do ONTAP . As ferramentas ONTAP não suportam essa visualização para datastores vVols baseados no sistema ASA r2. 
 |===

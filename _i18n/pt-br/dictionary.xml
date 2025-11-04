@@ -361,7 +361,6 @@
   <block id="175dc7694475b27598cc4934c607c602" category="admonition">O pacote de log gerado substitui o pacote de log gerado nos últimos 3 dias ou 72 horas.</block>
   <block id="890e36ddbad7723990bfc85c381032f7" category="summary">Você pode configurar as ferramentas do ONTAP para o VMware vSphere para habilitar o acesso SSH para o usuário diag.</block>
   <block id="efede0d5afb055973ecbabd1510449bc" category="doc">Configure o acesso de diagnóstico remoto</block>
-  <block id="08eb6f69a04bed1d014eb12b7cdc3039" category="paragraph">A extensão do provedor VASA deve estar habilitada para sua instância do vCenter Server.</block>
   <block id="bd0c5df6e8c9602ce4ddef780c7bf3a3" category="paragraph">Usar SSH para acessar a conta de usuário diag tem as seguintes limitações:</block>
   <block id="d864195b86449ab75bd5a82aff4a5412" category="list-text">O acesso SSH à conta de usuário diag é desativado quando uma das seguintes situações acontece:</block>
   <block id="53d2ec82e60f2fa8563f76e1038a66bc" category="list-text">O tempo expira.</block>
@@ -459,7 +458,6 @@
   <block id="76626cf93866fa9c640a48246c5c37f2" category="list-text">O mesmo datastore vVols em um host ESXi diferente</block>
   <block id="c8c19704fbcfa4999a1c35705f4fb8d5" category="list-text">Armazenamento de dados vVols compatível diferente no mesmo host ESXi</block>
   <block id="698d0f0c8caccc5471d6d668789c8d92" category="list-text">Armazenamento de dados vVols compatível diferente em um host ESXi diferente</block>
-  <block id="fd9de6a4f8a86b382dde37cbad9c6723" category="paragraph">Se a máquina virtual for migrada para um FlexVol volume diferente, o respetivo arquivo de metadados também será atualizado com as informações da máquina virtual. Se uma máquina virtual for migrada para um host ESXi diferente, mas o mesmo armazenamento, o arquivo de metadados FlexVol volume subjacente não será modificado.</block>
   <block id="885174fe1c59863207b1caa855941610" category="section-title">Máquinas virtuais protegidas contra clones</block>
   <block id="5fffbf2fea252f0535c4bf75d67805e3" category="paragraph">Você pode clonar máquinas virtuais protegidas para o seguinte:</block>
   <block id="3f4a0cebd12a48e31b096c69e3fcf80e" category="list-text">Mesmo contêiner do mesmo FlexVol volume usando o grupo de replicação</block>
@@ -481,8 +479,6 @@
   <block id="b5783ac409e73180ab37229219e49c28" category="doc">Diminua o armazenamento de dados do vVols</block>
   <block id="2e7ce9d8495225c584175fd7caa148ce" category="summary">O plug-in das ferramentas do ONTAP para VMware vSphere fornece relatórios para máquinas virtuais e datastores.</block>
   <block id="20ae9dd256071c9a70e603a7793d8869" category="paragraph">O plug-in das ferramentas do ONTAP para VMware vSphere fornece relatórios para máquinas virtuais e datastores. Quando você seleciona o ícone do plug-in das ferramentas do NetApp ONTAP para VMware vSphere na seção Atalhos do cliente vCenter, a interface do usuário navega para a página Visão geral. Selecione a guia relatórios para exibir a máquina virtual e o relatório de datastores.</block>
-  <block id="f7a2e0b6ed3f51220e81b2d1a0df9298" category="paragraph">O relatório de máquinas virtuais mostra a lista de máquinas virtuais descobertas (deve ter pelo menos um disco de datastores baseados em storage ONTAP) com métricas de desempenho. Quando você expande o Registro da VM, todas as informações do datastore relacionadas ao disco são exibidas.</block>
-  <block id="d0f68a94eb1418f8818cf580289652de" category="paragraph">O relatório de datastores mostra a lista de ferramentas descobertas ou reconhecidas do ONTAP para datastores gerenciados do VMware vSphere que são provisionados a partir do back-end de storage do ONTAP de todos os tipos com métricas de desempenho.</block>
   <block id="4e740e8d009ff8d0ca15216304e1e027" category="paragraph">Você pode usar a opção Gerenciar colunas para ocultar ou mostrar diferentes colunas.</block>
   <block id="823a888350d98ab4dac348c27cf264a3" category="doc">Repor a palavra-passe do utilizador da aplicação</block>
   <block id="bd294460cf119253eaf3ca5c5ff6bb68" category="summary">Durante a operação reiniciar o sistema operacional convidado, o menu grub exibe uma opção para redefinir a senha do usuário do console de manutenção.</block>
@@ -502,11 +498,9 @@
   <block id="ca6ef544de910ada8f9334d21c77dd5e" category="list-text">Na janela pop-up alterar senha, digite o token de redefinição de senha, o nome de usuário e os detalhes da nova senha.</block>
   <block id="7aaefa4d4b1dc5f22ac66195d817ec42" category="summary">O redimensionamento de um datastore permite aumentar o armazenamento de seus arquivos de máquina virtual. Você pode alterar o tamanho de um armazenamento de dados conforme os requisitos de infraestrutura mudam.</block>
   <block id="9704bbe9f3dcdd6bcaf267fe293ed88b" category="doc">Redimensione o armazenamento de dados NFS e VMFS</block>
-  <block id="acaef68592c39a3506e0d7bb3c9e162c" category="paragraph">Você só pode aumentar o tamanho de um datastores NFS e VMFS. Um FlexVol volume que faz parte de um datastores NFS e VMFS não pode diminuir abaixo do tamanho existente, mas pode crescer no máximo 120%.</block>
   <block id="c9e48152a254396a711cecd4df0731c4" category="list-text">Clique com o botão direito do Mouse no datastore NFS ou VMFS e selecione *Ferramentas NetApp ONTAP* &gt; *Redimensionar datastore*.</block>
   <block id="e5fca0377c7dfd55d5d999c1160bf046" category="summary">Você precisa iniciar o SSH em outros nós antes de atualizar.</block>
   <block id="38b79f652cf5dac18f92a7f17de383e2" category="doc">Inicie o SSH em outros nós</block>
-  <block id="2f4cc1df006d112e41d4252392764b14" category="paragraph">Execute este procedimento em cada um dos nós antes de atualizar.</block>
   <block id="ef7a1860bfa2c5f2ea33155989f85ee5" category="list-text">Introduza<block ref="c4ca4238a0b923820dcc509a6f75849b" prefix=" " category="inline-code"></block> para selecionar Access diagnostic shell (Acesso à shell de diagnóstico).</block>
   <block id="78efad1f6bb75b53e0c5236fd154c135" category="list-text">Entre<block ref="415290769594460e2e485922904f345d" prefix=" " category="inline-code"></block> para continuar.</block>
   <block id="7f228fe642db2c23792d7c5383792e8d" category="list-text">Execute o comando _sudo systemctl restart ssh_.</block>
@@ -530,7 +524,6 @@
   <block id="eefb401515606432e535b2c010ca31a1" category="doc">Visualizações de storage do ONTAP para datastores</block>
   <block id="be9a71458974fa7a07e70416397a3e07" category="summary">A ação desmontar datastore desmonta um datastore NFS ou VMFS dos hosts ESXi. A ação desmontar datastore está habilitada para armazenamentos de dados NFS e VMFS que são descobertos ou gerenciados pelas ferramentas do ONTAP para VMware vSphere.</block>
   <block id="27150de0fe201042be99ab9cc1628e7f" category="doc">Desmonte armazenamentos de dados NFS e VMFS</block>
-  <block id="dfa0dbf66f9f02b82fdb955b47146f58" category="paragraph">Uma caixa de diálogo é aberta e lista os hosts ESXi nos quais o datastore está montado. Quando a operação é executada em um datastore protegido, uma mensagem de aviso é exibida na tela.</block>
   <block id="145030897b3622bf5373be4a74e8ad80" category="list-text">Selecione um ou mais hosts ESXi para desmontar o datastore.</block>
   <block id="b58a084a2e5b8ee16e91cff21aeacb3b" category="list-text">Selecione o botão *Desmontar*.</block>
   <block id="58ee9210196e8f4558d87b26bba5bc19" category="paragraph">Se o datastore fizer parte de um cluster de host protegido, uma mensagem de aviso será exibida.</block>
@@ -538,13 +531,11 @@
   <block id="f72e000ebb4c7bedf651a46e595f1371" category="doc">Atualize as credenciais do vCenter Server e do ONTAP</block>
   <block id="7ac19aa441feceb73519a5108d4cc366" category="paragraph">Você pode atualizar a instância do vCenter Server e as credenciais do ONTAP usando o console de manutenção.</block>
   <block id="21a56b485fb6cd9f7c9cc8f514440950" category="paragraph">Você precisa ter credenciais de login de usuário de manutenção.</block>
-  <block id="1f8bb3d639d4544a4979b060d7cccc88" category="paragraph">Se você tiver alterado as credenciais para a implantação pós-vCenter Server, ONTAP ou Data LIF, precisará atualizar as credenciais usando este procedimento.</block>
   <block id="cea5a13834803a12adaeb249165351df" category="list-text">Entre<block ref="c81e728d9d4c2f636f067f89cc14862c" prefix=" " category="inline-code"></block> para selecionar Menu Configuração do sistema.</block>
   <block id="86ce6e9c3af571980099ca308cd245e3" category="list-text">Digite<block ref="45c48cce2e2d7fbdea1afc51c7c6ad26" prefix=" " category="inline-code"></block> para alterar as credenciais do ONTAP.</block>
   <block id="207c00a73dde0270cc0fbc7ce9c5f2fd" category="list-text">Digite<block ref="d3d9446802a44259755d38e6d163e820" prefix=" " category="inline-code"></block> para alterar as credenciais do vCenter.</block>
   <block id="d3cd4bffc1abc46e60337f8438f457b9" category="summary">A visualização de armazenamento mostra a lista de vVols criados pela máquina virtual.</block>
   <block id="f6607063532d19e10b746de0f6108f15" category="doc">Visualização de armazenamento de máquina virtual</block>
-  <block id="9d850336a156831a9095fd981a1a0c23" category="admonition">Essa exibição é aplicável à VM que tem pelo menos uma ferramenta ONTAP para o disco relacionado ao armazenamento de dados vVols gerenciado do VMware vSphere montado nele.</block>
   <block id="d30a2c17aee5520860321f3dd1c6c00c" category="list-text">Selecione *Ferramentas NetApp ONTAP* &gt; *armazenamento*. Os detalhes *Storage* aparecem no painel direito. Você pode ver a lista de vVols que estão presentes na VM.</block>
   <block id="6d710894cd1d83594944bdb2f558f3dd" category="paragraph">Você pode usar a opção 'Gerenciar colunas' para ocultar ou mostrar diferentes colunas.</block>
   <block id="77efba168b5a2059c2d20a1e2673f5d1" category="paragraph">Execute estas etapas nos locais de proteção e recuperação.</block>
@@ -812,15 +803,6 @@
   <block id="41b07b979210ee3b74b8321a449a902e" category="cell">Não HA</block>
   <block id="76841410d8f9a6881e0b96f150e9cedf" category="section-title">Requisitos portuários</block>
   <block id="5ddcf17f54788a5bb9148e8671562c06" category="cell">*Porto*</block>
-  <block id="07ac8d53698f067d7d278deb303748d3" category="cell">O Ansible usa essa porta SSH para comunicação durante o provisionamento de cluster. Essa porta é necessária para funcionalidades como alterar a senha do usuário de manutenção, mensagens de status e atualizar valores em todos os três nós no caso de configuração de HA.</block>
-  <block id="05820e7e588ce97dc4656c92f1b83966" category="cell">Essa porta hospeda a documentação da API por meio do Swagger e do aplicativo de interface de usuário do Manager.</block>
-  <block id="a5cc260611cf9a7ec571425794a59970" category="cell">Esta é a porta padrão para solicitações de clientes, como obter, colocar, excluir ou observar chaves no armazenamento de valores de chave etcd.</block>
-  <block id="8251f4d10510ac6bdb1df6c86a270877" category="cell">Esta é a porta padrão para comunicação de servidor para servidor para o cluster etcd usado para o algoritmo de consenso de jangada em que o etcd se baseia para replicação e consistência de dados.</block>
-  <block id="344246837eb9cebeda0390f27595098a" category="cell">Fonte: RKE2 nós de agentes. Destino: REK2 nós de servidor. Descrição: Kubernetes API</block>
-  <block id="d1666d7b518ad556f4c40bbdc50656d1" category="cell">Fonte: RKE2 nós de agentes. Destino: REK2 nós de servidor. Descrição: REK2 supervisor API</block>
-  <block id="8133e71f09aebd3b7b7114054e3996be" category="cell">Todos os nós precisam ser capazes de alcançar outros nós através da porta UDP 8472 quando flannel VXLAN é usado. Fonte: Todos os RKE2 nós. Destino: Todos os REK2 nós. Descrição: Canal CNI com VXLAN</block>
-  <block id="26e6b756f989b3caa29f4476282eb8a7" category="cell">Fonte: Todos os RKE2 nós. Destino: Todos os REK2 nós. Descrição: Kubelet metrics</block>
-  <block id="8954b42ae621d3a93011debf55edbeaf" category="cell">Fonte: Todos os RKE2 nós. Destino: Todos os REK2 nós. Descrição: NodePort Port port range</block>
   <block id="5f5053e002bb673864826817a2f5203c" category="paragraph">A guia Ferramentas do ONTAP mostra detalhes como tipo de certificado (autoassinado/CA assinado) e nome de domínio. Durante a implantação, o certificado autoassinado é gerado por padrão. Você pode renovar o certificado ou atualizar o certificado para CA.</block>
   <block id="043925c248050af88bd5572f4c47c484" category="list-text">Para atualizar o certificado auto-assinado para certificado CA personalizado, selecione *certificados* &gt; *Ferramentas ONTAP* &gt; *Atualizar para CA* opção.</block>
   <block id="da8b2f27297a9b9118f73acd0acb3d1c" category="paragraph">Certifique-se de que um host ESXi contenha apenas uma VM de ferramentas ONTAP. As entradas são validadas cada vez que você passa para a próxima janela.</block>
@@ -1083,15 +1065,11 @@
   <block id="65ab872e40a57d468184122e5d0784c0" category="list-text">Selecione a rede de destino para cada rede de origem e selecione *seguinte*.</block>
   <block id="59d5c19f1f3c5f065c5ee15d4ace3947" category="list-text">Selecione o ícone *administrador* no canto superior direito da tela e selecione *alterar senha*.</block>
   <block id="27385d25f49e4eeebab01eda70b36576" category="list-text">Selecione *Edit Appliance Settings* (Editar definições do dispositivo) na secção Overview (Descrição geral).</block>
-  <block id="10a18f6550543dba2c0c294b235bf941" category="list-text">Na seção *Serviços*, você pode habilitar serviços opcionais como o provedor VASA, a importação de configuração vVols e a recuperação de desastres (SRA) de acordo com suas necessidades.</block>
-  <block id="083fdc949ae8ae40c1cb8ff83d473adb" category="paragraph">A página *Visão geral* mostra o status da implantação. Utilizando a ID do trabalho, também pode controlar o estado do trabalho de definições do dispositivo de edição a partir da vista trabalhos.</block>
-  <block id="ae79a569a7aff132c14d8144a64688f9" category="paragraph">Se a implantação de HA falhar e o status do novo nó for exibido como "novo", exclua a nova VM no vCenter antes de tentar novamente a operação Habilitar HA.</block>
   <block id="426c64967b4b7a5db012042c7160c121" category="paragraph">Se houver um problema com as configurações do host ESXi, o problema será exibido no portlet dos sistemas host ESXi do painel. Você pode selecionar o problema para exibir o nome do host ou o endereço IP do host ESXi que tem o problema.</block>
   <block id="99458b1e600e8f8642f1d6a53c1cee4f" category="list-text">Na janela *Apply Recommended host settings* (aplicar configurações de host recomendadas), selecione os hosts que você deseja cumprir com as configurações de host recomendadas pelo NetApp e selecione *Next* (Avançar).</block>
   <block id="b9c098c7cabaa0b14f3cbc46dd8aee99" category="list-text">No painel de resumo, verifique os valores e selecione *Finish*. Você pode acompanhar o progresso no painel de tarefas recentes.</block>
   <block id="bbe57747f4505ee1666f69c3e2e22914" category="list-text">Na janela *Summary*, revise as seleções e selecione *Expand*. Você pode acompanhar o progresso no painel tarefas recentes.</block>
   <block id="7126c2d3ac63ad339fed10c3e80b9154" category="paragraph">Você deve usar a guia *Resumo* das ferramentas do ONTAP implantadas para o VMware vSphere para acessar o console de manutenção. Quando você seleciona <block ref="e47dca9fdf7d5de4c84091183b635b44" category="inline-image-macro-rx" type="image"></block>, o console de manutenção é iniciado.</block>
-  <block id="29f385adfbfb27c8582d1c11890c8556" category="list-text">Na janela *Edit Threshold* (Editar limite), forneça os valores desejados nos campos *Near Full* (quase completo) e *Full* (completo) e selecione *Save* (Guardar). Você pode redefinir os números para valores recomendados, que são 80 para quase cheio e 90 para cheio.</block>
   <block id="e86e9d91e2d4fec33d849cf922251ff6" category="list-text">Selecione as elipses verticais em relação ao vCenter Server que você deseja associar ou dissociar com backends de armazenamento.</block>
   <block id="c059c6405b3526137de28981e7d60b16" category="list-text">Selecione as elipses verticais em relação ao vCenter Server que você deseja modificar e selecione *Modificar*.</block>
   <block id="51f04e28eeabc89526616bd1000e6071" category="list-text">Clique com o botão direito do rato na máquina virtual que pretende migrar e selecione *migrar*.</block>
@@ -1102,7 +1080,6 @@
   <block id="f90f65776adad29b4cbb92ed52a8e69c" category="list-text">Clique com o botão direito do Mouse no datastore vVol e selecione *NetApp ONTAP Tools* &gt; *Remove storage from datastore*.</block>
   <block id="aead57347d2dc00927edd37edabb180a" category="list-text">Na janela pop-up *Remover armazenamento*, marque *Excluir volumes do cluster ONTAP* para excluir os volumes do armazenamento de dados e do armazenamento ONTAP e selecione *Excluir*.</block>
   <block id="267de19ac03e71a99875cacf87972c29" category="list-text">Selecione *Configurações* na barra lateral.</block>
-  <block id="acbb9fb52437ae4b13baa2a0348d0f54" category="list-text">Na caixa de diálogo Redimensionar, especifique um novo tamanho para o datastore e selecione *OK*.</block>
   <block id="3783fd9fd4953ec562029748312baab2" category="list-text">Selecione o menu elipses verticais e selecione *Discover storage*</block>
   <block id="94eb6f58d9e59ecf544e93049e0b5a12" category="list-text">Selecione o menu reticências verticais e selecione *Modificar* para modificar as credenciais ou o nome da porta. Você pode acompanhar o progresso no painel tarefas recentes.</block>
   <block id="e3a4199b03830cb617b930ebbf0e2ab9" category="list-text">Selecione o menu elipses verticais e selecione *Modificar*.</block>
@@ -1153,7 +1130,6 @@
   <block id="56a156ef32c18392cd77249a4e9d04c5" category="inline-link">Suporte ONTAP para NFSv4,2</block>
   <block id="26b3116c80531a47fa8562f359b1a573" category="paragraph"><block ref="26b3116c80531a47fa8562f359b1a573" category="inline-link-rx"></block></block>
   <block id="4c90abc26074daa0aa69e5fcd9bac645" category="paragraph">Para obter mais informações,<block ref="39a0a12cac57df4f5e3df88c1e683703" category="inline-link-rx"></block> consulte .</block>
-  <block id="10cd1f260e9855405e5e3b0b9fd330f5" category="list-text">Execute a verificação nslookup no nome de domínio para verificar se o domínio está sendo resolvido para o endereço IP pretendido.</block>
   <block id="f01050ae79f30f1986973e3e8b1d62e0" category="admonition">Não é possível alternar de um certificado assinado pela CA para um certificado autoassinado.</block>
   <block id="49f94738c3644fbe9136c4a2d758c0e8" category="open-title">Atualize o certificado das ferramentas do ONTAP</block>
   <block id="d051d66420b4ab4228c2f209cd30a155" category="list-text">Selecione *certificados* &gt; *Ferramentas ONTAP* &gt; *renovar* para renovar os certificados.</block>
@@ -1166,7 +1142,6 @@
   <block id="81914abf558d30aee207170f7eb62743" category="list-text">Selecione *certificados* &gt; *Fornecedor VASA* ou *Ferramentas ONTAP* &gt; *renovar* para renovar os certificados.</block>
   <block id="fafffe2e2a76baaa761981b13de575ba" category="list-text">Selecione *certificados* &gt; *Fornecedor VASA* ou *Ferramentas ONTAP* &gt; *Upgrade para CA* para atualizar o certificado auto-assinado para certificado CA personalizado.</block>
   <block id="6ab10f666dd4d5c8df15f3d1ec4b0587" category="list-text">Selecione *alterar* para implementar as alterações.</block>
-  <block id="3d7fb394c85bb4d38079573b5a7dd241" category="paragraph">A sessão de início de sessão permanece válida apenas até à meia-noite do dia seguinte.</block>
   <block id="4a724ef496ce3cb45c0d4dd43ce4a1cf" category="doc">Modifique as configurações do host ESXi usando as ferramentas do ONTAP</block>
   <block id="20d541172ecc7e2d477ce2738120938c" category="list-text">Selecione *Protect*.</block>
   <block id="fdbd4c13a762f69f21a098a7dd8e55ad" category="list-text">Selecione *Reset* para implementar as alterações.</block>
@@ -1191,17 +1166,13 @@
   <block id="bd605fff7af6a2da2d78ab96c4c19217" category="section-title">Back-ends de armazenamento</block>
   <block id="a6fd0b4332e8ac1bd18da3d605f3f558" category="open-title">Usando a interface de usuário do cliente vSphere</block>
   <block id="1371ece860fedc2eae03b50872f67242" category="list-text">Adicione o back-end de armazenamento e forneça o endereço IP do servidor, nome de usuário, senha e detalhes da porta.</block>
-  <block id="4e6630988c8d5d2e339ab683b972f17c" category="paragraph">Um certificado autoassinado é gerado por padrão para as ferramentas do ONTAP e o provedor VASA durante a implantação. Usando a interface do Gerenciador de ferramentas do ONTAP, você pode renovar o certificado ou atualizá-lo para uma CA personalizada. Certificados de CA personalizados são obrigatórios em uma implantação multi-vCenter.</block>
-  <block id="853d42cf6fdf63ba4697dcc8b9eada59" category="list-text">O nome de domínio no qual o certificado é emitido deve ser mapeado para o endereço IP virtual.</block>
   <block id="02d844dfe5fd0fc7cd13020f356ee57c" category="list-text">Na janela pop-up alterar senha, insira a senha antiga e os detalhes da nova senha. A restrição para alterar a palavra-passe é apresentada no ecrã da interface do utilizador.</block>
   <block id="b8b09f632a0b8f73d042a76d983ea497" category="admonition">A geração de logs a partir do Gerenciador de ferramentas do ONTAP inclui todos os logs para todas as instâncias do vCenter Server. A geração de logs a partir da interface de usuário do cliente vCenter é definida para o vCenter Server selecionado.</block>
   <block id="b4c23769d8288509b67a8cd8c0c74fcf" category="paragraph">Siga as etapas abaixo para gerar o pacote de log usando a interface do usuário do cliente vCenter:</block>
   <block id="ae8542fbf5a656049ee2f2fc888a8431" category="list-text">No vCenter Server, abra um console para o provedor VASA.</block>
   <block id="4711338ec6a6f73fded479cc268bfa48" category="list-text">No vCenter Server, abra o console de manutenção.</block>
   <block id="015fcba2f73d0510a2747315bc1f001d" category="summary">Quando você clica com o botão direito do Mouse no objeto datastore na visualização de objetos do vCenter, as ferramentas do ONTAP para ações compatíveis com o VMware vSphere são mostradas na seção plug-in.</block>
-  <block id="22bd336c17d35d26f84b7caca1b5c5ca" category="paragraph">Quando você clica com o botão direito do Mouse no objeto datastore na visualização de objetos do vCenter, as ferramentas do ONTAP para ações compatíveis com o VMware vSphere são mostradas na seção plug-in. Ações específicas são ativadas dependendo do tipo de armazenamento de dados e do usuário atual Privileges.</block>
   <block id="e6a483c76429d58f0d32ec49db43b74b" category="list-text">No painel de navegação, selecione o data center que contém o datastore.</block>
-  <block id="178077fdd0973ab5a00a9f6211645ddf" category="list-text">Na janela *criar ou Selecionar volumes*, você pode criar novos volumes ou escolher entre os volumes existentes. A interface do utilizador é auto-explicativa. Siga as instruções conforme sua escolha.</block>
   <block id="300d66653082bbd427bcd4e1d4cacd87" category="summary">Você deve estar ciente de algumas das considerações ao migrar máquinas virtuais existentes em seu data center.</block>
   <block id="b7a43456a2c0967142f6439b24bcbbe1" category="paragraph">Você deve estar ciente de algumas das considerações ao migrar máquinas virtuais existentes em seu data center.</block>
   <block id="bbe48fb854ea022537208eeeff822f91" category="list-title">Sobre esta tarefa</block>
@@ -1209,7 +1180,6 @@
   <block id="2e833566ef9159934f13bfc085d5d3d8" category="list-text">Se você estiver usando o vSphere Client 8,0 ou versões posteriores, algumas das opções de clique com o botão direito do Mouse ficam ocultas.</block>
   <block id="a109b0e6328f3c52176e48fdf19eb575" category="list-text">Das versões vSphere 7.0U3 ao vSphere 8,0, mesmo que as opções apareçam, a ação será desativada.</block>
   <block id="39037b551a4495c32d5aa53bb3952e75" category="list-text">No painel de navegação esquerdo, selecione os data centers que contêm os hosts.</block>
-  <block id="54862297571dca9382bb198a79d53cf3" category="list-text">Para montar datastores NFS/VMFS no cluster de host ou host, clique com o botão direito do Mouse e selecione *Ferramentas NetApp ONTAP* &gt; *montar datastores*.</block>
   <block id="fa946c7b8b00ac3d8f1845bdcf279074" category="paragraph">Não é possível desmontar o datastore de todos os hosts. A interface do usuário sugere que você use a operação delete datastore em vez disso.</block>
   <block id="664d1c7a4b62c8e9260ce3fdf6ca12ed" category="admonition">Ao configurar o gerenciador de array, você deve usar a mesma conexão (endereço IP) para o sistema de storage usado para integrar o sistema de storage nas ferramentas do ONTAP para VMware vSphere. Por exemplo, se a configuração do gerenciador de array for SVM com escopo, o storage em ferramentas do ONTAP para VMware vSphere deve ser adicionado ao nível da SVM.</block>
   <block id="eec58e3060e5203d2095052a30fc9008" category="list-text">Você deve ter implantado as ferramentas do ONTAP para o VMware vSphere.</block>
@@ -1219,11 +1189,8 @@
   <block id="4de1c4f6191ac837f89defd159014d4f" category="sidebar">Configurar as ferramentas do ONTAP para o VMware vSphere</block>
   <block id="dc2afa03f9d9070dcc18808c51d3b403" category="sidebar">Gerenciar as ferramentas do ONTAP para VMware vSphere</block>
   <block id="dd018bb6638d4453bb4643baac23fad3" category="sidebar">Atualize as ferramentas do ONTAP para o VMware vSphere</block>
-  <block id="9bb143d7a2036a80e106dc066c6b01f2" category="cell">Esta é a porta de passagem para a comunicação de entrada para o serviço do fornecedor VASA. O certificado auto-assinado do Fornecedor VASA e o certificado CA personalizado estão alojados nesta porta.</block>
-  <block id="131790b08b90f216c8731a6e1a071001" category="cell">Esta porta é uma porta de serviço usada internamente para o serviço do fornecedor VASA.</block>
   <block id="f86285920a635060c5823a8276628377" category="open-title">Atualize o certificado do fornecedor VASA</block>
   <block id="bfa75497fc09ee1e1a68a164c43dbf33" category="paragraph"><block ref="bfa75497fc09ee1e1a68a164c43dbf33" category="inline-link-macro-rx"></block></block>
-  <block id="7276496c35fbec54a8fb3dface57c5bb" category="paragraph">Para o Windows VM com tipo de armazenamento ASA R2, quando você tirar um instantâneo da máquina virtual, ele será um instantâneo somente leitura. Quando há uma chamada de ativação para a VM, o provedor VASA cria um LUN usando o snapshot somente leitura e, em seguida, ele o habilita para IOPS. Durante a solicitação de desligamento, o provedor VASA exclui o LUN que foi criado e desativa o IOPS.</block>
   <block id="378348480ef2745d6f8b174eaac75780" category="paragraph">Para redefinir a senha do Gerenciador, você precisa gerar o token de redefinição usando as ferramentas do ONTAP para o console de manutenção do VMware vSphere.</block>
   <block id="35baad0cee1a9c308249049e655932ff" category="list-text">No vCenter Server, abra o console de manutenção</block>
   <block id="0728c65962557eb1d00ebeef0418b72c" category="list-text">Introduza "2" para selecionar a opção System Configuration (Configuração do sistema)</block>
@@ -1231,23 +1198,18 @@
   <block id="f54e212052df635bcc70d25302fd583e" category="paragraph">A desinstalação das ferramentas do ONTAP para VMware vSphere exclui todos os dados das ferramentas.</block>
   <block id="d15333fd508f1d73c6c7c18f9657c60b" category="summary">Associe um back-end de storage ao vCenter Server para criar um mapeamento entre o back-end de storage e a instância integrada do vCenter Server globalmente.</block>
   <block id="cbd662f4329d81667a2e3c676911b7ad" category="doc">Alterar as ferramentas do ONTAP para a configuração do VMware vSphere</block>
-  <block id="05cbe0f49011bed719b6be221d77d648" category="list-text">Na seção *Configuração*, você pode fazer a escalabilidade vertical para aumentar o tamanho do nó e ativar a configuração de HA de acordo com suas necessidades. Você precisa das credenciais do vCenter Server para fazer quaisquer alterações.</block>
-  <block id="8f3fa52cb4355e5e1cb508d287692baf" category="paragraph">Quando as ferramentas do ONTAP estão na configuração HA, você pode alterar os detalhes da biblioteca de conteúdo. Você deve fornecer a senha novamente para o novo envio de edição.</block>
   <block id="6560d8a4066daf0ba566924d053a0444" category="list-text">Utilize o botão de alternância HA para ativar a configuração HA. Na página *HA settings*, certifique-se de que:</block>
   <block id="8c5690b70d39adb99bd47b035ccbd598" category="list-text">A biblioteca de conteúdo pertence ao mesmo vCenter Server onde as VMs de nó de ferramentas do ONTAP são executadas. As credenciais do vCenter Server são usadas para validar e baixar o modelo OVA para alterações de dispositivo.</block>
   <block id="aa98f0811d69b997695b614c2cf657a5" category="list-text">A máquina virtual que hospeda as ferramentas do ONTAP não é implantada diretamente em um host ESXi. A VM deve ser implantada em um cluster ou em um pool de recursos.</block>
   <block id="078e62684b70c2d03c38d8d57e5953c1" category="list-text">Na seção *HA settings* da janela *Edit Appliance Settings* (Editar configurações do dispositivo), você pode inserir os detalhes dos nós 2 e 3. As ferramentas do ONTAP para VMware vSphere são compatíveis com três nós na configuração de HA.</block>
   <block id="5a3dd06e1dba58a23c8b8e8cc1b07e40" category="list-text">Revise os detalhes na seção *Resumo* e *Salvar* as alterações.</block>
   <block id="4625cf8c2cfd4d7299bf041ace164a9e" category="doc">Habilite as ferramentas do ONTAP para os serviços do VMware vSphere</block>
-  <block id="ef1116c9ce2e3567875a69b012a5c5d8" category="list-text">A opção Mount datastore é desativada quando o cluster de host é protegido com configurações uniformes.</block>
   <block id="f234e66a493b1542c97d72433c0faca6" category="paragraph">As ferramentas do ONTAP para VMware vSphere mostram a visualização lateral do storage do ONTAP dos datastores e seus volumes na guia configure.</block>
-  <block id="09bb47a2c597f708642790a1371a33fe" category="list-text">Selecione *Ferramentas NetApp ONTAP* &gt; *armazenamento ONTAP*. Dependendo do tipo de armazenamento de dados, a exibição muda. Consulte a tabela abaixo para obter informações:</block>
   <block id="2bff6d8315f7f8c6cf3c54e6e53d9698" category="cell">*Tipo de datastore*</block>
   <block id="c961da7f498e50ff48715252d593d099" category="cell">*Informação disponível*</block>
   <block id="69e64cda3f8125351b5e3c5ea7debf1d" category="cell">Armazenamento de dados NFS</block>
   <block id="b5380e34617914719b059f6d55b97b66" category="cell">Armazenamentos de dados VMFS</block>
   <block id="e122a7a507ac1f580cc5b9f2632a851c" category="cell">Armazenamentos de dados vVols</block>
-  <block id="c1a8e52dd0993e6a774c59c89bccf1e8" category="cell">Lista todos os volumes. Você pode expandir ou remover o armazenamento do painel de armazenamento do ONTAP. Essa exibição não é compatível com o armazenamento de dados vVols baseado no sistema do ASA R2.</block>
   <block id="5a43e80953e87c7df463deaedcab9879" category="section-title">Dissociar os backends de armazenamento com a instância do vCenter Server</block>
   <block id="b5ae5420b0908ddbac99943f9b50285d" category="paragraph">A página de listagem do vCenter Server mostra o número associado de backends de armazenamento. Cada instância do vCenter Server tem a opção de associar ou desassociar a um back-end de armazenamento.</block>
   <block id="9a9ef84d994bd8c482cd3e98feba5977" category="list-text">Selecione *dissociar o back-end de armazenamento*.</block>
@@ -1576,29 +1538,13 @@
   <block id="c9aa6778e894ec4b3dcffe7a4940f428" category="cell">7,0 e 8,0</block>
   <block id="74de20ed3426be46891750a9fda8af0e" category="admonition">A partir das ferramentas do ONTAP para VMware vSphere 10,4, o hardware da máquina virtual é alterado da versão 10 para 17.</block>
   <block id="dce365633ffb688b7532470dfaf4e118" category="cell">*Protocolo*</block>
-  <block id="0c95054981de037de06e544a52eb3613" category="cell">8143</block>
   <block id="b136ef5f6a01d816991fe3cf7a6ac763" category="cell">TCP</block>
-  <block id="a78ff8f5e1a40f03bf97db00bda0fb5f" category="cell">Conexões HTTP/HTTPS para ferramentas ONTAP.</block>
-  <block id="5bd529d5b07b647a8863cf71e98d651a" category="cell">8043</block>
-  <block id="cb4b69eb9bd10da82c15dca2f86a1385" category="cell">9060</block>
   <block id="b6d767d2f8ed5d21a44b0e5886680cb9" category="cell">22</block>
-  <block id="13f3cf8c531952d72e5847c4183e6910" category="cell">443</block>
-  <block id="7e6b20d014d1c659e4eaf20dc2dcd7eb" category="cell">8443</block>
-  <block id="add217938e07bb1fd8796e0315b88c10" category="cell">2379</block>
-  <block id="da4902cb0bc38210839714ebdcf0efc3" category="cell">2380</block>
   <block id="8962b8350728e2f6eb9cbbb07ca70d86" category="cell">TCP/UDP</block>
-  <block id="5d188b044333b4c62676e0d4f53dade7" category="cell">7946</block>
-  <block id="a44ba9086b2b83ccf2baf7c678723449" category="cell">9083</block>
   <block id="c03afab54002887e7e1d27a1069e206c" category="cell">6443</block>
   <block id="76444b3132fda0e2aca778051d776f1c" category="cell">9345</block>
   <block id="6d1e481bdcf159961818823e652a7725" category="cell">8472</block>
-  <block id="a4b2529ef64aa741ab10320d0015b5fd" category="cell">TCP UDP</block>
-  <block id="183f50a7700982a3ed18ff6d7a5777bf" category="cell">10250</block>
-  <block id="84826728868f63de4eeb2f3b77cd762b" category="cell">30000-32767</block>
   <block id="202cb962ac59075b964b07152d234b70" category="cell">123</block>
-  <block id="caf50900f166353ae4848c8c5ddf3383" category="cell">O ntpd usa essa porta para executar a validação do servidor NTP.</block>
-  <block id="d82d678e9583c1f5f283ec56fbf1abb7" category="cell">9080</block>
-  <block id="4b32bee2eb6c3d05fc70a5fb2dffcb1c" category="cell">Conexões VP HTTP/HTTPS (somente a partir de 127,0.0.0/8 para IPv4 ou ::1/128 para IPv6).</block>
   <block id="66497dafb11e4eb14a710aba82842f2a" category="section-title">Definições de armazenamento ONTAP</block>
   <block id="b1f65147a07338ddacacf797fa8f8068" category="paragraph">Para garantir a integração perfeita do storage ONTAP com as ferramentas do ONTAP para VMware vSphere, considere as seguintes configurações:</block>
   <block id="89dcc1d78edaf637785c6ecfca413588" category="inline-link">Saiba mais sobre o zoneamento FC e FCoE com os sistemas ONTAP</block>
@@ -1625,7 +1571,6 @@
   <block id="fcfc7eab04afc81b6dd34672d0ba5bb3" category="paragraph"><block ref="fcfc7eab04afc81b6dd34672d0ba5bb3" category="inline-link-rx"></block></block>
   <block id="39d2588daa65a2f8e84916b15387b515" category="inline-link">Adicione um disco rígido existente a uma máquina virtual</block>
   <block id="d9ee6d77c906099b0f1e4e59cb8a3413" category="paragraph"><block ref="d9ee6d77c906099b0f1e4e59cb8a3413" category="inline-link-rx"></block></block>
-  <block id="3cea73ba96fae85e9ca019810cfd5753" category="list-text">Os certificados devem ser criados com o nome de domínio e o endereço IP das ferramentas ONTAP.</block>
   <block id="24fd16ca0ad062cc74daf0720edc3ee7" category="admonition">Um endereço IP de ferramentas ONTAP deve ser mapeado para um nome de domínio totalmente qualificado (FQDN). Os certificados devem conter o mesmo FQDN mapeado para o endereço IP das ferramentas do ONTAP em nomes alternativos de assunto ou assunto.</block>
   <block id="c177534364f5148483e550a73b24e216" category="list-text">Eliminar volumes FlexVol. Consulte a<block ref="eac8c90151648d7bc2ba6d1146004c9d" category="inline-link-rx"></block>. No comando CLI para excluir um volume, forneça o nome exato dos volumes FlexVol.</block>
   <block id="43c278d3178deaffe0383c284311f59a" category="list-text">Selecione a opção *Settings* &gt; *Telemetry* &gt; *Edit*.</block>
@@ -1711,7 +1656,6 @@
   <block id="42bc4627d63b98bd97ba7ee44a76918d" category="summary">Antes de implantar as ferramentas do ONTAP para o VMware vSphere, você deve estar familiarizado com os requisitos de espaço para o pacote de implantação e alguns requisitos básicos do sistema de host.</block>
   <block id="7cbac47005f891099143c8780a7b8c4a" category="cell">7.0U3 e 8.0U3</block>
   <block id="5239d77bc203f1ccbb06d46c0327b099" category="summary">Você pode gerenciar suas configurações de aplicativo, sistema e rede usando o console de manutenção das ferramentas do ONTAP. Pode alterar a palavra-passe do administrador e a palavra-passe de manutenção. Você também pode gerar pacotes de suporte, definir diferentes níveis de log, exibir e gerenciar configurações TLS e iniciar diagnósticos remotos.</block>
-  <block id="f4b50e8494bf3a443986218866d19dd2" category="paragraph">Você deve ter as ferramentas VMware instaladas após implantar as ferramentas ONTAP para VMware vSphere para acessar o console de manutenção. Você deve usar <block ref="67f50785d40416a7a7689c5c353f1128" prefix=" " category="inline-code"></block> como o nome de usuário e a senha que você configurou durante a implantação para efetuar login no console de manutenção das ferramentas ONTAP. Você deve usar *nano* para editar os arquivos em manutenção ou console de login root.</block>
   <block id="30725e73463cac6869eb16851a0b7f1f" category="paragraph">A tabela a seguir descreve o processo de migração nesses dois cenários diferentes.</block>
   <block id="481ad82ca4c063eed4e75acc5640a962" category="cell">*Se a configuração tiver armazenamentos de dados vVols*</block>
   <block id="6e4d49fbd70ad4839257ed5ced55d275" category="inline-link">Criar políticas de armazenamento de VM</block>
@@ -1829,7 +1773,6 @@
   <block id="64330c7217f629eb146d9c9276f808df" category="admonition">No sistema de armazenamento ASA r2 tipo SVM, as unidades de armazenamento (LUN/namespace) não são criadas porque o armazenamento de dados é apenas um contêiner lógico.</block>
   <block id="36b0287ed1ac9ef5ae710b3824924694" category="paragraph">Após o envio da solicitação de descoberta, você pode acompanhar o andamento da ação no painel de tarefas recentes.</block>
   <block id="2354608b52e418012c3c2e4a5f92ea66" category="cell">Este cartão mostra a capacidade agregada utilizada e disponível de todos os backends de armazenamento para a instância selecionada do vCenter Server. No caso de sistemas de armazenamento ASA r2, os dados de capacidade não são exibidos por se tratar de um sistema desagregado.</block>
-  <block id="539fe4c7849ba8b90945fa7a65b43e41" category="paragraph">A tabela a seguir descreve as portas de rede utilizadas pela NetApp e suas finalidades. Certifique-se de que essas portas estejam abertas e acessíveis para facilitar a operação e a comunicação adequadas dentro do sistema. Certifique-se de que as configurações de rede necessárias estejam implementadas para permitir o tráfego nessas portas e o funcionamento correto dos serviços associados. Dependendo das suas políticas de segurança, pode ser necessário configurar firewalls ou outros dispositivos de segurança para permitir esse tráfego na sua rede.</block>
   <block id="8598aab6bb36721c708c8e437a58cdc2" category="summary">Configure ONTAP tools for VMware vSphere com esta seção de início rápido.</block>
   <block id="569d8591be50649b9e7b8bea144f3512" category="paragraph">Verifique se as versões do seu host vSphere, ONTAP e ESXi são compatíveis com a versão das ferramentas ONTAP . Aloque CPU, memória e espaço em disco suficientes. Com base nas suas regras de segurança, pode ser necessário configurar firewalls ou outras ferramentas de segurança para permitir o tráfego de rede.</block>
   <block id="e9b5da82e11916ae21c792527e11c3be" category="paragraph">Inicialmente, você implantará as ONTAP tools for VMware vSphere como uma configuração de nó único de pequeno porte que fornece serviços essenciais para oferecer suporte a datastores NFS e VMFS. Se você planeja expandir sua configuração para usar datastores vVols e alta disponibilidade (HA), faça isso após concluir este fluxo de trabalho. Para expandir para uma configuração de HA, certifique-se de que a adição a quente de CPU e a conexão a quente de memória estejam habilitadas.</block>
@@ -1982,7 +1925,6 @@
   <block id="53c9a20680090f1ab571bcdb03fca51c" category="list-text">Criar funções:</block>
   <block id="531d52c9ac65bea4c3f93ea315082c04" category="paragraph">Adicione o *Caminho da API REST* e escolha o acesso na lista suspensa.</block>
   <block id="3cd09a793246427288182b8da71651c9" category="list-text">Criar usuários:</block>
-  <block id="72e02e66d5b260828007bb607b56fe01" category="paragraph">Esta seção lista os privilégios mínimos necessários para um usuário de cluster de escopo global não administrador sem um arquivo JSON.  Se um cluster estiver no escopo local, use o arquivo JSON para criar usuários porque as ONTAP tools for VMware vSphere precisam de mais do que apenas privilégios de leitura para provisionamento no ONTAP.</block>
   <block id="52fa098f2e1801712c70fcfaf0a2609f" category="paragraph">Você pode acessar a funcionalidade usando APIs:</block>
   <block id="5d07ab2b02dca399e309f6ada979b40c" category="cell">Descoberta de configuração de cluster</block>
   <block id="33d9ebdc263e08065a42673d853b8279" category="cell">Verificação de licenças específicas de protocolo</block>
@@ -2096,13 +2038,9 @@
   <block id="a6db38ab6788244dd400202a4ac077c9" category="cell">Endereço IPv4 para o nó de gerenciamento de ferramentas ONTAP .  É um endereço IPv4 exclusivo para a interface de gerenciamento de nós na rede de gerenciamento.</block>
   <block id="57a162b82ea942d344ca18a6563ae0ad" category="paragraph">Certifique-se de que as portas de firewall necessárias estejam abertas para todos os endereços IP relevantes.  As ferramentas ONTAP exigem acesso ao LIF pela porta 443.  Para obter uma lista completa das portas necessárias, consulte a seção de requisitos de porta em<block ref="1a93487a9f020b7c05d37b4998f77757" category="inline-link-macro-rx"></block> .</block>
   <block id="842fbe95dfc795462ae01e0da46b578d" category="list-text">Se você estiver usando o Fibre Channel (FC) para conectividade de armazenamento, configure o zoneamento em seus switches FC para conectar os hosts ESXi com os LIFs FC do SVM.<block ref="56d435991bafd2bcca9f59739e2992e7" category="inline-link-rx"></block></block>
-  <block id="44e30d1e41991ee8d16164727f93044b" category="list-text">*Requisitos de dimensionamento do sistema host* A memória recomendada para cada tamanho de implantação é mostrada na tabela abaixo.  Para implantações de alta disponibilidade (HA), você precisa de três vezes o tamanho do dispositivo listado.</block>
   <block id="3238b34a31c90c89668904ec5be46d4c" category="cell">9.15.1, 9.16.0, 9.16.1, 9.17.0 e 9.17.1</block>
   <block id="10b3adf4529649ecb009c579e7713c8e" category="cell">10,5</block>
   <block id="40be5cc49cd5c75f73a6fb947ad09668" category="admonition">Certifique-se de que todos os nós das ferramentas ONTAP residam na mesma sub-rede para manter uma comunicação ininterrupta entre si.</block>
-  <block id="c33f214adb70c327cfde7934d83fee93" category="cell">Esta porta é usada para descoberta de rede de contêineres do Docker.</block>
-  <block id="3b2af63934f20b0e43ea6705ffd375ed" category="cell">3300 e 6789-7300</block>
-  <block id="f472c0619450b2dadbc37b1b92c211dd" category="cell">Plano de dados entre nós</block>
   <block id="9393e3694e4434a89be7c86ca4b21dd7" category="cell">256 [NOTA] As contagens de hosts na tabela representam o total combinado em todos os vCenters conectados.</block>
   <block id="43735eab3ba96d50a6b739b518e1e76c" category="paragraph">Inicialmente, você implantará ONTAP tools for VMware vSphere como uma configuração de nó único de pequeno porte que fornece serviços essenciais para dar suporte a armazenamentos de dados NFS e VMFS.  Para expandir sua configuração para contêineres adicionais por serviço, resiliência aprimorada ou usar datastores vVols e alta disponibilidade (HA), conclua este fluxo de trabalho primeiro e depois prossiga com as etapas de expansão. Para mais informações, consulte o <block ref="9ef467ebb813ac9bfc1579e0ba7d9e65" category="inline-link-macro-rx"></block> .</block>
   <block id="c0b3d5bbb8cb9fd1d0c709c33cc29dab" category="paragraph">O backup é habilitado por padrão nas ONTAP tools for VMware vSphere 10.5 e ocorre a cada 10 minutos.  Agende backups das suas ONTAP tools for VMware vSphere , que você pode usar para recuperar a configuração em caso de falha.</block>
@@ -2124,11 +2062,9 @@
   <block id="fbd2a377670ba3a95fd8685e81b95c25" category="list-text">Digitar<block ref="eccbc87e4b5ce2fe28308fd9f2a7baf3" prefix=" " category="inline-code"></block> para alterar o sinalizador de validação do certificado.</block>
   <block id="aa007ecc1d629990e94ecc07df91b85a" category="paragraph">O console de manutenção mostra o status do sinalizador de validação do certificado e solicita que você o altere.</block>
   <block id="c0d4854af08f1ea9b190128d42ff4efb" category="list-text">Digite 'y' para alternar o sinalizador ou 'n' para cancelar.</block>
-  <block id="de4c788d706ba414d92180351d8a6887" category="paragraph">Se você alternar o sinalizador de validação do certificado de volta para verdadeiro, o sistema executará uma pré-verificação.  Se qualquer backend de armazenamento adicionado usar um certificado sem um SAN, você não poderá habilitar a validação do certificado.  Certifique-se de que todos os backends de armazenamento usem certificados baseados em SAN antes de habilitar este sinalizador.  Se você definir o sinalizador de validação de certificado como falso, o sistema ignorará a validação de certificado para todos os backends de armazenamento adicionados.</block>
   <block id="bfb5fa4b4ffe9b3090bc38ec98a8f7f8" category="list-text">você tem permissão para apenas uma conta de login por ativação de SSH.</block>
   <block id="faf5cc317fe3a3ff5395effce84c8add" category="list-text">Digitar<block ref="c81e728d9d4c2f636f067f89cc14862c" prefix=" " category="inline-code"></block> para selecionar *Habilitar acesso de diagnóstico remoto*.</block>
   <block id="f16dbda2c7cd8f21894d7106eeea0362" category="list-text">Determine o tipo de implantação das ONTAP tools for VMware vSphere a partir da VM do nó de gerenciamento das ferramentas ONTAP .</block>
-  <block id="c127b7107ca7387158680f81e82442da" category="paragraph">Esta seção descreve como excluir armazenamentos de dados NFS, VMFS ou vVols usando ferramentas ONTAP no vCenter Server.</block>
   <block id="2472b05287bd11427d87e320c2280744" category="paragraph">Quando você exclui um armazenamento de dados, as seguintes ações são executadas dependendo do tipo de armazenamento de dados:</block>
   <block id="67acc9efe304ba6171fee98eb071563a" category="list-text">O contêiner vVol está desmontado.</block>
   <block id="fa039f00336ec2f04779738e501c35f1" category="list-text">Se o igroup não estiver em uso, iqn será removido do igroup.</block>
@@ -2139,7 +2075,6 @@
   <block id="25a0e210bce888b4aec3eb0ef9397cd6" category="admonition">Você não pode excluir um armazenamento de dados usado por máquinas virtuais.  Mova as máquinas virtuais para outro armazenamento de dados antes de excluí-las.  Não é possível excluir o volume se ele fizer parte de um cluster de host protegido.</block>
   <block id="f1351c89c8104e43bbaa97b7d4892aae" category="list-text">No caso de um armazenamento de dados NFS ou VMFS, uma caixa de diálogo é exibida com a lista de VMs usando o armazenamento de dados.</block>
   <block id="b7b6363320f825e881aa6f3cd3c51432" category="list-text">Se nenhuma máquina virtual estiver associada a um armazenamento de dados VMFS, você verá uma caixa de diálogo de confirmação.  Se a proteção do cluster do host estiver habilitada e houver um relacionamento AFD, você poderá limpar elementos de armazenamento secundários.</block>
-  <block id="95d2419427931f5fe469047b934e375b" category="list-text">Para armazenamentos de dados VMFS protegidos em sistemas ASA r2, certifique-se de que a proteção seja removida antes da exclusão.  A partir do ONTAP 9.17.1 e das ONTAP tools for VMware vSphere 10.5, você pode excluir um armazenamento de dados protegido.  Se for o único armazenamento de dados no grupo de proteção, a proteção do cluster do host será removida automaticamente.</block>
   <block id="00631c027d18785a604b2eea4a14d390" category="list-text">Para armazenamentos de dados vVols , você pode excluir o armazenamento de dados somente se não houver vVols presentes.  A caixa de diálogo *Excluir armazenamento de dados* inclui uma opção para remover volumes do cluster ONTAP .</block>
   <block id="3000fcfacf70a2f4a9d06f3908c004ab" category="list-text">Para datastores vVols em sistemas ASA r2, não é possível excluir os volumes de suporte do ONTAP usando a opção *Excluir datastore*.</block>
   <block id="77339ec2ca06ea28ae5202f69bb13801" category="admonition">Para armazenamentos de dados VMFS no armazenamento ONTAP unificado que fazem parte de um cluster de host protegido, não é possível excluir o volume do cluster ONTAP .</block>
@@ -2152,7 +2087,6 @@
   <block id="4aa009e897900f61685752d5784bdc19" category="paragraph">Use o ONTAP Tools Manager para ampliar as ONTAP tools for VMware vSphere , aumentando o número de nós ou habilitando a Alta Disponibilidade (HA).  Por padrão, o dispositivo ONTAP tools for VMware vSphere é implantado como uma configuração de nó único, sem alta disponibilidade.</block>
   <block id="f71e21c8c29b3ddd64adf0bdcf70076b" category="admonition">Nas ONTAP tools for VMware vSphere, você só pode aumentar o tamanho do nó; não pode reduzi-lo.  Em uma configuração sem HA, somente uma configuração de tamanho médio é suportada.  Em uma configuração de HA, configurações médias e grandes são suportadas.</block>
   <block id="8eecb47472f0b7a96528f26363fff155" category="admonition">Depois que a configuração de HA for habilitada, não será possível reverter para uma configuração de nó único que não seja de HA.</block>
-  <block id="a95db542aa3368285d46aaaad77e7189" category="admonition">A maioria das opções de entrada são pré-preenchidas com detalhes da rede do Nó 1 para facilitar o fluxo de trabalho.  No entanto, você pode editar os dados de entrada antes de navegar para a página final do assistente.  Você pode inserir detalhes do endereço IPv6 para os outros dois nós somente quando o endereço IPv6 estiver habilitado no nó de gerenciamento de ferramentas ONTAP .</block>
   <block id="975ccf897e0824f95218f3ef95e24f0b" category="summary">Ao configurar ONTAP tools for VMware vSphere pela primeira vez, o AutoSupport é habilitado por padrão.  Ele envia mensagens ao suporte técnico 24 horas após ser ativado.</block>
   <block id="1561465107ecc7312d05b169468fe3ba" category="doc">Editar configurações do AutoSupport</block>
   <block id="166f334408abcb67def9100242400459" category="paragraph">Ao desabilitar o AutoSupport, você não receberá mais suporte e monitoramento proativos.</block>
@@ -2228,11 +2162,8 @@
   <block id="391290f2d6e73e30b72d024c57e55f59" category="admonition">não altere o caminho de destino e o nome do arquivo (/home/diag/system_recovery.tar.enc) mencionados no comando.</block>
   <block id="428dc800d37baccdfeb6cdda98b0361b" category="list-text">Após a transferência do arquivo de backup, faça login no shell de diagnóstico e execute o seguinte comando:</block>
   <block id="297d37a39d3a4fd1e8107b7327e350b8" category="paragraph">Após concluir a recuperação, as ferramentas ONTAP restauram serviços e objetos do vCenter.</block>
-  <block id="0c71b88a375e895d7b9ceacde08496b5" category="paragraph">Esta seção explica como remover volumes de um armazenamento de dados vVols .</block>
-  <block id="26bd83b100eeb681d1b3dc6373bb0a43" category="paragraph">Você pode usar a ação remover armazenamento do repositório de dados em qualquer repositório de dados vVols descoberto ou gerenciado pelas ONTAP tools for VMware vSphere no vCenter Server.</block>
   <block id="a7b42fd06d1579ab9b8318093d65976c" category="paragraph">Não é possível remover o armazenamento de um volume se ele contiver vVols; a opção de remoção será desabilitada para esses volumes.  Ao remover volumes do armazenamento de dados, você também tem a opção de excluir os volumes selecionados do armazenamento ONTAP .</block>
   <block id="8b6a716bd213fd5082e2a1b11bf0cc37" category="admonition">A operação de redução do armazenamento de dados vVols não é suportada para armazenamentos de dados vVols baseados em sistemas ASA r2.</block>
-  <block id="9786903403c7cc251906524a7476cf59" category="list-text">Selecione volumes que não tenham vVols e selecione *Remover*.</block>
   <block id="99fd05f6d33ef152b93e6f0f16c9f4ee" category="admonition">A opção para selecionar o volume no qual o vVols está residindo está desabilitada.</block>
   <block id="38a601e0b95d355705ee6b3483056874" category="admonition">Para ONTAP tools for VMware vSphere HA, você deve alterar a senha do usuário do console de manutenção no nó de gerenciamento de ferramentas ONTAP , que é node1.</block>
   <block id="f4a28bea29de7130904a49ce71fcda2d" category="doc">Redefinir credenciais do provedor VASA e SRA</block>
@@ -2346,7 +2277,6 @@
   <block id="a8ba41d7b6fa34ed9904832feb75d11b" category="list-text">Habilite o backup de baixo RPO e garanta um backup visível na interface do vCenter Client.</block>
   <block id="c3061246985713c75c44c8a3b878779b" category="list-text">Selecione o *arquivo ISO da biblioteca de conteúdo* na janela de edição de configurações, no campo *unidade de CD/DVD*.</block>
   <block id="462136a29a804d85c9626a4ff63b2bef" category="list-text">Selecione o arquivo ISO, marque a caixa *Conectado* para o campo *unidade de CD/DVD* e clique em *OK*.</block>
-  <block id="5d42f8a6d586fa68b83a523758952e8f" category="list-text">Digite *3* para selecionar o menu *Configuração do Sistema*.</block>
   <block id="9f6f7d4ab9570c7b22acd4966be9f823" category="list-text">Digite *7* para selecionar a opção *Atualizar*.</block>
   <block id="c6306b642a5e71b051af55355ca139dc" category="paragraph">Durante a atualização, se algum certificado de backend de armazenamento integrado não tiver entradas de Nome Alternativo de Assunto (SAN), você receberá um prompt indicando o SAN ausente.  Se você optar por prosseguir sem validar o SAN, a atualização continuará, mas isso não é recomendado devido a potenciais riscos de segurança.</block>
   <block id="6c872843c1ab00a20d8f946d62fe9e30" category="list-text">O certificado de gateway é renovado com um período de validade de 1 ano.  Quando você remove o adaptador SRA anterior e carrega o novo adaptador 10.5, a validade do certificado SRA muda de 10 anos para 1 ano.</block>
@@ -2367,7 +2297,6 @@
   <block id="5f5f5d0a92cd7d0a20bb7ec3d8e005e8" category="paragraph">No Modo Vinculado Aprimorado (ELM), o menu suspenso do vCenter Server é exibido.  Escolha um vCenter Server para visualizar seus dados.  O menu suspenso está disponível em todas as visualizações de listagem do plug-in. Ao selecionar um vCenter Server em uma página, ele permanece o mesmo ao alternar entre as guias do plug-in.<block ref="3d74245534ae0cb906e59ac9d79a1aaa" category="inline-image-macro-rx" type="image"></block></block>
   <block id="32b3057ea6484df6d6a53b6144f1b9fb" category="paragraph">Na página de visão geral, você pode executar a ação *Descoberta*. A ação de descoberta detecta backends de armazenamento, hosts, armazenamentos de dados e status de proteção ou relacionamentos recém-adicionados ou atualizados no nível do vCenter.  Execute a descoberta sob demanda sem esperar pela descoberta agendada.</block>
   <block id="88ab0bda606f4b01a47f37c4fc94365f" category="cell">Este cartão mostra se todos os hosts ESXi (para o vCenter selecionado) seguem as configurações de host NetApp recomendadas por grupo ou categoria. Você pode selecionar o link *Aplicar configurações recomendadas* para aplicar as configurações recomendadas. Você pode selecionar o status de conformidade dos hosts para ver a lista de hosts.</block>
-  <block id="9daf613fc2c14fea04f25deb15089b7e" category="paragraph">Quando você exclui um armazenamento de dados NFS, VMFS ou vVols , os igroups pais permanecem no sistema ONTAP .  Os igroups filho que não são mapeados para nenhum LUN são excluídos automaticamente.  As ferramentas ONTAP realizam uma limpeza diária para remover igroups pai padrão não mapeados.  Os igroups pai personalizados devem ser excluídos manualmente no ONTAP.  Todos os igroups pais restantes se tornam obsoletos e não podem ser reutilizados pelas ferramentas ONTAP .</block>
   <block id="4906f55f3a2620cb148e41d46cd95673" category="paragraph">Nas ONTAP tools for VMware vSphere 9.x, os igroups eram criados e gerenciados em uma estrutura simples, onde cada armazenamento de dados no vCenter era associado a um único igroup. Este modelo limitou a flexibilidade e a reutilização de igroups em vários armazenamentos de dados. As ONTAP tools for VMware vSphere introduzem igroups aninhados, onde cada armazenamento de dados no vCenter é associado a um igroup pai, enquanto cada host é vinculado a um igroup filho sob esse pai. Você pode definir igroups pai personalizados com nomes definidos pelo usuário para reutilização em armazenamentos de dados para facilitar o gerenciamento de igroups.  Entenda o fluxo de trabalho do igroup para gerenciar LUNs e datastores em ONTAP tools for VMware vSphere. Diferentes fluxos de trabalho geram configurações de igroup variadas, conforme mostrado nos exemplos a seguir:</block>
   <block id="c9d4983fbb8b77e2d14383a7bd6d3dba" category="paragraph">ONTAP cria o igroup pai DS1Igroup para DS1 e mapeia o igroup filho host1Igroup para lun1.  O sistema sempre mapeia LUNs para igroups filhos.</block>
   <block id="de6fc6004c216636011ba4dc31acef9a" category="paragraph">As ONTAP tools for VMware vSphere criam um igroup filho host2Igroup e o adicionam ao igroup pai existente DS1Igroup.</block>
@@ -2375,7 +2304,6 @@
   <block id="265d1364e0c9a1c88e39aa2446ded154" category="paragraph">Os igroups pai e filho são removidos, a menos que outro armazenamento de dados reutilize o igroup pai.  Os igroups filhos não são excluídos explicitamente</block>
   <block id="cd703691d1da791a7eedb75ca98439de" category="paragraph">As políticas de exportação controlam o acesso ao armazenamento de dados NFS e as permissões do cliente nas ONTAP tools for VMware vSphere.  As políticas de exportação são criadas e gerenciadas em sistemas ONTAP e podem ser usadas com armazenamentos de dados NFS para impor o controle de acesso. Cada política de exportação consiste em regras que especificam os clientes (endereços IP ou sub-redes) que têm permissão de acesso e as permissões concedidas (somente leitura ou leitura-gravação).</block>
   <block id="4a03eb267c1ef745af6c9e425460c0ea" category="paragraph">Quando você exclui ou desmonta um armazenamento de dados NFS de um host ESXi, as ONTAP tools for VMware vSphere removem o endereço IP do host da política de exportação. Se nenhum outro host estiver usando essa política de exportação, ela será excluída. Quando você exclui um armazenamento de dados NFS, as ONTAP tools for VMware vSphere removem a política de exportação associada a esse armazenamento de dados se ela não for reutilizada por nenhum outro armazenamento de dados. Se a política de exportação for reutilizada, ela manterá o endereço IP do host e não será alterada. Quando você exclui os armazenamentos de dados, a política de exportação cancela a atribuição do endereço IP do host e atribui uma política de exportação padrão, para que os sistemas ONTAP possam acessá-los, se necessário.</block>
-  <block id="26f060cdbd9d04157724426a5fee5807" category="paragraph">Se você gerencia VMs de ferramentas ONTAP e sistemas de armazenamento ONTAP , é importante entender como os igroups se comportam, especialmente ao mover armazenamentos de dados de ambientes não gerenciados por ferramentas ONTAP para aqueles que são.  Esta seção explica como os igroups são atualizados durante esse processo.</block>
   <block id="1bfb5765f8a7477bcd0a19363204252d" category="paragraph">As ONTAP tools for VMware vSphere 10.4 e versões posteriores criam e mantêm automaticamente objetos ONTAP e vCenter para simplificar o gerenciamento de armazenamento de dados em ambientes de data center VMware.</block>
   <block id="6465cb40b753be2d9e804f4f78805149" category="paragraph">Durante a criação do armazenamento de dados nas ferramentas ONTAP , você pode inserir um nome de igroup personalizado em vez de selecionar no menu suspenso. As ferramentas ONTAP então criam um igroup pai no nível do armazenamento de dados usando o nome especificado. Se o mesmo host for usado para vários armazenamentos de dados, o igroup (filho) de nível de host existente será reutilizado. Como resultado, o LUN para o novo armazenamento de dados é mapeado para esse igroup filho existente, que agora pode ser associado a vários igroups pais (um para cada armazenamento de dados). Você pode ver o novo armazenamento de dados com o nome do igroup personalizado na interface do vCenter Server.</block>
   <block id="fa885aacf6740d8be756318202aaeea3" category="paragraph">Depois de executar a descoberta do armazenamento de dados nas ferramentas ONTAP , as ferramentas ONTAP convertem o igroup plano em uma estrutura aninhada. As ferramentas ONTAP então gerenciam o igroup, renomeando-o com o prefixo 'otv_'. O LUN permanece mapeado para o mesmo igroup durante todo esse processo.</block>
@@ -2397,4 +2325,115 @@
   <block id="f71732b958ee4a60e461022e21963252" category="list-text">Se a atualização das ONTAP tools for VMware vSphere 10.3 ou 10.4 para 10.5 falhar, você não poderá reverter. Use RPO baixo ou recuperação de instantâneo para restaurar a configuração. Para ONTAP tools for VMware vSphere 10.2 e anteriores, use RPO zero para restaurar a configuração.</block>
   <block id="5a7cb767e19978ac12b0c5efd537b7d4" category="list-text">Certifique-se de que o certificado do sistema ONTAP e os certificados vCenter integrados sejam válidos por pelo menos 5 dias. Se os certificados expirarem antes, a atualização falhará.</block>
   <block id="2c9debac9c4240bbc6d03543b5dda428" category="list-text">Para garantir uma atualização segura, verifique se seus certificados incluem entradas de Nome Alternativo do Assunto (SAN). Se os certificados não tiverem entradas SAN, defina o sinalizador de validação do certificado como falso para ignorar as verificações SAN durante a atualização.</block>
+  <block id="3fc950b496659d05e7c00ad359e61d66" category="paragraph">Esta página lista os privilégios mínimos necessários para um usuário de cluster com escopo global que não seja administrador e que não possua um arquivo JSON. Se um cluster estiver no escopo local, use o arquivo JSON para criar usuários porque as ONTAP tools for VMware vSphere precisam de mais do que apenas privilégios de leitura para provisionamento no ONTAP.</block>
+  <block id="8022f639f22c4d924f60b0dc37225eeb" category="list-text">*Requisitos de dimensionamento do sistema host* A tabela abaixo mostra a memória recomendada para cada tamanho de implantação. Para implantações de alta disponibilidade (HA), você precisa de três vezes o tamanho do dispositivo listado.</block>
+  <block id="d6200c71714f45121b9b19360cec0630" category="paragraph">A tabela a seguir descreve as portas de rede utilizadas pela NetApp e suas finalidades. Existem três tipos diferentes de portas:</block>
+  <block id="ffc9eeee8fddb03c01c7595ed7d9ef20" category="list-text">Portas externas: Essas portas são acessíveis de fora do cluster ou nó do Kubernetes. Eles permitem que os serviços se comuniquem com redes ou usuários externos, possibilitando a integração com sistemas fora do ambiente de cluster.</block>
+  <block id="594ed13b4371cfff54a163037f8027fd" category="list-text">Portas entre nós: Essas portas permitem a comunicação entre os nós dentro do cluster Kubernetes. São necessários para tarefas em cluster, como compartilhamento de dados e trabalho em conjunto. Em implantações com um único nó, as portas entre nós são usadas apenas dentro do próprio nó e não precisam de acesso externo. As portas entre nós podem aceitar tráfego de fora do cluster. Bloqueie o acesso à internet das portas entre nós usando regras de firewall.</block>
+  <block id="a71b2f612491c16fd3ccd7aea87a39ce" category="list-text">Portas internas: Essas portas comunicam-se dentro do cluster Kubernetes usando endereços ClusterIP. Eles não são expostos externamente e não precisam ser adicionados às regras do firewall.</block>
+  <block id="32b77a34ac580798094847606125ee3f" category="cell">*Nome do serviço/componente*</block>
+  <block id="fb3301dd70508451098d3bf2e0f229dc" category="cell">*Tipo de porta*</block>
+  <block id="0fe9f736e781b8ae77a4dc265b308ebe" category="cell">serviço ntv-gateway (LB)</block>
+  <block id="225c8f048e5709c6d0264edeb227d6d2" category="cell">443, 8443</block>
+  <block id="b206a1b4ea1097761f78e8876f6da779" category="cell">Externo</block>
+  <block id="ee06f8cf62ebebce2fc682c3c88efaca" category="cell">Porta de passagem para comunicação de entrada do serviço VASA Provider. O certificado autoassinado do provedor VASA e o certificado CA personalizado são hospedados nesta porta.</block>
+  <block id="765553e6c7ac8592c389acb9878a050a" category="cell">SSH</block>
+  <block id="135064d8b8ef9153aa4d38ae8782828f" category="cell">Shell seguro para login remoto em servidores e execução de comandos.</block>
+  <block id="0174928de3b4efea8b958f92bc41ae33" category="cell">servidor rke2</block>
+  <block id="3d8c374783a1bcc7fa61483357a4da6c" category="cell">Inter-nó</block>
+  <block id="dbb53621f59553f9a8624fa7abf760c6" category="cell">API supervisora RKE2 (Restringir a redes confiáveis).</block>
+  <block id="6d61fe6aa1fb019df82898d5144703c6" category="cell">kube-apiserver</block>
+  <block id="cca9fc63e3115af1a58e5c1e6e0b7004" category="cell">Porta do servidor da API do Kubernetes (Restringir a redes confiáveis).</block>
+  <block id="c1eb43c159e761b5aa656b39c4a19c3c" category="cell">rpcbind/portmapper</block>
+  <block id="faacbda8079718ebf57507b9370a5cb8" category="cell">Utilizado para comunicação RPC entre serviços.</block>
+  <block id="06dc4c7a187ef5f93a26b76c544589d9" category="cell">núcleos (DNS)</block>
+  <block id="d82c8d1619ad8176d665453cfb2e55f0" category="cell">53</block>
+  <block id="6b6bfb9422fcc063d87dad5518a22387" category="cell">Serviço de Sistema de Nomes de Domínio (DNS) para resolução de nomes dentro do cluster.</block>
+  <block id="5c54cb8f927a6c5a90622e1c7bd0bda5" category="cell">NTP</block>
+  <block id="f5ef036b4d8b630721e51fe23489fbc9" category="cell">UDP</block>
+  <block id="28cabd936fc9e4dd676e5a473c991a9d" category="cell">Protocolo de Tempo de Rede (NTP) para sincronização de tempo.</block>
+  <block id="a226e9fbdfc1c8dd7e7fef4d333f86ed" category="cell">etcd</block>
+  <block id="4c5fe472aba4c61b8035b29586909501" category="cell">2379, 2380, 2381</block>
+  <block id="ca1016fc257fb4f206daba9c2e97602e" category="cell">Armazenamento de chave-valor para dados de cluster.</block>
+  <block id="0a753cc7c42ae02897ec5d952c6eeac3" category="cell">kube-vip</block>
+  <block id="a29d1598024f9e87beab4b98411d48ce" category="cell">2112</block>
+  <block id="6fd0a8d83b6bfaef8466f1eba5737f28" category="cell">Porta do servidor da API do Kubernetes.</block>
+  <block id="703e9c640b9e3ea630f6687938e43c9a" category="cell">kubelet</block>
+  <block id="ef6964cc948c50c0cb0f8e9c8c67d0b8" category="cell">10248, 10250</block>
+  <block id="6bc1cc8e5f4a2a59b1b4e10039d894d7" category="cell">Componente do Kubernetes</block>
+  <block id="5165268f7f73ee49d7f2962e7d3c2c4c" category="cell">kube-controlador</block>
+  <block id="9578a63fbe545bd82cc5bbe749636af1" category="cell">10257</block>
+  <block id="859a378c2edcfab4acc9054bf56d3ad1" category="cell">controlador de nuvem</block>
+  <block id="bd21307bad44dee908db2db5f6bf23c1" category="cell">10258</block>
+  <block id="81e0da1d45d48cb04172d7ca06e7effc" category="cell">kube-scheduler</block>
+  <block id="e44cf9762b402f5d8b5bc36f60304a15" category="cell">10259</block>
+  <block id="ea11065c99d9485fc7fe03aa1b668c20" category="cell">kube-proxy</block>
+  <block id="de5866a4d3536b773cd15b5e1e56bce8" category="cell">10249, 10256</block>
+  <block id="f4928ee7ea1ab0b3ae6cae5224c5cc14" category="cell">nó-calico</block>
+  <block id="0bb129af5c1fe13f217dc8c723b47ed6" category="cell">9091, 9099</block>
+  <block id="018630692c9be69155a82729a37de8d3" category="cell">Componente de rede Calico.</block>
+  <block id="34c54dce528ae11502f7c2908c0e4a21" category="cell">containerd</block>
+  <block id="a17479231dc298309a3fda7d7d00111a" category="cell">10010</block>
+  <block id="3c5a7d3a7abc9326167b18577df244e3" category="cell">Serviço daemon de contêiner.</block>
+  <block id="d5cb5397b2f4727babe1417077f0cfd0" category="cell">VXLAN (Flanela)</block>
+  <block id="53dc538455257579c3d1a04ad3ee82a7" category="cell">Rede sobreposta para comunicação entre pods.</block>
+  <block id="491f9ca9a65625d41b7536f95a5829ee" category="admonition">Para implantações de alta disponibilidade (HA), certifique-se de que a porta UDP 8472 esteja aberta entre todos os nós. Esta porta permite a comunicação entre pods em diferentes nós; bloqueá-la interromperá a rede entre os nós.</block>
+  <block id="622ebf1679f52188783e45799f3b70cb" category="summary">Adicionar novos hosts VMware vSphere às ONTAP tools for VMware vSphere.</block>
+  <block id="5aa6adafd8167a23c389304a0d6e16cb" category="doc">Adicionar novos hosts VMware vSphere</block>
+  <block id="a8626caa71cb3c13de333ded9fdfe5a8" category="paragraph">Adicione novos hosts VMware vSphere às ONTAP tools for VMware vSphere para gerenciar e proteger os datastores nesses hosts.</block>
+  <block id="020968a073f2c7584ecd5aaec97f88b0" category="inline-link">Como adicionar um host ESX ao seu cluster vSphere usando o fluxo de trabalho de início rápido</block>
+  <block id="0fdc03dfada440fcb45b31a6944bd23f" category="list-text">Adicione um host ao seu cluster VMware vSphere seguindo o fluxo de trabalho na página:<block ref="cf7664c28a8bbe5a872742d0c68a4d4b" category="inline-link-rx"></block></block>
+  <block id="9764e14a69d1669b765a8ac58a35d864" category="list-text">Após adicionar o host, acesse o menu principal das ferramentas ONTAP e selecione *Descobrir* no painel de visão geral. Aguarde a conclusão do processo de descoberta. Alternativamente, você pode aguardar a conclusão da descoberta de hosts agendada.</block>
+  <block id="c81c266dd6001708c9f3076ddf21214c" category="paragraph">O novo host foi descoberto e está sendo gerenciado pelas ONTAP tools for VMware vSphere. Você pode prosseguir com o gerenciamento do armazenamento de dados no novo host.</block>
+  <block id="11d81e4c78f6be23d5539c87f4f3a7a7" category="list-text"><block ref="c5978119f323c1ceb37571472aaae169" category="inline-link-macro-rx"></block>em novos hosts.</block>
+  <block id="063680c82bcd7ffea25b1d4d5c3c6470" category="list-text"><block ref="b5251e50ffdcc6a83e84a63c2a1cd1e4" category="inline-link-macro-rx"></block>em novos hosts.</block>
+  <block id="0eb234ccef0fdd3bb9f5b615c5ec8eef" category="paragraph">Um certificado autoassinado é gerado para ferramentas ONTAP e VASA Provider por padrão durante a implantação. Usando a interface do Gerenciador de ferramentas ONTAP , você pode renovar o certificado ou atualizá-lo para uma CA personalizada. É necessário usar certificados de CA personalizados em uma implantação com vários vCenters.</block>
+  <block id="badf77f43d93c8a563816ac386123a63" category="paragraph">Você deve ter o seguinte antes de começar:</block>
+  <block id="37b0536bf9555d4fd2d03f77ee0b0bab" category="list-text">O nome de domínio foi mapeado para o endereço IP virtual.</block>
+  <block id="d417b5848864e0c056fdd924f5f377f5" category="list-text">Consulta nslookup bem-sucedida do nome de domínio, confirmando que ele resolve para o endereço IP correto.</block>
+  <block id="847a74342b271a01b7356dba4e0e581b" category="list-text">Certificados criados com o nome de domínio e o endereço IP das ferramentas ONTAP .</block>
+  <block id="617ed5373c26aa974e1384bd0c21345b" category="paragraph">Ao ativar o sinalizador de validação de certificado (definido como verdadeiro), as ferramentas ONTAP verificam se todos os backends de armazenamento usam certificados com um Nome Alternativo do Assunto (SAN).  Se algum backend usar um certificado sem SAN, você não poderá ativar a validação de certificado.  Antes de ativar essa opção, verifique se todos os servidores de armazenamento utilizam certificados baseados em SAN.  Se você desativar o sinalizador de validação de certificado (definido como falso), as ferramentas ONTAP ignorarão a validação de certificado para todos os backends de armazenamento configurados.</block>
+  <block id="0cd39a00785b2d832062556ce23c369b" category="paragraph">Habilite a extensão VASA Provider para sua instância do vCenter Server.</block>
+  <block id="d0fd7773552c6493f9e5662b3d555d71" category="paragraph">A sessão de login expira à meia-noite do dia seguinte.</block>
+  <block id="a8998e3ec16a3510b175e1407abacad7" category="paragraph">Esta página descreve como excluir datastores NFS, VMFS ou vVols usando as ferramentas ONTAP no vCenter Server.</block>
+  <block id="2e1e725ecc851477134c7e9c4bb02bd1" category="list-text">Para datastores VMFS protegidos em sistemas ASA r2, remova a proteção antes de excluir. A partir do ONTAP 9.17.1 e das ONTAP tools for VMware vSphere 10.5, você pode excluir um armazenamento de dados protegido.  Se for o único armazenamento de dados no grupo de proteção, a proteção do cluster de hosts será removida automaticamente.</block>
+  <block id="dc7755c631c453b53771fb1b7a4db537" category="paragraph">Quando você exclui um armazenamento de dados NFS, VMFS ou vVols , os igroups pais permanecem no sistema ONTAP . Os igroups filho que não são mapeados para nenhum LUN são excluídos automaticamente. As ferramentas ONTAP realizam uma limpeza diária para remover igroups pai padrão não mapeados. Exclua manualmente os grupos de instâncias (igroups) pai personalizados no ONTAP.  As ferramentas ONTAP não podem reutilizar grupos de instâncias (igroups) pai obsoletos.</block>
+  <block id="da40ad6b7ed351f5835cab02f4edfe1d" category="paragraph">Siga estas instruções para concluir o processo de limpeza do VASA.</block>
+  <block id="48b6857b61c1353b6a160418591464d8" category="list-text">Na seção *Configuração*, aumente o tamanho do nó e habilite a configuração de alta disponibilidade (HA).  Utilize as credenciais do vCenter Server para efetuar alterações.</block>
+  <block id="c30dbf79f049d256e3fb8494b43ea963" category="paragraph">Na configuração de alta disponibilidade (HA), você pode alterar os detalhes da biblioteca de conteúdo.  Forneça a senha para cada edição.</block>
+  <block id="577fee28d9af79d5c2faa8867f8e9200" category="admonition">As ferramentas ONTAP preenchem automaticamente a maioria das opções de entrada com os detalhes da rede do Nó 1 para simplificar o fluxo de trabalho.  Você pode editar os dados de entrada antes de ir para a última página do assistente. Você pode inserir detalhes do endereço IPv6 para os outros dois nós somente quando o endereço IPv6 estiver habilitado no nó de gerenciamento de ferramentas ONTAP .</block>
+  <block id="d89fc310261203976db3cd457cd6caae" category="paragraph">A página *Visão geral* mostra o status da implantação. Você também pode acompanhar o status da tarefa de edição das configurações do dispositivo na visualização de tarefas, usando o ID da tarefa.</block>
+  <block id="45ea5efa1f66c68d972e718b18a51196" category="paragraph">Se a implementação do HA falhar e o novo status do nó for "Novo", exclua a nova VM no vCenter antes de tentar habilitar o HA novamente.</block>
+  <block id="35e6f670a5ded7baf93895cc50aff247" category="list-text">Na seção *Serviços*, você pode habilitar serviços opcionais como o provedor VASA, a importação da configuração do vVols e a recuperação de desastres (SRA), conforme necessário.</block>
+  <block id="634c02e0dc6683b922f110d11b975947" category="paragraph">Ao clicar com o botão direito do mouse no objeto de armazenamento de dados na visualização de objetos do vCenter, a seção de plug-ins mostra as ações compatíveis com as ONTAP tools for VMware vSphere. Ações específicas são habilitadas dependendo do tipo de armazenamento de dados e dos privilégios atuais do usuário.</block>
+  <block id="9ca1bffcd412b8ef99e9a92a8b3193e1" category="list-text">Na janela *criar ou selecionar volumes*, você pode criar novos volumes ou escolher entre os volumes existentes. Siga as instruções na tela para fazer sua seleção.</block>
+  <block id="99695bfd999355f1df38ec35a7171539" category="paragraph">O console de manutenção das ONTAP tools for VMware vSphere permite gerenciar configurações de aplicativos, sistemas e redes.  Você pode atualizar senhas de administrador e de manutenção, gerar pacotes de suporte, configurar níveis de registro, gerenciar configurações de TLS e habilitar diagnósticos remotos.</block>
+  <block id="0e3dbc4805c820c2543dcfc7fb0ff1ae" category="paragraph">Após implantar as ONTAP tools for VMware vSphere, se o console de manutenção não estiver acessível, instale as ferramentas VMware a partir do vCenter Server.  Faça login usando o<block ref="67f50785d40416a7a7689c5c353f1128" prefix=" " category="inline-code"></block> Nome de usuário e senha definidos durante a implantação.  Use o *nano* para editar arquivos no console de manutenção ou no console de login de root.</block>
+  <block id="3dc9723f860cc7fa81343acb2b1bc55f" category="list-text">Na janela *Editar Limite*, forneça os valores desejados nos campos *Quase Cheio* e *Cheio* e selecione *Salvar*. Você pode restaurar os valores limite para os padrões recomendados: 80 para Quase Cheio e 90 para Cheio.</block>
+  <block id="0fb6f15f7c944e350ea4ee5dbe349ad8" category="paragraph">Se você migrar a máquina virtual para um FlexVol volume diferente, o sistema atualizará o arquivo de metadados desse volume com as informações da máquina virtual. Se uma máquina virtual for migrada para um host ESXi diferente, mas com o mesmo armazenamento, o arquivo de metadados do FlexVol volume subjacente não será modificado.</block>
+  <block id="ffae2d616a4df47529c992a2371e2ccb" category="paragraph">Para uma máquina virtual Windows com o tipo de armazenamento ASA r2, um snapshot da máquina virtual é somente leitura.  Ao ligar a máquina virtual, o provedor VASA cria um LUN a partir do snapshot somente leitura e habilita as IOPS.  Ao desligar a máquina virtual, o provedor VASA exclui o LUN e desativa as IOPS.</block>
+  <block id="77320a87e6ca763456023daeede0729f" category="inline-link">Adicionar um host ESX ao seu fluxo de trabalho de cluster vSphere</block>
+  <block id="91d42183cd7455cc3f88c0c77b61174e" category="admonition">Ao adicionar um novo host ESXi usando o<block ref="4954232b8967f3dbfaee01742ae35b89" category="inline-link-rx"></block> Aguarde a conclusão da descoberta de hosts agendada antes que ela apareça nas ferramentas do ONTAP . Alternativamente, você pode executar a descoberta manualmente a partir da tela de visão geral das ferramentas do NetApp ONTAP .</block>
+  <block id="ba8e3bf168d21be1baf9d641e008977f" category="paragraph">O painel de tarefas recentes exibe o progresso.</block>
+  <block id="83c2a6ded9467f8048f9a53cabd2e783" category="paragraph-title">Tópico relacionado</block>
+  <block id="403e2c858b37daa43171ef37b71e6640" category="paragraph"><block ref="403e2c858b37daa43171ef37b71e6640" category="inline-link-macro-rx"></block></block>
+  <block id="8664aa558a2cba72e1c6505af0d61e83" category="list-text">O vSphere desativa a opção de montagem do armazenamento de dados quando o cluster de hosts está protegido com configurações uniformes.</block>
+  <block id="a1f04821262e5782b06fa1bb2f7ef076" category="list-text">Para montar datastores NFS/VMFS em um host ou cluster de hosts, clique com o botão direito e selecione *Ferramentas NetApp ONTAP * &gt; *Montar Datastores*.</block>
+  <block id="0b58e93bbab007c21f9f301adb42dc99" category="paragraph">Se você gerencia VMs de ferramentas ONTAP e sistemas de armazenamento ONTAP , é importante entender como os igroups se comportam, especialmente ao mover armazenamentos de dados de ambientes não gerenciados por ferramentas ONTAP para aqueles que são. Esta página explica como os grupos de interação (igroups) são atualizados durante esse processo.</block>
+  <block id="fa8e5790b9361467cce37c07e12ce82a" category="paragraph">Esta página explica como remover volumes de um armazenamento de dados vVols .</block>
+  <block id="0af9e2225c011d534179288b190817a8" category="paragraph">Utilize a ação "Remover armazenamento do datastore" em qualquer datastore vVols gerenciado pelas ferramentas ONTAP no vCenter Server.</block>
+  <block id="ccfaf6c006e0fbebe82be5ae3a6c2815" category="list-text">Selecione os volumes que não possuem vVols e selecione *Remover*.</block>
+  <block id="a5237c050fbb750b60c81abc7be6abc8" category="paragraph">O relatório de Máquinas virtuais mostra a lista de máquinas virtuais descobertas (devem ter pelo menos um disco de repositórios de dados baseados em armazenamento ONTAP ) com métricas de desempenho. Ao expandir o registro da máquina virtual, a interface exibe todas as informações do armazenamento de dados relacionadas ao disco.</block>
+  <block id="6714328364d88bcb775867c58aa0ce37" category="paragraph">O relatório de datastores lista os datastores descobertos ou reconhecidos ONTAP tools for VMware vSphere que utilizam qualquer armazenamento ONTAP , juntamente com as métricas de desempenho.</block>
+  <block id="e385df3f1b468053117f334cd5da5f4b" category="paragraph">Você pode aumentar o tamanho dos datastores NFS e VMFS.  Um FlexVol volume nesses armazenamentos de dados não pode ser reduzido abaixo do seu tamanho atual, mas pode crescer até 120%.</block>
+  <block id="57b462a22850f4fc55f97706795dc43e" category="list-text">Na caixa de diálogo Redimensionar, insira um novo tamanho para o armazenamento de dados e selecione *OK*.</block>
+  <block id="573e0ca6fef15685abd4cf05acc508cf" category="paragraph">Repita este procedimento em cada nó antes de atualizar.</block>
+  <block id="a2be99a76876ae4852bec1944bbbfbae" category="list-text">Selecione * Ferramentas NetApp ONTAP * &gt; * Armazenamento ONTAP *. A visualização muda de acordo com o tipo de armazenamento de dados.  Veja a tabela abaixo:</block>
+  <block id="0e527af09bb57a137d15be7b82466174" category="cell">Lista todos os volumes. Você pode expandir ou remover o armazenamento do painel de armazenamento do ONTAP . As ferramentas ONTAP não suportam essa visualização para datastores vVols baseados no sistema ASA r2.</block>
+  <block id="c39c392ff0013e0b93fcc63dc310cc30" category="paragraph">A ação Desmontar armazenamento de dados remove um armazenamento de dados NFS ou VMFS de hosts ESXi.  Está disponível para datastores descobertos ou gerenciados por ONTAP tools for VMware vSphere.</block>
+  <block id="0901929c9c2cc418f53328e6412b7d46" category="paragraph">O cliente vSphere abre uma caixa de diálogo e lista os hosts ESXi que montam o armazenamento de dados. Quando a operação é realizada em um armazenamento de dados protegido, uma mensagem de aviso é exibida na tela.</block>
+  <block id="e65e1eb2c16cb3c35af4e401b566b7c4" category="paragraph">Se você alterou as credenciais do vCenter Server, ONTAP ou Data LIF após a implantação, atualize-as usando este procedimento.</block>
+  <block id="69e03ac4326032eeb38fb3fcf35c7ff6" category="paragraph">A visualização de armazenamento mostra a lista de vVols que a máquina virtual cria.</block>
+  <block id="6dc534da8e148f3344a75f75993a7078" category="admonition">Esta visualização aplica-se a VMs com pelo menos um disco proveniente de um armazenamento de dados vVols gerenciado ONTAP tools for VMware vSphere .</block>
+  <block id="c94984b666995a59419ca0857f214e23" category="list-text">Digite *2* para selecionar o menu *Configuração do Sistema*.</block>
 </blocks>

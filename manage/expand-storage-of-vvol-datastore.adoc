@@ -11,7 +11,7 @@ summary: Quando você clica com o botão direito do Mouse no objeto datastore na
 
 
 [role="lead"]
-Quando você clica com o botão direito do Mouse no objeto datastore na visualização de objetos do vCenter, as ferramentas do ONTAP para ações compatíveis com o VMware vSphere são mostradas na seção plug-in. Ações específicas são ativadas dependendo do tipo de armazenamento de dados e do usuário atual Privileges.
+Ao clicar com o botão direito do mouse no objeto de armazenamento de dados na visualização de objetos do vCenter, a seção de plug-ins mostra as ações compatíveis com as ONTAP tools for VMware vSphere. Ações específicas são habilitadas dependendo do tipo de armazenamento de dados e dos privilégios atuais do usuário.
 
 
 NOTE: A operação do armazenamento de dados Expand vVols não é aplicável aos armazenamentos de dados vVols baseados no sistema ASA R2.
@@ -20,6 +20,6 @@ NOTE: A operação do armazenamento de dados Expand vVols não é aplicável aos
 . Na página inicial do vSphere Client, selecione *hosts and clusters*.
 . No painel de navegação, selecione o data center que contém o datastore.
 . Clique com o botão direito do Mouse no datastore e selecione *NetApp ONTAP Tools* > *Add storage to datastore*.
-. Na janela *criar ou Selecionar volumes*, você pode criar novos volumes ou escolher entre os volumes existentes. A interface do utilizador é auto-explicativa. Siga as instruções conforme sua escolha.
+. Na janela *criar ou selecionar volumes*, você pode criar novos volumes ou escolher entre os volumes existentes. Siga as instruções na tela para fazer sua seleção.
 . Na janela *Summary*, revise as seleções e selecione *Expand*. Você pode acompanhar o progresso no painel tarefas recentes.
 

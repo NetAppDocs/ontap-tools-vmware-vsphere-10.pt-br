@@ -11,7 +11,7 @@ summary:
 
 
 [role="lead"]
-Se você gerencia VMs de ferramentas ONTAP e sistemas de armazenamento ONTAP , é importante entender como os igroups se comportam, especialmente ao mover armazenamentos de dados de ambientes não gerenciados por ferramentas ONTAP para aqueles que são.  Esta seção explica como os igroups são atualizados durante esse processo.
+Se você gerencia VMs de ferramentas ONTAP e sistemas de armazenamento ONTAP , é importante entender como os igroups se comportam, especialmente ao mover armazenamentos de dados de ambientes não gerenciados por ferramentas ONTAP para aqueles que são. Esta página explica como os grupos de interação (igroups) são atualizados durante esse processo.
 
 As ONTAP tools for VMware vSphere 10.4 e versões posteriores criam e mantêm automaticamente objetos ONTAP e vCenter para simplificar o gerenciamento de armazenamento de dados em ambientes de data center VMware.
 

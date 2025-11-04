@@ -11,7 +11,7 @@ summary: Siga as etapas nesta seção para executar a limpeza VASA.
 
 
 [role="lead"]
-Siga as etapas nesta seção para executar a limpeza VASA.
+Siga estas instruções para concluir o processo de limpeza do VASA.
 
 
 NOTE: É recomendável que você remova todos os armazenamentos de dados vVols antes de executar a Limpeza VASA.

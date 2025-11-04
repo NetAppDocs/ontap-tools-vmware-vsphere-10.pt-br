@@ -11,10 +11,10 @@ summary: A visualização de armazenamento mostra a lista de vVols criados pela 
 
 
 [role="lead"]
-A visualização de armazenamento mostra a lista de vVols criados pela máquina virtual.
+A visualização de armazenamento mostra a lista de vVols que a máquina virtual cria.
 
 
-NOTE: Essa exibição é aplicável à VM que tem pelo menos uma ferramenta ONTAP para o disco relacionado ao armazenamento de dados vVols gerenciado do VMware vSphere montado nele.
+NOTE: Esta visualização aplica-se a VMs com pelo menos um disco proveniente de um armazenamento de dados vVols gerenciado ONTAP tools for VMware vSphere .
 
 .Passos
 . No vSphere Client, vá para a máquina virtual.

@@ -57,7 +57,7 @@ Você pode atualizar as ONTAP tools for VMware vSphere 10.3 ou 10.4 para 10.5.  
 . Selecione o arquivo ISO, marque a caixa *Conectado* para o campo *unidade de CD/DVD* e clique em *OK*.
 . No vCenter Server, abra um console para as ferramentas do ONTAP.
 . Inicie sessão como utilizador de manutenção.
-. Digite *3* para selecionar o menu *Configuração do Sistema*.
+. Digite *2* para selecionar o menu *Configuração do Sistema*.
 . Digite *7* para selecionar a opção *Atualizar*.
 +
 Durante a atualização, se algum certificado de backend de armazenamento integrado não tiver entradas de Nome Alternativo de Assunto (SAN), você receberá um prompt indicando o SAN ausente.  Se você optar por prosseguir sem validar o SAN, a atualização continuará, mas isso não é recomendado devido a potenciais riscos de segurança.

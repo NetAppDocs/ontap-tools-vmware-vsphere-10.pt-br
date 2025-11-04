@@ -24,9 +24,9 @@ Use o ONTAP Tools Manager para ampliar as ONTAP tools for VMware vSphere , aumen
 . Inicie o Gerenciador de ferramentas do ONTAP a partir de um navegador da Web: `\https://<ONTAPtoolsIP>:8443/virtualization/ui/`
 . Faça login com as ferramentas do ONTAP para as credenciais de administrador do VMware vSphere fornecidas durante a implantação.
 . Selecione *Edit Appliance Settings* (Editar definições do dispositivo) na secção Overview (Descrição geral).
-. Na seção *Configuração*, você pode fazer a escalabilidade vertical para aumentar o tamanho do nó e ativar a configuração de HA de acordo com suas necessidades. Você precisa das credenciais do vCenter Server para fazer quaisquer alterações.
+. Na seção *Configuração*, aumente o tamanho do nó e habilite a configuração de alta disponibilidade (HA).  Utilize as credenciais do vCenter Server para efetuar alterações.
 +
-Quando as ferramentas do ONTAP estão na configuração HA, você pode alterar os detalhes da biblioteca de conteúdo. Você deve fornecer a senha novamente para o novo envio de edição.
+Na configuração de alta disponibilidade (HA), você pode alterar os detalhes da biblioteca de conteúdo.  Forneça a senha para cada edição.
 
 +
 
@@ -45,7 +45,7 @@ NOTE: Depois que a configuração de HA for habilitada, não será possível rev
 . Na seção *HA settings* da janela *Edit Appliance Settings* (Editar configurações do dispositivo), você pode inserir os detalhes dos nós 2 e 3. As ferramentas do ONTAP para VMware vSphere são compatíveis com três nós na configuração de HA.
 +
 
-NOTE: A maioria das opções de entrada são pré-preenchidas com detalhes da rede do Nó 1 para facilitar o fluxo de trabalho.  No entanto, você pode editar os dados de entrada antes de navegar para a página final do assistente.  Você pode inserir detalhes do endereço IPv6 para os outros dois nós somente quando o endereço IPv6 estiver habilitado no nó de gerenciamento de ferramentas ONTAP .
+NOTE: As ferramentas ONTAP preenchem automaticamente a maioria das opções de entrada com os detalhes da rede do Nó 1 para simplificar o fluxo de trabalho.  Você pode editar os dados de entrada antes de ir para a última página do assistente. Você pode inserir detalhes do endereço IPv6 para os outros dois nós somente quando o endereço IPv6 estiver habilitado no nó de gerenciamento de ferramentas ONTAP .
 
 +
 Certifique-se de que um host ESXi contenha apenas uma VM de ferramentas ONTAP. As entradas são validadas cada vez que você passa para a próxima janela.
@@ -54,8 +54,8 @@ Certifique-se de que um host ESXi contenha apenas uma VM de ferramentas ONTAP. A
 
 
 .O que se segue?
-A página *Visão geral* mostra o status da implantação. Utilizando a ID do trabalho, também pode controlar o estado do trabalho de definições do dispositivo de edição a partir da vista trabalhos.
+A página *Visão geral* mostra o status da implantação. Você também pode acompanhar o status da tarefa de edição das configurações do dispositivo na visualização de tarefas, usando o ID da tarefa.
 
-Se a implantação de HA falhar e o status do novo nó for exibido como "novo", exclua a nova VM no vCenter antes de tentar novamente a operação Habilitar HA.
+Se a implementação do HA falhar e o novo status do nó for "Novo", exclua a nova VM no vCenter antes de tentar habilitar o HA novamente.
 
 A guia *Alertas* no painel esquerdo lista alertas de ferramentas do ONTAP para VMware vSphere.
