@@ -63,7 +63,7 @@ entries:
     url: "/manage/configure-remote-diagnostic-access.html"
   - title: Inicie o SSH em outros nós
     url: "/manage/start-the-ssh-on-other-nodes.html"
-  - title: Atualize as credenciais do vCenter Server e do ONTAP
+  - title: Atualize as credenciais do servidor vCenter.
     url: "/manage/update-vcenter-credentials.html"
   - title: Alterar sinalizador de validação de certificado
     url: "/manage/change-valid-flag.html"

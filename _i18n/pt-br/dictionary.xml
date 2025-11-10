@@ -527,13 +527,8 @@
   <block id="145030897b3622bf5373be4a74e8ad80" category="list-text">Selecione um ou mais hosts ESXi para desmontar o datastore.</block>
   <block id="b58a084a2e5b8ee16e91cff21aeacb3b" category="list-text">Selecione o botão *Desmontar*.</block>
   <block id="58ee9210196e8f4558d87b26bba5bc19" category="paragraph">Se o datastore fizer parte de um cluster de host protegido, uma mensagem de aviso será exibida.</block>
-  <block id="a6f65a806180d1ff3c8d5e553e634e9d" category="summary">Você pode atualizar as credenciais do vCenter Server e do ONTAP usando o console de manutenção.</block>
-  <block id="f72e000ebb4c7bedf651a46e595f1371" category="doc">Atualize as credenciais do vCenter Server e do ONTAP</block>
-  <block id="7ac19aa441feceb73519a5108d4cc366" category="paragraph">Você pode atualizar a instância do vCenter Server e as credenciais do ONTAP usando o console de manutenção.</block>
   <block id="21a56b485fb6cd9f7c9cc8f514440950" category="paragraph">Você precisa ter credenciais de login de usuário de manutenção.</block>
   <block id="cea5a13834803a12adaeb249165351df" category="list-text">Entre<block ref="c81e728d9d4c2f636f067f89cc14862c" prefix=" " category="inline-code"></block> para selecionar Menu Configuração do sistema.</block>
-  <block id="86ce6e9c3af571980099ca308cd245e3" category="list-text">Digite<block ref="45c48cce2e2d7fbdea1afc51c7c6ad26" prefix=" " category="inline-code"></block> para alterar as credenciais do ONTAP.</block>
-  <block id="207c00a73dde0270cc0fbc7ce9c5f2fd" category="list-text">Digite<block ref="d3d9446802a44259755d38e6d163e820" prefix=" " category="inline-code"></block> para alterar as credenciais do vCenter.</block>
   <block id="d3cd4bffc1abc46e60337f8438f457b9" category="summary">A visualização de armazenamento mostra a lista de vVols criados pela máquina virtual.</block>
   <block id="f6607063532d19e10b746de0f6108f15" category="doc">Visualização de armazenamento de máquina virtual</block>
   <block id="d30a2c17aee5520860321f3dd1c6c00c" category="list-text">Selecione *Ferramentas NetApp ONTAP* &gt; *armazenamento*. Os detalhes *Storage* aparecem no painel direito. Você pode ver a lista de vVols que estão presentes na VM.</block>
@@ -713,7 +708,6 @@
   <block id="53919574400a28fb0fcafa5fe9603b7e" category="paragraph">Saiba mais sobre<block ref="9befe92b354bb60a7e3304c392ee484a" category="inline-link-rx"></block></block>
   <block id="b5e39b37a2c811e88e1f07aa15f0ba15" category="summary">A atualização é compatível com implantações de HA e não HA.</block>
   <block id="b06f0e274f6c746f0d30521b5c7f392e" category="list-text">Faça o upload das ferramentas do ONTAP para a ISO de atualização do VMware vSphere para a biblioteca de conteúdo.</block>
-  <block id="dd5382558ec4a47dfbc203fb25698772" category="list-text">Na página da VM principal, selecione *ações* &gt; *Editar configurações*</block>
   <block id="6aa61138e01e77bb590500715db216a4" category="list-text">Ao atualizar, as seguintes ações são executadas automaticamente:</block>
   <block id="8f7be3c874feb6ef0fd5f20afd8d5fbb" category="sidebar">As ferramentas do ONTAP para o VMware vSphere permitem configurar, gerenciar e proteger seus datastores virtuais no ambiente do vCenter Server.</block>
   <block id="26ffc687a7267f96a389530199971cd1" category="sidebar">Ferramentas do ONTAP para documentação do VMware vSphere</block>
@@ -734,7 +728,6 @@
   <block id="41d4fa725cfb558559b7183adeea1e30" category="sidebar">Desmonte o armazenamento de dados NFS e VMFS</block>
   <block id="e6e4c7644f1b4ac0c9a1fa2e3a633259" category="sidebar">Expanda o armazenamento de dados da VVol</block>
   <block id="fdbc6b9d3a4fa30083007ec69abfbe6e" category="sidebar">Acesse as ferramentas do ONTAP para o console de manutenção do VMware vSphere</block>
-  <block id="0b05bd7cf8d32e0eca345c170c1c2bdd" category="sidebar">Atualize as credenciais do vCenter Server e do ONTAP</block>
   <block id="427d9ce60f4b39aa82a25138b4aa489f" category="sidebar">Gerenciar máquinas virtuais</block>
   <block id="1608a10fc8319b14c6c50a77edab9e7c" category="sidebar">Modifique as configurações do host ESXi</block>
   <block id="ce0ce3ea98d033e77751261b2720fefe" category="sidebar">Gerenciar senhas</block>
@@ -2432,8 +2425,18 @@
   <block id="0e527af09bb57a137d15be7b82466174" category="cell">Lista todos os volumes. Você pode expandir ou remover o armazenamento do painel de armazenamento do ONTAP . As ferramentas ONTAP não suportam essa visualização para datastores vVols baseados no sistema ASA r2.</block>
   <block id="c39c392ff0013e0b93fcc63dc310cc30" category="paragraph">A ação Desmontar armazenamento de dados remove um armazenamento de dados NFS ou VMFS de hosts ESXi.  Está disponível para datastores descobertos ou gerenciados por ONTAP tools for VMware vSphere.</block>
   <block id="0901929c9c2cc418f53328e6412b7d46" category="paragraph">O cliente vSphere abre uma caixa de diálogo e lista os hosts ESXi que montam o armazenamento de dados. Quando a operação é realizada em um armazenamento de dados protegido, uma mensagem de aviso é exibida na tela.</block>
-  <block id="e65e1eb2c16cb3c35af4e401b566b7c4" category="paragraph">Se você alterou as credenciais do vCenter Server, ONTAP ou Data LIF após a implantação, atualize-as usando este procedimento.</block>
   <block id="69e03ac4326032eeb38fb3fcf35c7ff6" category="paragraph">A visualização de armazenamento mostra a lista de vVols que a máquina virtual cria.</block>
   <block id="6dc534da8e148f3344a75f75993a7078" category="admonition">Esta visualização aplica-se a VMs com pelo menos um disco proveniente de um armazenamento de dados vVols gerenciado ONTAP tools for VMware vSphere .</block>
   <block id="c94984b666995a59419ca0857f214e23" category="list-text">Digite *2* para selecionar o menu *Configuração do Sistema*.</block>
+  <block id="bac860f1d4bb4c20d8de991eeeedd998" category="paragraph">Clique para expandir ou recolher a tabela de requisitos de porta.</block>
+  <block id="f59d6f6c2fbe5659bab55bb335b17871" category="summary">Você pode atualizar as credenciais do vCenter Server usando o console de manutenção.</block>
+  <block id="d546c3915b2e0bc231d2bd0456f2d736" category="doc">Atualize as credenciais do vCenter Server.</block>
+  <block id="6e73e8087488ddc10c72aeec0f27cc93" category="paragraph">Você pode atualizar as credenciais da instância do vCenter Server usando o console de manutenção.</block>
+  <block id="f13c11fc9998fa4e2d133fe7f943fb4f" category="paragraph">Se você alterou as credenciais do vCenter Server após a implantação, atualize-as seguindo este procedimento.</block>
+  <block id="a38dbe6982c223d82e53b7d0feab69ce" category="list-text">Digitar<block ref="c9f0f895fb98ab9159f51fd0297e236d" prefix=" " category="inline-code"></block> Para alterar as credenciais do vCenter.</block>
+  <block id="b09a768d508454c0e540ea7b37cb5509" category="paragraph">Consulte <block ref="afe6cee65a7db7868c8d2eef90c140e6" category="inline-link-macro-rx"></block> e <block ref="da3a0196b755588b543a28093241fcfa" category="inline-link-macro-rx"></block> Para obter mais informações sobre backup e recuperação.</block>
+  <block id="a928a1b805644ea87a643f7f8d60a477" category="list-text">Na página principal da VM, selecione *Ações* &gt; *Editar configurações*. Para identificar o nome da máquina virtual principal:</block>
+  <block id="75a86edd37c9b2122be450b28fa09149" category="list-text">Ative o shell de diagnóstico em qualquer nó.</block>
+  <block id="e016d50ae26af4214e6a864c1c2c8db5" category="list-text">Execute o seguinte comando:<block ref="1ebe86b64a17c55ae52f4488cffae75f" prefix=" " category="inline-code"></block></block>
+  <block id="e40ec845cea3d17ed090f7fc08824c3f" category="sidebar">Atualize as credenciais do servidor vCenter.</block>
 </blocks>

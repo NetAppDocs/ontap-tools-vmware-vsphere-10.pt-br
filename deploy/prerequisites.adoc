@@ -94,7 +94,10 @@ A tabela a seguir descreve as portas de rede utilizadas pela NetApp e suas final
 
 NOTE: Certifique-se de que todos os nós das ferramentas ONTAP residam na mesma sub-rede para manter uma comunicação ininterrupta entre si.
 
+Clique para expandir ou recolher a tabela de requisitos de porta.
 
+[%collapsible]
+====
 |===
 | *Nome do serviço/componente* | *Porto* | *Protocolo* | *Tipo de porta* | *Descrição* 
 
@@ -152,6 +155,7 @@ NOTE: Certifique-se de que todos os nós das ferramentas ONTAP residam na mesma 
 
 NOTE: Para implantações de alta disponibilidade (HA), certifique-se de que a porta UDP 8472 esteja aberta entre todos os nós. Esta porta permite a comunicação entre pods em diferentes nós; bloqueá-la interromperá a rede entre os nós.
 
+====
 
 
 == Limites de configuração para implantar as ferramentas do ONTAP para o VMware vSphere
