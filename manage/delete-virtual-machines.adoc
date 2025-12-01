@@ -11,10 +11,10 @@ summary: Siga as etapas nesta seção para executar a limpeza VASA.
 
 
 [role="lead"]
-Siga estas instruções para concluir o processo de limpeza do VASA.
+Para concluir o processo de limpeza do VASA, siga estas etapas.
 
 
-NOTE: É recomendável que você remova todos os armazenamentos de dados vVols antes de executar a Limpeza VASA.
+NOTE: Recomenda-se remover todos os datastores vVols antes de iniciar a limpeza do VASA.
 
 .Passos
 . Desmarque o plug-in entrando no \https://OTV_IP:8143/Register.html

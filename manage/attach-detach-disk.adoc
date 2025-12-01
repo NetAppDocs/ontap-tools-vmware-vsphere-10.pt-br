@@ -10,18 +10,21 @@ summary: Anexe um disco de dados a uma máquina virtual para expandir a capacida
 :imagesdir: ../media/
 
 
+[role="lead"]
+Siga estes passos para conectar ou desconectar discos de dados de máquinas virtuais no vSphere e gerenciar seus recursos de armazenamento.
+
 
 
 == Anexe um disco de dados a uma máquina virtual
 
-Anexe um disco de dados a uma máquina virtual para expandir a capacidade de armazenamento.
+Anexe um disco de dados a uma máquina virtual para adicionar mais espaço de armazenamento.
 
 .Passos
 . Faça login no cliente vSphere.
 . Clique com o botão direito do mouse em uma máquina virtual no inventário e selecione *Editar configurações*.
 . Na guia *hardware Virtual*, selecione *disco rígido existente*.
 . Selecione a máquina virtual onde o disco existe.
-. Selecione o disco que deseja anexar e selecione *OK*
+. Selecione o disco que deseja conectar e clique no botão *OK*.
 
 
 .Resultado
@@ -31,7 +34,7 @@ O disco rígido aparece na lista dispositivos de hardware virtual.
 
 == Separe um disco de dados da máquina virtual
 
-Você pode separar um disco de dados conetado a uma máquina virtual quando não for mais necessário. Quando você descola o disco da máquina virtual, ele não é excluído automaticamente; ele permanece no sistema de armazenamento ONTAP.
+Desconecte um disco de dados de uma máquina virtual quando não precisar mais dele.  O disco não é apagado; ele permanece no sistema de armazenamento ONTAP .
 
 .Passos
 . Faça login no cliente vSphere.

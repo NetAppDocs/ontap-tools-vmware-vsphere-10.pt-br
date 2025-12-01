@@ -11,7 +11,7 @@ summary: Se você não tiver configurado o acesso à rede, todos os endereços I
 
 
 [role="lead"]
-A menos que o acesso à rede tenha sido configurado, todos os endereços IP descobertos no host ESXi são incluídos automaticamente na política de exportação.  Você pode configurar a política para permitir apenas determinados endereços IP e excluir outros; no entanto, se você tentar montar a partir de um host ESXi excluído, a operação falhará.
+Por padrão, todos os endereços IP descobertos no host ESXi são adicionados automaticamente à política de exportação, a menos que você configure o acesso à rede.  Você pode modificar a política de exportação para permitir o acesso somente a partir de endereços IP específicos.  Se um host ESXi excluído tentar uma operação de montagem, a operação falhará.
 
 .Passos
 . Faça login no cliente vSphere.

@@ -23,7 +23,7 @@ Considere o seguinte antes de criar uma biblioteca de conteúdo:
 * Certifique-se de que a biblioteca de conteúdo seja criada antes de configurar o dispositivo para HA.
 +
 
-NOTE: não exclua o modelo OVA na biblioteca de conteúdo após a implantação.
+NOTE: Não exclua o modelo OVA na biblioteca de conteúdo após a implantação.
 
 
 
@@ -78,8 +78,24 @@ NOTE: Nunca armazene as ferramentas do ONTAP para a máquina virtual VMware vSph
 . Leia e aceite o contrato de licença e selecione *Next*.
 . Selecione o armazenamento para a configuração e o formato do disco e selecione *Next*.
 . Selecione a rede de destino para cada rede de origem e selecione *seguinte*.
-. Na janela *Personalizar modelo*, preencha os campos obrigatórios e selecione *Avançar*.image:../media/sys-conf.png["Personalizar modelo"]
+. Na janela *Personalizar modelo*, preencha os campos obrigatórios.image:../media/custom-temp.png["Personalizar modelo"]
 +
+
+NOTE: O nome do host do vCenter é o nome da instância do vCenter Server onde o dispositivo de ferramentas ONTAP está implantado.
+
++
+Se você estiver implementando ferramentas ONTAP em uma topologia de dois servidores vCenter — onde o dispositivo está hospedado em uma instância do vCenter e gerencia outra — você pode atribuir uma função restrita à instância do vCenter que hospeda as ferramentas ONTAP .  Você pode criar um usuário e uma função dedicados do vCenter com apenas as permissões de datastore listadas abaixo, necessárias para a implantação do modelo OVF:
+
++
+** Alocar espaço
+** Navegar pelo armazenamento de dados
+** operações de arquivo de baixo nível
+** Remover arquivo
+** Atualizar arquivos da máquina virtual
+** Atualizar metadados da máquina virtual
++
+Para a instância do vCenter que será gerenciada pelas ferramentas ONTAP , certifique-se de que a conta de usuário do vCenter tenha privilégios de administrador.
+
 ** As informações são validadas durante a instalação.  Se houver alguma discrepância, uma mensagem de erro será exibida no console da web e você será solicitado a corrigi-la.
 ** Os nomes de host devem incluir letras (A-Z, a-z), dígitos (0-9) e hífens (-). Para configurar a pilha dupla, especifique o nome do host mapeado para o endereço IPv6.
 +
@@ -90,7 +106,7 @@ NOTE: O Pure IPv6 não é compatível. O modo misto é suportado com VLAN conten
 ** O IPv4 é o componente de endereço IP da configuração do nó, que pode ser utilizado para habilitar o acesso de shell de diagnóstico e SSH no nó para fins de depuração e manutenção.
 
 
-. Ao usar a versão vCenter Server 8.0.3, na janela *Personalizar hardware*, ative as opções *Adição a quente da CPU* e *Adição a quente da memória* para permitir a funcionalidade de alta disponibilidade.image:../media/customize-hw105.png["Personalizar hardware"] image:../media/customize-hw.png["Personalizar hardware"]
+. Ao usar a versão 8.0.3 do vCenter Server, na janela *Personalizar hardware*, habilite as opções *Adição a quente de CPU* e *Conexão a quente de memória* para permitir a funcionalidade de alta disponibilidade (HA).image:../media/customize-hw105.png["Personalizar hardware"]
 . Revise os detalhes na janela *Pronto para concluir*, selecione *concluir*.
 +
 À medida que a tarefa de implantação é criada, o progresso é mostrado na barra de tarefas do vSphere.

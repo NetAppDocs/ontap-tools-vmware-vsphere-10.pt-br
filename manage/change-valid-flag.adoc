@@ -19,7 +19,7 @@ Você precisa ter credenciais de login de usuário de manutenção.
 .Passos
 . No vCenter Server, abra um console para as ferramentas do ONTAP.
 . Inicie sessão como utilizador de manutenção.
-. Digitar `1` para selecionar o Menu de configuração do aplicativo.
+. Digitar `1` Para selecionar o menu *Configuração do Aplicativo*.
 . Digitar `3` para alterar o sinalizador de validação do certificado.
 +
 O console de manutenção mostra o status do sinalizador de validação do certificado e solicita que você o altere.

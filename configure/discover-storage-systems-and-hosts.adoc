@@ -11,16 +11,15 @@ summary: Quando você executa pela primeira vez as ferramentas do ONTAP para VMw
 
 
 [role="lead"]
-Quando você executa pela primeira vez as ferramentas do ONTAP para VMware vSphere em um cliente vSphere, as ferramentas do ONTAP descobrem os hosts ESXi, suas exportações de LUNs e NFS, e os sistemas de storage NetApp que possuem esses LUNs e exportações.
+Quando as ONTAP tools for VMware vSphere são iniciadas no vSphere Client pela primeira vez, elas descobrem automaticamente os hosts ESXi, seus LUNs e exportações NFS associados, bem como os sistemas de armazenamento NetApp que possuem esses recursos.
 
 .Antes de começar
-* Todos os hosts ESXi devem estar ligados e conetados.
-* Todas as máquinas virtuais de armazenamento (SVMs) a serem descobertas devem estar em execução e cada nó de cluster deve ter pelo menos um LIF de dados configurado para o protocolo de armazenamento em uso (NFS ou iSCSI).
+* Certifique-se de que todos os hosts ESXi estejam ligados e conectados.
+* Certifique-se de que todas as máquinas virtuais de armazenamento (SVMs) a serem descobertas estejam em execução e que cada nó do cluster tenha pelo menos uma LIF de dados configurada para o protocolo de armazenamento em uso (NFS ou iSCSI).
 
 
-*Sobre esta tarefa*
-
-Você pode descobrir novos sistemas de armazenamento ou atualizar informações sobre sistemas de armazenamento existentes para obter as informações mais recentes sobre capacidade e configuração a qualquer momento. Você também pode modificar as credenciais que as ferramentas do ONTAP para VMware vSphere usam para fazer login nos sistemas de storage.
+.Sobre esta tarefa
+Você pode descobrir novos sistemas de armazenamento ou atualizar os existentes para obter os detalhes mais recentes sobre capacidade e configuração.  Você também pode alterar as ONTAP tools for VMware vSphere para acesso ao sistema de armazenamento.
 
 Ao descobrir os sistemas de armazenamento, as ferramentas do ONTAP para VMware vSphere coletam informações dos hosts ESXi gerenciados pela instância do vCenter Server.
 

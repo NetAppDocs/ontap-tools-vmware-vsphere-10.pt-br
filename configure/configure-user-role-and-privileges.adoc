@@ -11,7 +11,7 @@ summary: Configure funções e privilégios de usuário para backends de armazen
 
 
 [role="lead"]
-Configure funções e privilégios de usuário para backends de armazenamento com o arquivo JSON das ONTAP tools for VMware vSphere e ONTAP System Manager.
+Use esta seção para configurar funções e privilégios de usuário do ONTAP para back-ends de armazenamento com as ONTAP tools for VMware vSphere e ONTAP System Manager.  Você pode atribuir funções usando os arquivos JSON fornecidos, criar usuários e funções manualmente e aplicar os privilégios mínimos necessários para contas que não sejam de administrador.
 
 .Antes de começar
 * Baixe o arquivo de Privileges ONTAP das ONTAP tools for VMware vSphere usando _\https://<ONTAPtoolsIP>:8443/virtualization/user-privileges/users_roles.zip_.  Depois de baixar o arquivo zip, você encontra dois arquivos JSON.  Use o arquivo JSON específico do ASA r2 ao configurar um sistema ASA r2.
