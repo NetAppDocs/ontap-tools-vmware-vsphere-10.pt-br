@@ -69,7 +69,22 @@ Consulte link:../manage/backup-settings.html["Editar configurações de backup"]
 . Digite *2* para selecionar o menu *Configuração do Sistema*.
 . Digite *7* para selecionar a opção *Atualizar*.
 +
+Se você estiver implementando ferramentas ONTAP em uma topologia de dois servidores vCenter — onde o dispositivo está hospedado em uma instância do vCenter e gerencia outra — você pode atribuir uma função restrita à instância do vCenter que hospeda as ferramentas ONTAP .  Você pode criar um usuário e uma função dedicados do vCenter com apenas as permissões de datastore listadas abaixo, necessárias para a implantação do modelo OVF:
+
++
+** Alocar espaço
+** Navegar pelo armazenamento de dados
+** operações de arquivo de baixo nível
+** Remover arquivo
+** Atualizar arquivos da máquina virtual
+** Atualizar metadados da máquina virtual
++
+Para a instância do vCenter que será gerenciada pelas ferramentas ONTAP , certifique-se de que a conta de usuário do vCenter tenha privilégios de administrador.
+
++
 Durante a atualização, se algum certificado de backend de armazenamento integrado não tiver entradas de Nome Alternativo de Assunto (SAN), você receberá um prompt indicando o SAN ausente.  Se você optar por prosseguir sem validar o SAN, a atualização continuará, mas isso não é recomendado devido a potenciais riscos de segurança.
+
+
 
 . Ao atualizar, as seguintes ações são executadas automaticamente:
 +
