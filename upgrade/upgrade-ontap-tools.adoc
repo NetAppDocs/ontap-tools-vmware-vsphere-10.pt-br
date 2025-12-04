@@ -68,8 +68,9 @@ Consulte link:../manage/backup-settings.html["Editar configurações de backup"]
 . Inicie sessão como utilizador de manutenção.
 . Digite *2* para selecionar o menu *Configuração do Sistema*.
 . Digite *7* para selecionar a opção *Atualizar*.
+. Forneça as credenciais do vCenter quando solicitado.  Esta é a instância do vCenter onde as ferramentas ONTAP estão hospedadas.
 +
-Se você estiver implementando ferramentas ONTAP em uma topologia de dois servidores vCenter — onde o dispositivo está hospedado em uma instância do vCenter e gerencia outra — você pode atribuir uma função restrita à instância do vCenter que hospeda as ferramentas ONTAP .  Você pode criar um usuário e uma função dedicados do vCenter com apenas as permissões de datastore listadas abaixo, necessárias para a implantação do modelo OVF:
+Se você estiver usando as ferramentas ONTAP em uma topologia de dois servidores vCenter — onde o dispositivo está hospedado em uma instância do vCenter e gerencia outra — você pode atribuir uma função restrita à instância do vCenter que hospeda as ferramentas ONTAP .  Você pode criar um usuário e uma função dedicados do vCenter com apenas as permissões de armazenamento de dados listadas abaixo:
 
 +
 ** Alocar espaço

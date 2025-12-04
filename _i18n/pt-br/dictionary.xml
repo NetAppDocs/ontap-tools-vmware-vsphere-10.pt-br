@@ -2470,13 +2470,11 @@
   <block id="073983521d52887782f4ac8fcd628e60" category="cell">Ferramentas ONTAP 10.2 em diante</block>
   <block id="ab83860ed087a089d00a21810f2a0bf7" category="cell">Proposta de valor chave</block>
   <block id="4273cb76acdc3e1de02819d037c77ad4" category="cell">Simplifique e otimize as operações do dia 0 ao dia 2 com recursos aprimorados de segurança, conformidade e automação</block>
-  <block id="9596f14660005b587cb5dfdcc52a84c9" category="cell">Suporte expandido para incluir FC para VMFS e NVMe-oF/FC, NVMe-oF/TCP somente para VMFS. Facilidade de uso para NetApp SnapMirror, configuração simples para clusters de armazenamento metro vSphere e suporte VMware Live Site Recovery de três sites</block>
   <block id="92d3c85edd0fa69062ef2c7cca594814" category="cell">Qualificação de liberação ONTAP</block>
   <block id="f41628526d2ecef49849a9d54aec2d46" category="cell">ONTAP 9.9.1 para ONTAP 9.16.1</block>
   <block id="53f67abe3ae260cacfac7adeeda90377" category="cell">ONTAP 9.12.1 a 9.15.1 para ferramentas ONTAP 10.2. ONTAP 9.14.1, 9.15.1, 9.16.0 e 9.16.1 para ferramentas ONTAP 10.3. ONTAP 9.14.1, 9.15.1, 9.16.0 e 9.16.1 para ferramentas ONTAP 10.4. ONTAP 9.16.1P3 e posterior é necessário para as ferramentas ONTAP 10.4 ao usar sistemas ASA r2.  ONTAP 9.15.1, 9.16.0, 9.16.1, 9.17.0 e 9.17.1 para ferramentas ONTAP 10.5</block>
   <block id="d67ece44624c7aa69b0f38715d1ac2fb" category="cell">Suporte à versão VMware</block>
   <block id="af0223f5c63fe0b5a6e75d3087868abd" category="cell">vSphere 7.x-8.x VMware Site Recovery Manager (SRM) 8.5 para VMware Live Site Recovery 9.0</block>
-  <block id="d72bb3e1e67692ec327a89e11558943e" category="cell">vSphere 7.x-8.x VMware Site Recovery Manager (SRM) 8.7 para VMware Live Site Recovery 9.0 *NOTA:* Nas ferramentas ONTAP 10.x, o SRM suporta sites compartilhados, permitindo maior escalabilidade e melhor desempenho.</block>
   <block id="30388d1a3ab1a01f6930553a577eb80b" category="cell">Suporte de protocolo</block>
   <block id="69e493705b5762fd000de8321c6e2f1b" category="cell">Armazenamentos de dados NFS e VMFS: NFS (v3 e v4.1), VMFS (iSCSI e FCP)</block>
   <block id="308203c1fb88371d593fd65f1a44edf5" category="cell">Armazenamento de dados NFS e VMFS: NFS (v3 e v4.1), VMFS (iSCSI/FCP/NVMe-oF)</block>
@@ -2487,8 +2485,6 @@
   <block id="0ae86707597758caa42797b966846966" category="cell">Painéis de desempenho, capacidade e conformidade do host Relatórios dinâmicos de VM e armazenamento de dados</block>
   <block id="e48d3655de549622076e6823dc5953da" category="cell">Painéis atualizados de desempenho, capacidade e conformidade do host Relatórios dinâmicos de VM e armazenamento de dados</block>
   <block id="7e7397a7b79323762c61941fc0e6b5f9" category="cell">Proteção de dados</block>
-  <block id="3e28850991da16d19121f4144528251d" category="cell">Replicação SRA para VMFS e NFS, integração SCV e interoperabilidade para backup.</block>
-  <block id="f04d5a39f552e53928ef021fc890d6c5" category="cell">Replicação SRA para proteção de três sites de datastores iSCSI VMFS e NFS v3 combinando SMAS e VMware Live Site Recovery.</block>
   <block id="f995a81db9639d1f6676a86caa7c78e5" category="cell">Suporte do provedor VASA</block>
   <block id="8fc79c740ab04e88f200d7eddd9e1931" category="cell">VASA 4.0</block>
   <block id="5638860cdd6d2160f1889c6659867484" category="cell">VASA 3.0</block>
@@ -2498,4 +2494,10 @@
   <block id="750686b04dbf67a95b96fd8a0f1efb0f" category="list-text">Remova o adaptador SRA das ferramentas ONTAP 10.4 ou 10.3 e carregue o arquivo tar do adaptador SRA 10.5.</block>
   <block id="829b3830a5408ec70946282b75f9c6b7" category="list-text">Execute o comando de instalação após carregar o arquivo tar do adaptador SRA. Em seguida, verifique novamente os adaptadores SRA para atualizar a página de adaptadores de replicação de armazenamento do VMware Site Recovery.</block>
   <block id="070f340136b38d4a8c74afe9526b62dc" category="paragraph">Siga os passos desta seção para migrar o provedor VASA das ONTAP tools for VMware vSphere 9.xx para as ONTAP tools for VMware vSphere 10.5 e atualizar o Adaptador de Replicação de Armazenamento (SRA) no dispositivo VMware Live Site Recovery.</block>
+  <block id="503418f2f3e87464c59131a65b8d6509" category="cell">Suporte expandido para incluir FC para VMFS e NVMe-oF somente para VMFS. Facilidade de uso para NetApp SnapMirror, configuração simples para clusters de armazenamento metro vSphere e suporte VMware Live Site Recovery de três sites</block>
+  <block id="cdac32b049102650f7299ebf43f574d4" category="cell">vSphere 7.x-8.x, vSphere 9.0 a partir do ONTAP tools 10.5, VMware Site Recovery Manager (SRM) 8.7 até o VMware Live Site Recovery 9.0. *NOTA:* No ONTAP tools 10.x, o SRM oferece suporte a sites compartilhados, permitindo maior escalabilidade e melhor desempenho.</block>
+  <block id="3815b1a102d580dcf982cbd303e8f23c" category="cell">Replicação SRA para VMFS e NFS.  Integração e interoperabilidade com SCV para backup.</block>
+  <block id="8aed0b79b91ac394e16a8ff5c674b844" category="cell">Replicação SRA para proteção de três sites de datastores iSCSI VMFS e NFS v3 combinando SMAS e VMware Live Site Recovery. Suporte SRA para FCP com VMFS.</block>
+  <block id="d54f7e547c9116d6f3fa5c3da63b3f4c" category="list-text">Forneça as credenciais do vCenter quando solicitado.  Esta é a instância do vCenter onde as ferramentas ONTAP estão hospedadas.</block>
+  <block id="25c2ee20081a3dbb1ba37676816c4acf" category="paragraph">Se você estiver usando as ferramentas ONTAP em uma topologia de dois servidores vCenter — onde o dispositivo está hospedado em uma instância do vCenter e gerencia outra — você pode atribuir uma função restrita à instância do vCenter que hospeda as ferramentas ONTAP .  Você pode criar um usuário e uma função dedicados do vCenter com apenas as permissões de armazenamento de dados listadas abaixo:</block>
 </blocks>
