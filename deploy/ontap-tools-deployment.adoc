@@ -89,7 +89,7 @@ Se você estiver implementando ferramentas ONTAP em uma topologia de dois servid
 +
 ** Alocar espaço
 ** Navegar pelo armazenamento de dados
-** operações de arquivo de baixo nível
+** Operações de arquivo de baixo nível
 ** Remover arquivo
 ** Atualizar arquivos da máquina virtual
 ** Atualizar metadados da máquina virtual
