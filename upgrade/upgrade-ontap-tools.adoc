@@ -70,22 +70,13 @@ Consulte link:../manage/backup-settings.html["Editar configurações de backup"]
 . Digite *7* para selecionar a opção *Atualizar*.
 . Forneça as credenciais do vCenter quando solicitado.  Esta é a instância do vCenter onde as ferramentas ONTAP estão hospedadas.
 +
-Se você estiver usando as ferramentas ONTAP em uma topologia de dois servidores vCenter — onde o dispositivo está hospedado em uma instância do vCenter e gerencia outra — você pode atribuir uma função restrita à instância do vCenter que hospeda as ferramentas ONTAP .  Você pode criar um usuário e uma função dedicados do vCenter com apenas as permissões de armazenamento de dados listadas abaixo:
+Se você estiver usando as ferramentas ONTAP em uma topologia de dois servidores vCenter — onde o dispositivo está hospedado em uma instância do vCenter e gerencia outra —, poderá atribuir uma função restrita à instância do vCenter que hospeda as ferramentas ONTAP . Você pode criar um usuário e uma função dedicados do vCenter com apenas as permissões necessárias para a implantação do modelo OVF. Para obter detalhes, consulte as funções listadas em https://review.docs.netapp.com/us-en/ontap-tools-vmware-vsphere-10_otv105-releasebranch/concepts/rbac-vcenter-use.html#vsphere-object-hierarchy["Funções incluídas nas ferramentas do ONTAP para VMware vSphere 10"].
 
-+
-** Alocar espaço
-** Navegar pelo armazenamento de dados
-** Operações de arquivo de baixo nível
-** Remover arquivo
-** Atualizar arquivos da máquina virtual
-** Atualizar metadados da máquina virtual
 +
 Para a instância do vCenter que será gerenciada pelas ferramentas ONTAP , certifique-se de que a conta de usuário do vCenter tenha privilégios de administrador.
 
 +
 Durante a atualização, se algum certificado de backend de armazenamento integrado não tiver entradas de Nome Alternativo de Assunto (SAN), você receberá um prompt indicando o SAN ausente.  Se você optar por prosseguir sem validar o SAN, a atualização continuará, mas isso não é recomendado devido a potenciais riscos de segurança.
-
-
 
 . Ao atualizar, as seguintes ações são executadas automaticamente:
 +
