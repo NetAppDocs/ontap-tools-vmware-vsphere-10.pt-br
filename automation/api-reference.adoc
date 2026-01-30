@@ -4,7 +4,7 @@ permalink: automation/api-reference.html
 keywords: ontap tools for vmware vsphere rest api reference, api reference 
 summary: As ferramentas do ONTAP para referência da API REST do VMware vSphere 10 contêm detalhes sobre todas as chamadas de API. Esta referência é útil ao desenvolver aplicações de automação. 
 ---
-= Referência de API para as ferramentas do ONTAP para a API REST do VMware vSphere 10
+= Referência da API REST das ONTAP tools
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

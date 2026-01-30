@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:  
 summary: Você deve mapear suas pastas no site protegido e no site de recuperação para permitir a comunicação entre elas. 
 ---
-= Configurar mapeamentos de pastas
+= Configure o mapeamento de pastas nas ferramentas ONTAP
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

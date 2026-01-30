@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:  
 summary: Adicionar novos hosts VMware vSphere às ONTAP tools for VMware vSphere. 
 ---
-= Adicionar novos hosts VMware vSphere
+= Adicionar hosts VMware vSphere às ONTAP tools
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

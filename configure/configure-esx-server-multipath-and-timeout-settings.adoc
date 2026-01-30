@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:  
 summary: As ferramentas do ONTAP para VMware vSphere verificam e definem as configurações de multipathing do host ESXi e as configurações de tempo limite do HBA que funcionam melhor com os sistemas de armazenamento NetApp. 
 ---
-= Configure as configurações do host ESXi
+= Configure as configurações do host ESXi nas ONTAP tools
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

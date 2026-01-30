@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:  
 summary: 'Você deve configurar os intervalos de tempo de armazenamento de acordo com as configurações recomendadas para Storage Replication Adapter (SRA) para ter um desempenho ideal em ambientes altamente dimensionados.' 
 ---
-= Configure o SRA para ambientes altamente dimensionados
+= Configure o SRA nas ONTAP tools para ambientes altamente escaláveis
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

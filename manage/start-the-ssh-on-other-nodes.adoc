@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:  
 summary: Você precisa iniciar o SSH em outros nós antes de atualizar. 
 ---
-= Inicie o SSH em outros nós
+= Inicie o SSH em outros nós do ONTAP tools
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:  
 summary: Em um cenário de proteção fan-out, o grupo de consistência é duplamente protegido com relacionamento síncrono no primeiro cluster ONTAP de destino e com relacionamento assíncrono no segundo cluster ONTAP de destino. 
 ---
-= Proteção contra dispersão
+= Proteção contra fan-out em ONTAP tools
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

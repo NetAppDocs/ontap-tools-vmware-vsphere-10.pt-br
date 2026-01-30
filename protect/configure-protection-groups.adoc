@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:  
 summary: Você deve criar grupos de proteção para proteger um grupo de máquinas virtuais no site protegido. 
 ---
-= Configurar sites protegidos e de recuperação
+= Configure sites protegidos e de recuperação nas ferramentas ONTAP
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

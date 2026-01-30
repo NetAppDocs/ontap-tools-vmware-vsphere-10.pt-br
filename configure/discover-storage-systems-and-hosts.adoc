@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:  
 summary: Quando você executa pela primeira vez as ferramentas do ONTAP para VMware vSphere em um cliente vSphere, as ferramentas do ONTAP para VMware vSphere descobrem os hosts ESXi, suas exportações de LUNs e NFS, e os sistemas de storage NetApp que possuem esses LUNs e exportações. 
 ---
-= Descubra sistemas de storage e hosts
+= Descubra sistemas de armazenamento e hosts nas ferramentas ONTAP
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

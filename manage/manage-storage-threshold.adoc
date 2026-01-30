@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:  
 summary: Você pode definir o limite para receber notificações no vCenter Server quando o volume e a capacidade agregada atingirem determinados níveis. 
 ---
-= Gerenciar limites de storage
+= Gerencie os limites de armazenamento nas ONTAP tools
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

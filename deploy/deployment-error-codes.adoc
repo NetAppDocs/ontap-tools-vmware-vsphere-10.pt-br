@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: upgrade 
 summary: Esta página descreve os códigos de erro para as operações de implantação, reinicialização e recuperação de ferramentas do ONTAP para o sistema VMware vSphere. 
 ---
-= Solucionar erros de implantação
+= Solucionar erros de implantação das ONTAP tools
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

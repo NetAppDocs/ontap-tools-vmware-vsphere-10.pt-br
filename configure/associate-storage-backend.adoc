@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:  
 summary: Associe um back-end de storage ao vCenter Server para criar um mapeamento entre o back-end de storage e a instância integrada do vCenter Server globalmente. 
 ---
-= Associar um back-end de storage a uma instância do vCenter Server
+= Associe um backend de armazenamento a uma instância do servidor vCenter nas ONTAP tools
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

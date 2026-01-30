@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:  
 summary: 'Você deve configurar os sistemas de armazenamento antes de executar o Storage Replication Adapter (SRA) para o VMware Live Site Recovery.' 
 ---
-= Configurar o SRA para ambientes SAN e nas
+= Configure o SRA em ONTAP tools for VMware vSphere para ambientes SAN e NAS
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

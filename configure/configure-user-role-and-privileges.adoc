@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: user roles 
 summary: Configure funções e privilégios de usuário para backends de armazenamento com o arquivo JSON das ONTAP tools for VMware vSphere e ONTAP System Manager. 
 ---
-= Configurar as funções de usuário do ONTAP e o Privileges
+= Configure funções e privilégios de usuário do ONTAP para ONTAP tools
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

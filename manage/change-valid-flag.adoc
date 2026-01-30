@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:  
 summary: Você pode alterar o sinalizador de validação do certificado usando o console de manutenção. 
 ---
-= Alterar sinalizador de validação de certificado
+= Alterar o indicador de validação do certificado nas ONTAP tools
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

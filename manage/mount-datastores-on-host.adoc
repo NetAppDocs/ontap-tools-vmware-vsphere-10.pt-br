@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:  
 summary: A montagem de um datastore fornece acesso ao storage a hosts adicionais. Você pode montar o datastore nos hosts adicionais depois de adicionar os hosts ao seu ambiente VMware. 
 ---
-= Montar armazenamentos de dados NFS e VMFS
+= Montar datastores NFS e VMFS nas ONTAP tools
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

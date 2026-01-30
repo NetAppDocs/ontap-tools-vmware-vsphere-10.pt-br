@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:  
 summary: Você deve estar ciente de algumas das considerações ao migrar máquinas virtuais existentes em seu data center. 
 ---
-= Considerações para migrar ou clonar máquinas virtuais
+= Considerações sobre migração e clonagem de máquinas virtuais para ONTAP tools
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

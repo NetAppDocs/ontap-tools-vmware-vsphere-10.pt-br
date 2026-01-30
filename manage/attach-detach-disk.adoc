@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:  
 summary: Anexe um disco de dados a uma máquina virtual para expandir a capacidade de armazenamento. 
 ---
-= Anexe ou separe um disco de dados de uma máquina virtual
+= Anexar ou desanexar um disco de dados de uma VM nas ONTAP tools
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

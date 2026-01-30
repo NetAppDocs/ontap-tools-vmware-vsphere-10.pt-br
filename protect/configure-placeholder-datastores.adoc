@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:  
 summary: 'Configure um armazenamento de dados de espaço reservado para reservar espaço no inventário do vCenter no site de recuperação para máquinas virtuais (VMs) protegidas.  Os armazenamentos de dados de espaço reservado exigem capacidade mínima, porque as VMs de espaço reservado são pequenas e normalmente usam apenas algumas centenas de quilobytes.' 
 ---
-= Configurar datastores de espaço reservado
+= Configure armazenamentos de dados de espaço reservado nas ONTAP tools
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

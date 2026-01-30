@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:  
 summary: Quando você cria um armazenamento de dados no nível do cluster do host, as ferramentas ONTAP o montam em todos os hosts de destino e habilitam a ação somente se você tiver os privilégios necessários. 
 ---
-= Crie um datastore
+= Criar um datastore nas ONTAP tools
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

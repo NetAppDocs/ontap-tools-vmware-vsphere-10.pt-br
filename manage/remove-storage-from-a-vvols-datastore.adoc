@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: Remove vVol datastore 
 summary: A ação Excluir datastore exclui o datastore quando não há vVols no datastore selecionado. 
 ---
-= Diminua o armazenamento de dados do vVols
+= Reduzir um datastore vVols nas ONTAP tools
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

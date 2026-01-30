@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: vVols datastore,delete vVol 
 summary: A ação Excluir datastore exclui o datastore. No caso do armazenamento de dados NFS ou VMFS, uma caixa de diálogo aparece com a lista de VMs que estão usando o armazenamento de dados. 
 ---
-= Excluir datastores
+= Excluir datastores nas ONTAP tools
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

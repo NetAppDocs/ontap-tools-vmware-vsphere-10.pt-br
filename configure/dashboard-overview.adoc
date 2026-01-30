@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: user roles 
 summary: Quando você seleciona o ícone de plug-in das ferramentas do ONTAP para VMware vSphere na seção de atalhos no cliente vCenter, a interface do usuário navega para a página de visão geral. Essa página funciona como o painel que fornece o resumo das ferramentas do ONTAP para o plug-in do VMware vSphere. 
 ---
-= Visão geral das ferramentas do ONTAP para o painel do VMware vSphere
+= Saiba mais sobre o painel de ferramentas do ONTAP
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

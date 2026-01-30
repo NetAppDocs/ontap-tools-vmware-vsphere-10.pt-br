@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:  
 summary: Você pode alterar a senha do administrador usando o Gerenciador de ferramentas do ONTAP. 
 ---
-= Alterar as ferramentas do ONTAP para a configuração do VMware vSphere
+= Alterar as configurações do appliance ONTAP tools
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

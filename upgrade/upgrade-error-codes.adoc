@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: upgrade 
 summary: Esta página descreve os códigos de erro para a operação de atualização das ferramentas do ONTAP para o sistema VMware vSphere. 
 ---
-= Atualizar códigos de erro
+= Códigos de erro de atualização das ONTAP tools
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

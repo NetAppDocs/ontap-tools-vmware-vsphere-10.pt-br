@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:  
 summary: Você pode gerenciar suas configurações de aplicativo, sistema e rede usando o console de manutenção das ferramentas do ONTAP. Pode alterar a palavra-passe do administrador e a palavra-passe de manutenção. Você também pode gerar pacotes de suporte, definir diferentes níveis de log, exibir e gerenciar configurações TLS e iniciar diagnósticos remotos. 
 ---
-= Visão geral das ferramentas do ONTAP para o console de manutenção do VMware vSphere
+= Saiba mais sobre o console de manutenção das ONTAP tools
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

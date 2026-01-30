@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: role based access control, rbac, rbac components, learn about rbac 
 summary: 'O controle de acesso baseado em função (RBAC) é uma estrutura de segurança para controlar o acesso a recursos dentro de uma organização. O RBAC simplifica a administração definindo funções com níveis específicos de autoridade para executar ações, em vez de atribuir autorização a usuários individuais. As funções definidas são atribuídas aos usuários, o que ajuda a reduzir o risco de erros e simplifica o gerenciamento do controle de acesso em toda a organização.' 
 ---
-= Saiba mais sobre as ferramentas do ONTAP para VMware vSphere 10 RBAC
+= Saiba mais sobre as ferramentas RBAC do ONTAP
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

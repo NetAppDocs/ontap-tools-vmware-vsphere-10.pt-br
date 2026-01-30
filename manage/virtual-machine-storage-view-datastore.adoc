@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: Remove vVol datastore 
 summary: A visualização de armazenamento mostra a lista de vVols criados pela máquina virtual. 
 ---
-= Visualização de armazenamento de máquina virtual
+= Visualização do armazenamento da máquina virtual nas ferramentas ONTAP
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

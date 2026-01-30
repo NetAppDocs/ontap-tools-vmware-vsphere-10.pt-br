@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:  
 summary: 'Você pode configurar o Storage Replication Adapter (SRA) usando o assistente Array Manager do VMware Live Site Recovery para habilitar interações entre o VMware Live Site Recovery e máquinas virtuais de armazenamento (SVMs).' 
 ---
-= Configure o SRA usando o gerenciador de array
+= Configure o SRA usando o gerenciador de arrays nas ferramentas ONTAP
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

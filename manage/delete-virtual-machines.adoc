@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:  
 summary: Siga as etapas nesta seção para executar a limpeza VASA. 
 ---
-= Limpeza VASA
+= Limpe as configurações do VASA nas ferramentas ONTAP
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

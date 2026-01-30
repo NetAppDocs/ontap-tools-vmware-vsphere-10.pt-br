@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: ontap tools manager, managerui 
 summary: O Gerenciador de ferramentas do ONTAP fornece mais controle e poder às ferramentas do ONTAP para o administrador do VMware vSphere, o que ajuda no gerenciamento geral dos dispositivos, locatários e back-ends de storage. 
 ---
-= Interface de usuário do Gerenciador de ferramentas do ONTAP
+= Saiba mais sobre a interface de usuário do ONTAP tools Manager
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

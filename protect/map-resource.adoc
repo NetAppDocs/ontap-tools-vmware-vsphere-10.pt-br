@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:  
 summary: Você deve mapear seus recursos no site protegido e no site de recuperação para que as máquinas virtuais sejam configuradas para fazer failover em um grupo de hosts ou outro. 
 ---
-= Configurar mapeamentos de recursos
+= Configure os mapeamentos de recursos nas ONTAP tools
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

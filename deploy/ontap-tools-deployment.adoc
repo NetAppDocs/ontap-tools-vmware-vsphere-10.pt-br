@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:  
 summary: O dispositivo ONTAP tools for VMware vSphere é implantado como um nó único de pequeno porte com serviços principais para dar suporte a armazenamentos de dados NFS e VMFS. 
 ---
-= Implantar as ferramentas do ONTAP para o VMware vSphere
+= Implantar ONTAP tools
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

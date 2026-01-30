@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: ontap rbac, use ontap rbac 
 summary: Há vários aspectos das ferramentas do ONTAP para a implementação do RBAC do VMware vSphere 10 com o ONTAP que você deve considerar antes de usá-lo em um ambiente de produção. 
 ---
-= Use o RBAC do ONTAP com as ferramentas do ONTAP para VMware vSphere 10
+= Considerações sobre RBAC do ONTAP para ONTAP tools
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

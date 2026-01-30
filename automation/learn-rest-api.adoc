@@ -4,7 +4,7 @@ permalink: automation/learn-rest-api.html
 keywords: ontap tools vmware vsphere rest api 
 summary: As ferramentas do ONTAP para VMware vSphere 10 são um conjunto de ferramentas para o gerenciamento do ciclo de vida da máquina virtual. Ele inclui uma API REST robusta que você pode usar como parte de seus processos de automação. 
 ---
-= Saiba mais sobre as ferramentas do ONTAP para a API REST do VMware vSphere 10
+= Saiba mais sobre a API REST do ONTAP tools
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

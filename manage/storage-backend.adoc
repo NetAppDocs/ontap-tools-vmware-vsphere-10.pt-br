@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:  
 summary: Os backends de armazenamento são sistemas que os hosts ESXi usam para armazenamento de dados. 
 ---
-= Gerenciar backends de armazenamento
+= Gerencie back-ends de armazenamento nas ONTAP tools
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

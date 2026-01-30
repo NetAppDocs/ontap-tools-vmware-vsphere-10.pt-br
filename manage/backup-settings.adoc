@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:  
 summary: Digite os detalhes do servidor NTP para sincronizar os relógios de hora do utilitário ONTAP Tools. 
 ---
-= Editar configurações de backup
+= Editar configurações de backup das ferramentas ONTAP
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
