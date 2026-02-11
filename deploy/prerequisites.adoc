@@ -53,7 +53,7 @@ NOTE: Quando o backup está habilitado, cada cluster de ferramentas do ONTAP pre
 | Storage, host e aplicações | Requisitos de versão 
 
 
-| ONTAP | 9.15.1, 9.16.0, 9.16.1, 9.17.0 e 9.17.1 
+| ONTAP | 9.15.1, 9.16.1 e 9.17.0 
 
 
 | As ferramentas do ONTAP suportaram os hosts ESXi | 7.0.3 em diante 

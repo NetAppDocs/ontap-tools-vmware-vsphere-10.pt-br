@@ -47,4 +47,8 @@ O processo de atualização e migração de versões anteriores do ONTAP tools f
 
 == Plataformas ONTAP e versões do vCenter Server suportadas
 
+ONTAP tools for VMware vSphere 10.5 P1 suporta configurações de Alta Disponibilidade (HA) do vCenter para os componentes SRA e SnapMirror active sync. vVols não é suportado nessa configuração. Durante um failover de HA, o vCenter pode ficar indisponível por vários minutos. Em ambientes grandes ou se ocorrer um erro, os tempos de failover podem exceder 15 minutos.
+
+Para obter mais informações, consulte o https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere/9-0/vsphere-availability/vcenter-server-high-availability.html["Documentação de alta disponibilidade do vCenter"^]. Para perguntas sobre vCenter HA, entre em contato com https://support.broadcom.com/["Suporte da Broadcom"^].
+
 Para obter os detalhes mais recentes sobre compatibilidade de versões, consulte https://imt.netapp.com/matrix/imt.jsp?components=105475;&solution=1777&isHWU&src=IMT["Ferramenta de Matriz de interoperabilidade do NetApp"^] .

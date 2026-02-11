@@ -1964,7 +1964,6 @@
   <block id="a6db38ab6788244dd400202a4ac077c9" category="cell">Endereço IPv4 para o nó de gerenciamento de ferramentas ONTAP .  É um endereço IPv4 exclusivo para a interface de gerenciamento de nós na rede de gerenciamento.</block>
   <block id="57a162b82ea942d344ca18a6563ae0ad" category="paragraph">Certifique-se de que as portas de firewall necessárias estejam abertas para todos os endereços IP relevantes.  As ferramentas ONTAP exigem acesso ao LIF pela porta 443.  Para obter uma lista completa das portas necessárias, consulte a seção de requisitos de porta em<block ref="1a93487a9f020b7c05d37b4998f77757" category="inline-link-macro-rx"></block> .</block>
   <block id="842fbe95dfc795462ae01e0da46b578d" category="list-text">Se você estiver usando o Fibre Channel (FC) para conectividade de armazenamento, configure o zoneamento em seus switches FC para conectar os hosts ESXi com os LIFs FC do SVM.<block ref="56d435991bafd2bcca9f59739e2992e7" category="inline-link-rx"></block></block>
-  <block id="3238b34a31c90c89668904ec5be46d4c" category="cell">9.15.1, 9.16.0, 9.16.1, 9.17.0 e 9.17.1</block>
   <block id="10b3adf4529649ecb009c579e7713c8e" category="cell">10,5</block>
   <block id="40be5cc49cd5c75f73a6fb947ad09668" category="admonition">Certifique-se de que todos os nós das ferramentas ONTAP residam na mesma sub-rede para manter uma comunicação ininterrupta entre si.</block>
   <block id="43735eab3ba96d50a6b739b518e1e76c" category="paragraph">Inicialmente, você implantará ONTAP tools for VMware vSphere como uma configuração de nó único de pequeno porte que fornece serviços essenciais para dar suporte a armazenamentos de dados NFS e VMFS.  Para expandir sua configuração para contêineres adicionais por serviço, resiliência aprimorada ou usar datastores vVols e alta disponibilidade (HA), conclua este fluxo de trabalho primeiro e depois prossiga com as etapas de expansão. Para mais informações, consulte o <block ref="9ef467ebb813ac9bfc1579e0ba7d9e65" category="inline-link-macro-rx"></block> .</block>
@@ -2444,7 +2443,6 @@
   <block id="4273cb76acdc3e1de02819d037c77ad4" category="cell">Simplifique e otimize as operações do dia 0 ao dia 2 com recursos aprimorados de segurança, conformidade e automação</block>
   <block id="92d3c85edd0fa69062ef2c7cca594814" category="cell">Qualificação de liberação ONTAP</block>
   <block id="f41628526d2ecef49849a9d54aec2d46" category="cell">ONTAP 9.9.1 para ONTAP 9.16.1</block>
-  <block id="53f67abe3ae260cacfac7adeeda90377" category="cell">ONTAP 9.12.1 a 9.15.1 para ferramentas ONTAP 10.2. ONTAP 9.14.1, 9.15.1, 9.16.0 e 9.16.1 para ferramentas ONTAP 10.3. ONTAP 9.14.1, 9.15.1, 9.16.0 e 9.16.1 para ferramentas ONTAP 10.4. ONTAP 9.16.1P3 e posterior é necessário para as ferramentas ONTAP 10.4 ao usar sistemas ASA r2.  ONTAP 9.15.1, 9.16.0, 9.16.1, 9.17.0 e 9.17.1 para ferramentas ONTAP 10.5</block>
   <block id="d67ece44624c7aa69b0f38715d1ac2fb" category="cell">Suporte à versão VMware</block>
   <block id="af0223f5c63fe0b5a6e75d3087868abd" category="cell">vSphere 7.x-8.x VMware Site Recovery Manager (SRM) 8.5 para VMware Live Site Recovery 9.0</block>
   <block id="30388d1a3ab1a01f6930553a577eb80b" category="cell">Suporte de protocolo</block>
@@ -2591,8 +2589,6 @@
   <block id="587025fcd9783b8dad6642bf4ea9050a" category="doc">Como o RBAC do vCenter Server funciona com as ONTAP tools</block>
   <block id="b690b3fbfbdc8910bd0b4b68feb15af2" category="doc">vCenter considerações sobre RBAC do servidor para ONTAP tools</block>
   <block id="eaeddcc9311544bd9a0756a835a12cea" category="doc">Adicionar um backend de armazenamento às ferramentas ONTAP</block>
-  <block id="ff0b8d98acac2c2dec8cc8937cbbe057" category="paragraph">Ao registrar uma instância de vCenter Server com ONTAP tools Manager, certifique-se de que o certificado do vCenter Server inclua uma extensão válida de Subject Alternative Name (SAN). A extensão SAN deve conter entradas de DNS e de endereço IP. Por exemplo:</block>
-  <block id="b6a9b93d1e2b7bdb6d36311aa19ed1cf" category="paragraph">Se o certificado do servidor vCenter não incluir uma extensão SAN, ou se a extensão SAN não contiver os valores corretos de DNS ou endereço IP, as operações das ONTAP tools poderão falhar devido a erros de validação do certificado.</block>
   <block id="152eb457072cc3f0d1daeb3318bbc7f4" category="doc">Associe um backend de armazenamento a uma instância do servidor vCenter nas ONTAP tools</block>
   <block id="eb92fe0cb6bfddb65b18107ce1bfc6df" category="doc">Configure as configurações do host ESXi nas ONTAP tools</block>
   <block id="362f310edd36afeeeec5d3c7f14cefac" category="doc">Configure o acesso à rede nas ONTAP tools</block>
@@ -2680,4 +2676,22 @@
   <block id="c928bb04121a183be07f4eafbb06b783" category="doc">Verifique os sistemas de armazenamento replicados nas ferramentas ONTAP</block>
   <block id="9d2c893e6932222a6e9063b1f628bae1" category="doc">Notas de lançamento para ONTAP tools</block>
   <block id="c219ac41703e11b6d5430626757ee4d1" category="doc">Códigos de erro de atualização das ONTAP tools</block>
+  <block id="7387e2cfe8bac61aeada7d8df94fe9f7" category="list-text">Certifique-se de que o certificado do servidor vCenter inclua uma extensão de Nome Alternativo do Assunto (SAN) válida, com entradas de DNS e endereço IP. Por exemplo:</block>
+  <block id="077c9bea99c626318ae6e1c521fb7c41" category="paragraph">Se o certificado não incluir uma extensão SAN, ou se a extensão SAN não contiver os valores corretos de DNS ou endereço IP, as operações das ONTAP tools poderão falhar devido a erros de validação do certificado.</block>
+  <block id="6f8b3b7e42dadd9b7806e6e98d7d0a77" category="list-text">O Identificador de Rede Primário (PNID) do vCenter Server deve estar incluído nos detalhes do SAN. O PNID e o nome DNS devem ser idênticos e resolvíveis no DNS.</block>
+  <block id="39e421f0221e3f55b7e77a0110fce9e0" category="list-text">Recomenda-se implantar o vCenter Server usando seu domínio totalmente qualificado (FQDN) e garantir que o SAN no certificado inclua DNS Name=machine_FQDN para compatibilidade e suporte ideais.</block>
+  <block id="dbabfcb48125f6c3a069313029fdada8" category="list-text">Para obter mais informações, consulte a documentação VMware:</block>
+  <block id="381b5a0822c9882ced35624a3338ea81" category="inline-link">vSphere Requisitos de Certificação para Diferentes Caminhos de Solução</block>
+  <block id="38e7ce10f91b93ef8eecb43d98853cb3" category="list-text"><block ref="38e7ce10f91b93ef8eecb43d98853cb3" category="inline-link-rx"></block></block>
+  <block id="bab39c0d7f700e0dbd68e4761a2c9ac4" category="inline-link">Substituir vCenter certificado SSL da máquina Certificado assinado por autoridade certificadora personalizada</block>
+  <block id="81c3c30e39dc6db9cf179ead4dc53c00" category="list-text"><block ref="81c3c30e39dc6db9cf179ead4dc53c00" category="inline-link-rx"></block></block>
+  <block id="4ce004ede8d7c5a94bcc602e81d0dd46" category="inline-link">Erro: o campo Nome Alternativo do Assunto (SAN) não contém o PNID. Forneça um certificado válido</block>
+  <block id="e124d9a97cf59877517198f1cf0f104c" category="list-text"><block ref="e124d9a97cf59877517198f1cf0f104c" category="inline-link-rx"></block></block>
+  <block id="b4a7fb91e417866bbf89b862eaf99003" category="paragraph">Caso o FQDN não esteja disponível, você pode definir o PNID para o endereço IP e incluir o endereço IP no SAN. No entanto, isso não é recomendado pela VMware.</block>
+  <block id="71593980c484b19aefec169af936ae1e" category="cell">9.15.1, 9.16.1 e 9.17.0</block>
+  <block id="16ad6f9ee375f3dcd68aa34d3ccd374c" category="cell">ONTAP 9.12.1 a 9.15.1 para ONTAP tools 10.2. ONTAP 9.14.1, 9.15.1, 9.16.0 e 9.16.1 para ONTAP tools 10.3. ONTAP 9.14.1, 9.15.1, 9.16.0 e 9.16.1 para ONTAP tools 10.4. ONTAP 9.16.1P3 e versões posteriores são necessários para ONTAP tools 10.4 ao usar sistemas ASA r2. ONTAP 9.15.1, 9.16.1 e 9.17.0 para ONTAP tools 10.5</block>
+  <block id="c9ea6c5f05454d915a89126e34375938" category="paragraph">ONTAP tools for VMware vSphere 10.5 P1 suporta configurações de Alta Disponibilidade (HA) do vCenter para os componentes SRA e SnapMirror active sync. vVols não é suportado nessa configuração. Durante um failover de HA, o vCenter pode ficar indisponível por vários minutos. Em ambientes grandes ou se ocorrer um erro, os tempos de failover podem exceder 15 minutos.</block>
+  <block id="a51a2d315454dc257743fd165c6ec1e1" category="inline-link">Documentação de alta disponibilidade do vCenter</block>
+  <block id="b2275014ec45c2e387f49db63d8ae0de" category="inline-link">Suporte da Broadcom</block>
+  <block id="7617b6be9a4dd36133ef22cea59d80e2" category="paragraph">Para obter mais informações, consulte o<block ref="debb52d5bcbe0ce63e3d926c803fdf23" category="inline-link-rx"></block>. Para perguntas sobre vCenter HA, entre em contato com<block ref="2ce3402d69457b08a3211a429ae43e9d" category="inline-link-rx"></block>.</block>
 </blocks>
