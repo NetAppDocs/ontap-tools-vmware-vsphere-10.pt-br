@@ -523,7 +523,6 @@
   <block id="a62fbfbe1fa2fbcd3ff1ab71d9f0cf7a" category="paragraph">*Curl exemplo*</block>
   <block id="654a9186fe9a47c1397903b9228f2c36" category="paragraph">Corpo de solicitação para outra migração de liberação:</block>
   <block id="18009c9216d59118fb460184e2ec0a3d" category="paragraph">* Exemplo de saída JSON*</block>
-  <block id="492fdcd87814cf3c979a27709fc29350" category="paragraph">Um objeto de tarefa é retornado. Você deve salvar o identificador do trabalho para usá-lo na próxima etapa.</block>
   <block id="ec874bf582309d24e5c0f1f38429fb73" category="inline-link-macro">Registre o provedor VASA no vCenter Server</block>
   <block id="63bc9a3997d66d835d9f3ec29451407d" category="cell">PATCH</block>
   <block id="0b3582622e579cb352e246015d6ca171" category="summary">Você pode configurar o Storage Replication Adapter (SRA) usando o assistente Array Manager do VMware Live Site Recovery para habilitar interações entre o VMware Live Site Recovery e máquinas virtuais de armazenamento (SVMs).</block>
@@ -974,7 +973,6 @@
   <block id="90182eba2ac7240af5b5cb5ba83a8c1b" category="sidebar">Saiba mais sobre a API REST</block>
   <block id="d58b759501469292f5d0464d265c376c" category="sidebar">Implementação REST</block>
   <block id="eaff07db9f9bd4c788b59cf5ac2e6f5e" category="paragraph"><block ref="eaff07db9f9bd4c788b59cf5ac2e6f5e" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="f663ec26fcc5dbf0e82a2df73c30a3e3" category="paragraph">O corpo da solicitação está vazio para operação de patch.</block>
   <block id="c1da67abb88e41cb6c66ffcb6aa791c1" category="list-text">No vCenter Server, abra um console para as ferramentas do ONTAP.</block>
   <block id="c8c29d2a26286541354fc8e377f3b6ce" category="list-text">Passar de uma configuração que não seja HA para uma configuração HA</block>
   <block id="9c1b85c4b3c7f912b4954489e7d9f1ad" category="list-text">Como exemplo de uma chamada de API individual, role para baixo até a categoria *vCenters* e selecione *GET* ao lado do endpoint<block ref="22d8515b1a0806aac1067186e4429b4c" prefix=" " category="inline-code"></block></block>
@@ -1958,10 +1956,8 @@
   <block id="e665d4f634eb279e3d3649d89dce4f3e" category="paragraph">As ONTAP tools for VMware vSphere são implantadas inicialmente como uma configuração não HA.  Para escalar para implantação de alta disponibilidade, você precisará habilitar o hot plug-in de CPU e de memória. Você pode executar esta etapa como parte do processo de implantação ou editar as configurações da VM após a implantação.</block>
   <block id="76ecd43e2d7d963469ed779109b6621d" category="list-text">Vá para o pool de recursos, cluster ou host onde você pretende implantar o OVA.</block>
   <block id="a85cd355d0191e9ca39647db304e9886" category="list-text">Acesse as ONTAP tools for VMware vSphere em *Inventários* e selecione a opção *Editar configurações*.</block>
-  <block id="7bc1f449f84cbd0274b17756a6c88276" category="cell">Endereço IP para o aplicativo de ferramentas ONTAP .  Este é o endereço IP para acessar a interface web das ferramentas ONTAP (balanceador de carga)</block>
   <block id="0a975d248a4d2c7d423087028109208e" category="cell">Ferramentas ONTAP endereço IP virtual para comunicação interna.  Este endereço IP é usado para comunicação interna em uma configuração com várias instâncias de ferramentas ONTAP .  Este endereço IP não deve ser o mesmo que o endereço IP do aplicativo de ferramentas ONTAP . (O Plano de Controle do Kubernetes)</block>
   <block id="1cd1ce31df98698494f685f0c097277b" category="cell">Nome do host DNS para o nó de gerenciamento de ferramentas ONTAP</block>
-  <block id="a6db38ab6788244dd400202a4ac077c9" category="cell">Endereço IPv4 para o nó de gerenciamento de ferramentas ONTAP .  É um endereço IPv4 exclusivo para a interface de gerenciamento de nós na rede de gerenciamento.</block>
   <block id="57a162b82ea942d344ca18a6563ae0ad" category="paragraph">Certifique-se de que as portas de firewall necessárias estejam abertas para todos os endereços IP relevantes.  As ferramentas ONTAP exigem acesso ao LIF pela porta 443.  Para obter uma lista completa das portas necessárias, consulte a seção de requisitos de porta em<block ref="1a93487a9f020b7c05d37b4998f77757" category="inline-link-macro-rx"></block> .</block>
   <block id="842fbe95dfc795462ae01e0da46b578d" category="list-text">Se você estiver usando o Fibre Channel (FC) para conectividade de armazenamento, configure o zoneamento em seus switches FC para conectar os hosts ESXi com os LIFs FC do SVM.<block ref="56d435991bafd2bcca9f59739e2992e7" category="inline-link-rx"></block></block>
   <block id="10b3adf4529649ecb009c579e7713c8e" category="cell">10,5</block>
@@ -2227,7 +2223,6 @@
   <block id="fa885aacf6740d8be756318202aaeea3" category="paragraph">Depois de executar a descoberta do armazenamento de dados nas ferramentas ONTAP , as ferramentas ONTAP convertem o igroup plano em uma estrutura aninhada. As ferramentas ONTAP então gerenciam o igroup, renomeando-o com o prefixo 'otv_'. O LUN permanece mapeado para o mesmo igroup durante todo esse processo.</block>
   <block id="6e63f9b05e0f51c3646052747b709edf" category="paragraph">Você pode criar um armazenamento de dados nas ferramentas ONTAP usando um igroup que foi criado primeiro nos sistemas ONTAP , depois que as ferramentas ONTAP o gerenciam. Esses igroups aparecem na lista suspensa de nomes de grupos iniciadores personalizados. O novo LUN para o armazenamento de dados é então mapeado para o igroup filho normalizado correspondente, como "otv_NativeIgroup1".</block>
   <block id="cf78d06b764932bff9c08da08c607da8" category="paragraph">O sistema retorna um objeto de trabalho.  Salve o identificador do trabalho para usá-lo na próxima etapa.</block>
-  <block id="e79f49713689b554500076c29f3b0f0d" category="paragraph">Após a conclusão do trabalho, revise o relatório de migração na resposta do trabalho.</block>
   <block id="8c72adfd7c929e7f36ec5083f128105b" category="list-text">Os datastores NFS e VMFS migrados aparecem nas ONTAP tools for VMware vSphere 10.5 após o trabalho de descoberta do datastore, que pode levar até 30 minutos.  Verifique a visibilidade deles na página de visão geral.</block>
   <block id="03785cc80d260849e9ee53ea9ad304bf" category="list-text">Aguarde a conclusão da *Descoberta* e o sistema atualizará os certificados automaticamente em todos os hosts.</block>
   <block id="32684456982f6de7f06ceb0a0a814307" category="list-text">Aguarde antes de iniciar as operações do armazenamento de dados e da máquina virtual.  O tempo de espera depende do número de hosts, armazenamentos de dados e máquinas virtuais.  Se você não esperar, poderá ver falhas ocasionais.</block>
@@ -2424,14 +2419,11 @@
   <block id="8d5176b0f7c64423a1410ec460a2fbcd" category="paragraph">Copie e salve o token de acesso retornado na resposta.</block>
   <block id="7b7cd5f7fba7393568ce0f3e6a816e91" category="list-text">Adicione as ONTAP tools for VMware vSphere ao vCenter Server.</block>
   <block id="2b0f4f36b8001dce4b825bc0fecf2e17" category="list-text">Registre o provedor VASA com as ONTAP tools for VMware vSphere. Para obter instruções, consulte<block ref="c283b8bc021fee7e6c856fce39783a46" category="inline-link-macro-rx"></block> .</block>
-  <block id="1a464e16899d07e725803f6174f5e1fb" category="list-text">Após o registro, verifique o nome do provedor VASA e seu status no vSphere Client em *Provedores de armazenamento*.  O provedor VASA deverá aparecer online, confirmando o registro bem-sucedido.</block>
   <block id="7449849ed5e181a25bd151a90c66a6d6" category="list-text">Pare as ONTAP tools for VMware vSphere 9.10/9.11/9.12/9.13 VASA seguindo estes passos:</block>
   <block id="3076f368d1fb701b7d40be8f8c0f7d05" category="list-text">Nas ferramentas ONTAP 9.x, abra o console da web.</block>
   <block id="6979cadafb4e3b67b5a0bda70225f50f" category="list-text">Acesse o console de manutenção.</block>
   <block id="b94aaa9c1bb758125ee360d9695799cf" category="list-text">Digitar<block ref="c4ca4238a0b923820dcc509a6f75849b" prefix=" " category="inline-code"></block> Para selecionar o menu *Configuração do Aplicativo*.</block>
   <block id="64b8cf9b632898bad5081763af1fbebd" category="list-text">Digitar<block ref="e4da3b7fbbce2345d7772b0674a318d5" prefix=" " category="inline-code"></block> interromper os serviços do provedor VASA e do SRA.</block>
-  <block id="ccba785a416529522c083f4606900605" category="list-text">No vSphere Client, navegue até *Inventário* &gt; *Provedores de armazenamento*.</block>
-  <block id="836dd342f378a7b29dcbef5f07ab1b95" category="list-text">Selecione o provedor VASA do ONTAP tools 9.x no backend de armazenamento e clique em *Remover*.</block>
   <block id="f191ddd9150b5ab75986a7a94e92817b" category="paragraph">Utilize o seguinte URI no Swagger:</block>
   <block id="7cf21d459cdbb9c2a1e4864da9f56b5a" category="summary">Saiba mais sobre a comparação de recursos das ONTAP tools for VMware vSphere 9 e ONTAP tools for VMware vSphere 10</block>
   <block id="49d4ace549bb255068ca23c9172eab10" category="doc">Comparação de recursos das ONTAP tools for VMware vSphere 9 e 10</block>
@@ -2694,4 +2686,14 @@
   <block id="a51a2d315454dc257743fd165c6ec1e1" category="inline-link">Documentação de alta disponibilidade do vCenter</block>
   <block id="b2275014ec45c2e387f49db63d8ae0de" category="inline-link">Suporte da Broadcom</block>
   <block id="7617b6be9a4dd36133ef22cea59d80e2" category="paragraph">Para obter mais informações, consulte o<block ref="debb52d5bcbe0ce63e3d926c803fdf23" category="inline-link-rx"></block>. Para perguntas sobre vCenter HA, entre em contato com<block ref="2ce3402d69457b08a3211a429ae43e9d" category="inline-link-rx"></block>.</block>
+  <block id="015201c8d96a0d1f03859660b14c2930" category="cell">Endereço IP para o aplicativo ONTAP tools. Este é o endereço IP para acessar a interface web do ONTAP tools manager (balanceador de carga) em<block ref="a06d973ff78e33873c1cb100862ab7a3" prefix=" " category="inline-code"></block></block>
+  <block id="818a93ed2e98a0dc1f094445fc5de89a" category="cell">Endereço IPv4 para o nó de gerenciamento das ferramentas ONTAP. Trata-se de um endereço IPv4 exclusivo para a interface de gerenciamento na rede de gerenciamento. Isso é usado para conectar-se ao appliance das ferramentas ONTAP para acesso remoto de diagnóstico via SSH.</block>
+  <block id="608710d42ef8659d2d9da02848081770" category="paragraph">Utilize o valor 'id' retornado pela tarefa de migração na etapa anterior. Após a conclusão da tarefa, revise o relatório de migração na resposta da tarefa.</block>
+  <block id="29a7e4682b4c588fb3d5a8c40bdd6124" category="list-text">Verifique o registro do VASA Provider:</block>
+  <block id="f663c84551a178949a68d10f2492f5c6" category="list-text">No vSphere Client, navegue até o vCenter Server.</block>
+  <block id="e4157e6ef58fbdd1f4edfff7edfb100a" category="list-text">Selecione *Configurar* &gt; *Provedores de armazenamento*.</block>
+  <block id="36455669f9fbf01f7cd2ef94a12ea762" category="list-text">Confirme que o VASA Provider registrado na etapa anterior aparece online.</block>
+  <block id="9c3fd4feed3b70ad58582159360ae925" category="list-text">No vSphere Client, navegue até o vCenter Server e selecione *Configurar* &gt; *Provedores de armazenamento*.</block>
+  <block id="6df01bde6e0e3398aefe5b78073a6a20" category="list-text">Selecione o VASA Provider offline para ONTAP tools 9.x e selecione *Remover*.</block>
+  <block id="5f3d684c32f3b3125b0b7b6f2b37b3f0" category="admonition">Utilize o valor 'migration_id' retornado na Etapa 7 como &lt;migration_id&gt; na chamada da API PATCH. O corpo da requisição está vazio para a operação de patch.</block>
 </blocks>

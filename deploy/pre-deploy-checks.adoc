@@ -60,7 +60,7 @@ Use a planilha a seguir para reunir as informações necessárias para as ferram
 | Requisito | O seu valor 
 
 
-| Endereço IP para o aplicativo de ferramentas ONTAP .  Este é o endereço IP para acessar a interface web das ferramentas ONTAP (balanceador de carga) |  
+| Endereço IP para o aplicativo ONTAP tools. Este é o endereço IP para acessar a interface web do ONTAP tools manager (balanceador de carga) em `\https://<ip>:8443/virtualization/ui/` |  
 
 
 | Ferramentas ONTAP endereço IP virtual para comunicação interna.  Este endereço IP é usado para comunicação interna em uma configuração com várias instâncias de ferramentas ONTAP .  Este endereço IP não deve ser o mesmo que o endereço IP do aplicativo de ferramentas ONTAP . (O Plano de Controle do Kubernetes) |  
@@ -78,7 +78,7 @@ Use a planilha a seguir para reunir as informações necessárias para as ferram
 | Domínio de pesquisa DNS |  
 
 
-| Endereço IPv4 para o nó de gerenciamento de ferramentas ONTAP .  É um endereço IPv4 exclusivo para a interface de gerenciamento de nós na rede de gerenciamento. |  
+| Endereço IPv4 para o nó de gerenciamento das ferramentas ONTAP. Trata-se de um endereço IPv4 exclusivo para a interface de gerenciamento na rede de gerenciamento. Isso é usado para conectar-se ao appliance das ferramentas ONTAP para acesso remoto de diagnóstico via SSH. |  
 
 
 | Máscara de sub-rede para o endereço IPv4 |  
