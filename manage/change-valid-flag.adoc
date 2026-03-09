@@ -28,3 +28,16 @@ O console de manutenção mostra o status do sinalizador de validação do certi
 
 
 Ao ativar o sinalizador de validação de certificado (definido como verdadeiro), as ferramentas ONTAP verificam se todos os backends de armazenamento usam certificados com um Nome Alternativo do Assunto (SAN).  Se algum backend usar um certificado sem SAN, você não poderá ativar a validação de certificado.  Antes de ativar essa opção, verifique se todos os servidores de armazenamento utilizam certificados baseados em SAN.  Se você desativar o sinalizador de validação de certificado (definido como falso), as ferramentas ONTAP ignorarão a validação de certificado para todos os backends de armazenamento configurados.
+
+
+
+== Verifique certificados baseados em SAN para backends de armazenamento
+
+Para garantir uma comunicação segura e a validação adequada, verifique se todos os storage backends utilizam certificados baseados em SAN:
+
+. Verifique se o certificado de gerenciamento do ONTAP inclui uma entrada de Nome Alternativo do Assunto (SAN).
+. Confirme se as entradas SAN correspondem ao endereço IP de gerenciamento do ONTAP ou ao nome DNS, ou a ambos.
+. Certifique-se de que os detalhes usados para integrar o ONTAP correspondam ao endereço IP ou nome DNS na entrada SAN do certificado.
+
+
+Seguir esses passos ajuda a evitar problemas de validação de certificados e garante que o sistema ONTAP esteja integrado de forma segura.

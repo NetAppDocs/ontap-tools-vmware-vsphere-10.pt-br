@@ -2696,4 +2696,10 @@
   <block id="9c3fd4feed3b70ad58582159360ae925" category="list-text">No vSphere Client, navegue até o vCenter Server e selecione *Configurar* &gt; *Provedores de armazenamento*.</block>
   <block id="6df01bde6e0e3398aefe5b78073a6a20" category="list-text">Selecione o VASA Provider offline para ONTAP tools 9.x e selecione *Remover*.</block>
   <block id="5f3d684c32f3b3125b0b7b6f2b37b3f0" category="admonition">Utilize o valor 'migration_id' retornado na Etapa 7 como &lt;migration_id&gt; na chamada da API PATCH. O corpo da requisição está vazio para a operação de patch.</block>
+  <block id="c5ee1392d2a4919b586e3706e8fd7ca2" category="section-title">Verifique certificados baseados em SAN para backends de armazenamento</block>
+  <block id="7fddec929757e28798cf7b2e040cc5c0" category="paragraph">Para garantir uma comunicação segura e a validação adequada, verifique se todos os storage backends utilizam certificados baseados em SAN:</block>
+  <block id="5f2131ae70df4a174b962b01cada7033" category="list-text">Verifique se o certificado de gerenciamento do ONTAP inclui uma entrada de Nome Alternativo do Assunto (SAN).</block>
+  <block id="8d80b04306b64b2c7241ee8c3b8cac3a" category="list-text">Confirme se as entradas SAN correspondem ao endereço IP de gerenciamento do ONTAP ou ao nome DNS, ou a ambos.</block>
+  <block id="0c205dec8702acf753959708a299c51f" category="list-text">Certifique-se de que os detalhes usados para integrar o ONTAP correspondam ao endereço IP ou nome DNS na entrada SAN do certificado.</block>
+  <block id="f38a6ced93585f5991828bd2b6c8fa42" category="paragraph">Seguir esses passos ajuda a evitar problemas de validação de certificados e garante que o sistema ONTAP esteja integrado de forma segura.</block>
 </blocks>
