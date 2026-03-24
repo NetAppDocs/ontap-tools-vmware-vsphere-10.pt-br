@@ -56,8 +56,8 @@ Atualmente, a VMware não oferece suporte a máquinas virtuais clonadas em um mo
 
 == Instantâneos de máquina virtual
 
-Atualmente, apenas instantâneos de máquina virtual sem memória são suportados. Se a máquina virtual tiver Snapshot com memória, a máquina virtual não será considerada para proteção.
+São suportados snapshots de máquinas virtuais sem memória. Se uma máquina virtual tiver um snapshot com memória, a máquina virtual não poderá ser protegida.
 
-Você também não pode proteger máquinas virtuais desprotegidas que tenham instantâneo de memória.  Para esta versão, espera-se que você exclua o instantâneo de memória antes de habilitar a proteção para a máquina virtual.
+Não é possível proteger máquinas virtuais desprotegidas que contenham snapshots de memória. Exclua os snapshots de memória antes de ativar a proteção para a máquina virtual.
 
-Para uma máquina virtual Windows com o tipo de armazenamento ASA r2, um snapshot da máquina virtual é somente leitura.  Ao ligar a máquina virtual, o provedor VASA cria um LUN a partir do snapshot somente leitura e habilita as IOPS.  Ao desligar a máquina virtual, o provedor VASA exclui o LUN e desativa as IOPS.
+Para uma máquina virtual Windows com armazenamento ASA r2, os snapshots da máquina virtual são somente leitura. Ao ligar a máquina virtual, VASA Provider cria um LUN a partir do snapshot somente leitura e habilita IOPS. Ao desligar a máquina virtual, VASA Provider exclui o LUN e desabilita IOPS.
