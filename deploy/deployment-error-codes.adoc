@@ -160,7 +160,7 @@ Se a implantação falhar com o código de erro 114, siga os passos abaixo:
 
 * Ative o shell de diagnóstico.
 * Execute o seguinte comando: `sudo perl /home/maint/scripts/post-deploy-upgrade.pl --internal_cert_update_collection`
-* Consulte os registros em  `/var/log/otvng/post-deploy-upgrade.log`.
+* Analise os registros em `/var/log/otvng/post-deploy-upgrade.log`
 
 
 |===

@@ -32,6 +32,6 @@ Você deve verificar se o site protegido e o site de recuperação foram emparel
 . Acesse *Recuperação de Site* > *Replicação Baseada em Matriz*.
 . Selecione o par de matrizes necessário e verifique os detalhes correspondentes.
 +
-Os sistemas de armazenamento devem ser descobertos no local protegido e no local de recuperação com o Status como ""habilitado"".
+Os sistemas de armazenamento devem ser detectados no site protegido e no site de recuperação com o status *Enabled*.
 
 
