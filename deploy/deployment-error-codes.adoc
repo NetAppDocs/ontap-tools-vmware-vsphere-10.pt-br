@@ -17,10 +17,10 @@ Se você tiver problemas de implantação, revise os logs e códigos de erro par
 
 == Recolha os ficheiros de registo
 
-Você pode coletar arquivos de log para as ferramentas do ONTAP para VMware vSphere a partir das opções disponíveis na interface de usuário do Gerenciador de ferramentas do ONTAP. O suporte técnico pode solicitar que você colete os arquivos de log para ajudar a solucionar um problema.
+Você pode coletar arquivos de log para ONTAP tools for VMware vSphere a partir das opções disponíveis na interface de usuário do ONTAP tools Manager. O suporte técnico pode solicitar que você colete os arquivos de log para ajudar na solução de um problema.
 
 
-NOTE: A geração de logs a partir do Gerenciador de ferramentas do ONTAP inclui todos os logs para todas as instâncias do vCenter Server. A geração de logs a partir da interface de usuário do cliente vCenter é definida para o vCenter Server selecionado.
+NOTE: A geração de logs a partir do ONTAP tools Manager inclui todos os logs de todas as instâncias do servidor vCenter. A geração de logs a partir da interface de usuário do cliente vCenter é limitada ao servidor vCenter selecionado.
 
 .Passos
 . Inicie o Gerenciador de ferramentas do ONTAP a partir de um navegador da Web: `\https://<ONTAPtoolsIP>:8443/virtualization/ui/`
@@ -56,7 +56,7 @@ Você pode encontrar códigos de erro durante as ferramentas do ONTAP para opera
 Todos os logs de erros são registrados no arquivo ansible-perl-errors.log no diretório /var/log para facilitar o rastreamento e a resolução de problemas.  Este arquivo de log contém o código de erro e a tarefa Ansible com falha.
 
 
-NOTE: Os códigos de erro fornecidos nesta página são apenas para referência. Entre em Contato com a equipe de suporte se o erro persistir ou se não houver nenhuma resolução mencionada.
+NOTE: Os códigos de erro fornecidos nesta página são apenas para referência. Entre em contato com a equipe de suporte se o erro persistir ou se não houver resolução mencionada.
 
 A tabela a seguir lista os códigos de erro e os nomes de arquivo correspondentes.
 
@@ -106,7 +106,7 @@ Os últimos três dígitos do código de erro indicam o erro de fluxo de trabalh
 | 049 | Para rede e validação, o script perl irá atribuí-los também em breve | - 
 
 
-| 050 | Falha na geração da chave SSH | Reinicie a máquina virtual principal (VM). 
+| 050 | A geração da chave SSH falhou | Reinicie a máquina virtual principal (VM). 
 
 
 | 053 | Falha ao instalar o RKE2 | Execute o seguinte e reinicie a VM principal ou reimplante: Sudo rke2-killall.sh (todas as VMs) sudo rke2-uninstall.sh (todas as VMs). 
@@ -115,10 +115,10 @@ Os últimos três dígitos do código de erro indicam o erro de fluxo de trabalh
 | 054 | Falha ao definir kubeconfig | Reimplantar 
 
 
-| 055 | Falha ao implantar o Registro | Se o pod de Registro estiver presente, aguarde que o pod esteja pronto e reinicie a VM principal ou então reimplante. 
+| 055 | Falha ao implantar o Registro | Se o pod de registro estiver presente, aguarde até que ele esteja pronto e, em seguida, reinicie a VM primária ou reimplante. 
 
 
-| 059 | A implantação do KubeVip falhou | Certifique-se de que o endereço IP virtual para o plano de controle do Kubernetes e as ferramentas do ONTAP o endereço IP fornecido durante a implantação pertencem à mesma VLAN e são endereços IP livres. Reinicie se todos os pontos anteriores estiverem corretos. Caso contrário, reimplante. 
+| 059 | A implantação do KubeVip falhou | Certifique-se de que o endereço IP virtual para o plano de controle do Kubernetes e o endereço IP das ONTAP tools fornecidos durante a implantação pertençam à mesma VLAN e sejam endereços IP livres. Reinicie se todos os pontos anteriores estiverem corretos. Caso contrário, reimplemente. 
 
 
 | 060 | A implantação do operador falhou | Reinicie 
@@ -133,7 +133,14 @@ Os últimos três dígitos do código de erro indicam o erro de fluxo de trabalh
 | 065 | O URL da página do Swagger não está acessível | Reimplantar 
 
 
-| 066 | As etapas de pós-implantação para o certificado do gateway falharam | Faça o seguinte para recuperar/concluir a atualização: * Ativar shell de diagnóstico. * Executar 'passo perl /home/maint/scripts/post-deploy-upgrade.pl --postDeploy' comando. * Verifique os logs em /var/log/post-deploy-upgrade.log. 
+| 066 | As etapas de pós-implantação para o certificado do gateway falharam  a| 
+Siga as etapas abaixo para recuperar/concluir a atualização:
+
+* Ativar shell de diagnóstico.
+* Execute o comando 'sudo perl /home/maint/scripts/post-deploy-upgrade.pl --postDeploy'.
+* Verifique os registros em /var/log/post-deploy-upgrade.log.
+
+
 
 
 | 088 | A configuração da rotação de log para journald falhou | Verifique as configurações de rede da VM compatíveis com o host no qual a VM está hospedada. Você pode tentar migrar para outro host e reiniciar a VM. 
@@ -146,6 +153,16 @@ Os últimos três dígitos do código de erro indicam o erro de fluxo de trabalh
 
 
 | 108 | Falha no script de semeadura | - 
+
+
+| 114 | A atualização do certificado interno na coleção do MongoDB falhou  a| 
+Se a implantação falhar com o código de erro 114, siga os passos abaixo:
+
+* Ative o shell de diagnóstico.
+* Execute o seguinte comando: `sudo perl /home/maint/scripts/post-deploy-upgrade.pl --internal_cert_update_collection`
+* Consulte os registros em  `/var/log/otvng/post-deploy-upgrade.log`.
+
+
 |===
 |===
 

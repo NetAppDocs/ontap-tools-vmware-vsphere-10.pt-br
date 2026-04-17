@@ -40,7 +40,7 @@ curl --request POST \
 +
 Copie e salve o token de acesso retornado na resposta.
 
-. Emita a seguinte API do Swagger ou no Postman para migrar.
+. Emita a seguinte API a partir do Swagger ou Postman para migrar.
 +
 [listing]
 ----
@@ -246,11 +246,11 @@ Após a atualização, se o estado de conformidade da máquina virtual estiver d
 No plano de recuperação, o site protegido refere-se ao local onde as VMs estão em execução, enquanto o site de recuperação é onde as VMs serão recuperadas. A interface do dispositivo VMware Live Site Recovery exibe o estado do plano de recuperação com detalhes sobre os sites protegidos e de recuperação.  No plano de recuperação, os botões LIMPAR e REPROTEGER são desabilitados, enquanto os botões TESTE e EXECUTAR permanecem habilitados. Isso indica que o site está preparado para recuperação de dados. Antes de migrar o SRA, verifique se um site está no estado protegido e o outro no estado de recuperação.
 
 
-NOTE: Não inicie a migração se o failover tiver sido concluído, mas a nova proteção estiver pendente.  Certifique-se de que o processo de reproteção seja concluído antes de prosseguir com a migração.  Se um failover de teste estiver em andamento, limpe-o e inicie a migração.
+NOTE: Não inicie a migração se o failover tiver sido concluído, mas a reproteção estiver pendente. Certifique-se de que o processo de reproteção seja concluído antes de prosseguir com a migração. Se um failover de teste estiver em andamento, finalize o failover de teste e inicie a migração.
 
 . Siga estas etapas para excluir o adaptador SRA das ferramentas do ONTAP para VMware vSphere 9.xx na recuperação de site da VMware:
+. Acesse a página de gerenciamento de configuração do VMware Live Site Recovery.
 +
-.. Vá para a página de gerenciamento de configuração do VMware Live Site Recovery
 .. Vá para a seção *Storage Replication Adapter*.
 .. No menu de elipses, selecione *Reset Configuration*.
 .. No menu de elipses, selecione *Delete*.

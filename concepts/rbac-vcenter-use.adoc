@@ -36,12 +36,12 @@ Todas as permissões são validadas na hierarquia de objetos vSphere, exceto as 
 
 == Funções incluídas nas ferramentas do ONTAP para VMware vSphere 10
 
-Para simplificar o trabalho com o vCenter Server RBAC, as ferramentas do ONTAP para VMware vSphere fornecem funções predefinidas adaptadas a várias tarefas de administração.
+Para simplificar o trabalho com o RBAC do servidor vCenter, ONTAP tools for VMware vSphere fornece funções predefinidas adaptadas a várias tarefas administrativas.
 
 
-NOTE: Você pode criar novas funções personalizadas, se necessário. Nesse caso, você deve clonar uma das funções existentes das ferramentas do ONTAP e editá-la conforme necessário. Depois de fazer as alterações de configuração, os usuários do cliente vSphere afetados precisam fazer logout e fazer login novamente para ativar as alterações.
+NOTE: Você pode criar novas funções personalizadas, se necessário. Para isso, clone uma das funções existentes das ferramentas ONTAP e edite-a conforme necessário. Após fazer as alterações de configuração, os usuários do cliente vSphere afetados precisam fazer logout e entrar novamente para ativar as alterações.
 
-Para visualizar as ONTAP tools for VMware vSphere , selecione *Menu* na parte superior do vSphere Client e clique em *Administração* e, em seguida, em *Funções* à esquerda. Os seguintes privilégios devem estar incluídos na função atribuída ao usuário do vCenter responsável pela implantação ou integração do vCenter. Certifique-se de que esses privilégios estejam configurados como pré-requisito para o processo de implantação ou integração.
+Para visualizar as funções das ONTAP tools for VMware vSphere, selecione *Menu* na parte superior do vSphere Client e clique em *Administração* e, em seguida, em *Funções* à esquerda. Os seguintes privilégios devem estar incluídos na função atribuída ao usuário vCenter responsável pela implantação ou processo de ambientação do vCenter Server. Certifique-se de que esses privilégios estejam configurados como pré-requisito para a implantação ou processo de ambientação.
 
 * Alarmes
 +

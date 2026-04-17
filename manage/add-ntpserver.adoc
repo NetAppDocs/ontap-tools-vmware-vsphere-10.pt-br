@@ -19,6 +19,6 @@ Insira os detalhes do servidor NTP para sincronizar os relógios de hora do util
 . Selecione a opção *Settings* > *NTP Server* > *Edit*.
 . Insira os endereços FQDN (nome de domínio totalmente qualificado), IPv4 ou IPv6 separados por vírgulas.
 +
-Atualize para o ecrã para ver os valores atualizados.
+Atualize a tela para ver os valores atualizados.
 
 

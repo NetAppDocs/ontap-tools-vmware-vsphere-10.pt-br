@@ -17,7 +17,7 @@ Certifique-se de que os seguintes requisitos sejam atendidos antes de prosseguir
 | Requisitos | O seu estado 
 
 
-| A versão do vSphere, a versão do ONTAP e a versão do host ESXi são compatíveis com a versão das ferramentas do ONTP. | ❏ Sim ❏ não 
+| vSphere versão, versão do ONTAP e versão do host ESXi são compatíveis com a versão das ONTAP tools. | ❏ Sim ❏ não 
 
 
 | O ambiente do vCenter Server está configurado e configurado | ❏ Sim ❏ não 
@@ -63,7 +63,7 @@ Use a planilha a seguir para reunir as informações necessárias para as ferram
 | Endereço IP para o aplicativo ONTAP tools. Este é o endereço IP para acessar a interface web do ONTAP tools manager (balanceador de carga) em `\https://<ip>:8443/virtualization/ui/` |  
 
 
-| Ferramentas ONTAP endereço IP virtual para comunicação interna.  Este endereço IP é usado para comunicação interna em uma configuração com várias instâncias de ferramentas ONTAP .  Este endereço IP não deve ser o mesmo que o endereço IP do aplicativo de ferramentas ONTAP . (O Plano de Controle do Kubernetes) |  
+| Endereço IP virtual do ONTAP tools para comunicação interna. Este endereço IP é usado para comunicação interna em uma configuração com várias instâncias do ONTAP tools. Este endereço IP não deve ser o mesmo que o endereço IP do aplicativo ONTAP tools. (o plano de controle do Kubernetes) |  
 
 
 | Nome do host DNS para o nó de gerenciamento de ferramentas ONTAP |  
@@ -96,7 +96,7 @@ Use a planilha a seguir para reunir as informações necessárias para as ferram
 | Gateway para o endereço IPv6 (opcional) |  
 |===
 
-NOTE: Crie Registros DNS para todos os endereços IP acima. Antes de atribuir nomes de host, mapeie-os para os endereços IP gratuitos no DNS. Todos os endereços IP devem estar na mesma VLAN selecionada para implantação.
+NOTE: Crie registros DNS para todos os endereços IP acima. Antes de atribuir nomes de host, mapeie-os para os endereços IP livres no DNS. Todos os endereços IP devem estar na mesma VLAN selecionada para implantação.
 
 
 

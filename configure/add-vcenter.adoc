@@ -29,7 +29,7 @@ X509v3 extensions:
 Se o certificado não incluir uma extensão SAN, ou se a extensão SAN não contiver os valores corretos de DNS ou endereço IP, as operações das ONTAP tools poderão falhar devido a erros de validação do certificado.
 
 * O Identificador de Rede Primário (PNID) do vCenter Server deve estar incluído nos detalhes do SAN. O PNID e o nome DNS devem ser idênticos e resolvíveis no DNS.
-* Recomenda-se implantar o vCenter Server usando seu domínio totalmente qualificado (FQDN) e garantir que o SAN no certificado inclua DNS Name=machine_FQDN para compatibilidade e suporte ideais.
+* Recomenda-se implantar o vCenter Server usando seu domínio totalmente qualificado (FQDN), garantindo que o SAN no certificado inclua DNS Name=machine_FQDN para compatibilidade e suporte ideais.
 * Para obter mais informações, consulte a documentação VMware:
 +
 ** https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere/8-0/vsphere-authentication/vsphere-security-certificates-authentication/certificate-requirements-for-different-solution-paths-authentication.html["vSphere Requisitos de Certificação para Diferentes Caminhos de Solução"]

@@ -2,7 +2,7 @@
 permalink: manage/delete-ds.html 
 sidebar: sidebar 
 keywords: vVols datastore,delete vVol 
-summary: A ação Excluir datastore exclui o datastore. No caso do armazenamento de dados NFS ou VMFS, uma caixa de diálogo aparece com a lista de VMs que estão usando o armazenamento de dados. 
+summary: 'A ação "Excluir datastore" exclui o datastore. No caso de um datastore NFS ou VMFS, uma caixa de diálogo é exibida com a lista de máquinas virtuais que estão usando o datastore.' 
 ---
 = Excluir datastores nas ONTAP tools
 :allow-uri-read: 
@@ -16,7 +16,7 @@ Esta página descreve como excluir datastores NFS, VMFS ou vVols usando as ferra
 Quando você exclui um armazenamento de dados, as seguintes ações são executadas dependendo do tipo de armazenamento de dados:
 
 * O contêiner vVol está desmontado.
-* Se o igroup não estiver em uso, iqn será removido do igroup.
+* Se o igroup não estiver em uso, seus iniciadores serão removidos do igroup.
 * O contêiner vVol é excluído.
 * Os volumes flexíveis são deixados no array de armazenamento.
 

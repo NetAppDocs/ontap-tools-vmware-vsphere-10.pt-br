@@ -68,7 +68,7 @@ Você deve remover todos os armazenamentos de dados anexados ao backend de armaz
 . Selecione o menu de elipses verticais e selecione *Remover*.  Certifique-se de que o backend de armazenamento não contenha nenhum armazenamento de dados.  Você pode acompanhar o progresso no painel de tarefas recentes.
 
 
-Você pode executar a operação de remoção de clusters globais do ONTAP usando o Gerenciador de ferramentas do ONTAP.
+Você pode remover clusters ONTAP globais usando ONTAP tools Manager.
 
 . Inicie o Gerenciador de ferramentas do ONTAP a partir de um navegador da Web: `\https://<ONTAPtoolsIP>:8443/virtualization/ui/`
 . Faça login com as ferramentas do ONTAP para as credenciais de administrador do VMware vSphere fornecidas durante a implantação.
@@ -92,7 +92,7 @@ A página de resumo fornece os seguintes detalhes:
 * Informações básicas sobre a VM
 * Detalhes do certificado, como o status do certificado e a data de validade.
 * Informações de rede, como endereço IP e porta da rede.  Para o SVM filho, as informações são as mesmas do backend de armazenamento pai.
-* Privileges permitidos e restritos para o backend de armazenamento.  Para o SVM filho, as informações são as mesmas do backend de armazenamento pai.  As ferramentas ONTAP mostram privilégios apenas nos backends de armazenamento baseados em cluster.  Se você adicionar o SVM como backend de armazenamento, as informações de privilégios não serão mostradas.
+* Privileges permitidos e restritos para o backend de armazenamento. Para o SVM filho, as informações são as mesmas do backend de armazenamento pai. ONTAP tools exibe privilégios apenas em backends de armazenamento baseados em cluster. Se você adicionar SVM como backend de armazenamento, as informações de privilégios não serão exibidas.
 * A exibição detalhada do cluster do sistema ASA r2 não inclui a guia de camadas locais quando a propriedade desagregada é definida como "true" para o SVM ou o cluster.
 * Para sistemas ASA R2 SVM, o portlet de capacidade não é mostrado. O portal de capacidade só é necessário quando a propriedade desagregada é definida como "verdadeiro" para o SVM ou cluster.
 * Para sistemas ASA R2 SVM, a seção de informações básicas mostra o tipo de plataforma.

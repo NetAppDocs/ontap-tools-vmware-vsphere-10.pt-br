@@ -31,4 +31,4 @@ Você deve ter conetado os sites protegidos e de recuperação.
 
 
 .Resultado
-A página Mapeamentos de pastas exibe os recursos do site protegido e os recursos do site de recuperação. Você pode seguir os mesmos passos para outras redes em seu ambiente.
+A página Mapeamento de Pastas exibe os recursos do site protegido e os recursos do site de recuperação. Você pode seguir os mesmos passos para outras pastas em seu ambiente.

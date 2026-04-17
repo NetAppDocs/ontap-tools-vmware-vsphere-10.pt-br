@@ -2,7 +2,7 @@
 permalink: manage/enable-services.html 
 sidebar: sidebar 
 keywords:  
-summary: 'Você pode alterar a senha do administrador usando o Gerenciador de ferramentas do ONTAP para habilitar serviços como o provedor VASA, a importação de configuração do vVols e a recuperação de desastres (SRA) usando o Gerenciador de ferramentas do ONTAP.' 
+summary: 'Você pode habilitar serviços opcionais como o provedor VASA, a importação de vVols configuração e a recuperação de desastres (SRA) usando ONTAP tools Manager.' 
 ---
 = Habilitar os serviços do ONTAP tools
 :allow-uri-read: 

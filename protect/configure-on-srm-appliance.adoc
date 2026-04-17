@@ -17,9 +17,9 @@ Configurar o SRA no dispositivo VMware Live Site Recovery salva as ONTAP tools f
 
 .Antes de começar
 * Baixe o arquivo _.tar.gz_ do https://mysupport.netapp.com/site/products/all/details/otv10/downloads-tab["Site de suporte da NetApp"] .
-* Habilite serviços SRA no Gerenciador de ferramentas ONTAP . Para obter mais informações, consulte link:../manage/enable-services.html["Habilitar serviços"] seção.
-* Adicione servidores vCenter às ferramentas ONTATP para o dispositivo VMware vSphere. Para obter mais informações, consulte link:../configure/add-vcenter.html["Adicionar servidores vCenter"] seção.
-* Adicione backends de armazenamento às ONTAP tools for VMware vSphere. Para obter mais informações, consulte link:../configure/add-storage-backend.html["Adicionar backends de armazenamento"] seção.
+* Habilite os serviços SRA no ONTAP tools Manager. Para obter mais informações, consulte a seção link:../manage/enable-services.html["Habilitar serviços"].
+* Adicione servidores vCenter à appliance ONTAP tools for VMware vSphere. Para mais informações, consulte a seção link:../configure/add-vcenter.html["Adicionar servidores vCenter"].
+* Adicione backends de armazenamento às ONTAP tools for VMware vSphere. Para obter mais informações, consulte a link:../configure/add-storage-backend.html["Adicionar backends de armazenamento"] seção.
 
 
 

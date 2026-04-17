@@ -17,6 +17,9 @@ Você deve configurar os sistemas de armazenamento antes de executar o Storage R
 
 == Configurar o SRA para ambientes SAN
 
+
+NOTE: Os grupos de consistência em fluxos de trabalho SRA são suportados apenas com protocolos SAN (iSCSI e Fibre Channel) em sistemas de storage Unified e ASA r2.
+
 .Antes de começar
 Você deve ter os seguintes programas instalados no site protegido e no site de recuperação:
 
@@ -27,9 +30,15 @@ https://techdocs.broadcom.com/us/en/vmware-cis/live-recovery/live-site-recovery/
 * SRA: Instale o adaptador no VMware Live Site Recovery.
 
 
+Para configurações do protocolo iSCSI, observe o seguinte antes de executar os fluxos de trabalho do SRA:
+
+* *Site protegido*: os adaptadores de armazenamento iSCSI e os detalhes da LIF de dados são configurados automaticamente ao provisionar datastores. Nenhuma configuração manual é necessária.
+* *Local de recuperação*: os adaptadores de storage iSCSI devem ser configurados manualmente em cada host ESXi incluído no mapeamento de recursos para recuperação de desastres. Para evitar configurar adaptadores individualmente em cada host, crie um datastore de espaço reservado do tipo iSCSI no local de recuperação usando a SVM na qual os fluxos de trabalho do SRA estão configurados. Isso adiciona automaticamente o adaptador iSCSI e os endereços IP LIF de dados necessários a todos os hosts ESXi mapeados. Consulte link:../protect/configure-placeholder-datastores.html["Configure armazenamentos de dados de espaço reservado nas ONTAP tools"] para mais detalhes.
+
+
 .Passos
 . Verifique se os hosts ESXi primários estão conetados aos LUNs no sistema de armazenamento primário no local protegido.
-. Verifique se os LUNS estão em grupos que têm a `ostype` opção definida como _VMware_ no sistema de armazenamento primário.
+. Verifique se os LUNs estão em igroups que têm a  `ostype` opção definida como _VMware_ no sistema de storage primário.
 . Verifique se os hosts ESXi no site de recuperação têm conectividade iSCSI e Fibre Channel apropriadas para a máquina virtual de armazenamento (SVM).  Os hosts ESXi do site secundário devem ter acesso ao armazenamento do site secundário, e os hosts ESXi do site primário devem ter acesso ao armazenamento do site primário.
 +
 Você pode fazer isso verificando se os hosts ESXi têm LUNs locais conetados na SVM ou o comando nas SVMs `iscsi show initiators`. Verifique o acesso LUN para os LUNs mapeados no host ESXi para verificar a conetividade iSCSI.
@@ -40,6 +49,9 @@ Você pode fazer isso verificando se os hosts ESXi têm LUNs locais conetados na
 
 == Configurar o SRA para ambientes nas
 
+
+NOTE: Grupos de consistência não são suportados para NFS em fluxos de trabalho do SRA. Se volumes de datastore NFS forem colocados em um grupo de consistência e protegidos, a operação Discover Devices falhará. Não use grupos de consistência ao proteger datastores NFS com o SRA.
+
 .Antes de começar
 Você deve ter os seguintes programas instalados no site protegido e no site de recuperação:
 
@@ -49,7 +61,7 @@ Você deve ter os seguintes programas instalados no site protegido e no site de 
 
 .Passos
 . Verifique se os datastores no site protegido contêm máquinas virtuais registradas no vCenter Server.
-. Verifique se os hosts ESXi no local protegido montaram os volumes de exportações NFS da máquina virtual de storage (SVM).
-. Verifique se endereços válidos, como o endereço IP ou o FQDN no qual as exportações NFS estão presentes, estão especificados no campo *Endereços NFS* ao usar o assistente do Array Manager para adicionar arrays ao VMware Live Site Recovery. Não use o nome do host NFS no campo *Endereços NFS*.
+. Verifique se os hosts ESXi no site protegido montaram os volumes de exportação NFS da storage virtual machine (SVM).
+. Verifique se os endereços IP válidos nos quais as exportações NFS estão presentes estão especificados no campo *Endereços NFS* ao usar o assistente do Array Manager para adicionar arrays ao VMware Live Site Recovery. Não use o nome do host NFS ou o FQDN no campo *Endereços NFS*.
 . Use o `ping` comando em cada host ESXi no local de recuperação para verificar se o host tem uma porta VMkernel que pode acessar os endereços IP usados para atender às exportações NFS do SVM.
 

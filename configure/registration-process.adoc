@@ -13,14 +13,14 @@ summary: Você pode registrar o VASA Provider com uma instância do vCenter Serv
 [role="lead"]
 Use as ONTAP tools for VMware vSphere para registrar o VASA Provider com uma instância do vCenter Server.  Isso permite gerenciamento baseado em políticas de armazenamento, suporte a vVols e integração com dispositivos VMware Live Site Recovery em sistemas ONTAP .
 
-As configurações do provedor VASA mostram o status de registro do vCenter Server selecionado.
+As configurações do provedor VASA mostram o status de registro para o vCenter Server selecionado.
 
 .Passos
 . Faça login no cliente vSphere.
 . Selecione *Atalhos* > *Ferramentas do NetApp ONTAP* na seção plug-ins.
 . Selecione *Configurações* > *Configurações do provedor VASA*.  As ferramentas ONTAP exibem o status de registro do Provedor VASA como não registrado.
 . Selecione o botão *Register* para registar o Fornecedor VASA.
-. Insira um nome e credenciais para o Provedor VASA.  O nome de usuário só pode conter letras, números e sublinhados.  Defina o comprimento da senha entre 8 e 256 caracteres.
+. Insira um nome e as credenciais do VASA Provider. O nome de usuário pode conter apenas letras, números e sublinhados. A senha deve ter entre 8 e 256 caracteres.
 . Selecione *Registe-se*.
 . Após um registro bem-sucedido e uma atualização de página, as ferramentas ONTAP exibem o status, o nome e a versão do Provedor VASA registrado.
 

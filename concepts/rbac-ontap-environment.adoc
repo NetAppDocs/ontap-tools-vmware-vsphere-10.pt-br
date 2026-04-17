@@ -34,11 +34,11 @@ As funções REST foram introduzidas com o ONTAP 9.6 e geralmente são aplicadas
 
 * Tradicional
 +
-Estas são as funções herdadas incluídas antes do ONTAP 9.6. Eles continuam sendo um aspeto fundamental da RBAC. Os Privileges são definidos em termos de acesso aos comandos da CLI do ONTAP.
+Essas são as funções legadas que existiam antes do ONTAP 9.6. Elas continuam sendo um aspecto fundamental do RBAC. Os privilégios são definidos em termos de acesso aos comandos da CLI do ONTAP.
 
 
 
-Embora os papéis RESTANTES tenham sido introduzidos mais recentemente, os papéis tradicionais têm algumas vantagens. Por exemplo, parâmetros de consulta adicionais podem ser opcionalmente incluídos para que o Privileges defina com mais precisão os objetos aos quais são aplicados.
+Embora as funções REST tenham sido introduzidas mais recentemente, as funções tradicionais oferecem algumas vantagens. Por exemplo, parâmetros de consulta adicionais podem ser incluídos para permitir que os Privileges definam com mais precisão os objetos aos quais se aplicam.
 
 .Âmbito de aplicação
 As funções do ONTAP podem ser definidas com um de dois escopos diferentes. Elas podem ser aplicadas a um data SVM específico (nível do SVM) ou a todo o cluster ONTAP (nível de cluster).

@@ -16,7 +16,7 @@ Quando você remove a proteção do cluster de host, os datastores ficam desprot
 .Passos
 . Para visualizar a lista de clusters de hosts protegidos, acesse * Ferramentas NetApp ONTAP * > * Proteção * > * Relacionamentos de clusters de hosts *.
 +
-Nesta página, monitore clusters de hosts protegidos, estado de proteção, relacionamento do SnapMirror e status.  Selecione grupos de consistência para visualizar capacidade, armazenamentos de dados associados e grupos filho.
+Nesta página, você pode monitorar clusters de hosts protegidos, estado de proteção, SnapMirror relacionamento e status. Selecione grupos de consistência para visualizar a capacidade, os datastores associados e os grupos filhos.
 
 . Na janela *Proteção do cluster do host*, selecione o menu de reticências ao lado do cluster e selecione *Remover proteção*.
 +

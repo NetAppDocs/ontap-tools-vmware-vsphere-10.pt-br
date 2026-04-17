@@ -48,7 +48,7 @@ NOTE: Depois que a configuração de HA for habilitada, não será possível rev
 NOTE: As ferramentas ONTAP preenchem automaticamente a maioria das opções de entrada com os detalhes da rede do Nó 1 para simplificar o fluxo de trabalho.  Você pode editar os dados de entrada antes de ir para a última página do assistente. Você pode inserir detalhes do endereço IPv6 para os outros dois nós somente quando o endereço IPv6 estiver habilitado no nó de gerenciamento de ferramentas ONTAP .
 
 +
-Certifique-se de que um host ESXi contenha apenas uma VM de ferramentas ONTAP. As entradas são validadas cada vez que você passa para a próxima janela.
+Certifique-se de que cada host ESXi contenha apenas uma VM do ONTAP tools. As entradas são validadas sempre que você avança para a próxima janela.
 
 . Revise os detalhes na seção *Resumo* e *Salvar* as alterações.
 

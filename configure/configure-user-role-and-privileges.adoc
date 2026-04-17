@@ -90,11 +90,11 @@ Adicione o *Caminho da API REST* e escolha o acesso na lista suspensa.
 
 . Criar usuários:
 +
-.. Selecione *Adicionar* na tabela *usuários*.
+.. Selecione *Adicionar* na tabela *Usuários*.
 .. Na caixa de diálogo *Adicionar usuário*, selecione *System Manager*.
 .. Introduza o *Nome de utilizador*.
 .. Selecione *Role* nas opções criadas na etapa *Create Roles* acima.
-.. Introduza as aplicações a que pretende dar acesso e o método de autenticação. ONTAPI e HTTP são as aplicações necessárias e o tipo de autenticação é *Password*.
+.. Insira os aplicativos aos quais deseja conceder acesso e o método de autenticação. ONTAPI e HTTP são os aplicativos obrigatórios, e o método de autenticação é *Senha*.
 .. Defina *Senha para o usuário* e *Salvar* para o usuário.
 
 
@@ -259,13 +259,13 @@ security login rest-role create -role <role-name> -api /api/svm/svms -access rea
 security login rest-role create -role <role-name> -api /api/cluster/metrocluster -access readonly
 
 ----
-Além disso, para o ONTAP versões 9.16.0 e superiores execute o seguinte comando:
+Além disso, para versões do ONTAP 9.16.0 e superiores, execute o seguinte comando:
 
 [listing]
 ----
 security login rest-role create -role <role-name> -api /api/storage/storage-units -access all
 ----
-Para sistemas ASA R2 no ONTAP versões 9.16.1 e superiores, execute o seguinte comando:
+Para sistemas ASA r2 com versões do ONTAP 9.16.1 ou superior, execute o seguinte comando:
 
 [listing]
 ----
@@ -355,13 +355,13 @@ security login rest-role create -role <role-name> -api /api/svm/peers -access re
 
 security login rest-role create -role <role-name> -api /api/svm/svms -access readonly -vserver <vserver-name>
 ----
-Além disso, para o ONTAP versões 9.16.0 e superiores execute o seguinte comando:
+Além disso, para versões do ONTAP 9.16.0 e superiores, execute o seguinte comando:
 
 [listing]
 ----
 security login rest-role create -role <role-name> -api /api/storage/storage-units -access all -vserver <vserver-name>
 ----
-Para criar um novo usuário baseado em API usando as funções baseadas em API criadas acima, execute o seguinte comando:
+Para criar um novo usuário baseado em API usando as funções baseadas em API criadas anteriormente, execute o seguinte comando:
 
 [listing]
 ----

@@ -55,7 +55,7 @@ As definições RBAC são empacotadas como várias capacidades de produto, inclu
 
 === Privileges
 
-As Privileges de função são organizadas em quatro conjuntos com base no nível de acesso necessário ao storage ONTAP. Os Privileges em que as funções são baseadas incluem:
+Os privilégios de função são organizados em quatro conjuntos com base no nível de acesso necessário para o armazenamento ONTAP. Os privilégios nos quais as funções se baseiam incluem:
 
 * Detecção
 +
@@ -89,4 +89,4 @@ Depois de selecionar as opções de configuração para o seu ambiente, clique e
 .Exemplo
 `OTV_10_VSC_Discovery_Create`
 
-O novo usuário será adicionado à lista na página "usuários e funções". Observe que os métodos de login de usuário HTTP e ONTAPI são suportados.
+O novo usuário será adicionado à lista na página 'Usuários e funções'. Observe que os métodos de login de usuário HTTP e ONTAPI são suportados.

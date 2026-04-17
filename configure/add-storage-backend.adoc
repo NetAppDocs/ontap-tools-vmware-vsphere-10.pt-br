@@ -72,9 +72,6 @@ NOTE: Depois que o sistema ONTAP executar uma alternância e uma reversão, exec
 
 
 
-.O que vem a seguir?
-As ferramentas ONTAP atualizam a lista para mostrar o novo backend de armazenamento.
-
 --
 ====
 As ferramentas ONTAP listam o backend de armazenamento recém-adicionado na página *Backends de armazenamento*.  Se um certificado expirar em 30 dias ou menos, as ferramentas ONTAP mostrarão um aviso na coluna de data de expiração do certificado.  Após a expiração, as ferramentas ONTAP marcam o backend de armazenamento como desconhecido porque ele não consegue se conectar ao sistema de armazenamento.

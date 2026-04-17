@@ -2,7 +2,7 @@
 permalink: manage/migrate-virtual-machines.html 
 sidebar: sidebar 
 keywords:  
-summary: Você deve estar ciente de algumas das considerações ao migrar máquinas virtuais existentes em seu data center. 
+summary: É importante estar ciente de algumas considerações ao migrar máquinas virtuais existentes em seu data center. 
 ---
 = Considerações sobre migração e clonagem de máquinas virtuais para ONTAP tools
 :allow-uri-read: 
@@ -11,20 +11,22 @@ summary: Você deve estar ciente de algumas das considerações ao migrar máqui
 
 
 [role="lead"]
-Você deve estar ciente de algumas das considerações ao migrar máquinas virtuais existentes em seu data center.
+ONTAP tools for VMware vSphere suportam todos os principais tipos de migração de máquina virtual, incluindo somente computação (vMotion), somente armazenamento (Storage vMotion) e migração combinada de computação e armazenamento em todos os datastores. Este tópico descreve as principais considerações e práticas recomendadas para garantir a migração e clonagem bem-sucedidas de máquinas virtuais, independentemente do tipo de datastore subjacente.
 
 
 
 == Migrar máquinas virtuais protegidas
 
-Você pode migrar as máquinas virtuais protegidas para:
+Você pode migrar máquinas virtuais protegidas para:
 
-* O mesmo datastore vVols em um host ESXi diferente
-* Armazenamento de dados vVols compatível diferente no mesmo host ESXi
-* Armazenamento de dados vVols compatível diferente em um host ESXi diferente
+* O mesmo armazenamento de dados em um host ESXi diferente
+* Um armazenamento de dados compatível diferente no mesmo host ESXi
+* Um armazenamento de dados compatível diferente em um host ESXi diferente
 
 
-Se você migrar a máquina virtual para um FlexVol volume diferente, o sistema atualizará o arquivo de metadados desse volume com as informações da máquina virtual. Se uma máquina virtual for migrada para um host ESXi diferente, mas com o mesmo armazenamento, o arquivo de metadados do FlexVol volume subjacente não será modificado.
+Se você migrar a máquina virtual para um volume FlexVol diferente, o sistema atualizará o arquivo de metadados desse volume com as informações da máquina virtual. Se uma máquina virtual for migrada para um host ESXi diferente, mas para o mesmo storage, o arquivo de metadados do volume FlexVol subjacente não será modificado.
+
+Para obter informações sobre a migração de máquinas virtuais, consulte a documentação da Broadcom: https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere/9-0/vcenter-and-host-management/migrating-virtual-machines-host-management.html["vSphere Migração de Máquinas Virtuais"]
 
 
 
@@ -32,32 +34,37 @@ Se você migrar a máquina virtual para um FlexVol volume diferente, o sistema a
 
 Você pode clonar máquinas virtuais protegidas para o seguinte:
 
-* Mesmo contêiner do mesmo FlexVol volume usando o grupo de replicação
+* O mesmo contêiner do mesmo FlexVol volume usando um grupo de replicação
 +
-O arquivo de metadados do mesmo FlexVol volume é atualizado com os detalhes da máquina virtual clonada.
+O arquivo de metadados do mesmo volume FlexVol é atualizado com os detalhes da máquina virtual clonada.
 
-* Mesmo contêiner de um FlexVol volume diferente usando o grupo de replicação
+* O mesmo contêiner de um volume FlexVol diferente usando um grupo de replicação
 +
-O FlexVol volume onde a máquina virtual clonada é colocada, o arquivo de metadados é atualizado com os detalhes da máquina virtual clonada.
+No volume FlexVol onde a máquina virtual clonada é colocada, o arquivo de metadados é atualizado com os detalhes da máquina virtual clonada.
 
-* Datastore diferente de contêiner ou vVols
+* Um contêiner ou vVols datastore diferente
 +
-O FlexVol volume onde a máquina virtual clonada é colocada, o arquivo de metadados recebe detalhes atualizados da máquina virtual.
+No volume FlexVol onde a máquina virtual clonada é colocada, o arquivo de metadados é atualizado com os detalhes da máquina virtual.
 
 
 
-Atualmente, a VMware não oferece suporte a máquinas virtuais clonadas em um modelo de VM.
+Atualmente, a VMware não oferece suporte a máquinas virtuais clonadas para um modelo de máquina virtual.
 
-É suportado clone-of-Clone de uma máquina virtual protegida.
+É possível criar um clone de um clone de uma máquina virtual protegida.
 
- https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere/7-0/vsphere-virtual-machine-administration-guide-7-0/deploying-virtual-machinesvm-admin/clone-an-existing-virtual-machine-h5vm-admin.html["Criando uma Máquina Virtual para Clonagem"]Consulte para obter mais detalhes.
+Consulte a documentação da Broadcom: https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere/7-0/vsphere-virtual-machine-administration-guide-7-0/deploying-virtual-machinesvm-admin/clone-an-existing-virtual-machine-h5vm-admin.html["Criando uma Máquina Virtual para Clonagem"] para obter mais detalhes.
 
 
 
-== Instantâneos de máquina virtual
+== Instantâneos de máquinas virtuais
 
-São suportados snapshots de máquinas virtuais sem memória. Se uma máquina virtual tiver um snapshot com memória, a máquina virtual não poderá ser protegida.
+ONTAP tools suporta snapshots de máquinas virtuais por meio de fluxos de trabalho padrão da VMware. Snapshots são pontos de reversão de curto prazo destinados a casos de uso como testes e preparação de patches. Eles não substituem backup ou proteção de dados baseada em replicação. Executar uma máquina virtual em um snapshot por períodos prolongados pode causar instabilidade e perda de dados.
 
-Não é possível proteger máquinas virtuais desprotegidas que contenham snapshots de memória. Exclua os snapshots de memória antes de ativar a proteção para a máquina virtual.
+Você pode tirar snapshots consistentes com falhas (snapshots sem o estado da memória, que podem ser usados para reiniciar a máquina virtual em um estado consistente) em todos os tipos de datastore compatíveis. Snapshots quiesced, que usam o VMware Tools para gravar os dados em memória no disco antes da captura, também são compatíveis. Para obter uma visão geral dos tipos e comportamentos de snapshots, consulte  https://knowledge.broadcom.com/external/article/342618/overview-of-virtual-machine-snapshots-in.html["Visão geral dos snapshots de máquina virtual em vSphere"].
 
-Para uma máquina virtual Windows com armazenamento ASA r2, os snapshots da máquina virtual são somente leitura. Ao ligar a máquina virtual, VASA Provider cria um LUN a partir do snapshot somente leitura e habilita IOPS. Ao desligar a máquina virtual, VASA Provider exclui o LUN e desabilita IOPS.
+
+NOTE: Os snapshots de memória capturam o estado da memória em execução e interrompem temporariamente a máquina virtual. Eles não são suportados nos fluxos de trabalho das ONTAP tools. Se uma máquina virtual tiver um snapshot de memória, você deve excluí-lo antes que a máquina virtual possa ser incluída em um grupo de consistência ou em um relacionamento de cluster de hosts gerenciado pelas ONTAP tools.
+
+Nos sistemas de storage ASA r2, o comportamento dos snapshots de máquina virtual difere de outros tipos de storage. Os snapshots são somente leitura. Ao ligar a máquina virtual, o VASA Provider cria um LUN a partir do snapshot somente leitura e habilita as IOPS. Ao desligar a máquina virtual, o VASA Provider exclui o LUN e desabilita as IOPS.
+
+Para obter informações sobre como gerenciar snapshots de máquinas virtuais, consulte a documentação da Broadcom https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere/9-0/vsphere-virtual-machine-administration/managing-virtual-machinesvsphere-vm-admin/using-snapshots-to-manage-virtual-machinesvsphere-vm-admin.html["Gerencie máquinas virtuais com snapshots"].

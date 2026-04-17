@@ -22,7 +22,7 @@ Ao adicionar um novo repositório de dados, você pode incluí-lo no grupo de re
 Você deve emparelhar os sites protegidos e de recuperação criados usando o vSphere Client para habilitar o Storage Replication Adapter (SRA) para descobrir os sistemas de armazenamento.
 
 
-NOTE: O Adaptador de Replicação de Armazenamento (SRA) oferece suporte a fan-out com um relacionamento de sincronização do tipo Automated Failover Duplex e relacionamento assíncrono SnapMirror no grupo de consistência. No entanto, o fan-out com dois SnapMirror assíncronos no grupo de consistência ou fan-out de SnapMirrors no volume não é suportado. Os relacionamentos SnapMirror do tipo Vault não são considerados dentro dessas restrições de distribuição.
+NOTE: O Adaptador de Replicação de Armazenamento (SRA) suporta fan-out com uma relação síncrona do tipo Failover Duplex Automatizado e uma relação assíncrona SnapMirror em grupo de consistência. No entanto, fan-out com duas relações assíncronas SnapMirror em grupos de consistência ou relações de fan-out SnapMirror em volumes não é suportado. Relações do tipo Vault SnapMirror não são consideradas nessas restrições de fan-out. O suporte a grupos de consistência no SRA é limitado a protocolos SAN (iSCSI e Fibre Channel) em sistemas de storage Unified e ASA r2. Grupos de consistência não são suportados para NFS; se volumes de datastore NFS forem colocados em um grupo de consistência, a operação Descobrir Dispositivos falhará.
 
 .Antes de começar
 * Você deve ter o VMware Live Site Recovery instalado nos sites protegidos e de recuperação.
@@ -62,7 +62,7 @@ Você deve garantir que ambos os sites de origem e destino estejam configurados 
 . Faça login no vCenter Server e selecione *Site Recovery* > *Grupos de proteção*.
 . No painel *grupos de proteção*, selecione *novo*.
 . Especifique um nome e uma descrição para o grupo de proteção, direção e selecione *Next*.
-. No campo *Tipo*, selecione a opção *Campo Tipo...* como grupos de armazenamento de dados (replicação baseada em matriz) para armazenamento de dados NFS e VMFS. O domínio de falha nada mais é do que SVMs com replicação habilitada. As SVMs que possuem apenas peering implementado e não apresentam problemas são exibidas.
+. No campo *Tipo*, selecione a opção *Tipo* como grupos de datastore (replicação baseada em array) para datastore NFS e VMFS. O domínio de falha consiste em SVMs com replicação habilitada. As SVMs que possuem apenas o peering implementado e não apresentam problemas são exibidas.
 . Na guia grupos de replicação, selecione o par de matrizes ativado ou os grupos de replicação que têm a máquina virtual configurada e, em seguida, selecione *Next*.
 +
 Todas as máquinas virtuais no grupo de replicação são adicionadas ao grupo de proteção.

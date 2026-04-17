@@ -26,7 +26,7 @@ Depois de integrar o armazenamento e executar a descoberta do armazenamento de d
 Começando com as ONTAP tools for VMware vSphere 10.3, você pode criar um armazenamento de dados vVols em sistemas ASA r2 com eficiência de espaço como thin.vVol.  O provedor VASA cria um contêiner e os pontos de extremidade de protocolo desejados ao criar o armazenamento de dados vVol.  O Provedor VASA não atribui nenhum volume de apoio a este contêiner.
 
 .Antes de começar
-* Certifique-se de que os agregados raiz não sejam mapeados para SVM.
+* Certifique-se de que os agregados raiz não estejam mapeados para a SVM.
 * Certifique-se de que o Fornecedor VASA está registado no vCenter selecionado.
 * No sistema de armazenamento ASA r2, o SVM deve ser mapeado para o agregado do usuário do SVM.
 
@@ -34,7 +34,7 @@ Começando com as ONTAP tools for VMware vSphere 10.3, você pode criar um armaz
 .Passos
 . Faça login no cliente vSphere.
 . Clique com o botão direito do mouse em um sistema host, cluster de host ou data center e selecione * Ferramentas NetApp ONTAP * > *Criar armazenamento de dados*.
-. Selecione vVols *datastore type*.
+. Selecione vVols como *Tipo de armazenamento de dados*.
 . Insira as informações *nome do datastore* e *Protocolo*.
 +
 
@@ -44,7 +44,7 @@ NOTE: O sistema ASA R2 dá suporte aos protocolos iSCSI e FC para vVols.
 . Em opções avançadas:
 +
 ** Se você selecionar a *Política de exportação personalizada*, certifique-se de executar a descoberta no vCenter para todos os objetos.  É recomendável que você não use esta opção.
-** Você pode selecionar *Nome do grupo de iniciadores personalizados* para os protocolos iSCSI e FC.
+** Você pode selecionar um nome de *Grupo de iniciadores personalizado* para os protocolos iSCSI e FC.
 +
 
 NOTE: No sistema de armazenamento ASA r2 tipo SVM, as unidades de armazenamento (LUN/namespace) não são criadas porque o armazenamento de dados é apenas um contêiner lógico.
@@ -53,7 +53,7 @@ NOTE: No sistema de armazenamento ASA r2 tipo SVM, as unidades de armazenamento 
 
 . No painel *atributos de armazenamento*, você pode criar novos volumes ou usar os volumes existentes. No entanto, você não pode combinar esses dois tipos de volumes para criar um datastore vVols.
 +
-Ao criar um novo volume, você pode habilitar o QoS no armazenamento de dados.  Por padrão, um volume é criado para cada solicitação criada por LUN.  Ignore esta etapa para datastores vVols em sistemas de armazenamento ASA r2.
+Ao criar um novo volume, você pode habilitar o QoS no datastore. Por padrão, um volume é criado para cada solicitação de criação de LUN. Ignore esta etapa para datastores vVols em sistemas de armazenamento ASA r2.
 
 . Reveja a sua seleção no painel *Summary* e selecione *Finish*.
 
@@ -137,9 +137,9 @@ Para obter mais informações sobre como usar o NVMe/FC com o VMware vSphere 7,0
 .Passos
 . Faça login no cliente vSphere.
 . Clique com o botão direito do mouse em um sistema host, cluster de host ou data center e selecione * Ferramentas NetApp ONTAP * > *Criar armazenamento de dados*.
-. Selecione o tipo de armazenamento de dados VMFS.
+. Selecione o tipo de datastore VMFS.
 . Insira o nome, o tamanho e as informações de protocolo do armazenamento de dados no painel *Nome e Protocolo*.  Para adicionar o novo armazenamento de dados a um cluster VMFS existente, selecione o cluster de armazenamento de dados em Opções avançadas.
-. Selecione Storage VM (VM de armazenamento) no painel *Storage* (armazenamento). Forneça o *Nome do grupo de iniciadores personalizados* na seção *Opções avançadas* conforme necessário. Você pode escolher um grupo existente para o datastore ou criar um novo grupo com um nome personalizado.
+. Selecione uma VM de armazenamento no painel *Armazenamento*. Forneça o *Nome do grupo de iniciadores personalizado* na seção *Opções avançadas*, conforme necessário. Você pode escolher um igroup existente para o datastore ou criar um novo igroup com um nome personalizado.
 +
 Quando o protocolo NVMe/FC ou NVMe/TCP é selecionado, um novo subsistema de namespace é criado e usado para mapeamento de namespace.  As ferramentas ONTAP criam o subsistema de namespace usando o nome gerado automaticamente que inclui o nome do armazenamento de dados.  Você pode renomear o subsistema de namespace no campo *nome do subsistema de namespace personalizado* nas opções avançadas do painel *Armazenamento*.
 
@@ -162,7 +162,7 @@ NOTE: A partir do ONTAP 9.16.1, os sistemas de storage ASA R2 oferecem suporte p
 .. Selecione *Use as opções de volume existente*, *Enable QoS* conforme necessário e forneça os detalhes.
 +
 
-NOTE: No tipo de armazenamento ASA r2, a criação ou seleção de volume não se aplica à criação de unidade de armazenamento (LUN/Namespace).  Portanto, essas opções não são mostradas.
+NOTE: No tipo de armazenamento ASA r2, a criação ou seleção de volume não se aplica à criação de unidade de armazenamento (LUN/Namespace). Portanto, essas opções não são exibidas.
 
 +
 

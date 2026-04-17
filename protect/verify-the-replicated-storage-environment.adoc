@@ -1,7 +1,7 @@
 ---
 permalink: protect/verify-the-replicated-storage-environment.html 
 sidebar: sidebar 
-keywords:  
+keywords: SRA, storage replication adapter, storage discovery, SnapMirror, custom policy, array pairing, VMware Live Site Recovery 
 summary: 'Você deve verificar se o site protegido e o site de recuperação estão emparelhados com êxito após configurar o Storage Replication Adapter (SRA). O sistema de storage replicado deve ser detetável tanto pelo local protegido quanto pelo local de recuperação.' 
 ---
 = Verifique os sistemas de armazenamento replicados nas ferramentas ONTAP
@@ -18,6 +18,13 @@ Você deve verificar se o site protegido e o site de recuperação foram emparel
 * Você deve ter emparelhado o site protegido e o site de recuperação usando o gerenciador de array do VMware Live Site Recovery.
 * Você deve ter habilitado a licença FlexClone e a licença SnapMirror antes de executar a operação de failover de teste e a operação de failover para SRA.
 * Você deve ter as mesmas políticas e programações do SnapMirror nos sites de origem e destino.
+* Se você estiver usando políticas personalizadas do SnapMirror com um agendamento personalizado, deverá configurar o mesmo agendamento e a mesma política nos sites protegidos e de recuperação.
+* Se você estiver usando políticas personalizadas do SnapMirror (com agendamento padrão ou personalizado), deverá realizar a descoberta de storage a partir das ONTAP tools para que a nova política seja reconhecida. Sem isso, os fluxos de trabalho do SRA, incluindo test failover e failover, falharão. Realize a descoberta de storage nos seguintes pontos:
++
+** Após criar a política personalizada no site de recuperação.
+** Após uma operação de reproteção, que recria a política no site protegido.
+
+
 
 
 .Passos

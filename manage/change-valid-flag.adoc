@@ -41,3 +41,7 @@ Para garantir uma comunicação segura e a validação adequada, verifique se to
 
 
 Seguir esses passos ajuda a evitar problemas de validação de certificados e garante que o sistema ONTAP esteja integrado de forma segura.
+
+O seguinte certificado de exemplo mostra as informações decodificadas:
+
+image:../media/sample-cert.png["Exemplo de certificado"]

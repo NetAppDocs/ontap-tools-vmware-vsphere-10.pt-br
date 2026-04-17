@@ -11,7 +11,7 @@ summary: As ferramentas do ONTAP para o VMware vSphere gerenciam a proteção do
 
 
 [role="lead"]
-As ferramentas do ONTAP para o VMware vSphere gerenciam a proteção dos clusters de host. Todos os armazenamentos de dados pertencentes ao SVM selecionado e montados em um ou mais hosts do cluster são protegidos em um cluster de host.
+ONTAP tools for VMware vSphere gerencia a proteção de clusters de hosts. Todos os datastores pertencentes à SVM selecionada e montados em um ou mais hosts do cluster são protegidos sob um cluster de hosts.
 
 .Antes de começar
 Certifique-se de atender a estes requisitos antes de proteger um cluster de host:
@@ -34,10 +34,10 @@ Certifique-se de atender a estes requisitos antes de proteger um cluster de host
 O tipo de política pode ser assíncrono ou AutomatedFailOverDuplex.
 
 +
-Quando você adiciona a relação do SnapMirror como uma política de tipo AutomatedFailOverDuplex, você deve adicionar a VM de armazenamento de destino como back-end de armazenamento ao mesmo vCenter onde as ferramentas do ONTAP para VMware vSphere são implantadas.
+Ao adicionar a relação do SnapMirror como uma política do tipo AutomatedFailOverDuplex, você deve adicionar a VM de armazenamento de destino como um backend de armazenamento no mesmo vCenter onde ONTAP tools for VMware vSphere está implantado.
 
 +
-No tipo de política AutomatedFailOverDuplex, há configurações de host uniformes e não uniformes.  Quando você seleciona o botão de alternância *configuração uniforme do host*, a configuração do grupo iniciador do host é replicada implicitamente no site de destino. Para mais informações, consulte link:../concepts/ontap-tools-concepts-terms.html["Principais conceitos e termos"] .
+No tipo de política AutomatedFailOverDuplex, existem configurações de host uniformes e não uniformes. Ao selecionar o botão de alternância *Configuração de host uniforme*, a configuração do grupo iniciador do host é replicada implicitamente no site de destino. Para mais informações, consulte link:../concepts/ontap-tools-concepts-terms.html["Principais conceitos e termos"].
 
 . Se você optar por ter uma configuração de host não uniforme, selecione o acesso do host (origem/destino) para cada host dentro desse cluster.
 . Selecione *Adicionar*.
