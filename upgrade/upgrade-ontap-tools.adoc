@@ -70,7 +70,7 @@ Consulte link:../manage/backup-settings.html["Editar configurações de backup"]
 . Digite *7* para selecionar a opção *Atualizar*.
 . Forneça as credenciais do vCenter quando solicitado. Esta é a instância do vCenter onde o ONTAP tools está hospedado.
 +
-Se você estiver usando as ferramentas ONTAP em uma topologia de dois servidores vCenter — onde o dispositivo está hospedado em uma instância do vCenter e gerencia outra —, poderá atribuir uma função restrita à instância do vCenter que hospeda as ferramentas ONTAP . Você pode criar um usuário e uma função dedicados do vCenter com apenas as permissões necessárias para a implantação do modelo OVF. Para obter detalhes, consulte as funções listadas em https://review.docs.netapp.com/us-en/ontap-tools-vmware-vsphere-10_otv105-releasebranch/concepts/rbac-vcenter-use.html#vsphere-object-hierarchy["Funções incluídas nas ferramentas do ONTAP para VMware vSphere 10"].
+Se você estiver usando as ferramentas ONTAP em uma topologia de dois vCenter Server—onde o appliance está hospedado em uma instância vCenter e gerencia outra, você pode atribuir uma função restrita para a instância vCenter que hospeda as ferramentas ONTAP. Você pode criar um usuário e uma função dedicados vCenter com apenas as permissões necessárias para a implantação do template OVF. Para obter detalhes, consulte as funções listadas em link:../concepts/rbac-vcenter-use.html#vsphere-object-hierarchy["Funções incluídas nas ferramentas do ONTAP para VMware vSphere 10"].
 
 +
 Para a instância do vCenter que será gerenciada pelas ferramentas ONTAP , certifique-se de que a conta de usuário do vCenter tenha privilégios de administrador.
