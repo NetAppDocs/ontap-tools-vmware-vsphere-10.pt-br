@@ -2,7 +2,7 @@
 permalink: manage/nested-igroups.html 
 sidebar: sidebar 
 keywords:  
-summary:  
+summary: Aprenda como as ONTAP tools for VMware vSphere representam e gerenciam igroups, incluindo o comportamento de igroups aninhados, reutilização e alterações de limpeza do 10.5 P2. 
 ---
 = Como as ONTAP tools gerenciam igroups
 :allow-uri-read: 
@@ -11,19 +11,33 @@ summary:
 
 
 [role="lead"]
-Se você gerencia VMs de ferramentas ONTAP e sistemas de armazenamento ONTAP , é importante entender como os igroups se comportam, especialmente ao mover armazenamentos de dados de ambientes não gerenciados por ferramentas ONTAP para aqueles que são. Esta página explica como os grupos de interação (igroups) são atualizados durante esse processo.
+Se você gerencia tanto as VMs do ONTAP tools quanto os sistemas de storage ONTAP, é importante entender como os igroups se comportam, especialmente ao mover datastores de ambientes não gerenciados pelo ONTAP tools para aqueles que são. Esta página explica como o ONTAP tools para VMware vSphere representa e gerencia igroups. Trata-se de informação conceitual para entender as diferenças de comportamento entre versões anteriores e o modelo atual de igroup aninhado.
 
-A partir do ONTAP tools for VMware vSphere 10.4, o ONTAP tools cria e mantém automaticamente objetos ONTAP e vCenter, simplificando o gerenciamento de datastores em ambientes de datacenter VMware.
+A partir do ONTAP tools for VMware vSphere 10.4, ONTAP tools cria e mantém automaticamente objetos ONTAP e vCenter, simplificando o gerenciamento de datastores em ambientes de datacenter VMware. A partir do ONTAP tools for VMware vSphere 10.5 P2, os igroups migrados também são excluídos automaticamente quando não estão mais em uso.
 
-As ONTAP tools for VMware vSphere interpretam igroups em dois contextos diferentes:
+
+
+== Resumo rápido do comportamento
+
+* Os datastores VMFS gerenciados pelas ONTAP tools usam igroups aninhados: um igroup pai por contexto de datastore e igroups filhos por host.
+* Os mapeamentos de LUN são aplicados aos igroups filhos.
+* Grupos de instâncias (igroups) pais personalizados podem ser reutilizados em diferentes datastores.
+* Os igroups migrados das ONTAP tools 9.x não podem ser reutilizados.
+
+
+
+
+== Contextos de igroup
+
+ONTAP tools for VMware vSphere lidam com igroups em dois contextos.
 
 .Ferramentas não ONTAP gerenciam igroups
-Como administrador de armazenamento, você pode criar igroups no sistema ONTAP como estruturas simples ou aninhadas.  A ilustração mostra um igroup plano criado no sistema ONTAP .
+Como administrador de storage, você pode criar igroups no sistema ONTAP como estruturas planas ou aninhadas. A ilustração a seguir mostra um igroup plano criado diretamente no ONTAP.
 
 image:../media/non-otv-managed.png["Ferramentas não ONTAP gerenciadas igroup"]
 
 .Ferramentas ONTAP gerenciam igroups
-Ao criar armazenamentos de dados, as ONTAP tools for VMware vSphere criam automaticamente igroups usando uma estrutura aninhada para facilitar o mapeamento de LUN.
+Ao criar datastores, ONTAP tools for VMware vSphere cria igroups em uma estrutura aninhada.
 
 Por exemplo, quando o datastore1 é criado e montado nos hosts 1, 2 e 3, e um novo datastore (datastore2) é criado e montado nos hosts 3, 4 e 5, as ferramentas ONTAP reutilizam o igroup de nível de host para gerenciamento eficiente.
 
@@ -31,41 +45,69 @@ image:../media/otv-managed.png["Ferramentas ONTAP gerenciadas igroup"]
 
 image:../media/otv-managed2.png["Ferramentas ONTAP gerenciam igroup com igroup filho reutilizado"]
 
-Aqui estão alguns casos de ONTAP tools for VMware vSphere .
-
-*Quando você cria um armazenamento de dados com configurações igroup padrão*
-
-Quando você cria um armazenamento de dados e deixa o campo igroup em branco (configuração padrão), as ferramentas ONTAP geram automaticamente uma estrutura de igroup aninhada para esse armazenamento de dados.  O igroup pai no nível do armazenamento de dados é nomeado usando o padrão: otv_<vcguid>_<host_parent_datacenterMoref>_<datastore_name>.  Cada igroup filho no nível de host segue o padrão: otv_<hostMoref>_<vcguid>.  Você pode visualizar a associação entre os igroups pai (nível de armazenamento de dados) e filho (nível de host) na seção *Grupo Iniciador Pai* da interface de armazenamento do ONTAP .
-
-Com a abordagem de igroup aninhado, os LUNs são mapeados apenas para os igroups filhos. O inventário do vCenter Server exibe o novo armazenamento de dados.
-
-*Quando você cria um armazenamento de dados com um nome de igroup personalizado*
-
-Durante a criação do armazenamento de dados nas ferramentas ONTAP , você pode inserir um nome de igroup personalizado em vez de selecionar no menu suspenso. As ferramentas ONTAP então criam um igroup pai no nível do armazenamento de dados usando o nome especificado. Se o mesmo host for usado para vários armazenamentos de dados, o igroup (filho) de nível de host existente será reutilizado. Como resultado, o LUN para o novo armazenamento de dados é mapeado para esse igroup filho existente, que agora pode ser associado a vários igroups pais (um para cada armazenamento de dados). Você pode ver o novo armazenamento de dados com o nome do igroup personalizado na interface do vCenter Server.
-
-*Quando você reutiliza o nome do igroup durante a criação do armazenamento de dados*
-
-Ao criar um armazenamento de dados usando a interface de usuário das ferramentas ONTAP , você pode escolher um igroup pai personalizado existente na lista suspensa.  Após reutilizar o igroup pai para criar outro armazenamento de dados, a interface do usuário dos sistemas ONTAP mostra esta associação.  O novo armazenamento de dados também aparece na interface do usuário do vCenter Server.
-
-Esta operação também pode ser realizada usando a API.  Para reutilizar um igroup existente durante a criação do armazenamento de dados, especifique o UUID do igroup no payload da solicitação da API.
 
 
-NOTE: Somente igroups personalizados podem ser reutilizados. Igroups criados durante a migração do ONTAP tools 9.x (igroups migrados) não podem ser reutilizados e, a partir do ONTAP tools 10.5P2, são excluídos automaticamente quando não estão mais em uso.
+== Comportamento de nomeação
 
-*Quando você cria um datastore e um igroup nativamente do ONTAP e do vCenter*
+Ao criar um datastore e deixar o campo igroup em branco, ONTAP tools cria uma estrutura de igroup aninhada padrão.
 
-Se você criar o igroup e o datastore diretamente em sistemas ONTAP e ambientes VMware, as ferramentas ONTAP não gerenciarão esses objetos inicialmente.  Isso cria uma estrutura de igroup plana.
+* Padrão de nomenclatura do grupo pai: `otv_<vcguid>_<host_parent_datacenterMoref>_<datastore_name>`
+* Padrão de nomenclatura do grupo filho: `otv_<hostMoref>_<vcguid>`
+
+
+A interface ONTAP mostra a relação entre os igroups pai e filho no campo *Parent Initiator Group*.
+
+
+
+== Comportamento por cenário
+
+[cols="25,25,25,25"]
+|===
+| Cenário | Comportamento do igroup parental | Comportamento do igroup filho | Mapeamento e visibilidade de LUN 
+
+
+| Repositório de dados criado com a configuração padrão do igroup | Um igroup pai padrão gerenciado pelas ONTAP tools é criado. | Grupos de interface (igroups) filhos no nível do host são criados conforme necessário. | Os LUNs são mapeados para igroups filhos. O datastore aparece no inventário do servidor vCenter. 
+
+
+| Repositório de dados criado com nome de igroup personalizado | Um igroup pai personalizado é criado com o nome especificado. | Os grupos de instâncias (igroups) filhos existentes no nível do host são reutilizados quando os hosts se sobrepõem. | O novo LUN do datastore é mapeado para o igroup filho reutilizado ou recém-criado. O datastore aparece no vCenter Server. 
+
+
+| Grupo de igroup personalizado existente reutilizado durante a criação do datastore | Um igroup pai personalizado existente é selecionado e reutilizado. | Os grupos filhos são reutilizados ou estendidos com base na associação do host. | O novo LUN do datastore é mapeado através do igroup filho associado. O datastore aparece no vCenter Server. 
+
+
+| Datastore e igroup criados nativamente no ONTAP e vCenter, depois descobertos pelas ONTAP tools | ONTAP tools cria um igroup pai em seu contexto de gerenciamento e mantém o nome original do igroup. | ONTAP tools renomeia o igroup original com o  `otv_`prefixo e o representa como um igroup filho na hierarquia. | Os mapeamentos de iniciadores permanecem inalterados. Somente os igroups mapeados para datastores são convertidos durante a descoberta. 
+|===
+
+
+== Reutilização de igroup personalizado e comportamento da API
+
+Na interface de usuário do ONTAP tools, você pode reutilizar um igroup pai personalizado existente na lista suspensa ao criar um datastore.
+
+O mesmo comportamento é suportado pela API. Para reutilizar um igroup existente durante a criação do datastore, forneça o UUID do igroup na carga da solicitação da API.
+
+
+NOTE: Somente igroups personalizados podem ser reutilizados. Igroups migrados do ONTAP tools 9.x não podem ser reutilizados e, a partir do ONTAP tools 10.5 P2, são excluídos automaticamente quando não estão mais em uso.
+
+
+
+== Visão de conversão de nativo para gerenciado
+
+Se você criar o igroup e o datastore diretamente em sistemas ONTAP e ambientes VMware, ONTAP tools não gerencia esses objetos inicialmente. Isso resulta em uma estrutura de igroup plana.
 
 image:../media/vmfsds-native.png["Datastore e igroup criados nativamente"]
 
-Para gerenciar um armazenamento de dados e um igroup existentes com ferramentas ONTAP , você deve executar uma descoberta de armazenamento de dados.  As ferramentas ONTAP identificam e registram o armazenamento de dados e o igroup e os convertem em uma estrutura aninhada em seu banco de dados.  Um novo igroup pai é criado usando o nome personalizado, enquanto o igroup existente é renomeado com o prefixo "otv_" e se torna o igroup filho.  Os mapeamentos do iniciador permanecem inalterados.  Somente igroups mapeados para armazenamentos de dados são convertidos durante a descoberta.  Depois disso, a estrutura do igroup fica como na ilustração abaixo.
+Após a descoberta do datastore, ONTAP tools identifica e registra os igroups mapeados para o datastore e, em seguida, os representa em um modelo aninhado. O igroup pai é representado no nível do datastore, o igroup existente é renomeado com o  `otv_` prefixo como um igroup filho, e os mapeamentos de iniciadores permanecem inalterados.
 
 image:../media/otv-ds.png["Datastore e igroup gerenciados por ferramentas ONTAP"]
 
-Depois de executar a descoberta do armazenamento de dados nas ferramentas ONTAP , as ferramentas ONTAP convertem o igroup plano em uma estrutura aninhada. As ferramentas ONTAP então gerenciam o igroup, renomeando-o com o prefixo 'otv_'. O LUN permanece mapeado para o mesmo igroup durante todo esse processo.
+ONTAP tools for VMware vSphere não detecta nem gerencia igroups que são criados em sistemas ONTAP mas não estão mapeados para um datastore ou vinculados ao ONTAP tools. Durante a descoberta, ONTAP tools converte apenas os igroups que estão mapeados para datastores descobertos; outros igroups permanecem não gerenciados.
 
-*Como as ferramentas ONTAP reutilizam igroups criados nativamente*
 
-Você pode criar um armazenamento de dados nas ferramentas ONTAP usando um igroup que foi criado primeiro nos sistemas ONTAP , depois que as ferramentas ONTAP o gerenciam. Esses igroups aparecem na lista suspensa de nomes de grupos iniciadores personalizados. O novo LUN para o armazenamento de dados é então mapeado para o igroup filho normalizado correspondente, como "otv_NativeIgroup1".
 
-As ONTAP tools for VMware vSphere não detectam nem usam igroups criados no sistema ONTAP que não são gerenciados pelas ferramentas ONTAP ou vinculados a um armazenamento de dados.
+== Reutilização de igroups nativos descobertos
+
+Após as ferramentas ONTAP gerenciarem um igroup nativo descoberto, esse igroup ficará disponível na lista suspensa de nomes de grupos de iniciadores personalizados para a criação de datastore.
+
+O novo LUN do datastore é mapeado para o igroup filho normalizado, por exemplo,  `otv_NativeIgroup1`.
+
+ONTAP tools for VMware vSphere não detecta nem utiliza igroups criados em sistemas ONTAP que não são gerenciados pelo ONTAP tools ou que não estão vinculados a um datastore.
