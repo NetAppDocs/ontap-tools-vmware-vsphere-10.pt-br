@@ -2786,4 +2786,8 @@
   <block id="45f0d050845f640650733b37410eca9f" category="paragraph">Após as ferramentas ONTAP gerenciarem um igroup nativo descoberto, esse igroup ficará disponível na lista suspensa de nomes de grupos de iniciadores personalizados para a criação de datastore.</block>
   <block id="8d90581e01616bc6e833be117c8bf966" category="paragraph">O novo LUN do datastore é mapeado para o igroup filho normalizado, por exemplo, <block ref="e2e2c5bf7535645ea2278f194b28ad1e" prefix=" " category="inline-code"></block>.</block>
   <block id="270b8c3a2baff1c0296c4a92204b5a54" category="paragraph">ONTAP tools for VMware vSphere não detecta nem utiliza igroups criados em sistemas ONTAP que não são gerenciados pelo ONTAP tools ou que não estão vinculados a um datastore.</block>
+  <block id="3830b8eac1743f2f8fe4765b99fa2547" category="summary">Adicione e gerencie backends de armazenamento localmente para uma instância vCenter ou globalmente para descoberta em todo o cluster nas ferramentas ONTAP.</block>
+  <block id="986013590d14c5a1a3fba70da34aec61" category="inline-link">OTV 10: O que é o escopo global e local do backend de armazenamento</block>
+  <block id="7a2217d00eec7417d83566729e06f7aa" category="paragraph">Consulte o artigo da base de conhecimento:<block ref="8136f7308c7184af5e69534cb5835c82" category="inline-link-rx"></block> para obter mais informações sobre backends de armazenamento globais e locais.</block>
+  <block id="0c1cd48173490f27f69352986a77e96e" category="paragraph"><block ref="0c1cd48173490f27f69352986a77e96e" category="inline-link-rx"></block></block>
 </blocks>

@@ -2,7 +2,7 @@
 permalink: configure/add-storage-backend.html 
 sidebar: sidebar 
 keywords:  
-summary: Os backends de armazenamento são sistemas que os hosts ESXi usam para armazenamento de dados. 
+summary: Adicione e gerencie backends de armazenamento localmente para uma instância vCenter ou globalmente para descoberta em todo o cluster nas ferramentas ONTAP. 
 ---
 = Adicionar um backend de armazenamento às ferramentas ONTAP
 :allow-uri-read: 
@@ -16,6 +16,8 @@ Utilize as ONTAP tools for VMware vSphere para adicionar e gerenciar backends de
 Para adicionar um backend de armazenamento localmente, use as credenciais do cluster ou do SVM na interface das ferramentas ONTAP .  Os servidores de armazenamento local estão disponíveis apenas para o vCenter Server selecionado. As ferramentas ONTAP mapeiam SVMs para o vCenter Server para gerenciamento de armazenamento de dados vVols ou VMFS.  Para datastores VMFS e fluxos de trabalho SRA, você pode usar credenciais SVM sem mapear um cluster globalmente.
 
 Para adicionar um backend de armazenamento global, use as credenciais do cluster ONTAP no Gerenciador de ferramentas ONTAP .  Os backends de armazenamento globais permitem fluxos de trabalho de descoberta para identificar os recursos de cluster necessários para o gerenciamento de vVols.  Em ambientes multitenant, você pode adicionar um usuário SVM localmente para gerenciar datastores vVols .
+
+Consulte o artigo da base de conhecimento: https://kb.netapp.com/data-mgmt/OTV/VSC_Kbs/OTV_10_What_is_storage_backend_global_and_local_scope["OTV 10: O que é o escopo global e local do backend de armazenamento"^] para obter mais informações sobre backends de armazenamento globais e locais.
 
 Se o suporte a MetroCluster estiver habilitado no ONTAP, integre os clusters de origem e destino como backends de armazenamento locais ou globais.
 
@@ -77,4 +79,6 @@ NOTE: Depois que o sistema ONTAP executar uma alternância e uma reversão, exec
 As ferramentas ONTAP listam o backend de armazenamento recém-adicionado na página *Backends de armazenamento*.  Se um certificado expirar em 30 dias ou menos, as ferramentas ONTAP mostrarão um aviso na coluna de data de expiração do certificado.  Após a expiração, as ferramentas ONTAP marcam o backend de armazenamento como desconhecido porque ele não consegue se conectar ao sistema de armazenamento.
 
 .Informações relacionadas
+https://kb.netapp.com/data-mgmt/OTV/VSC_Kbs/OTV_10_What_is_storage_backend_global_and_local_scope["OTV 10: O que é o escopo global e local do backend de armazenamento"^]
+
 https://docs.netapp.com/us-en/ontap-metrocluster/install-ip/task_sw_config_configure_clusters.html["Configurando os clusters em uma configuração MetroCluster"]
