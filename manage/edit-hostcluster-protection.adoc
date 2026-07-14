@@ -24,6 +24,7 @@ NOTE: Você precisa executar a descoberta de armazenamento depois de criar, edit
 
 
 
+[[monitor-host-cluster-protection]]
 == Monitorar a proteção do cluster de host
 
 Monitore o status de proteção, relacionamentos do SnapMirror , armazenamentos de dados e status do SnapMirror para cada cluster de host protegido.
@@ -39,6 +40,7 @@ A coluna de proteção exibe um ícone que mostra o status da proteção.
 
 
 
+[[add-new-datastores-or-hosts]]
 == Adicione novos armazenamentos de dados ou hosts
 
 Adicione hosts ou crie armazenamentos de dados no cluster protegido usando a interface de usuário do vCenter.
@@ -69,6 +71,7 @@ As ferramentas ONTAP criam uma tarefa do vCenter, e você pode acompanhar seu pr
 
 
 
+[[add-a-new-snapmirror-relationship]]
 == Adicione uma nova relação do SnapMirror
 
 .Passos
@@ -91,6 +94,7 @@ As ferramentas ONTAP criam uma tarefa do vCenter, e você pode acompanhar seu pr
 
 
 
+[[delete-an-existing-snapmirror-relationship]]
 == Eliminar uma relação SnapMirror existente
 
 Para excluir um relacionamento assíncrono do SnapMirror , certifique-se de que o SVM ou cluster do site secundário seja adicionado como um backend de armazenamento nas ONTAP tools for VMware vSphere.  Não é possível excluir todos os relacionamentos do SnapMirror de uma só vez.  A exclusão de um relacionamento também remove o relacionamento correspondente do cluster ONTAP .  Quando você exclui um relacionamento Automated Failover Duplex SnapMirror , o sistema desmapeia os armazenamentos de dados de destino e exclui o grupo de consistência, LUNs, volumes e igroups do cluster ONTAP de destino.
@@ -118,6 +122,7 @@ As ferramentas ONTAP criam uma tarefa do vCenter, e você pode acompanhar seu pr
 
 
 
+[[modify-an-existing-snapmirror-relationship]]
 == Modificar uma relação SnapMirror existente
 
 Para modificar um relacionamento assíncrono do SnapMirror , certifique-se de que o SVM ou cluster do site secundário seja adicionado como um backend de armazenamento nas ONTAP tools for VMware vSphere.  Para relacionamentos SnapMirror de Failover Duplex Automatizado, você pode atualizar a proximidade do host para configurações uniformes ou o acesso ao host para configurações não uniformes.  Não há suporte para a alternância entre os tipos de política de failover duplex assíncrono e automatizado.  Você pode configurar as configurações de proximidade ou acesso para hosts recém-descobertos no cluster.

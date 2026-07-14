@@ -15,6 +15,7 @@ Configurar as configurações de multicaminho e tempo limite do servidor ESXi aj
 
 
 
+[[configure-esxi-server-multipath-and-timeout-settings]]
 == Configure as configurações multipath e timeout do servidor ESXi
 
 As ferramentas do ONTAP para VMware vSphere verificam e definem as configurações de multipath do host ESXi e as configurações de tempo limite do HBA que funcionam melhor com os sistemas de armazenamento NetApp.
@@ -38,6 +39,7 @@ NOTE: Você pode expandir o host ESXi para ver os valores atuais.
 
 
 
+[[set-esxi-host-values]]
 == Defina os valores do host ESXi
 
 Use ONTAP tools for VMware vSphere para definir tempos limite e outros valores em hosts ESXi para desempenho e failover ideais.  Ele define esses valores com base nos testes da NetApp .
@@ -46,6 +48,7 @@ Você pode definir os seguintes valores em um host ESXi:
 
 
 
+[[hbacna-adapter-settings]]
 === Definições do adaptador HBA/CNA
 
 Define os seguintes parâmetros para valores padrão:
@@ -58,6 +61,7 @@ Define os seguintes parâmetros para valores padrão:
 
 
 
+[[mpio-settings]]
 === Definições MPIO
 
 As configurações do MPIO escolhem os melhores caminhos para os sistemas de armazenamento NetApp .  As configurações do MPIO selecionam o melhor caminho e o utilizam.
@@ -69,6 +73,7 @@ NOTE: As configurações de MPIO não se aplicam aos protocolos NVMe, NVMe/FC e 
 
 
 
+[[nfs-settings]]
 === Definições NFS
 
 |===

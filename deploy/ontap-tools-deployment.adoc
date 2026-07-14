@@ -80,6 +80,21 @@ NOTE: Nunca armazene a máquina virtual do ONTAP tools for VMware vSphere em dat
 . Selecione a rede de destino para cada rede de origem e selecione *seguinte*.
 . Na janela *Personalizar modelo*, preencha os campos obrigatórios. image:../media/custom-temp-p2.png["Personalizar modelo"]
 +
+[IMPORTANT]
+====
+Os valores na página *Personalizar modelo* são obrigatórios para uma implementação bem-sucedida.
+
+Preste especial atenção a estes campos:
+
+** *Nome do host*: Insira o nome do host da VM ONTAP tools. Use um formato de nome de host válido.
+** *Endereço IP das ONTAP tools*: Esta é a interface de gerenciamento principal usada para acessar as ONTAP tools.
+** *Endereço IPv4*: Este é o endereço IP do nó usado para acesso ao shell de diagnóstico e SSH para resolução de problemas e manutenção.
+
+
+Se você usar nomes DNS para o host ou vCenter, certifique-se de que esses nomes sejam resolvidos corretamente no DNS.
+
+====
++
 
 NOTE: O nome do host do vCenter é o nome da instância do vCenter Server onde o dispositivo de ferramentas ONTAP está implantado.
 

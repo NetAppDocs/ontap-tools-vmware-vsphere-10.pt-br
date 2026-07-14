@@ -48,10 +48,12 @@ Certifique-se de que os seguintes requisitos sejam atendidos antes de prosseguir
 |===
 
 
+[[deployment-worksheet]]
 == Folha de cálculo de implementação
 
 
 
+[[for-single-node-deployment]]
 === Para implantação de nó único
 
 Use a planilha a seguir para reunir as informações necessárias para as ferramentas ONTAP para implantação inicial do VMware vSphere:
@@ -100,6 +102,7 @@ NOTE: Crie registros DNS para todos os endereços IP acima. Antes de atribuir no
 
 
 
+[[for-high-availability-ha-deployment]]
 === Para implantação de alta disponibilidade (HA)
 
 Além dos requisitos de implantação de nó único, você precisará das seguintes informações para implantação de HA:
@@ -132,12 +135,14 @@ Além dos requisitos de implantação de nó único, você precisará das seguin
 |===
 
 
+[[network-firewall-configuration]]
 == Configuração de firewall de rede
 
 Certifique-se de que as portas de firewall necessárias estejam abertas para todos os endereços IP relevantes.  As ferramentas ONTAP exigem acesso ao LIF pela porta 443.  Para obter uma lista completa das portas necessárias, consulte a seção de requisitos de porta emlink:../deploy/prerequisites.html["Ferramentas ONTAP para requisitos e limites de configuração do VMware vSphere"] .
 
 
 
+[[ontap-storage-settings]]
 == Definições de armazenamento ONTAP
 
 Para garantir a integração perfeita do storage ONTAP com as ferramentas do ONTAP para VMware vSphere, considere as seguintes configurações:

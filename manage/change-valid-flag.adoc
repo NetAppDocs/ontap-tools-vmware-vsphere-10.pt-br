@@ -31,6 +31,7 @@ Ao ativar o sinalizador de validação de certificado (definido como verdadeiro)
 
 
 
+[[verify-san-based-certificates-for-storage-backends]]
 == Verifique certificados baseados em SAN para backends de armazenamento
 
 Para garantir uma comunicação segura e a validação adequada, verifique se todos os storage backends utilizam certificados baseados em SAN:

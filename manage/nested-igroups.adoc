@@ -17,6 +17,7 @@ A partir do ONTAP tools for VMware vSphere 10.4, ONTAP tools cria e mantém auto
 
 
 
+[[quick-behavior-summary]]
 == Resumo rápido do comportamento
 
 * Os datastores VMFS gerenciados pelas ONTAP tools usam igroups aninhados: um igroup pai por contexto de datastore e igroups filhos por host.
@@ -27,6 +28,7 @@ A partir do ONTAP tools for VMware vSphere 10.4, ONTAP tools cria e mantém auto
 
 
 
+[[igroup-contexts]]
 == Contextos de igroup
 
 ONTAP tools for VMware vSphere lidam com igroups em dois contextos.
@@ -47,6 +49,7 @@ image:../media/otv-managed2.png["Ferramentas ONTAP gerenciam igroup com igroup f
 
 
 
+[[naming-behavior]]
 == Comportamento de nomeação
 
 Ao criar um datastore e deixar o campo igroup em branco, ONTAP tools cria uma estrutura de igroup aninhada padrão.
@@ -59,6 +62,7 @@ A interface ONTAP mostra a relação entre os igroups pai e filho no campo *Pare
 
 
 
+[[behavior-by-scenario]]
 == Comportamento por cenário
 
 [cols="25,25,25,25"]
@@ -79,6 +83,7 @@ A interface ONTAP mostra a relação entre os igroups pai e filho no campo *Pare
 |===
 
 
+[[custom-igroup-reuse-and-api-behavior]]
 == Reutilização de igroup personalizado e comportamento da API
 
 Na interface de usuário do ONTAP tools, você pode reutilizar um igroup pai personalizado existente na lista suspensa ao criar um datastore.
@@ -90,6 +95,7 @@ NOTE: Somente igroups personalizados podem ser reutilizados. Igroups migrados do
 
 
 
+[[native-to-managed-conversion-view]]
 == Visão de conversão de nativo para gerenciado
 
 Se você criar o igroup e o datastore diretamente em sistemas ONTAP e ambientes VMware, ONTAP tools não gerencia esses objetos inicialmente. Isso resulta em uma estrutura de igroup plana.
@@ -104,6 +110,7 @@ ONTAP tools for VMware vSphere não detecta nem gerencia igroups que são criado
 
 
 
+[[reuse-of-discovered-native-igroups]]
 == Reutilização de igroups nativos descobertos
 
 Após as ferramentas ONTAP gerenciarem um igroup nativo descoberto, esse igroup ficará disponível na lista suspensa de nomes de grupos de iniciadores personalizados para a criação de datastore.

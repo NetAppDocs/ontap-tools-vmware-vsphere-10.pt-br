@@ -15,6 +15,7 @@ ONTAP tools for VMware vSphere suportam todos os principais tipos de migração 
 
 
 
+[[migrate-protected-virtual-machines]]
 == Migrar máquinas virtuais protegidas
 
 Você pode migrar máquinas virtuais protegidas para:
@@ -30,6 +31,7 @@ Para obter informações sobre a migração de máquinas virtuais, consulte a do
 
 
 
+[[clone-protected-virtual-machines]]
 == Máquinas virtuais protegidas contra clones
 
 Você pode clonar máquinas virtuais protegidas para o seguinte:
@@ -56,6 +58,7 @@ Consulte a documentação da Broadcom: https://techdocs.broadcom.com/us/en/vmwar
 
 
 
+[[virtual-machine-snapshots]]
 == Instantâneos de máquinas virtuais
 
 ONTAP tools suporta snapshots de máquinas virtuais por meio de fluxos de trabalho padrão da VMware. Snapshots são pontos de reversão de curto prazo destinados a casos de uso como testes e preparação de patches. Eles não substituem backup ou proteção de dados baseada em replicação. Executar uma máquina virtual em um snapshot por períodos prolongados pode causar instabilidade e perda de dados.

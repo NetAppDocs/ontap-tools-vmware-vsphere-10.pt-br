@@ -15,6 +15,7 @@ Se você tiver problemas de implantação, revise os logs e códigos de erro par
 
 
 
+[[collect-the-log-files]]
 == Recolha os ficheiros de registo
 
 Você pode coletar arquivos de log para ONTAP tools for VMware vSphere a partir das opções disponíveis na interface de usuário do ONTAP tools Manager. O suporte técnico pode solicitar que você colete os arquivos de log para ajudar na solução de um problema.
@@ -49,6 +50,7 @@ NOTE: O pacote de log gerado substitui o pacote de log gerado nos últimos 3 dia
 
 
 
+[[deployment-error-codes]]
 == Códigos de erro de implantação
 
 Você pode encontrar códigos de erro durante as ferramentas do ONTAP para operações de implantação, reinicialização e recuperação do VMware vSphere. Os códigos de erro têm cinco dígitos, onde os dois primeiros dígitos representam o script que encontrou o problema, e os últimos três dígitos representam o fluxo de trabalho específico dentro desse script.

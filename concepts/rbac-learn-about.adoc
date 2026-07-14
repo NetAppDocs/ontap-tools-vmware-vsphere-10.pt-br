@@ -20,6 +20,7 @@ O modelo padrão RBAC consiste em várias tecnologias de implementação ou fase
 
 
 
+[[rbac-components]]
 == Componentes RBAC
 
 Em linhas gerais, existem vários componentes que geralmente estão incluídos em toda implementação de RBAC. Esses componentes são interligados de diferentes maneiras como parte da definição dos processos de autorização.
@@ -41,6 +42,7 @@ A _permission_ é uma definição que liga um usuário ou grupo junto com uma fu
 
 
 
+[[two-rbac-environments]]
 == Dois ambientes RBAC
 
 Existem dois ambientes RBAC distintos que você precisa considerar ao trabalhar com ONTAP tools for VMware vSphere 10. As ONTAP tools for VMware vSphere 10 exigem privilégios específicos tanto no vCenter quanto no ONTAP para executar suas operações. Embora as ferramentas ONTAP automatizem tarefas de gerenciamento de armazenamento, elas não criam contas de usuário no vCenter nem no ONTAP. As contas de serviço devem ser criadas por um administrador do vSphere conforme necessário. Esta documentação fornece orientações para que os administradores atribuam as funções e permissões necessárias para o gerenciamento eficaz das ferramentas ONTAP .

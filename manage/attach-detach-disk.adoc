@@ -15,6 +15,7 @@ Siga estes passos para conectar ou desconectar discos de dados de máquinas virt
 
 
 
+[[attach-a-data-disk-to-a-virtual-machine]]
 == Anexe um disco de dados a uma máquina virtual
 
 Anexe um disco de dados a uma máquina virtual para adicionar mais espaço de armazenamento.
@@ -32,6 +33,7 @@ O disco rígido aparece na lista dispositivos de hardware virtual.
 
 
 
+[[detach-a-data-disk-from-the-virtual-machine]]
 == Separe um disco de dados da máquina virtual
 
 Desconecte um disco de dados de uma máquina virtual quando não precisar mais dele.  O disco não é apagado; ele permanece no sistema de armazenamento ONTAP .
