@@ -1,8 +1,8 @@
 ---
 permalink: manage/unmount-datastores-on-host.html 
 sidebar: sidebar 
-keywords:  
-summary: A ação desmontar datastore desmonta um datastore NFS ou VMFS dos hosts ESXi. A ação desmontar datastore está habilitada para armazenamentos de dados NFS e VMFS que são descobertos ou gerenciados pelas ferramentas do ONTAP para VMware vSphere. 
+keywords: unmount NFS VMFS datastore, remove datastore from host, ONTAP tools datastore unmount, ESXi host storage detach 
+summary: Desmonte datastores NFS ou VMFS de hosts ESXi usando ONTAP tools. 
 ---
 = Desmontar datastores NFS e VMFS nas ONTAP tools
 :allow-uri-read: 
@@ -11,13 +11,15 @@ summary: A ação desmontar datastore desmonta um datastore NFS ou VMFS dos host
 
 
 [role="lead"]
-A ação Desmontar armazenamento de dados remove um armazenamento de dados NFS ou VMFS de hosts ESXi.  Está disponível para datastores descobertos ou gerenciados por ONTAP tools for VMware vSphere.
+Use esta tarefa para desmontar um datastore NFS ou VMFS de hosts ESXi. O desmontar de datastore em nível de cluster não é suportado pela interface do usuário ou APIs.
+
+A partir da versão 10.6 do ONTAP tools, desmontar é bloqueado para datastores VMFS protegidos.
 
 .Passos
 . Faça login no cliente vSphere.
-. Clique com o botão direito do mouse em um objeto de armazenamento de dados NFS ou VMFS e selecione *Desmontar armazenamento de dados*.
+. Clique com o botão direito do mouse em um objeto de datastore NFS ou VMFS e selecione *Desmontar datastore*.
 +
-O cliente vSphere abre uma caixa de diálogo e lista os hosts ESXi que montam o armazenamento de dados. Quando a operação é realizada em um armazenamento de dados protegido, uma mensagem de aviso é exibida na tela.
+O cliente vSphere abre uma caixa de diálogo e lista os hosts ESXi que montam o datastore. Se o datastore estiver protegido, ONTAP tools bloqueia a solicitação e exibe uma mensagem informando que o datastore está protegido e não pode ser desmontado.
 
 . Selecione um ou mais hosts ESXi para desmontar o datastore.
 +
@@ -25,12 +27,12 @@ Não é possível desmontar o datastore de todos os hosts. A interface do usuár
 
 . Selecione o botão *Desmontar*.
 +
-Se o datastore fizer parte de um cluster de host protegido, uma mensagem de aviso será exibida.
+A opção *Desmontar armazenamento de dados* está disponível somente quando o host é movido para fora do cluster de hosts protegido.
 
 
 
 
-NOTE: Se o armazenamento de dados protegido for desmontado, a configuração de proteção existente poderá resultar em proteção parcial. Consulte link:../manage/edit-hostcluster-protection.html["Modificar cluster de host protegido"] para permitir proteção completa.
+NOTE: Se um datastore estiver protegido, você deve remover a proteção antes de poder desmontá-lo.
 
 .O que se segue?
 Você pode acompanhar o progresso no painel tarefas recentes.

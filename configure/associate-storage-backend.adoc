@@ -1,8 +1,8 @@
 ---
 permalink: configure/associate-storage-backend.html 
 sidebar: sidebar 
-keywords:  
-summary: Associe um back-end de storage ao vCenter Server para criar um mapeamento entre o back-end de storage e a instância integrada do vCenter Server globalmente. 
+keywords: associate storage backend, ONTAP tools backend mapping, global storage backend association, vCenter storage backend 
+summary: Associe um backend de storage global a uma instância do vCenter Server nas ONTAP tools. 
 ---
 = Associe um backend de armazenamento a uma instância do servidor vCenter nas ONTAP tools
 :allow-uri-read: 
@@ -11,12 +11,12 @@ summary: Associe um back-end de storage ao vCenter Server para criar um mapeamen
 
 
 [role="lead"]
-Associe um backend de armazenamento a uma instância do vCenter Server para permitir o acesso a todas as instâncias do vCenter Server.  Para a configuração do MetroCluster , ao associar um cluster de backend de armazenamento, certifique-se de também associar seu cluster par ao vCenter Server.
+Use esta tarefa para associar um backend de armazenamento global a uma instância do vCenter Server. Um backend de armazenamento global é um backend adicionado no ONTAP tools Manager que ainda não está associado a instâncias específicas do vCenter Server. Para configurações NetApp MetroCluster, ao associar um cluster de backend de armazenamento, associe também o cluster correspondente ao vCenter Server.
 
 .Passos
 . Inicie o Gerenciador de ferramentas do ONTAP a partir de um navegador da Web: `\https://<ONTAPtoolsIP>:8443/virtualization/ui/`
 . Faça login com as ferramentas do ONTAP para as credenciais de administrador do VMware vSphere fornecidas durante a implantação.
 . Selecione vCenter na barra lateral.
-. Selecione as reticências verticais ao lado da instância do vCenter Server que você deseja conectar aos backends de armazenamento.
+. Selecione as reticências verticais ao lado da instância do vCenter Server à qual você deseja conectar aos storage backends.
 . No menu suspenso, escolha o backend de armazenamento que você deseja associar à instância selecionada do vCenter Server.
 

@@ -1,0 +1,57 @@
+---
+permalink: manage/unprotect-ds.html 
+sidebar: sidebar 
+keywords: unprotect VMFS datastore, remove datastore protection group, SnapMirror protection removal, ONTAP tools DR cleanup 
+summary: Desproteja um datastore VMFS e, opcionalmente, remova os elementos de storage associados no lado do destino. 
+---
+= Desproteger um datastore VMFS
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Use esta tarefa para desproteger um datastore VMFS e, opcionalmente, remover os elementos de storage associados no lado de destino no site secundário.
+
+.Sobre esta tarefa
+Ao desbloquear um datastore VMFS, considere o seguinte comportamento:
+
+* Ao remover a proteção do último datastore em um grupo de proteção, o grupo de proteção e o nome de suas configurações de proteção são excluídos.
+* Para o último datastore, ONTAP tools exibe o nome das configurações de proteção.
+
+
+.Antes de começar
+* Certifique-se de ter privilégios administrativos em vSphere.
+* Certifique-se de que sua conta de usuário das ONTAP tools tenha permissões para gerenciar as configurações de proteção.
+* Analise o impacto de desproteger o último datastore em um grupo de proteção.
+* Em clusters ONTAP 9, a desproteção de datastore que não seja o último é suportada apenas para relacionamentos AutomatedFailOverDuplex.
+
+
+.Passos
+. Faça login no vSphere Client.
+. Selecione o cluster de hosts e, em seguida, selecione *Datastores*.
+. Clique com o botão direito do mouse no datastore VMFS elegível que você deseja desproteger e selecione *NetApp ONTAP tools* > *Desproteger datastore*.
++
+
+NOTE: Você só pode desproteger um datastore por vez. A desproteção múltipla não é compatível.
+
+. Na caixa de diálogo de confirmação, revise a mensagem *Esta ação remove a proteção do datastore. Deseja continuar?*.
+. Opcional: selecione *Excluir elementos de armazenamento (LUNs) e igroups associados do storage secundário* para remover LUNs replicados e grupos de consistência no site de destino.
+. Selecione *Desproteger datastore*.
++
+
+NOTE: Para datastores que não sejam os últimos, o comportamento varia de acordo com o tipo de storage:
+
++
+** Para ASA r2, a desproteção de um datastore que não seja o último exibe a mesma mensagem de confirmação e permite que você exclua recursos do site secundário a partir da caixa de diálogo.
+** Para storage ONTAP com uma relação assíncrona de SnapMirror, desproteger um datastore que não seja o último não é suportado.
+** Para storage ONTAP com um relacionamento AutomatedFailOverDuplex (AFD), desproteger um datastore que não seja o último remove o relacionamento AFD e o recria, pois a redução do grupo de consistência não é suportada.
++
+A operação de desproteção inicia uma tarefa que você pode monitorar no ONTAP tools Manager.
+
+
+
+
+
+.Resultado
+O datastore é removido da proteção. Se ele for o último datastore no grupo de proteção, ONTAP tools exclui o grupo de proteção e as configurações de proteção. Se você selecionou a opção de exclusão, os LUNs replicados no lado de destino e os grupos de consistência também são removidos. Para datastores elegíveis que não sejam os últimos no storage ONTAP (AutomatedFailOverDuplex somente), ONTAP tools remove e recria o relacionamento AFD como parte da operação.

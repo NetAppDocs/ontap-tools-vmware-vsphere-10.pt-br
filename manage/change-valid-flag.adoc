@@ -1,8 +1,8 @@
 ---
 permalink: manage/change-valid-flag.html 
 sidebar: sidebar 
-keywords:  
-summary: Você pode alterar o sinalizador de validação do certificado usando o console de manutenção. 
+keywords: certificate validation flag, ONTAP tools certificate check, maintenance console certificate settings, TLS validation toggle 
+summary: Altere o sinalizador de validação do certificado usando o console de manutenção. 
 ---
 = Alterar o indicador de validação do certificado nas ONTAP tools
 :allow-uri-read: 
@@ -17,8 +17,9 @@ Por padrão, o sinalizador de validação de certificado está habilitado (defin
 Você precisa ter credenciais de login de usuário de manutenção.
 
 .Passos
-. No vCenter Server, abra um console para as ferramentas do ONTAP.
-. Inicie sessão como utilizador de manutenção.
+. Faça login no servidor vCenter.
+. Localize a máquina virtual do ONTAP tools e inicie o console da web.
+. Faça login usando as `maint` credenciais.
 . Digitar `1` Para selecionar o menu *Configuração do Aplicativo*.
 . Digitar `3` para alterar o sinalizador de validação do certificado.
 +

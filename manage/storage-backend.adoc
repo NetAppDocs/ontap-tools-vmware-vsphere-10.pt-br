@@ -1,8 +1,8 @@
 ---
 permalink: manage/storage-backend.html 
 sidebar: sidebar 
-keywords:  
-summary: Os backends de armazenamento são sistemas que os hosts ESXi usam para armazenamento de dados. 
+keywords: manage storage backends, ONTAP backend systems, storage backend operations, VMware datastore backend configuration 
+summary: Gerencie os backends de armazenamento que os hosts ESXi usam para storage. 
 ---
 = Gerencie back-ends de armazenamento nas ONTAP tools
 :allow-uri-read: 
@@ -26,7 +26,7 @@ Siga os passos abaixo para descobrir os backends de armazenamento.
 . Faça login no cliente vSphere.
 . Na página atalhos, selecione *Ferramentas do NetApp ONTAP* na seção plug-ins.
 . No painel esquerdo das ferramentas ONTAP , vá para *Backends de armazenamento* e selecione um backend de armazenamento.
-. Selecione o menu elipses verticais e selecione *Discover storage*
+. Selecione o menu de reticências verticais e selecione *Discover storage*
 
 
 Você pode acompanhar o progresso no painel tarefas recentes.
@@ -45,7 +45,7 @@ Siga as etapas nesta seção para modificar um back-end de armazenamento.
 . Faça login no cliente vSphere.
 . Na página atalhos, selecione *Ferramentas do NetApp ONTAP* na seção plug-ins.
 . No painel esquerdo das ferramentas ONTAP , vá para *Backends de armazenamento* e selecione um backend de armazenamento.
-. Selecione o menu reticências verticais e selecione *Modificar* para modificar as credenciais ou o nome da porta. Você pode acompanhar o progresso no painel tarefas recentes.
+. Selecione o menu de reticências verticais e selecione *Modificar* para modificar as credenciais ou o nome da porta. Você pode acompanhar o progresso no painel de tarefas recentes.
 
 
 Modifique clusters ONTAP globais com o Gerenciador de ferramentas ONTAP da seguinte maneira.
@@ -54,7 +54,7 @@ Modifique clusters ONTAP globais com o Gerenciador de ferramentas ONTAP da segui
 . Faça login com as ferramentas do ONTAP para as credenciais de administrador do VMware vSphere fornecidas durante a implantação.
 . Selecione backends de armazenamento na barra lateral.
 . Selecione o back-end de armazenamento que você deseja modificar.
-. Selecione o menu elipses verticais e selecione *Modificar*.
+. Selecione o menu de reticências verticais e selecione *Modificar*.
 . Você pode modificar as credenciais ou a porta. Digite *Nome de usuário* e *Senha* para modificar o back-end de armazenamento.
 
 
@@ -68,7 +68,7 @@ Você deve remover todos os armazenamentos de dados anexados ao backend de armaz
 . Faça login no cliente vSphere.
 . Na página atalhos, selecione *Ferramentas do NetApp ONTAP* na seção plug-ins.
 . No painel esquerdo das ferramentas ONTAP , vá para *Backends de armazenamento* e selecione um backend de armazenamento.
-. Selecione o menu de elipses verticais e selecione *Remover*.  Certifique-se de que o backend de armazenamento não contenha nenhum armazenamento de dados.  Você pode acompanhar o progresso no painel de tarefas recentes.
+. Selecione o menu de reticências verticais e escolha *Remover*. Certifique-se de que o backend de storage não contenha nenhum datastore. Você pode acompanhar o progresso no painel de tarefas recentes.
 
 
 Você pode remover clusters ONTAP globais usando ONTAP tools Manager.
@@ -77,7 +77,7 @@ Você pode remover clusters ONTAP globais usando ONTAP tools Manager.
 . Faça login com as ferramentas do ONTAP para as credenciais de administrador do VMware vSphere fornecidas durante a implantação.
 . Selecione *backends de armazenamento* na barra lateral.
 . Selecione o back-end de armazenamento que você deseja remover
-. Selecione o menu elipses verticais e selecione *Remover*.
+. Selecione o menu de reticências verticais e selecione *Remover*.
 
 
 

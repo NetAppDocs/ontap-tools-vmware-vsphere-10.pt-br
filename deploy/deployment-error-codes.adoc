@@ -1,8 +1,8 @@
 ---
 permalink: deploy/deployment-error-codes.html 
 sidebar: sidebar 
-keywords: upgrade 
-summary: Esta página descreve os códigos de erro para as operações de implantação, reinicialização e recuperação de ferramentas do ONTAP para o sistema VMware vSphere. 
+keywords: troubleshooting deployment errors, log bundles, error codes, ONTAP tools 
+summary: Utilize os códigos de erro de implantação das ONTAP tools para diagnosticar e resolver falhas de implantação, reinicialização e recuperação. 
 ---
 = Solucionar erros de implantação das ONTAP tools
 :allow-uri-read: 
@@ -11,7 +11,7 @@ summary: Esta página descreve os códigos de erro para as operações de implan
 
 
 [role="lead"]
-Se você tiver problemas de implantação, revise os logs e códigos de erro para diagnosticar e resolver problemas.  A partir das ONTAP tools for VMware vSphere 10.5, os pacotes de log coletados dos pods incluem logs do MongoDB, RabbitMQ e Vault, juntamente com o status e as descrições de todos os pods.  Eles são fornecidos além dos logs de serviço das ferramentas ONTAP existentes, melhorando a capacidade de suporte e a solução de problemas.
+Se você encontrar problemas de implantação, revise os logs e os códigos de erro para diagnosticar e resolver problemas. A partir do ONTAP tools para VMware vSphere 10.6, os pacotes de logs coletados dos pods incluem logs do MongoDB, RabbitMQ e Vault, juntamente com o status e as descrições de todos os pods. ONTAP tools 10.6 também adiciona o registro de auditoria para melhorar a rastreabilidade durante a solução de problemas. Esses logs são fornecidos além dos logs de serviço existentes do ONTAP tools, aprimorando o suporte e a solução de problemas.
 
 
 
@@ -55,7 +55,7 @@ NOTE: O pacote de log gerado substitui o pacote de log gerado nos últimos 3 dia
 
 Você pode encontrar códigos de erro durante as ferramentas do ONTAP para operações de implantação, reinicialização e recuperação do VMware vSphere. Os códigos de erro têm cinco dígitos, onde os dois primeiros dígitos representam o script que encontrou o problema, e os últimos três dígitos representam o fluxo de trabalho específico dentro desse script.
 
-Todos os logs de erros são registrados no arquivo ansible-perl-errors.log no diretório /var/log para facilitar o rastreamento e a resolução de problemas.  Este arquivo de log contém o código de erro e a tarefa Ansible com falha.
+Todos os registros de erros são gravados no arquivo ansible-perl-errors.log, localizado no diretório /var/log/otvng, para facilitar o rastreamento e a resolução de problemas. Este arquivo de log contém o código de erro e a tarefa Ansible que falhou.
 
 
 NOTE: Os códigos de erro fornecidos nesta página são apenas para referência. Entre em contato com a equipe de suporte se o erro persistir ou se não houver resolução mencionada.
@@ -126,10 +126,10 @@ Os últimos três dígitos do código de erro indicam o erro de fluxo de trabalh
 | 060 | A implantação do operador falhou | Reinicie 
 
 
-| 061 | A implantação de serviços falhou | Execute a depuração básica do Kubernetes, como Get Pods, get rs, Get svc, e assim por diante no namespace ntv-system para mais detalhes e logs de erro em /var/log/ansible-perl-errors.log e /var/log/ansible-run.log e redeploy. 
+| 061 | A implantação de serviços falhou | Execute a depuração básica do Kubernetes, como get pods, get rs, get svc e assim por diante, no namespace ntv-system para obter mais detalhes e logs de erros em /var/log/otvng/ansible-perl-errors.log e /var/log/otvng/ansible-run.log e reimplante. 
 
 
-| 062 | A implantação de serviços de ferramentas do ONTAP falhou | Consulte os logs de erro em /var/log/ansible-perl-errors.log para obter mais detalhes e reimplantar. 
+| 062 | A implantação de serviços de ferramentas do ONTAP falhou | Consulte os registros de erros em /var/log/otvng/ansible-perl-errors.log para mais detalhes e reimplemente. 
 
 
 | 065 | O URL da página do Swagger não está acessível | Reimplantar 
@@ -140,7 +140,7 @@ Siga as etapas abaixo para recuperar/concluir a atualização:
 
 * Ativar shell de diagnóstico.
 * Execute o comando 'sudo perl /home/maint/scripts/post-deploy-upgrade.pl --postDeploy'.
-* Verifique os registros em /var/log/post-deploy-upgrade.log.
+* Verifique os logs em /var/log/otvng/post-deploy-upgrade.log.
 
 
 
@@ -155,16 +155,6 @@ Siga as etapas abaixo para recuperar/concluir a atualização:
 
 
 | 108 | Falha no script de semeadura | - 
-
-
-| 114 | A atualização do certificado interno na coleção do MongoDB falhou  a| 
-Se a implantação falhar com o código de erro 114, siga os passos abaixo:
-
-* Ative o shell de diagnóstico.
-* Execute o seguinte comando: `sudo perl /home/maint/scripts/post-deploy-upgrade.pl --internal_cert_update_collection`
-* Analise os registros em `/var/log/otvng/post-deploy-upgrade.log`
-
-
 |===
 |===
 

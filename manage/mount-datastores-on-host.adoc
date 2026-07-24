@@ -1,8 +1,8 @@
 ---
 permalink: manage/mount-datastores-on-host.html 
 sidebar: sidebar 
-keywords:  
-summary: A montagem de um datastore fornece acesso ao storage a hosts adicionais. Você pode montar o datastore nos hosts adicionais depois de adicionar os hosts ao seu ambiente VMware. 
+keywords: mount NFS VMFS datastore, datastore host access, ONTAP tools datastore mounting, add datastore to ESXi host 
+summary: Monte os datastores em hosts adicionais após adicionar hosts ao seu ambiente VMware. 
 ---
 = Montar datastores NFS e VMFS nas ONTAP tools
 :allow-uri-read: 
@@ -14,7 +14,7 @@ summary: A montagem de um datastore fornece acesso ao storage a hosts adicionais
 A montagem de um datastore fornece acesso ao storage a hosts adicionais. Você pode montar o datastore nos hosts adicionais depois de adicionar os hosts ao seu ambiente VMware.
 
 
-NOTE: Ao adicionar um novo host ESXi usando o https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere/9-0/use-quickstart-to-add---host-to-a-cluster.html["Adicionar um host ESX ao seu fluxo de trabalho de cluster vSphere"] Aguarde a conclusão da descoberta de hosts agendada antes que ela apareça nas ferramentas do ONTAP . Alternativamente, você pode executar a descoberta manualmente a partir da tela de visão geral das ferramentas do NetApp ONTAP .
+NOTE: Após adicionar o host, aguarde a conclusão da descoberta agendada antes que ele apareça nas ONTAP tools. Como alternativa, você pode executar a descoberta manualmente na tela de visão geral das NetApp ONTAP tools. Para obter informações sobre como adicionar um host ESXi ao seu cluster vSphere, consulte  https://techdocs.broadcom.com/["Documentação técnica Broadcom"].
 
 .Sobre esta tarefa
 * Algumas ações com o botão direito do Mouse são desativadas ou indisponíveis dependendo da versão do cliente vSphere e do tipo de datastore selecionado.
@@ -24,6 +24,7 @@ NOTE: Ao adicionar um novo host ESXi usando o https://techdocs.broadcom.com/us/e
 
 
 * O vSphere desativa a opção de montagem do armazenamento de dados quando o cluster de hosts está protegido com configurações uniformes.
+* Quando um datastore com nconnect é montado em um novo host, ONTAP tools aplica o valor de nconnect do datastore se ele exceder a configuração do host.
 
 
 .Passos

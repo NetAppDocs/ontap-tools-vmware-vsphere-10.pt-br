@@ -1,8 +1,8 @@
 ---
 permalink: manage/manage-storage-threshold.html 
 sidebar: sidebar 
-keywords:  
-summary: Você pode definir o limite para receber notificações no vCenter Server quando o volume e a capacidade agregada atingirem determinados níveis. 
+keywords: storage threshold alerts, ONTAP tools capacity thresholds, vCenter storage notifications, aggregate volume capacity warnings 
+summary: Defina notificações de limite para níveis de volume e capacidade agregada no vCenter Server. 
 ---
 = Gerencie os limites de armazenamento nas ONTAP tools
 :allow-uri-read: 

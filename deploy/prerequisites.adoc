@@ -1,8 +1,8 @@
 ---
 permalink: deploy/prerequisites.html 
 sidebar: sidebar 
-keywords: ONTAP tools,Storage Replication Adapter 
-summary: Antes de implantar as ferramentas do ONTAP para o VMware vSphere, você deve estar familiarizado com os requisitos de espaço para o pacote de implantação e alguns requisitos básicos do sistema de host. 
+keywords: ONTAP tools requirements, configuration limits, supported versions, sizing 
+summary: Revise as versões suportadas, o dimensionamento, os requisitos de porta e os limites de configuração antes de implementar ONTAP tools for VMware vSphere. 
 ---
 = Ferramentas ONTAP para requisitos e limites de configuração do VMware vSphere
 :allow-uri-read: 
@@ -11,9 +11,9 @@ summary: Antes de implantar as ferramentas do ONTAP para o VMware vSphere, você
 
 
 [role="lead"]
-Antes de implantar as ferramentas do ONTAP para o VMware vSphere, você deve estar familiarizado com os requisitos de espaço para o pacote de implantação e alguns requisitos básicos do sistema de host.
+Revise as versões suportadas, o dimensionamento, os requisitos de porta e os limites de configuração antes de implementar ONTAP tools for VMware vSphere.
 
-Você pode usar ONTAP tools for VMware vSphere com VMware vCenter Server Virtual Appliance (vCSA). Você deve implantar ONTAP tools for VMware vSphere em um ambiente vSphere compatível que inclua hosts ESXi.
+Implante ONTAP tools for VMware vSphere em um ambiente vSphere compatível que inclua hosts ESXi e VMware vCenter Server Virtual Appliance (vCSA).
 
 
 
@@ -26,7 +26,7 @@ Você pode usar ONTAP tools for VMware vSphere com VMware vCenter Server Virtual
 ** 348 GB para instalações com provisionamento espesso
 
 
-* *Requisitos de dimensionamento do sistema host* A tabela abaixo mostra a memória recomendada para cada tamanho de implantação. Para implantações de alta disponibilidade (HA), você precisa de três vezes o tamanho do dispositivo listado.
+* *Requisitos de dimensionamento do sistema host* A tabela abaixo mostra a CPU, memória e espaço de disco recomendados por nó para cada tamanho de implantação. Para implantações de alta disponibilidade (HA), implante três nós.
 
 
 |===
@@ -35,16 +35,22 @@ Você pode usar ONTAP tools for VMware vSphere com VMware vCenter Server Virtual
 | *Tipo de implantação* | *CPUs por nó* | *Memória (GB) por nó* | *Espaço em disco (GB) de espessura provisionado por nó* 
 
 
+| Extra pequeno (XS) | 6 | 12 | 350 
+
+
 | Pequeno | 9 | 18 | 350 
 
 
 | Média | 13 | 26 | 350 
 
 
-| OBSERVAÇÃO: A implantação grande é apenas para configuração de HA. | 17 | 34 | 350 
+| Grande | 17 | 34 | 350 
 |===
 
-NOTE: Quando o backup está habilitado, cada cluster de ferramentas do ONTAP precisa de mais 50GB MB de espaço no armazenamento de dados onde as VMs são implantadas. Portanto, o não-HA requer 400 GB e o HA requer 1100 GB de espaço no total.
+NOTE: O tamanho de implantação grande é suportado apenas para configuração HA.
+
+
+NOTE: Quando o backup está ativado, cada cluster de ONTAP tools precisa de 50 GB adicionais de espaço no datastore onde as máquinas virtuais estão implantadas. Portanto, non-HA requer 400 GB e HA requer 1100 GB de espaço no total.
 
 
 
@@ -55,28 +61,28 @@ NOTE: Quando o backup está habilitado, cada cluster de ferramentas do ONTAP pre
 | Storage, host e aplicações | Requisitos de versão 
 
 
-| ONTAP | 9.15.1, 9.16.1 e 9.17.0 
+| Sistemas ONTAP | 9.16.1, 9.17.1, 9.18.1, 9.19.1 
 
 
-| As ferramentas do ONTAP suportaram os hosts ESXi | 7.0.3 em diante 
+| Hosts ESXi gerenciados pelas ONTAP tools | 7.0.3 em diante 
 
 
-| As ferramentas do ONTAP suportaram o vCenter Server | 7.0U3 em diante 
+| vCenter Server instâncias gerenciadas por ONTAP tools | 8.0U3 em diante 
 
 
 | Fornecedor VASA | 3,0 
 
 
-| Aplicação OVA | 10,5 
+| Aplicação OVA | 10,6 
 
 
-| Host ESXi para implantar a máquina virtual ONTAP Tools | 7.0U3 e 8.0U3 
+| Host ESXi usado para implantar a máquina virtual ONTAP tools | 7.0U3 e 8.0U3 
 
 
-| VCenter Server para implantar a máquina virtual das ferramentas do ONTAP | 7,0 e 8,0 
+| vCenter Server usado para implantar a máquina virtual ONTAP tools | 7,0 e 8,0 
 |===
 
-NOTE: A partir das ferramentas do ONTAP para VMware vSphere 10,4, o hardware da máquina virtual é alterado da versão 10 para 17.
+NOTE: A partir do ONTAP tools for VMware vSphere 10.4, a versão do hardware da máquina virtual muda de 10 para 17.
 
 A ferramenta de Matriz de interoperabilidade (IMT) contém as informações mais recentes sobre as versões suportadas do ONTAP, vCenter Server, hosts ESXi e aplicativos de plug-in.
 
@@ -90,7 +96,7 @@ https://imt.netapp.com/matrix/imt.jsp?components=105475;&solution=1777&isHWU&src
 A tabela a seguir descreve as portas de rede utilizadas pela NetApp e suas finalidades. Existem três tipos diferentes de portas:
 
 * Portas externas: Essas portas são acessíveis de fora do cluster ou nó do Kubernetes. Eles permitem que os serviços se comuniquem com redes ou usuários externos, possibilitando a integração com sistemas fora do ambiente de cluster.
-* Portas entre nós: Essas portas permitem a comunicação entre os nós dentro do cluster Kubernetes. São necessários para tarefas em cluster, como compartilhamento de dados e trabalho em conjunto. Em implantações com um único nó, as portas entre nós são usadas apenas dentro do próprio nó e não precisam de acesso externo. As portas entre nós podem aceitar tráfego de fora do cluster. Bloqueie o acesso à internet das portas entre nós usando regras de firewall.
+* Portas entre nós: Essas portas permitem a comunicação entre nós dentro do cluster Kubernetes. Elas são necessárias para operações do cluster, como troca de dados e coordenação entre nós. Em implantações com um único nó, as portas entre nós são usadas apenas dentro do próprio nó e não exigem acesso externo. Permita o tráfego entre nós apenas de redes confiáveis do cluster e bloqueie o acesso à internet com regras de firewall.
 * Portas internas: Essas portas comunicam-se dentro do cluster Kubernetes usando endereços ClusterIP. Eles não são expostos externamente e não precisam ser adicionados às regras do firewall.
 
 
@@ -161,10 +167,10 @@ NOTE: Para implantações de alta disponibilidade (HA), certifique-se de que a p
 ====
 
 
-[[configuration-limits-to-deploy-ontap-tools-for-vmware-vsphere-for-vvols-datastores]]
-== Limites de configuração para implantar ONTAP tools for VMware vSphere para datastores vVols
+[[configuration-limits-for-vvol-datastores]]
+== Limites de configuração para vVol datastores
 
-Você pode usar a tabela a seguir como um guia para configurar ONTAP tools for VMware vSphere.
+Utilize a tabela a seguir como guia para configurar as ferramentas ONTAP para VMware vSphere.
 
 |===
 
@@ -178,21 +184,21 @@ Você pode usar a tabela a seguir como um guia para configurar ONTAP tools for V
 | Não HA | Médio (M) | até 24K | 64 
 
 
-| Alta disponibilidade | Pequeno (S) | até 24K | 64 
+| HA | Pequeno (S) | até 24K | 64 
 
 
-| Alta disponibilidade | Médio (M) | até 50k | 128 
+| HA | Médio (M) | até 50K | 128 
 
 
-| Alta disponibilidade | Grande (L) | até 100k | 256 
+| HA | Grande (L) | até 100K | 256 
 |===
 
 NOTE: A contagem de hosts na tabela representa o total combinado em todos os vCenters conectados.
 
 
 
-[[configuration-limits-to-deploy-ontap-tools-for-vmware-vsphere-for-vmfs-and-nfs-datastores]]
-== Limitações de configuração para implantar ONTAP tools for VMware vSphere para datastores VMFS e NFS
+[[configuration-limits-for-vmfs-and-nfs-datastores]]
+== Limites de configuração para datastores VMFS e NFS
 
 Os limites de configuração listados nesta seção são validados e suportados pela NetApp. Os limites reais podem variar dependendo do seu ambiente e carga de trabalho. Exceder esses limites pode afetar o desempenho ou a capacidade de suporte e não é recomendado. Considere o seguinte ao analisar a tabela:
 
@@ -207,10 +213,16 @@ Os limites de configuração listados nesta seção são validados e suportados 
 | Implantação | Número de datastores VMFS e NFS | Número de datastores VMFS com DR habilitado | Número de hosts 
 
 
+| Extra pequeno | 50 | 50 | 16 
+
+
 | Não-HA pequeno | 200 | 80 | 32 
 
 
 | Meio não-HA | 250 | 100 | 32 
+
+
+| HA Extra pequeno | 200 | 100 | 32 
 
 
 | HA pequena | 350 | 200 | 64 
@@ -229,7 +241,7 @@ Os limites de configuração listados nesta seção são validados e suportados 
 A tabela a seguir mostra os números suportados por instância do VMware Live Site Recovery usando as ferramentas do ONTAP para VMware vSphere.
 
 |===
-| * Tamanho da implantação do vCenter* | *Pequeno* | *Médio* 
+| *vCenter tamanho da implantação* | *Pequeno* | *Médio* 
 
 
 | Número total de máquinas virtuais configuradas para proteção usando replicação baseada em array | 2000 | 5000 
@@ -251,7 +263,7 @@ A tabela a seguir mostra o número de instâncias do VMware Live Site Recovery e
 |===
 
 
-| *Número de instâncias de recuperação do VMware Live Site* | *Tamanho de implantação de ferramentas ONTAP* 
+| *Número de instâncias de recuperação do VMware Live Site* | *Tamanho da implantação das ONTAP tools* 
 
 
 | Até 4 | Pequeno 

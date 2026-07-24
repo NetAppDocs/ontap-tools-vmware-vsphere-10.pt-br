@@ -1,8 +1,8 @@
 ---
 permalink: manage/backup-settings.html 
 sidebar: sidebar 
-keywords:  
-summary: Digite os detalhes do servidor NTP para sincronizar os relógios de hora do utilitário ONTAP Tools. 
+keywords: ONTAP tools backup settings, configure backup schedule, appliance backup configuration, ONTAP tools data protection 
+summary: Ative ou desative o backup das ONTAP tools e configure a frequência de backup entre 10 e 60 minutos. 
 ---
 = Editar configurações de backup das ferramentas ONTAP
 :allow-uri-read: 

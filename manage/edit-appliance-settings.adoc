@@ -1,61 +1,53 @@
 ---
 permalink: manage/edit-appliance-settings.html 
 sidebar: sidebar 
-keywords:  
-summary: Você pode alterar a senha do administrador usando o Gerenciador de ferramentas do ONTAP. 
+keywords: scale ONTAP tools appliance, enable high availability, ONTAP tools HA configuration, appliance scaling settings 
+summary: 'Dimensione o appliance do ONTAP tools e configure a alta disponibilidade (HA) usando o ONTAP tools Manager.' 
 ---
-= Alterar as configurações do appliance ONTAP tools
+= Aumente as ferramentas ONTAP e habilite a alta disponibilidade
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-Use o ONTAP Tools Manager para ampliar as ONTAP tools for VMware vSphere , aumentando o número de nós ou habilitando a Alta Disponibilidade (HA).  Por padrão, o dispositivo ONTAP tools for VMware vSphere é implantado como uma configuração de nó único, sem alta disponibilidade.
+Use ONTAP tools Manager para expandir seu appliance e configurar alta disponibilidade (HA). Por padrão, ONTAP tools for VMware vSphere é implantado como uma configuração de nó único, sem HA.
 
 .Antes de começar
-* Certifique-se de que o seu MODELO OVA tem a mesma versão OVA que o nó 1. O nó 1 é o nó padrão em que as ferramentas do ONTAP para o VMware vSphere OVA são implantadas inicialmente.
-* Certifique-se de que o hot add e o hot plug de memória da CPU estejam ativados.
-* No vCenter Server, defina o nível de automação do Serviço de Recuperação de Desastres (DRS) como parcialmente automatizado. Após implantar o HA, reverta-o para totalmente automatizado.
-* Os nomes de host dos nós na configuração de HA devem estar em letras minúsculas.
+* Certifique-se de que seu modelo OVA corresponda à versão do Node 1 (o nó de implantação inicial).
+* Habilite o adicionar sem desligamento de CPU e o hot plug de memória no hipervisor. Esses recursos são necessários para aumentar a escala do appliance e habilitar a HA. Para ONTAP tools 10.6 e versões posteriores, esses recursos estão habilitados por padrão. Para versões anteriores, habilite esses recursos antes de aumentar a escala ou habilitar a HA.
+* No vCenter Server, defina o nível de automação do Disaster Recovery Service (DRS) como parcialmente automatizado. Retorne ao nível totalmente automatizado após a conclusão da implantação de HA.
++
+
+NOTE: Você só pode aumentar o tamanho do nó, não diminuí-lo. Implantações extra pequenas (XS) limitam determinados serviços.
+
 
 
 .Passos
-. Inicie o Gerenciador de ferramentas do ONTAP a partir de um navegador da Web: `\https://<ONTAPtoolsIP>:8443/virtualization/ui/`
-. Faça login com as ferramentas do ONTAP para as credenciais de administrador do VMware vSphere fornecidas durante a implantação.
-. Selecione *Edit Appliance Settings* (Editar definições do dispositivo) na secção Overview (Descrição geral).
-. Na seção *Configuração*, aumente o tamanho do nó e habilite a configuração de alta disponibilidade (HA).  Utilize as credenciais do vCenter Server para efetuar alterações.
+. Inicie o Gerenciador ONTAP tools: `\https://<ONTAPtoolsIP>:8443/virtualization/ui/`
+. Faça login com suas credenciais de administrador das ONTAP tools.
+. Selecione *Editar configurações do appliance* na seção de visão geral.
+. Na seção *Configuração*, selecione seu novo tamanho de nó e ative a opção HA para habilitar a Alta Disponibilidade.
+. Na página *Configurações do HA*, verifique o seguinte:
 +
-Na configuração de alta disponibilidade (HA), você pode alterar os detalhes da biblioteca de conteúdo.  Forneça a senha para cada edição.
-
-+
-
-NOTE: Nas ONTAP tools for VMware vSphere, você só pode aumentar o tamanho do nó; não pode reduzi-lo.  Em uma configuração sem HA, somente uma configuração de tamanho médio é suportada.  Em uma configuração de HA, configurações médias e grandes são suportadas.
-
-. Utilize o botão de alternância HA para ativar a configuração HA. Na página *HA settings*, certifique-se de que:
-+
-** A biblioteca de conteúdo pertence ao mesmo vCenter Server onde as VMs de nó de ferramentas do ONTAP são executadas. As credenciais do vCenter Server são usadas para validar e baixar o modelo OVA para alterações de dispositivo.
-** A máquina virtual que hospeda as ferramentas do ONTAP não é implantada diretamente em um host ESXi. A VM deve ser implantada em um cluster ou em um pool de recursos.
+** A biblioteca de conteúdo reside no mesmo vCenter Server onde as VMs das ONTAP tools serão executadas.
+** As VMs das ONTAP tools são implantadas em um cluster ou pool de recursos, não diretamente em um host ESXi.
 +
 
-NOTE: Depois que a configuração de HA for habilitada, não será possível reverter para uma configuração de nó único que não seja de HA.
+IMPORTANT: Após ativar o HA, você não pode reverter para uma configuração de nó único sem HA.
 
 
 
-. Na seção *HA settings* da janela *Edit Appliance Settings* (Editar configurações do dispositivo), você pode inserir os detalhes dos nós 2 e 3. As ferramentas do ONTAP para VMware vSphere são compatíveis com três nós na configuração de HA.
+. Na seção *Configurações de HA*, insira os detalhes de rede para os Nós 2 e 3. ONTAP tools suporta três nós no modo HA.
 +
+As ONTAP tools preenchem automaticamente a maioria dos campos com as configurações de rede do Node 1. Você pode editar esses valores antes de concluir o assistente. As entradas de endereço IPv6 só estão disponíveis se o IPv6 estiver habilitado no nó de gerenciamento. Certifique-se de que cada host ESXi hospede apenas uma VM do ONTAP tools.
 
-NOTE: As ferramentas ONTAP preenchem automaticamente a maioria das opções de entrada com os detalhes da rede do Nó 1 para simplificar o fluxo de trabalho.  Você pode editar os dados de entrada antes de ir para a última página do assistente. Você pode inserir detalhes do endereço IPv6 para os outros dois nós somente quando o endereço IPv6 estiver habilitado no nó de gerenciamento de ferramentas ONTAP .
-
-+
-Certifique-se de que cada host ESXi contenha apenas uma VM do ONTAP tools. As entradas são validadas sempre que você avança para a próxima janela.
-
-. Revise os detalhes na seção *Resumo* e *Salvar* as alterações.
+. Analise o resumo e clique em *Salvar*.
 
 
-.O que se segue?
-A página *Visão geral* mostra o status da implantação. Você também pode acompanhar o status da tarefa de edição das configurações do dispositivo na visualização de tarefas, usando o ID da tarefa.
+.Resultado
+O dispositivo inicia o processo de escalonamento e capacitação de HA. Monitore o progresso na página *Visão geral* ou acompanhe o trabalho na visualização *Trabalhos* usando o ID do trabalho.
 
-Se a implementação do HA falhar e o novo status do nó for "Novo", exclua a nova VM no vCenter antes de tentar habilitar o HA novamente.
+Se a implantação de alta disponibilidade falhar com o status "Novo", exclua a VM com falha em vCenter e tente novamente.
 
-A guia *Alertas* no painel esquerdo lista alertas de ferramentas do ONTAP para VMware vSphere.
+Consulte a aba *Alertas* para verificar se há avisos ou problemas durante o processo.

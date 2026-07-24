@@ -1,8 +1,8 @@
 ---
 permalink: manage/resize-datastores.html 
 sidebar: sidebar 
-keywords:  
-summary: O redimensionamento de um datastore permite aumentar o armazenamento de seus arquivos de máquina virtual. Você pode alterar o tamanho de um armazenamento de dados conforme os requisitos de infraestrutura mudam. 
+keywords: resize NFS VMFS datastore, increase datastore capacity, ONTAP tools datastore expansion, VMware datastore size change 
+summary: Redimensione os datastores para aumentar o storage de arquivos da máquina virtual conforme as necessidades da infraestrutura mudam. 
 ---
 = Redimensionar datastores NFS e VMFS nas ONTAP tools
 :allow-uri-read: 

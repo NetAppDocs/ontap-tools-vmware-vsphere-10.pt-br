@@ -1,8 +1,8 @@
 ---
 permalink: protect/configure-protection-groups.html 
 sidebar: sidebar 
-keywords:  
-summary: Você deve criar grupos de proteção para proteger um grupo de máquinas virtuais no site protegido. 
+keywords: protection groups, VMware Live Site Recovery, SnapMirror, datastore protection, ONTAP tools 
+summary: Crie grupos de proteção para máquinas virtuais em sites protegidos e atualize a descoberta de storage após adicionar datastores a volumes protegidos. 
 ---
 = Configure sites protegidos e de recuperação nas ferramentas ONTAP
 :allow-uri-read: 
@@ -23,10 +23,10 @@ Ao adicionar um novo repositório de dados, você pode incluí-lo no grupo de re
 Você deve emparelhar os sites protegidos e de recuperação criados usando o vSphere Client para habilitar o Storage Replication Adapter (SRA) para descobrir os sistemas de armazenamento.
 
 
-NOTE: O Adaptador de Replicação de Armazenamento (SRA) suporta fan-out com uma relação síncrona do tipo Automated Failover Duplex e uma relação assíncrona SnapMirror em grupo de consistência. No entanto, fan-out com duas relações assíncronas SnapMirror em grupos de consistência ou relações de fan-out SnapMirror em volumes não é suportado. Relações do tipo Vault SnapMirror não são consideradas nessas restrições de fan-out. O suporte a grupo de consistência no SRA é limitado a protocolos SAN (iSCSI e fibre channel) em sistemas de armazenamento Unified e ASA r2. Grupos de consistência não são suportados para NFS. Se volumes de datastore NFS forem colocados em um grupo de consistência, a operação de descoberta de dispositivos falhará.
+NOTE: O Adaptador de Replicação de Armazenamento (SRA) suporta fan-out com um relacionamento síncrono do tipo Automated Failover Duplex e um relacionamento assíncrono SnapMirror em grupo de consistência. No entanto, fan-out com dois relacionamentos assíncronos SnapMirror em grupos de consistência ou relacionamentos de fan-out SnapMirror em volumes não é suportado. Relacionamentos do tipo Vault SnapMirror não são considerados nessas restrições de fan-out. O suporte a grupos de consistência no SRA é limitado a protocolos SAN (iSCSI e fibre channel) em sistemas de storage ONTAP e ASA r2. Grupos de consistência não são suportados para NFS. Se volumes de datastore NFS forem colocados em um grupo de consistência, a operação de descoberta de dispositivos falhará.
 
 .Antes de começar
-* Você deve ter o VMware Live Site Recovery instalado nos sites protegidos e de recuperação.
+* Você deve ter o VMware Live Site Recovery (VLSR) instalado nos sites protegidos e de recuperação.
 * Você deve ter o SRA instalado nos sites protegidos e de recuperação.
 
 
@@ -54,7 +54,7 @@ A caixa de diálogo *Objetos* exibe os sites protegidos e de recuperação.
 .Antes de começar
 Você deve garantir que ambos os sites de origem e destino estejam configurados para o seguinte:
 
-* Mesma versão do VMware Live Site Recovery instalada
+* Mesma versão do VLSR instalada
 * Máquinas virtuais
 * Emparelhados sites protegidos e de recuperação
 * Os datastores de origem e destino devem ser montados nos respetivos sites

@@ -1,8 +1,8 @@
 ---
 permalink: manage/storage-view-datastore.html 
 sidebar: sidebar 
-keywords: Remove vVol datastore 
-summary: A visualização de armazenamento ONTAP na guia Configurar das ONTAP tools for VMware vSphere fornece dados relacionados ao datastore e seus volumes. 
+keywords: ONTAP storage view datastores, datastore volume details, NFS VMFS vVol datastore insights, ONTAP tools storage visibility 
+summary: Visualize os detalhes do datastore e do volume na página de storage do ONTAP nas ONTAP tools for VMware vSphere. 
 ---
 = Visualizações de armazenamento ONTAP para datastores em ONTAP tools
 :allow-uri-read: 
@@ -11,10 +11,10 @@ summary: A visualização de armazenamento ONTAP na guia Configurar das ONTAP to
 
 
 [role="lead"]
-As ferramentas do ONTAP para VMware vSphere mostram a visualização lateral do storage do ONTAP dos datastores e seus volumes na guia configure.
+Use a página ONTAP Storage na guia *Configurar* para visualizar informações sobre datastore e volume.
 
 .Passos
-. No cliente vSphere, acesse o armazenamento de dados.
+. No inventário do vSphere Client, selecione o datastore.
 . Selecione a guia *Configure* no painel direito.
 . Selecione * Ferramentas NetApp ONTAP * > * Armazenamento ONTAP *. A visualização muda de acordo com o tipo de armazenamento de dados.  Veja a tabela abaixo:
 
@@ -25,11 +25,13 @@ As ferramentas do ONTAP para VMware vSphere mostram a visualização lateral do 
 | *Tipo de datastore* | *Informação disponível* 
 
 
-| Armazenamento de dados NFS | A página *Detalhes do armazenamento* contém backends de armazenamento, informações agregadas e de volume. A página *detalhes de NFS* contém dados relacionados ao armazenamento de dados NFS. 
+| Datastores NFS | A página *Detalhes do storage* contém backends de storage, agregados e informações de volumes. A página *Detalhes do NFS* contém dados relacionados ao datastore NFS. Observação: se o valor de nconnect for alterado fora do ONTAP tools, o valor exibido no ONTAP tools pode não refletir essa alteração externa. 
 
 
-| Armazenamentos de dados VMFS | A página *Detalhes do armazenamento* contém detalhes de back-end, agregado, volume e zona de disponibilidade de armazenamento (SAZ). A página *Detalhes da unidade de armazenamento* contém detalhes da unidade de armazenamento. 
+| Armazenamentos de dados VMFS | A página *Detalhes do armazenamento* contém informações sobre o backend de armazenamento, o agregado, o volume e a zona de disponibilidade de storage (SAZ). A página *Detalhes da unidade de armazenamento* contém detalhes da unidade de armazenamento. 
 
 
 | Armazenamentos de dados vVols | Lista todos os volumes. Você pode expandir ou remover o armazenamento do painel de armazenamento do ONTAP . As ferramentas ONTAP não suportam essa visualização para datastores vVols baseados no sistema ASA r2. 
 |===
+.Resultado
+Você pode revisar os detalhes do datastore do lado do ONTAP com base no tipo de datastore selecionado.

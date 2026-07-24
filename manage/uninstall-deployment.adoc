@@ -1,8 +1,8 @@
 ---
 permalink: manage/uninstall-deployment.html 
 sidebar: sidebar 
-keywords: ONTAP tools,Storage Replication Adapter 
-summary: Siga as instruções nesta seção para encerrar suas ferramentas do ONTAP para a implantação do VMware vSphere com simplicidade. 
+keywords: uninstall ONTAP tools, remove ONTAP tools deployment, appliance decommission workflow, graceful deployment termination 
+summary: Encerre sua implantação do ONTAP tools for VMware vSphere de forma adequada. 
 ---
 = Desinstalar ONTAP tools
 :allow-uri-read: 
@@ -17,7 +17,7 @@ A desinstalação das ferramentas do ONTAP para VMware vSphere exclui todos os d
 . Remova ou mova todas as máquinas virtuais das ferramentas do ONTAP para armazenamentos de dados gerenciados do VMware vSphere.
 +
 ** Para remover as máquinas virtuais, consulte https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere/8-0/vsphere-virtual-machine-administration-guide-8-0/managing-virtual-machinesvsphere-vm-admin/adding-and-removing-virtual-machinesvsphere-vm-admin.html#GUID-376174FE-F936-4BE4-B8C2-48EED42F110B-en["Remover e Registrar novamente VMs e modelos de VM"]
-** Para movê-los para um armazenamento de dados não gerenciado, consulte https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere/9-0/migrate-a-virtual-machine-with-storage-vmotion.html["Como migrar sua máquina virtual com o Storage vMotion"]
+** Para movê-los para um datastore não gerenciado, consulte  https://techdocs.broadcom.com/["Documentação técnica Broadcom"] para migrar máquinas virtuais com Storage vMotion
 
 
 . link:../manage/delete-ds.html["Excluir datastores"] Criado nas ferramentas do ONTAP para VMware vSphere.

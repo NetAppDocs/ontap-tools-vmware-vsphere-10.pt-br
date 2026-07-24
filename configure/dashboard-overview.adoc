@@ -1,8 +1,8 @@
 ---
 permalink: configure/dashboard-overview.html 
 sidebar: sidebar 
-keywords: user roles 
-summary: Ao selecionar o ícone do plug-in ONTAP tools for VMware vSphere na seção de atalhos no cliente vCenter, a interface de usuário navega para a página de visão geral. Esta página funciona como o painel, fornecendo um resumo do plug-in ONTAP tools for VMware vSphere. 
+keywords: ONTAP tools dashboard, vCenter plug-in overview, datastore and backend summary, Enhanced Linked Mode dashboard 
+summary: Consulte o painel de ferramentas do ONTAP para ver um resumo do status do plug-in, dos datastores e dos dados do servidor vCenter. 
 ---
 = Saiba mais sobre o painel de ferramentas do ONTAP
 :allow-uri-read: 
@@ -16,6 +16,10 @@ Selecionar o ícone do plug-in ONTAP tools for VMware vSphere na seção de atal
 No Modo Vinculado Aprimorado (ELM), o menu suspenso do vCenter Server é exibido.  Escolha um vCenter Server para visualizar seus dados.  O menu suspenso está disponível em todas as visualizações de listagem do plug-in. Ao selecionar um vCenter Server em uma página, ele permanece o mesmo ao alternar entre as guias do plug-in.image:../media/remote-plugin-dashboard.png["Descrição geral do painel"]
 
 Na página de visão geral, você pode executar a ação *Descoberta*. A ação de descoberta detecta backends de armazenamento, hosts, armazenamentos de dados e status de proteção ou relacionamentos recém-adicionados ou atualizados no nível do vCenter.  Execute a descoberta sob demanda sem esperar pela descoberta agendada.
+
+Se você adicionar um novo host a um cluster de hosts protegido, as configurações de proteção mudam para *Parcialmente protegido*.
+
+Para resolver esse estado, abra *Modificar configuração do cluster*, atribua o host ao site correto (origem ou destino) e selecione *Modificar*.
 
 
 NOTE: O botão *Descoberta* só estará habilitado se você tiver o privilégio necessário para realizar a descoberta.

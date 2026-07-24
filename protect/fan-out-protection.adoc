@@ -1,8 +1,8 @@
 ---
 permalink: protect/fan-out-protection.html 
 sidebar: sidebar 
-keywords:  
-summary: Em um cenário de proteção fan-out, o grupo de consistência é duplamente protegido com relacionamento síncrono no primeiro cluster ONTAP de destino e com relacionamento assíncrono no segundo cluster ONTAP de destino. 
+keywords: fan-out protection, SnapMirror active sync, asynchronous replication, VMware Live Site Recovery, placeholder datastore, host cluster protection 
+summary: Proteja um grupo de consistência com proteção fan-out usando replicação síncrona e assíncrona em dois clusters ONTAP de destino. 
 ---
 = Proteção contra fan-out em ONTAP tools
 :allow-uri-read: 
@@ -11,37 +11,35 @@ summary: Em um cenário de proteção fan-out, o grupo de consistência é dupla
 
 
 [role="lead"]
-Em um cenário de proteção fan-out, o grupo de consistência é duplamente protegido com relacionamento síncrono no primeiro cluster ONTAP de destino e com relacionamento assíncrono no segundo cluster ONTAP de destino.  Os fluxos de trabalho de criação, edição e exclusão da proteção de sincronização ativa do SnapMirror mantêm a proteção síncrona.  Os fluxos de trabalho de failover e reproteção do dispositivo VMware Live Site Recovery mantêm a proteção assíncrona.
+Use a proteção fan-out para proteger um grupo de consistência em dois clusters ONTAP de destino. ONTAP tools mantém a relação síncrona por meio dos fluxos de trabalho de criação, edição e exclusão de proteção de sincronização ativa do SnapMirror, e o VMware Live Site Recovery mantém a relação assíncrona por meio dos fluxos de trabalho de failover e reproteção.
 
 
 NOTE: O recurso Fan-out não é suportado para usuários de SVM.
 
 Para configurar a proteção de fan-out, faça o peering dos três clusters de sites e SVMs.
 
+O diagrama a seguir mostra a configuração de proteção fan-out: image:../media/fan-out-protection.png["Configuração de proteção fan-out"]
+
 Exemplo:
 
-|===
+Se:
 
-
-| Se | então 
-
-
- a| 
 * O grupo de consistência de origem está nos clusters C1 e svm1
 * O primeiro grupo de consistência de destino está no cluster C2 e SVM svm2 e.
 * O segundo grupo de consistência de destino está no cluster C3 e SVM svm3
 
- a| 
+
+Em seguida,
+
 * O peering de cluster no cluster ONTAP de origem será (C1, C2) e (C1, C3).
 * O peering de cluster no primeiro cluster ONTAP de destino será (C2, C1) e (C2, C3) e.
 * O peering de cluster no segundo cluster ONTAP de destino será (C3, C1) e (C3, C2).
 * O peering SVM na SVM de origem será (svm1, svm2) e (svm1, svm3).
 * O peering SVM no primeiro SVM de destino será (svm2, svm1) e (svm2, svm3) e.
-* O peering SVM no segundo svm de destino será (svm3, svm1) e (svm3, svm2).
+* O peering SVM no segundo destino SVM será (svm3, svm1) e (svm3, svm2).
 
 
-|===
-O diagrama a seguir mostra a configuração de proteção fan-out:image:../media/fan-out-protection.png["Configuração de proteção fan-out"] image:../media/fan-out-protection-relationship.png["Relação de proteção fan-out"]
+image:../media/fan-out-protection-relationship.png["Relação de proteção fan-out"]
 
 .Passos
 . Selecione um novo repositório de dados provisório. Os critérios de seleção do repositório de dados provisório para proteção faseada são:
@@ -49,9 +47,9 @@ O diagrama a seguir mostra a configuração de proteção fan-out:image:../media
 ** Não coloque o armazenamento de espaço reservado no cluster de host que você está protegendo.
 ** Se precisar incluir o datastore placeholder no cluster de hosts, adicione-o ao appliance do VMware Live Site Recovery antes de configurar a proteção de sincronização ativa do SnapMirror. Com essa configuração, você pode deixar o datastore placeholder fora da proteção.
 +
-Para mais informações, consulte https://techdocs.broadcom.com/us/en/vmware-cis/live-recovery/site-recovery-manager/8-8/site-recovery-manager-administration-8-8/about-placeholder-virtual-machines/configure-a-placeholder-datastore.html["Selecione um armazenamento de dados do marcador de posição"]
+Para obter mais informações, consulte https://techdocs.broadcom.com/us/en/vmware-cis/live-recovery/site-recovery-manager/8-8/site-recovery-manager-administration-8-8/about-placeholder-virtual-machines/configure-a-placeholder-datastore.html["Selecione um datastore placeholder"]
 
 
 
-. Adicione armazenamentos de dados à proteção do cluster de hosts seguindo link:../manage/edit-hostcluster-protection.html["Modificar cluster de host protegido"]. Adicione tipos de política assíncrona e síncrona.
+. Adicione armazenamentos de dados à proteção do cluster de hosts seguindo link:../protect/protect-multiple-ds.html["Proteger datastores em um cluster"]. Adicione tipos de política assíncrona e síncrona.
 

@@ -1,8 +1,8 @@
 ---
 permalink: protect/map-folder.html 
 sidebar: sidebar 
-keywords:  
-summary: Você deve mapear suas pastas no site protegido e no site de recuperação para permitir a comunicação entre elas. 
+keywords: folder mappings, protected and recovery sites, VMware Live Site Recovery, disaster recovery, ONTAP tools 
+summary: Mapeie pastas entre sites protegidos e de recuperação para preparar fluxos de trabalho de failover do VMware Live Site Recovery. 
 ---
 = Configure o mapeamento de pastas nas ferramentas ONTAP
 :allow-uri-read: 

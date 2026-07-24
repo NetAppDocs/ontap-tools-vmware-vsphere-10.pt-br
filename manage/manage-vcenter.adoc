@@ -1,8 +1,8 @@
 ---
 permalink: manage/manage-vcenter.html 
 sidebar: sidebar 
-keywords:  
-summary: VCenters são plataformas de gerenciamento central que permitem controlar hosts, máquinas virtuais e backends de armazenamento. 
+keywords: manage vCenter instances, add remove vCenter, ONTAP tools vCenter credentials, vCenter certificate management 
+summary: Gerencie instâncias do vCenter nas ONTAP tools para controlar hosts, máquinas virtuais e backends de storage. 
 ---
 = Gerenciar instâncias do vCenter Server em ferramentas ONTAP
 :allow-uri-read: 
@@ -15,16 +15,16 @@ As instâncias do vCenter Server são plataformas de gerenciamento central que p
 
 
 
-[[dissociate-storage-backends-with-the-vcenter-server-instance]]
-== Dissociar os backends de armazenamento com a instância do vCenter Server
+[[dissociate-storage-backends-from-a-vcenter-server-instance]]
+== Desvincular backends de storage de uma instância do servidor vCenter
 
 A página de listagem do vCenter Server mostra o número associado de backends de armazenamento. Cada instância do vCenter Server tem a opção de associar ou desassociar a um back-end de armazenamento.
 
 .Passos
 . Inicie o Gerenciador de ferramentas do ONTAP a partir de um navegador da Web: `\https://<ONTAPtoolsIP>:8443/virtualization/ui/`
 . Faça login com as ferramentas do ONTAP para as credenciais de administrador do VMware vSphere fornecidas durante a implantação.
-. Selecione a instância do vCenter Server necessária na barra lateral.
-. Selecione as elipses verticais em relação ao vCenter Server que você deseja associar ou dissociar com backends de armazenamento.
+. Selecione *vCenters* na barra lateral.
+. Selecione as reticências verticais para o vCenter Server que você deseja associar ou desassociar com backends de storage.
 . Selecione *dissociar o back-end de armazenamento*.
 
 
@@ -33,12 +33,10 @@ A página de listagem do vCenter Server mostra o número associado de backends d
 [[modify-a-vcenter-server-instance]]
 == Modifique uma instância do vCenter Server
 
-Siga as etapas abaixo para modificar as instâncias do vCenter Server.
-
 . Inicie o Gerenciador de ferramentas do ONTAP a partir de um navegador da Web: `\https://<ONTAPtoolsIP>:8443/virtualization/ui/`
 . Faça login com as ferramentas do ONTAP para as credenciais de administrador do VMware vSphere fornecidas durante a implantação.
-. Selecione a instância aplicável do vCenter Server na barra lateral
-. Selecione as elipses verticais em relação ao vCenter Server que você deseja modificar e selecione *Modificar*.
+. Selecione *vCenters* na barra lateral.
+. Selecione as reticências verticais para o vCenter Server que você deseja modificar e selecione *Modificar*.
 . Na janela *Modificar vCenter*, insira o nome de usuário, a senha e os detalhes da porta.
 . Carregue o certificado e selecione *Modificar*.
 
@@ -48,22 +46,61 @@ Siga as etapas abaixo para modificar as instâncias do vCenter Server.
 [[remove-a-vcenter-server-instance]]
 == Remova uma instância do vCenter Server
 
-Remova todos os backends de armazenamento do vCenter Server antes de removê-lo.
+Você pode remover uma instância do servidor vCenter mesmo quando datastores e backends de storage ainda estão associados. A caixa de diálogo *Remove vCenter* orienta você pelas ações necessárias com base no estado atual do servidor vCenter.
 
+
+NOTE: A exclusão forçada remove apenas os metadados das ONTAP tools. Ela não remove objetos de storage ONTAP (volumes ou LUNs), datastores do vSphere ou máquinas virtuais.
+
+.Antes de começar
+A exclusão forçada está bloqueada se o vCenter Server tiver datastores vVols ou datastores protegidos. Antes de prosseguir:
+
+* Remova ou migre todos os datastores vVols.
+* Desproteja todos os datastores protegidos.
+* Certifique-se de que nenhuma tarefa de descoberta esteja em execução. A operação de exclusão forçada não prosseguirá se houver tarefas de descoberta em andamento.
+
+
+
+NOTE: Os backends de storage globais compartilhados com outras instâncias do vCenter Server são mantidos. Somente a associação com o vCenter Server excluído é removida.
+
+.Passos
 . Inicie o Gerenciador de ferramentas do ONTAP a partir de um navegador da Web: `\https://<ONTAPtoolsIP>:8443/virtualization/ui/`
 . Faça login com as ferramentas do ONTAP para as credenciais de administrador do VMware vSphere fornecidas durante a implantação.
-. Selecione as instâncias aplicáveis do vCenter Server na barra lateral
-. Selecione as reticências verticais no vCenter Server que você deseja remover e selecione *Remover*.
+. Selecione *vCenters* na barra lateral.
+. Selecione as reticências verticais para o vCenter Server desejado e selecione *Remover*.
+. Na caixa de diálogo *Remover vCenter*, revise o estado do servidor vCenter e conclua as ações necessárias.
 +
+O comportamento do diálogo depende do estado do vCenter Server:
 
-NOTE: Após remover instâncias do vCenter Server, elas não serão mais mantidas pelo aplicativo.
++
+[cols="2,2,3"]
+|===
+| Condição | Comportamento de diálogo | Ação necessária 
 
 
+| Sem vVols ou armazenamentos de dados protegidos, mas os backends de storage estão associados | A caixa de diálogo exibe o número de storage backends e datastores associados. | Selecione *Remover todos os artefatos de storage deste vCenter Server* e *Entendo que os datastores associados não serão mais gerenciados por ONTAP tools*. 
 
-Quando você remove instâncias do vCenter Server nas ferramentas do ONTAP, as seguintes ações são executadas automaticamente:
+
+| Sem datastores vVols, datastores protegidos ou storage backends | A caixa de diálogo confirma a remoção. | Nenhuma ação adicional é necessária. 
+|===
+. Selecione *Forçar exclusão*.
+. Confirme a ação.
+
+
+.Resultado
+As ferramentas ONTAP executam as seguintes ações automaticamente:
 
 * O plug-in não está registado.
 * As funções plug-in Privileges e plug-in são removidas.
+
+
+A instância do servidor vCenter não é mais gerenciada pelas ONTAP tools.
+
+Se o servidor vCenter estiver inacessível durante a exclusão:
+
+* As ferramentas ONTAP removem o registro do servidor vCenter.
+* O cancelamento do registro do plug-in não ocorre.
+* Uma mensagem de aviso é exibida.
+* Você deve cancelar o registro do plug-in manualmente no VMware vCenter Server.
 
 
 
@@ -120,9 +157,9 @@ siO7bL+k/Pxql27NVIhuCoVJAlcI7ak=
 . Inicie o Gerenciador de ferramentas do ONTAP a partir de um navegador da Web: `\https://<ONTAPtoolsIP>:8443/virtualization/ui/`
 . Faça login com as ferramentas do ONTAP para as credenciais de administrador do VMware vSphere fornecidas durante a implantação.
 . Selecione a instância aplicável do vCenter Server na barra lateral
-. Selecione as elipses verticais em relação ao vCenter Server que você deseja modificar e selecione *Modificar*.
+. Selecione as reticências verticais para o vCenter Server que você deseja modificar e selecione *Modificar*.
 . Na janela *Modificar vCenter*, insira o nome de usuário, a senha e os detalhes da porta.
-. Carregue o certificado e selecione *Modificar*.
+. Faça o upload do certificado e selecione *Modificar*.
 
 
 .Informações relacionadas

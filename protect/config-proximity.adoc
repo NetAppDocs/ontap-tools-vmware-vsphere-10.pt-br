@@ -1,0 +1,59 @@
+---
+permalink: protect/config-proximity.html 
+sidebar: sidebar 
+keywords: cluster configuration, datastore protection, SVM pairing, VMware vSphere, failover management 
+summary: Configure as definições de proximidade do cluster de hosts para definir os sites de origem e destino, atribuir hosts e emparelhar SVMs para proteção do datastore. 
+---
+= Configure o cluster para proteção do datastore com ONTAP tools
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Use as ONTAP tools for VMware vSphere para configurar as definições de configuração de cluster (proximidade entre host e storage), permitindo uma proteção eficiente do datastore e uma gestão simplificada de failover para o seu ambiente virtualizado.
+
+.Antes de começar
+* Verifique se você possui privilégios administrativos em vSphere.
+* As configurações de cluster são aplicáveis tanto a configurações uniformes quanto não uniformes, enquanto as configurações de acesso são aplicáveis apenas ao tipo de relacionamento AFD.
+
+
+.Passos
+. No cliente vSphere, clique com o botão direito do mouse no cluster de hosts e selecione *Configurar proteção de cluster*.
++
+
+NOTE: Se o cluster já tiver uma configuração de cluster, esta opção permite que você edite a configuração existente.
+
+. Na janela *Tipo de configuração*:
++
+.. Selecione *Uniform* para permitir que os hosts em ambos os domínios de falha acessem recursos de storage em ambos os sites. Domínio de falha é um grupo de componentes de hardware e infraestrutura. Atribua cada host a um domínio de falha para ambos os sites.
+.. Selecione *Não uniforme* para restringir os hosts em cada site a acessarem o storage apenas em seus respectivos sites. Atribua os hosts aos domínios de falha de acordo.
+.. Insira os nomes dos domínios de falha. Os nomes padrão são "Site A" e "Site B". Você pode editar esses valores. Os nomes dos sites correspondem aos domínios de falha de origem e destino. A interface do usuário valida as entradas conforme você digita e exibe mensagens para caracteres não suportados ou valores que excedem o limite de caracteres.
++
+
+NOTE: O tipo de configuração não pode ser modificado após ser definido. Para alterar o tipo de configuração, exclua a configuração do cluster e crie uma nova com as configurações desejadas.
+
+
+
+. Selecione *seguinte*.
+. Na janela *Hosts*, atribue cada host ao domínio de falha de origem ou ao domínio de falha de destino. Todos os hosts devem ser atribuídos e um host não pode pertencer a ambos os sites. Os nomes dos sites exibidos no assistente são os nomes dos domínios de falha de origem e de destino. O botão *Avançar* é habilitado após todos os hosts serem atribuídos.
+. Selecione *seguinte*.
+. Na página *Pares SVM de armazenamento*, atribua cada SVM ao site apropriado. Você pode atribuir vários pares SVM, mas pelo menos um deve ser atribuído a cada site. Quando você atribui uma SVM a um site, sua SVM correspondente é automaticamente atribuída ao site oposto.
+. Selecione *seguinte*.
+. Analise a página *Resumo*. Confirme as configurações do cluster para os respectivos domínios de falha.
+. Selecione *Criar* para aplicar a configuração.
+. Para visualizar ou editar uma configuração de proteção de cluster existente:
++
+.. Vá para a visualização do plug-in ONTAP tools.
+.. Navegue até *Proteção* > *Configuração de proteção de cluster*.
+.. Selecione o cluster para visualizar sua configuração atual.
+.. Clique nas reticências verticais e selecione *Editar* para modificar a configuração. O assistente exibe as configurações atuais para edição.
++
+image:../media/edit-protection.png["Editar configuração de proteção de cluster"]
+
+
+
+
+
+.Resultado
+A configuração é aplicada e você pode visualizá-la ou editá-la no plug-in ONTAP tools.

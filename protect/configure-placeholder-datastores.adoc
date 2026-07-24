@@ -1,8 +1,8 @@
 ---
 permalink: protect/configure-placeholder-datastores.html 
 sidebar: sidebar 
-keywords:  
-summary: 'Configure um armazenamento de dados de espaço reservado para reservar espaço no inventário do vCenter no site de recuperação para máquinas virtuais (VMs) protegidas.  Os armazenamentos de dados de espaço reservado exigem capacidade mínima, porque as VMs de espaço reservado são pequenas e normalmente usam apenas algumas centenas de quilobytes.' 
+keywords: placeholder datastore, VMware Live Site Recovery, vCenter inventory, protected virtual machines, ONTAP tools 
+summary: Configure datastores provisórios no site de recuperação para reservar espaço de inventário do vCenter para máquinas virtuais protegidas. 
 ---
 = Configure armazenamentos de dados de espaço reservado nas ONTAP tools
 :allow-uri-read: 

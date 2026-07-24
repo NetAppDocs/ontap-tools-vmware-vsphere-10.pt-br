@@ -1,8 +1,8 @@
 ---
 permalink: manage/delete-ds.html 
 sidebar: sidebar 
-keywords: vVols datastore,delete vVol 
-summary: 'A ação "Excluir datastore" exclui o datastore. No caso de um datastore NFS ou VMFS, uma caixa de diálogo é exibida com a lista de máquinas virtuais que estão usando o datastore.' 
+keywords: delete datastore, ONTAP tools datastore removal, delete NFS VMFS vVol datastore, VMware datastore cleanup 
+summary: Exclua um datastore NFS, VMFS ou vVols e revise as máquinas virtuais que o utilizam antes de removê-lo. 
 ---
 = Excluir datastores nas ONTAP tools
 :allow-uri-read: 
@@ -11,9 +11,15 @@ summary: 'A ação "Excluir datastore" exclui o datastore. No caso de um datasto
 
 
 [role="lead"]
-Esta página descreve como excluir datastores NFS, VMFS ou vVols usando as ferramentas ONTAP no vCenter Server.
+Use esta tarefa para excluir datastores NFS, VMFS ou vVols usando as ferramentas ONTAP no vCenter Server. O comportamento de exclusão e as opções de limpeza variam de acordo com o tipo de datastore.
 
-Quando você exclui um armazenamento de dados, as seguintes ações são executadas dependendo do tipo de armazenamento de dados:
+.Comportamento de exclusão para datastores NFS e VMFS
+* Não é possível excluir um datastore que está sendo usado por máquinas virtuais.
+* Para clusters de hosts protegidos, aplicam-se restrições de proteção adicionais.
+
+
+.Comportamento de exclusão para vVols datastores
+Para armazenamentos de dados vVols, as seguintes ações são executadas:
 
 * O contêiner vVol está desmontado.
 * Se o igroup não estiver em uso, seus iniciadores serão removidos do igroup.
@@ -21,28 +27,57 @@ Quando você exclui um armazenamento de dados, as seguintes ações são executa
 * Os volumes flexíveis são deixados no array de armazenamento.
 
 
-Você pode excluir o armazenamento de dados somente se não houver vVols presentes no armazenamento de dados selecionado.
+Para armazenamentos de dados vVols, você só pode excluir o armazenamento de dados se não houver vVols presentes no armazenamento de dados selecionado.
 
+.Antes de começar
+* Verifique se o armazenamento de dados não está sendo usado por máquinas virtuais.
+* Verifique se o datastore pertence a um cluster de hosts protegido.
+* Decida se deseja excluir os volumes de suporte no cluster ONTAP durante a exclusão do datastore.
+
+
+[cols="1,1,2,2"]
+|===
+| Tipo de datastore | Você pode apagar isso? | Condição de bloqueio primário | Opção de limpeza do ONTAP 
+
+
+| NFS | Sim | O datastore está em uso por máquinas virtuais. | Você pode selecionar *Excluir volumes no cluster ONTAP* quando aplicável. 
+
+
+| VMFS | Sim | O armazenamento de dados está em uso por máquinas virtuais ou restrições de proteção do cluster de hosts se aplicam. | Você pode selecionar *Excluir volumes no cluster ONTAP*. Para clusters de hosts protegidos no storage ONTAP, a exclusão do volume a partir do ONTAP não é suportada. 
+
+
+| vVols | Sim, condicionalmente | Um ou mais vVols estão presentes no datastore. | Você pode selecionar a opção para remover volumes do ONTAP, exceto no ASA r2, onde a exclusão de volumes de suporte do ONTAP não é suportada por este fluxo de trabalho. 
+|===
 .Passos
-. Faça login no cliente vSphere.
+. Faça login no vSphere Client.
 . Clique com o botão direito do mouse em um sistema host, um cluster de host ou um data center e selecione * Ferramentas NetApp ONTAP * > * Excluir armazenamento de dados *.
 +
 
-NOTE: Você não pode excluir um armazenamento de dados usado por máquinas virtuais.  Mova as máquinas virtuais para outro armazenamento de dados antes de excluí-las.  Não é possível excluir o volume se ele fizer parte de um cluster de host protegido.
+NOTE: Não é possível excluir um datastore usado por máquinas virtuais. Mova as máquinas virtuais para outro datastore antes de excluir.
 
 +
-.. No caso de um armazenamento de dados NFS ou VMFS, uma caixa de diálogo é exibida com a lista de VMs usando o armazenamento de dados.
-.. Se nenhuma máquina virtual estiver associada a um armazenamento de dados VMFS, você verá uma caixa de diálogo de confirmação.  Se a proteção do cluster do host estiver habilitada e houver um relacionamento AFD, você poderá limpar elementos de armazenamento secundários.
-.. Para datastores VMFS protegidos em sistemas ASA r2, remova a proteção antes de excluir. A partir do ONTAP 9.17.1 e das ONTAP tools for VMware vSphere 10.5, você pode excluir um armazenamento de dados protegido.  Se for o único armazenamento de dados no grupo de proteção, a proteção do cluster de hosts será removida automaticamente.
+
+NOTE: Se o datastore fizer parte de um cluster de hosts protegido, revise as restrições de proteção antes de excluir.
+
++
+.. Para um datastore NFS ou VMFS, uma caixa de diálogo é exibida com uma lista de VMs que utilizam o datastore.
+.. Se nenhuma máquina virtual estiver associada a um datastore VMFS, você verá uma caixa de diálogo de confirmação. Se a proteção de cluster do host estiver habilitada e existir um relacionamento Automated Failover Duplex (AFD), você pode limpar os elementos de storage secundário.
+.. Para datastores VMFS protegidos em sistemas de armazenamento ASA r2, remova a proteção antes de excluí-los. A partir do ONTAP 9.17.1 e ONTAP tools for VMware vSphere 10.5, você pode excluir um datastore protegido.
++
+Para a exclusão do último datastore com Automated Failover Duplex (AFD), ONTAP tools exibe esta mensagem: *O datastore está protegido. A proteção será removida antes da exclusão.*
+
++
+Se você excluir o último datastore protegido em um grupo de proteção, ONTAP tools exibirá uma mensagem informando que a exclusão do último datastore resulta em um datastore desprotegido.
+
 .. Para armazenamentos de dados vVols , você pode excluir o armazenamento de dados somente se não houver vVols presentes.  A caixa de diálogo *Excluir armazenamento de dados* inclui uma opção para remover volumes do cluster ONTAP .
-.. Para datastores vVols em sistemas ASA r2, não é possível excluir os volumes de suporte do ONTAP usando a opção *Excluir datastore*.
+.. Para vVols datastores em sistemas de armazenamento ASA r2, você não pode excluir os volumes de suporte do ONTAP usando a opção *Excluir datastore*.
 
 
 . Para excluir os volumes de backup no armazenamento ONTAP, selecione *Excluir volumes no cluster ONTAP*.
 +
 
-NOTE: Para armazenamentos de dados VMFS no armazenamento ONTAP unificado que fazem parte de um cluster de host protegido, não é possível excluir o volume do cluster ONTAP .
+NOTE: Para datastores VMFS em storage ONTAP que fazem parte de um cluster de hosts protegido, você não pode excluir o volume do cluster ONTAP.
 
 
 
-Quando você exclui um armazenamento de dados NFS, VMFS ou vVols , os igroups pais permanecem no sistema ONTAP . Os igroups filho que não são mapeados para nenhum LUN são excluídos automaticamente. As ferramentas ONTAP realizam uma limpeza diária para remover igroups pai padrão não mapeados. Exclua manualmente os grupos de instâncias (igroups) pai personalizados no ONTAP.  As ferramentas ONTAP não podem reutilizar grupos de instâncias (igroups) pai obsoletos.
+Ao excluir um datastore NFS, VMFS ou vVols, os igroups pai permanecem no sistema ONTAP. Os igroups filho que não estão mapeados para nenhum LUN são excluídos automaticamente. ONTAP tools realiza uma limpeza diária para remover igroups pai padrão não mapeados. Exclua manualmente os igroups pai personalizados no ONTAP. ONTAP tools não pode reutilizar igroups pai obsoletos.

@@ -1,8 +1,8 @@
 ---
 permalink: upgrade/upgrade-error-codes.html 
 sidebar: sidebar 
-keywords: upgrade 
-summary: Esta página descreve os códigos de erro para a operação de atualização das ferramentas do ONTAP para o sistema VMware vSphere. 
+keywords: upgrade error codes, ONTAP tools, VMware vSphere, troubleshooting, Ansible logs 
+summary: Utilize os códigos de erro de atualização das ONTAP tools para identificar fluxos de trabalho com falha e solucionar problemas de atualização no VMware vSphere. 
 ---
 = Códigos de erro de atualização das ONTAP tools
 :allow-uri-read: 
@@ -64,7 +64,7 @@ Os últimos três dígitos do código de erro indicam o erro de fluxo de trabalh
 | 052 | O ISO pode ser o mesmo da versão atual ou duas versões acima da versão atual. | Utilize uma versão ISO compatível para atualizar a partir da sua versão atual. 
 
 
-| 068 | A reversão de pacotes Debian falhou | Use a recuperação baseada em snapshot ou zero RPO e tente fazer a atualização novamente. 
+| 068 | Falha ao reverter pacotes do sistema operacional Debian | Use a recuperação baseada em snapshot ou zero RPO e tente fazer a atualização novamente. 
 
 
 | 069 | Falha ao restaurar ficheiros | Use a recuperação baseada em snapshot ou zero RPO e tente fazer a atualização novamente. 
@@ -76,7 +76,7 @@ Os últimos três dígitos do código de erro indicam o erro de fluxo de trabalh
 | 071 | O cluster do Kubernetes não estava íntegro | - 
 
 
-| 074 | A montagem ISO falhou | Verifique o /var/log/upgrade-run.log e tente atualizar novamente. 
+| 074 | A montagem ISO falhou | Verifique o arquivo /var/log/otvng/upgrade-run.log e tente atualizar novamente. 
 
 
 | 075 | As pré-verificações de atualização falharam | Tente novamente a atualização. 
@@ -106,10 +106,10 @@ Os últimos três dígitos do código de erro indicam o erro de fluxo de trabalh
 | 083 | A eliminação da cópia de segurança falhou | Use a recuperação baseada em snapshot ou zero RPO e tente fazer a atualização novamente. 
 
 
-| 084 | Falha ao alterar o JobManager de volta à produção | Execute os seguintes passos para recuperar/concluir a atualização. 1. Habilite o Shell de Diagnóstico 2. Execute o comando: _sudo perl /home/maint/scripts/post-deploy-upgrade.pl --postupgrade_ 3. Verifique os logs em /var/log/post-deploy-upgrade.log 
+| 084 | Falha ao alterar o JobManager de volta à produção | Execute os seguintes passos para recuperar/concluir a atualização. 1. Habilite o Diagnostic Shell 2. Execute o comando: _sudo perl /home/maint/scripts/post-deploy-upgrade.pl --postupgrade_ 3. Verifique os logs em /var/log/otvng/post-deploy-upgrade.log 
 
 
-| 087 | As etapas de pós-atualização falharam. | Execute as seguintes etapas para recuperar/concluir a atualização. 1. Ative o Shell de Diagnóstico 2. Execute _sudo perl /home/manut/scripts/post-deploy-upgrade.pl --postupgrade_ comando 3. Verifique os logs em /var/log/post-deploy-upgrade.log 
+| 087 | As etapas de pós-atualização falharam. | Execute os seguintes passos para recuperar/concluir a atualização. 1. Habilite o Diagnostic Shell 2. Execute o comando _sudo perl /home/maint/scripts/post-deploy-upgrade.pl --postupgrade_ 3. Verifique os logs em /var/log/otvng/post-deploy-upgrade.log 
 
 
 | 088 | A configuração da rotação de log para journald falhou | Verifique as configurações de rede da máquina virtual (VM) compatíveis com o host em que a VM está hospedada. Você pode tentar migrar a VM para outro host e reiniciar. 
@@ -127,10 +127,13 @@ Os últimos três dígitos do código de erro indicam o erro de fluxo de trabalh
 | 097 | A desinstalação de serviços para atualização falhou | Use recuperação baseada em snapshots ou RPO zero e tente fazer a atualização novamente. 
 
 
-| 098 | a cópia do segredo do provisionador de armazenamento dinâmico do sistema ntv para o namespace do provisionador de armazenamento dinâmico falhou | Verifique os logs de atualização e tente atualizar novamente. 
+| 098 | Falha ao copiar o segredo dockercred do namespace ntv-system para o namespace rook-ceph | Verifique os logs de atualização e tente atualizar novamente. 
 
 
 | 099 | Falha ao validar a nova adição de HDD | Adicione o novo HDD a todos os nós no caso de HA e a um nó em caso de implantação não HA. 
+
+
+| 108 | Falha no script de semeadura | - 
 
 
 | 109 | o backup de dados de volume persistentes falhou | Verifique os logs de atualização e tente atualizar novamente. 
@@ -160,7 +163,7 @@ Os últimos três dígitos do código de erro indicam o erro de fluxo de trabalh
 | 056 | a eliminação da cópia de segurança de migração falhou | NA 
 
 
-| 090 | falha na validação do certificado para backends de armazenamento e vCenter | Verifique os logs de atualização e o arquivo de log em /var/log/cert_validation_error.log e tente atualizar novamente. 
+| 090 | falha na validação do certificado para backends de armazenamento e vCenter | Verifique os registros de atualização e o arquivo de log em /var/log/otvng/cert_validation_error.log e tente a atualização novamente. 
 
 
 | 114 | A atualização do certificado interno na coleção do MongoDB falhou  a| 
@@ -215,7 +218,7 @@ sudo perl /home/maint/scripts/post-deploy-upgrade.pl --postupgrade
 +
 [listing]
 ----
-tail -f /var/log/post-deploy-upgrade.log
+tail -f /var/log/otvng/post-deploy-upgrade.log
 ----
 +
 Procure a mensagem de sucesso: `Completed post 10.5 upgrade steps.`

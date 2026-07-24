@@ -1,0 +1,105 @@
+---
+permalink: manage/manage-protection-groups.html 
+sidebar: sidebar 
+keywords: manage protection groups, SnapMirror relationships, datastore disaster recovery, ONTAP tools replication groups 
+summary: Visualize, edite e exclua grupos de proteção e seus relacionamentos em ONTAP tools. 
+---
+= Gerencie grupos de proteção nas ONTAP tools
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Use esta tarefa para visualizar, editar e excluir grupos de proteção e seus relacionamentos na página Grupos de proteção em ONTAP tools.
+
+.Antes de começar
+* Certifique-se de ter privilégios administrativos em vSphere.
+* Certifique-se de que sua conta de usuário das ONTAP tools tenha permissões para gerenciar grupos de proteção.
+
+
+
+IMPORTANT: Antes de editar ou remover a proteção, revise as mensagens de aviso na caixa de diálogo. Remover relacionamentos pode afetar o comportamento de backup e consistência.
+
+.Sobre esta tarefa
+* As ferramentas ONTAP atualizam os registros de proteção locais na instância das ferramentas ONTAP selecionada.
+* Se você selecionar *Excluir elementos de armazenamento associados*, ONTAP tools remove os elementos de armazenamento do grupo de proteção.
+* Se você não selecionar *Excluir elementos de storage associados*, remova manualmente os relacionamentos e elementos de storage do lado do destino no ONTAP.
+
+
+
+
+[[view-protection-groups]]
+== Ver grupos de proteção
+
+.Passos
+. No plug-in ONTAP tools, navegue até *Proteção* > *Grupos de proteção*.
++
+A lista de grupos de proteção mostra os relacionamentos associados, incluindo grupos de consistência, SnapMirror policies e datastores protegidos.
+
+. Analise os detalhes do grupo de proteção, incluindo o número de datastores protegidos.
+
+
+
+
+[[edit-protection-group-relationships]]
+== Editar relações do grupo de proteção
+
+.Passos
+. No plug-in ONTAP tools, navegue até *Proteção* > *Grupos de proteção*.
+. Selecione as reticências verticais (três pontos) ao lado do grupo de proteção que você deseja editar.
+. Selecione *Editar grupo de proteção*.
+. Atualize as configurações de relacionamento:
++
+.. Se um grupo de proteção tiver um relacionamento de Automated Failover Duplex (AFD), você pode adicionar um relacionamento assíncrono.
+.. Se um grupo de proteção tiver uma relação assíncrona, você pode adicionar uma relação de Automated Failover Duplex (AFD).
+.. Se um grupo de proteção tiver relacionamentos de Automated Failover Duplex (AFD) e assíncronos, você pode remover qualquer um dos relacionamentos na janela *Editar grupo de proteção*.
+.. Cada grupo de proteção pode ter apenas um relacionamento de Automated Failover Duplex (AFD) e um relacionamento assíncrono.
+.. Para usar um relacionamento AFD diferente, remova o relacionamento AFD existente e adicione o novo relacionamento AFD.
+.. Se você remover um relacionamento existente na janela *Editar grupo de proteção*, revise o aviso de que a remoção do relacionamento pode afetar backups e consistência.
+.. Se você remover um relacionamento assíncrono na janela *Editar grupo de proteção*, os recursos de storage do lado do destino não serão excluídos automaticamente. Remova manualmente os relacionamentos e elementos de storage do lado do destino no ONTAP.
+
+
+
+
+
+NOTE: As operações de edição estão limitadas às configurações de relacionamento suportadas. Consulte sua política de proteção e requisitos de fluxo de trabalho antes de salvar as alterações.
+
+
+
+[[remove-a-protection-group]]
+== Remover um grupo de proteção
+
+.Passos
+. No plug-in ONTAP tools, navegue até *Proteção* > *Grupos de proteção*.
+. Selecione as reticências verticais (três pontos) ao lado do grupo de proteção que você deseja remover.
+. Selecione *Remover proteção*.
+. Na caixa de diálogo *Remover proteção*, revise a mensagem informando que a remoção da proteção do cluster de hosts resulta em datastores desprotegidos.
+. Opcional: selecione *Excluir elementos de armazenamento associados* (artefatos de limpeza) para remover elementos de armazenamento do grupo de proteção.
++
+Os elementos de armazenamento podem incluir grupos de consistência, volumes, unidades de armazenamento e snapshots.
+
+. Se você não selecionar *Excluir elementos de storage associados*, ONTAP tools remove apenas os registros de proteção locais. Remova manualmente os relacionamentos e elementos de storage do lado do destino no ONTAP.
+
+
+[cols="1,1,1,1"]
+|===
+| Tipo de relacionamento | Excluir escopo | Limpeza automática | Limpeza manual necessária 
+
+
+| Failover Duplex Automatizado (AFD) | Excluir a proteção em qualquer um dos sites exclui o relacionamento em ambos os sites. | Os registros de relacionamento são removidos como parte do fluxo de trabalho. | Caso você não selecione *Excluir elementos de armazenamento associados*, remova manualmente os elementos de armazenamento restantes conforme necessário. 
+
+
+| Assíncrono | A exclusão aplica-se apenas à instância local das ONTAP tools; a exclusão entre sites não está disponível. | Os registros de proteção local são removidos. | Remova manualmente os relacionamentos e elementos de storage do lado do destino no ONTAP. 
+|===
+.Resultado
+* As ferramentas ONTAP removem os registros de proteção local para o grupo de proteção selecionado.
+* Se você selecionou *Excluir elementos de armazenamento associados*, ONTAP tools remove os elementos de armazenamento selecionados no grupo de proteção.
+* Se ainda existirem relações ou elementos de storage no lado do destino, remova-os manualmente no ONTAP.
+
+
+.Tópicos relacionados
+* link:../manage/protect-ds.html["Proteger um datastore VMFS"]
+* link:../protect/protect-multiple-ds.html["Proteja vários armazenamentos de dados"]
+* link:../protect/config-proximity.html["Configure o cluster para proteção do datastore com ONTAP tools"]
+
