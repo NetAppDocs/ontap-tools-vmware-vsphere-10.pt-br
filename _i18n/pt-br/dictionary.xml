@@ -3117,4 +3117,6 @@
   <block id="3d3b22ece01725fa79df30b77fa3a31a" category="sidebar">Migrar ONTAP tools for VMware vSphere 9.xx para 10.6</block>
   <block id="41a5e22b558335c66fd0b39340507737" category="sidebar">Conceitos e elegibilidade de proteção granular de datastore</block>
   <block id="78b8a2472e1c8fa0502b3ca56bf4d2c2" category="sidebar">Configure o cluster para proteção do datastore</block>
+  <block id="6449edcecf1e41dc6b7285ef82391ccf" category="section-title">Limites de configuração para descoberta de backend de armazenamento</block>
+  <block id="1bf037add08fddef448fa6335970a313" category="paragraph">As ferramentas ONTAP suportam a descoberta de backend de armazenamento para até 200 SVMs e aproximadamente 10.000 LUNs.</block>
 </blocks>

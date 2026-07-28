@@ -197,6 +197,13 @@ NOTE: A contagem de hosts na tabela representa o total combinado em todos os vCe
 
 
 
+[[configuration-limits-for-storage-backend-discovery]]
+== Limites de configuração para descoberta de backend de armazenamento
+
+As ferramentas ONTAP suportam a descoberta de backend de armazenamento para até 200 SVMs e aproximadamente 10.000 LUNs.
+
+
+
 [[configuration-limits-for-vmfs-and-nfs-datastores]]
 == Limites de configuração para datastores VMFS e NFS
 
