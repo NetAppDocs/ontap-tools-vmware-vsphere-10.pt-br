@@ -4,14 +4,14 @@ sidebar: sidebar
 keywords: virtual machine migration considerations, ONTAP tools VM cloning guidance, VMware storage vMotion considerations, VM migration best practices 
 summary: Analise os principais pontos a considerar antes de migrar máquinas virtuais existentes no seu data center. 
 ---
-= Considerações sobre migração e clonagem de máquinas virtuais para ONTAP tools
+= Saiba mais sobre migração e clonagem de máquina virtual nas ONTAP tools
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-ONTAP tools for VMware vSphere suportam todos os principais tipos de migração de máquina virtual, incluindo somente computação (vMotion), somente armazenamento (Storage vMotion) e migração combinada de computação e armazenamento em todos os datastores. Este tópico descreve as principais considerações e práticas recomendadas para garantir a migração e clonagem bem-sucedidas de máquinas virtuais, independentemente do tipo de datastore subjacente.
+ONTAP tools for VMware vSphere suporta todos os principais tipos de migração de máquina virtual, incluindo somente computação (vMotion), somente storage (Storage vMotion) e migração combinada de computação e storage em todos os datastores. Compreender essas considerações e práticas recomendadas de migração e clonagem ajuda você a alcançar resultados bem-sucedidos, independentemente do tipo de datastore subjacente.
 
 
 
@@ -38,19 +38,19 @@ Você pode clonar máquinas virtuais protegidas para o seguinte:
 
 * O mesmo contêiner do mesmo FlexVol volume usando um grupo de replicação
 +
-O arquivo de metadados do mesmo volume FlexVol é atualizado com os detalhes da máquina virtual clonada.
+ONTAP tools atualiza o arquivo de metadados do mesmo volume FlexVol com os detalhes da máquina virtual clonada.
 
 * O mesmo contêiner de um volume FlexVol diferente usando um grupo de replicação
 +
-No volume FlexVol onde a máquina virtual clonada é colocada, o arquivo de metadados é atualizado com os detalhes da máquina virtual clonada.
+No volume FlexVol onde a máquina virtual clonada é colocada, ONTAP tools atualiza o arquivo de metadados com os detalhes da máquina virtual clonada.
 
 * Um contêiner ou vVols datastore diferente
 +
-No volume FlexVol onde a máquina virtual clonada é colocada, o arquivo de metadados é atualizado com os detalhes da máquina virtual.
+No volume FlexVol onde a máquina virtual clonada é colocada, ONTAP tools atualiza o arquivo de metadados com os detalhes da máquina virtual.
 
 
 
-Atualmente, a VMware não oferece suporte a máquinas virtuais clonadas para um modelo de máquina virtual.
+Atualmente, a VMware não oferece suporte a máquinas virtuais clonadas para um template de máquina virtual.
 
 É possível criar um clone de um clone de uma máquina virtual protegida.
 

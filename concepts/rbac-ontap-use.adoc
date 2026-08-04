@@ -4,14 +4,14 @@ sidebar: sidebar
 keywords: ONTAP RBAC deployment, custom roles, user configuration, JSON role definition 
 summary: Analise as considerações sobre RBAC do ONTAP para ONTAP tools antes de usar em um ambiente de produção. 
 ---
-= Considerações sobre RBAC do ONTAP para ONTAP tools
+= ONTAP RBAC em ONTAP tools for VMware vSphere
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-Há vários aspectos das ferramentas do ONTAP para a implementação do RBAC do VMware vSphere 10 com o ONTAP que você deve considerar antes de usá-lo em um ambiente de produção.
+ONTAP tools for VMware vSphere oferece controle de acesso baseado em funções (RBAC) por meio do ONTAP, permitindo que você crie usuários e funções personalizados que restringem o acesso a recursos de storage. Entender o processo de configuração e os níveis de privilégio ajuda você a configurar controles de acesso adequados antes de implantar ONTAP tools em um ambiente de produção.
 
 
 
@@ -20,7 +20,7 @@ Há vários aspectos das ferramentas do ONTAP para a implementação do RBAC do 
 
 As ONTAP tools for VMware vSphere incluem suporte para criar um usuário ONTAP com uma função personalizada.  As definições são empacotadas em um arquivo JSON que você pode carregar no cluster ONTAP .  Você pode criar o usuário e adaptar a função ao seu ambiente e às suas necessidades de segurança.
 
-Os principais passos de configuração são descritos em um nível alto abaixo. link:../configure/configure-user-role-and-privileges.html["Configurar as funções de usuário do ONTAP e o Privileges"]Consulte para obter mais detalhes.
+A seção a seguir descreve as principais etapas de configuração em alto nível. Consulte link:../configure/configure-user-role-and-privileges.html["Configurar as funções de usuário do ONTAP e o Privileges"] para obter mais detalhes.
 
 .1. Prepare-se
 Você precisa ter credenciais administrativas para o Gerenciador de ferramentas do ONTAP e para o cluster do ONTAP.
@@ -32,7 +32,7 @@ Depois de fazer login na interface de usuário do Gerenciador de ferramentas do 
 Depois de iniciar sessão no System Manager, pode criar o utilizador e a função:
 
 . Selecione *Cluster* à esquerda e, em seguida, *Settings*.
-. Role para baixo até *usuários e funções* e clique `-->`em .
+. Desça até *Usuários e funções* e selecione  `-->`.
 . Selecione *Adicionar* em *usuários* e selecione *Produtos de virtualização*.
 . Selecione o arquivo JSON em sua estação de trabalho local e carregue-o.
 
@@ -59,7 +59,7 @@ As definições RBAC são empacotadas como várias capacidades de produto, inclu
 [[privileges]]
 === Privileges
 
-Os privilégios de função são organizados em quatro conjuntos com base no nível de acesso necessário para o armazenamento ONTAP. Os privilégios nos quais as funções se baseiam incluem:
+Os privilégios de função são organizados em quatro conjuntos com base no nível de acesso necessário para o storage ONTAP. Os privilégios nos quais as funções se baseiam incluem:
 
 * Detecção
 +
@@ -84,7 +84,7 @@ Esta função permite que você destrua o armazenamento. Ele também inclui todo
 [[generate-the-user-with-a-role]]
 === Gere o usuário com uma função
 
-Depois de selecionar as opções de configuração para o seu ambiente, clique em *Adicionar* e o ONTAP cria o usuário e a função. O nome da função gerada é uma concatenação dos seguintes valores:
+Após selecionar as opções de configuração para o seu ambiente, selecione *Adicionar* e ONTAP cria o usuário e a função. O nome da função gerada é uma concatenação dos seguintes valores:
 
 * Valor de prefixo constante definido no arquivo JSON (por exemplo, "OTV_10")
 * Capacidade do produto selecionada
@@ -94,4 +94,4 @@ Depois de selecionar as opções de configuração para o seu ambiente, clique e
 .Exemplo
 `OTV_10_VSC_Discovery_Create`
 
-O novo usuário será adicionado à lista na página 'Usuários e funções'. Observe que os métodos de login de usuário HTTP e ONTAPI são suportados.
+O novo usuário aparece na lista na página *Usuários e funções*. Observe que os métodos de login de usuário HTTP e ONTAPI são suportados.

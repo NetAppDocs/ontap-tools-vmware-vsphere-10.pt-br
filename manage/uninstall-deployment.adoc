@@ -4,14 +4,14 @@ sidebar: sidebar
 keywords: uninstall ONTAP tools, remove ONTAP tools deployment, appliance decommission workflow, graceful deployment termination 
 summary: Encerre sua implantação do ONTAP tools for VMware vSphere de forma adequada. 
 ---
-= Desinstalar ONTAP tools
+= Desinstale sua implantação do ONTAP tools for VMware vSphere
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-A desinstalação das ferramentas do ONTAP para VMware vSphere exclui todos os dados das ferramentas.
+A desinstalação das ONTAP tools for VMware vSphere exclui todos os dados nas ferramentas, portanto, você deve concluir estas etapas para encerrar sua implantação corretamente e evitar perda de dados.
 
 .Passos
 . Remova ou mova todas as máquinas virtuais das ferramentas do ONTAP para armazenamentos de dados gerenciados do VMware vSphere.

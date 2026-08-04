@@ -14,17 +14,17 @@ summary: Analise o ambiente RBAC do ONTAP e como ele controla o acesso ao storag
 
 
 [role="lead"]
-O ONTAP fornece um ambiente RBAC robusto e extensível. Use a funcionalidade RBAC para controlar o acesso ao storage e às operações do sistema conforme exposto pela API REST e CLI. É útil estar familiarizado com o ambiente antes de usá-lo com as ferramentas do ONTAP para a implantação do VMware vSphere 10.
+ONTAP oferece um ambiente RBAC robusto e extensível que controla o acesso ao storage e às operações do sistema por meio da API REST e da CLI. Compreender os conceitos de RBAC do ONTAP — incluindo tipos de função, escopos e privilégios — ajuda você a configurar e gerenciar o acesso de usuários às suas ONTAP tools for VMware vSphere 10 deployment.
 
 
 
 [[overview-of-the-administrative-options]]
 == Visão geral das opções administrativas
 
-Há várias opções disponíveis ao usar o ONTAP RBAC, dependendo do ambiente e das metas. Uma visão geral das principais decisões administrativas é apresentada abaixo. Consulte também https://docs.netapp.com/us-en/ontap-automation/rest/rbac_overview.html["Automação ONTAP: Visão geral da segurança RBAC"^] para obter mais informações.
+Existem diversas opções disponíveis ao usar ONTAP RBAC, dependendo do seu ambiente e objetivos. As seções a seguir fornecem uma visão geral das principais decisões administrativas. Consulte também  https://docs.netapp.com/us-en/ontap-automation/rest/rbac_overview.html["Automação ONTAP: Visão geral da segurança RBAC"^] para obter mais informações.
 
 
-NOTE: O ONTAP RBAC é adaptado para um ambiente de armazenamento e é mais simples do que a implementação do RBAC fornecida com o vCenter Server.  Com o ONTAP, você atribui uma função diretamente ao usuário.  Não é necessário configurar permissões explícitas, como aquelas usadas com o vCenter Server, com o ONTAP RBAC.
+NOTE: ONTAP RBAC é adaptado a um ambiente de storage e é mais simples do que a implementação de RBAC fornecida com vCenter Server. Com ONTAP, você atribui uma função diretamente ao usuário. Ao contrário do vCenter Server, o ONTAP RBAC não exige que você configure permissões explícitas.
 
 .Tipos de papéis e Privileges
 Uma função ONTAP é necessária ao definir um usuário ONTAP. Existem dois tipos de funções do ONTAP:
@@ -39,7 +39,7 @@ Essas são as funções legadas que existiam antes do ONTAP 9.6. Elas continuam 
 
 
 
-Embora as funções REST tenham sido introduzidas mais recentemente, as funções tradicionais oferecem algumas vantagens. Por exemplo, parâmetros de consulta adicionais podem ser incluídos para permitir que os Privileges definam com mais precisão os objetos aos quais se aplicam.
+Embora as funções REST tenham sido introduzidas mais recentemente, as funções tradicionais oferecem algumas vantagens. Por exemplo, você pode incluir parâmetros de consulta adicionais para que os privilégios definam com mais precisão os objetos aos quais se aplicam.
 
 .Âmbito de aplicação
 As funções do ONTAP podem ser definidas com um de dois escopos diferentes. Elas podem ser aplicadas a um data SVM específico (nível do SVM) ou a todo o cluster ONTAP (nível de cluster).
@@ -52,7 +52,7 @@ O ONTAP fornece um conjunto de funções pré-definidas no nível do cluster e d
 [[working-with-ontap-rest-roles]]
 == Trabalhando com as funções REST do ONTAP
 
-Há várias considerações ao usar as funções REST do ONTAP incluídas nas ferramentas do ONTAP para VMware vSphere 10.
+Tenha em mente o seguinte ao usar as funções REST do ONTAP incluídas nas ONTAP tools for VMware vSphere 10.
 
 .Mapeamento de funções
 Seja usando uma função tradicional ou REST, todas as decisões de acesso ao ONTAP são tomadas com base no comando CLI subjacente. Mas como os Privileges em uma FUNÇÃO REST são definidos em termos dos endpoints da API REST, o ONTAP precisa criar uma função tradicional _mapeada_ para cada uma das funções REST. Portanto, cada função REST mapeia para um papel tradicional subjacente. Isso permite que o ONTAP tome decisões de controle de acesso de forma consistente, independentemente do tipo de função. Não é possível modificar as funções mapeadas paralelas.

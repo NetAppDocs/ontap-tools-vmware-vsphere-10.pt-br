@@ -11,7 +11,7 @@ summary: Visualize os detalhes do datastore e do volume na página de storage do
 
 
 [role="lead"]
-Use a página ONTAP Storage na guia *Configurar* para visualizar informações sobre datastore e volume.
+ONTAP tools for VMware vSphere exibe a visão do lado do storage ONTAP dos datastores e seus volumes na guia Configurar, incluindo detalhes do backend de storage, agregado e volume para cada tipo de datastore.
 
 .Passos
 . No inventário do vSphere Client, selecione o datastore.
@@ -25,13 +25,13 @@ Use a página ONTAP Storage na guia *Configurar* para visualizar informações s
 | *Tipo de datastore* | *Informação disponível* 
 
 
-| Datastores NFS | A página *Detalhes do storage* contém backends de storage, agregados e informações de volumes. A página *Detalhes do NFS* contém dados relacionados ao datastore NFS. Observação: se o valor de nconnect for alterado fora do ONTAP tools, o valor exibido no ONTAP tools pode não refletir essa alteração externa. 
+| Datastore NFS | A página *Detalhes do storage* contém informações sobre o backend de storage, agregados e volumes. A página *Detalhes do NFS* contém dados relacionados ao datastore NFS. Observação: se o valor de nconnect for alterado fora do ONTAP tools, o valor exibido no ONTAP tools pode não refletir essa alteração externa. 
 
 
 | Armazenamentos de dados VMFS | A página *Detalhes do armazenamento* contém informações sobre o backend de armazenamento, o agregado, o volume e a zona de disponibilidade de storage (SAZ). A página *Detalhes da unidade de armazenamento* contém detalhes da unidade de armazenamento. 
 
 
-| Armazenamentos de dados vVols | Lista todos os volumes. Você pode expandir ou remover o armazenamento do painel de armazenamento do ONTAP . As ferramentas ONTAP não suportam essa visualização para datastores vVols baseados no sistema ASA r2. 
+| Armazenamentos de dados vVols | A página lista todos os volumes. Você pode expandir ou remover storage no painel de storage do ONTAP. ONTAP tools for VMware vSphere não oferece suporte a essa visualização para datastores vVols baseados em sistema ASA r2. 
 |===
 .Resultado
 Você pode revisar os detalhes do datastore do lado do ONTAP com base no tipo de datastore selecionado.

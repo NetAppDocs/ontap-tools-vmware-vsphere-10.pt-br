@@ -4,17 +4,17 @@ sidebar: sidebar
 keywords: ONTAP tools reports, virtual machine reports, datastore reports, VMware storage reporting 
 summary: Visualize relatórios de máquinas virtuais e datastores no plug-in ONTAP tools. 
 ---
-= Relatórios de ferramentas do ONTAP
+= Relatórios do ONTAP tools for VMware vSphere
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-O plug-in das ferramentas do ONTAP para VMware vSphere fornece relatórios para máquinas virtuais e datastores. Quando você seleciona o ícone do plug-in das ferramentas do NetApp ONTAP para VMware vSphere na seção Atalhos do cliente vCenter, a interface do usuário navega para a página Visão geral. Selecione a guia relatórios para exibir a máquina virtual e o relatório de datastores.
+O plug-in ONTAP tools for VMware vSphere fornece relatórios que ajudam você a monitorar máquinas virtuais e datastores suportados pelo storage ONTAP. Para visualizar esses relatórios, selecione o ícone do plug-in ONTAP tools for VMware vSphere na seção de atalhos do cliente vCenter e, em seguida, selecione a guia Relatórios.
 
-O relatório de Máquinas virtuais mostra a lista de máquinas virtuais descobertas (devem ter pelo menos um disco de repositórios de dados baseados em armazenamento ONTAP ) com métricas de desempenho. Ao expandir o registro da máquina virtual, a interface exibe todas as informações do armazenamento de dados relacionadas ao disco.
+O relatório de Máquinas Virtuais lista as máquinas virtuais detectadas que possuem pelo menos um disco em um datastore baseado em ONTAP, juntamente com métricas de desempenho. Ao expandir o registro da VM, a interface exibe todas as informações do datastore relacionadas ao disco.
 
-O relatório de datastores lista os datastores descobertos ou reconhecidos ONTAP tools for VMware vSphere que utilizam qualquer armazenamento ONTAP , juntamente com as métricas de desempenho.
+O relatório de datastores lista os datastores que ONTAP tools for VMware vSphere descobre e que usam storage ONTAP, juntamente com métricas de desempenho.
 
 Você pode usar a opção Gerenciar colunas para ocultar ou mostrar diferentes colunas.

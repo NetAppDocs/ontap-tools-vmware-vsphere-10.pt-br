@@ -11,7 +11,7 @@ summary: Recupere as ONTAP tools a partir do backup e compreenda o comportamento
 
 
 [role="lead"]
-A partir das ONTAP tools for VMware vSphere 10.5, o recurso de backup é habilitado por padrão.
+Você pode recuperar a configuração do ONTAP tools for VMware vSphere restaurando-a a partir de um arquivo de backup armazenado no datastore. A partir do ONTAP tools for VMware vSphere 10.5, o recurso de backup está habilitado por padrão, então um backup recente estará disponível caso você precise reimplantar ou recuperar o appliance.
 
 O armazenamento de dados onde você implanta ONTAP tools for VMware vSphere armazena os arquivos de backup.  Uma pasta nomeada após o endereço IP das ferramentas ONTAP (pontos substituídos por sublinhados e sufixados com _OTV_backup_) mantém os dois arquivos de backup mais recentes (_OTV_backup_1.tar.enc_ e _OTV_backup_2.tar.enc_) e um arquivo de informações (_OTV_backup_info.txt_) que contém o nome do backup mais recente.
 
@@ -40,7 +40,7 @@ scp <OTV_backup_X.tar.enc> diag@<node_ip>:/home/diag/system_recovery.tar.enc
 ----
 +
 
-NOTE: não altere o caminho de destino e o nome do arquivo (/home/diag/system_recovery.tar.enc) mencionados no comando.
+NOTE: Não altere o caminho de destino e o nome do arquivo (/home/diag/system_recovery.tar.enc) mencionados no comando.
 
 . Após a transferência do arquivo de backup, faça login no shell de diagnóstico e execute o seguinte comando:
 +

@@ -11,7 +11,7 @@ summary: Inicie o SSH em outros nós antes de executar uma atualização.
 
 
 [role="lead"]
-Você precisa iniciar o SSH em outros nós antes de atualizar.
+Antes de atualizar ONTAP tools for VMware vSphere, você precisa iniciar o SSH em cada um dos outros nós do seu ambiente.
 
 .Antes de começar
 Habilite a extensão VASA Provider para sua instância do vCenter Server.

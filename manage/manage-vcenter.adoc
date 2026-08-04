@@ -11,7 +11,7 @@ summary: Gerencie instâncias do vCenter nas ONTAP tools para controlar hosts, m
 
 
 [role="lead"]
-As instâncias do vCenter Server são plataformas de gerenciamento central que permitem controlar hosts, máquinas virtuais e backends de armazenamento.
+As instâncias do vCenter Server são plataformas de gerenciamento central que permitem controlar hosts, máquinas virtuais e backends de storage. Nas ONTAP tools, você pode dissociar backends de storage, modificar detalhes da instância, remover instâncias e renovar certificados do vCenter Server.
 
 
 
@@ -33,12 +33,14 @@ A página de listagem do vCenter Server mostra o número associado de backends d
 [[modify-a-vcenter-server-instance]]
 == Modifique uma instância do vCenter Server
 
+Modifique uma instância do servidor vCenter seguindo os passos abaixo.
+
 . Inicie o Gerenciador de ferramentas do ONTAP a partir de um navegador da Web: `\https://<ONTAPtoolsIP>:8443/virtualization/ui/`
 . Faça login com as ferramentas do ONTAP para as credenciais de administrador do VMware vSphere fornecidas durante a implantação.
 . Selecione *vCenters* na barra lateral.
 . Selecione as reticências verticais para o vCenter Server que você deseja modificar e selecione *Modificar*.
 . Na janela *Modificar vCenter*, insira o nome de usuário, a senha e os detalhes da porta.
-. Carregue o certificado e selecione *Modificar*.
+. Faça o upload do certificado e selecione *Modificar*.
 
 
 
@@ -117,7 +119,7 @@ As ferramentas ONTAP notificam você quando o certificado do vCenter está perto
 ----
 echo | openssl s_client connect <vcenter>:443 2>&1 | sed -n '/-BEGIN CERTIFICATE/,/END CERTIFICATE/p'
 ----
-. Certifique-se de que o certificado esteja no formato ASCII Base 64 e inclua as linhas inicial e final, por exemplo:
+. Verifique se o certificado está no formato ASCII Base 64 e inclui as linhas inicial e final, por exemplo:
 +
 [listing]
 ----

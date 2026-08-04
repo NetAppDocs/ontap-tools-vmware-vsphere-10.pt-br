@@ -11,7 +11,7 @@ summary: Monte os datastores em hosts adicionais após adicionar hosts ao seu am
 
 
 [role="lead"]
-A montagem de um datastore fornece acesso ao storage a hosts adicionais. Você pode montar o datastore nos hosts adicionais depois de adicionar os hosts ao seu ambiente VMware.
+Montar um datastore fornece acesso ao storage a hosts adicionais depois de adicioná-los ao seu ambiente VMware.
 
 
 NOTE: Após adicionar o host, aguarde a conclusão da descoberta agendada antes que ele apareça nas ONTAP tools. Como alternativa, você pode executar a descoberta manualmente na tela de visão geral das NetApp ONTAP tools. Para obter informações sobre como adicionar um host ESXi ao seu cluster vSphere, consulte  https://techdocs.broadcom.com/["Documentação técnica Broadcom"].
@@ -20,11 +20,10 @@ NOTE: Após adicionar o host, aguarde a conclusão da descoberta agendada antes 
 * Algumas ações com o botão direito do Mouse são desativadas ou indisponíveis dependendo da versão do cliente vSphere e do tipo de datastore selecionado.
 +
 ** Se você estiver usando o vSphere Client 8,0 ou versões posteriores, algumas das opções de clique com o botão direito do Mouse ficam ocultas.
-** Das versões vSphere 7.0U3 ao vSphere 8,0, mesmo que as opções apareçam, a ação será desativada.
+** Da versão vSphere 7.0U3 à vSphere 8.0, embora as opções apareçam, a ação está desativada.
 
 
 * O vSphere desativa a opção de montagem do armazenamento de dados quando o cluster de hosts está protegido com configurações uniformes.
-* Quando um datastore com nconnect é montado em um novo host, ONTAP tools aplica o valor de nconnect do datastore se ele exceder a configuração do host.
 
 
 .Passos

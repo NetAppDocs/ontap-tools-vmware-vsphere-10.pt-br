@@ -11,7 +11,7 @@ summary: Aprenda como ONTAP tools representa e gerencia igroups aninhados para u
 
 
 [role="lead"]
-Se você gerencia tanto as VMs do ONTAP tools quanto os sistemas de storage ONTAP, é importante entender como os igroups se comportam, especialmente ao mover datastores de ambientes não gerenciados pelo ONTAP tools para aqueles que são. Esta página explica como o ONTAP tools para VMware vSphere representa e gerencia igroups. Trata-se de informação conceitual para entender as diferenças de comportamento entre versões anteriores e o modelo atual de igroup aninhado.
+Se você gerencia tanto as máquinas virtuais do ONTAP tools quanto os sistemas de storage ONTAP, precisa entender como os igroups se comportam, especialmente ao mover datastores de ambientes não gerenciados pelo ONTAP tools para ambientes gerenciados. ONTAP tools para VMware vSphere representa e gerencia igroups usando um modelo de igroup aninhado, e entender esse modelo ajuda você a interpretar as diferenças de comportamento entre versões anteriores e a implementação atual.
 
 A partir do ONTAP tools for VMware vSphere 10.4, ONTAP tools cria e mantém automaticamente objetos ONTAP e vCenter, simplificando o gerenciamento de datastores em ambientes de datacenter VMware. A partir do ONTAP tools for VMware vSphere 10.5 P2, os igroups migrados também são excluídos automaticamente quando não estão mais em uso.
 
@@ -41,7 +41,7 @@ image:../media/non-otv-managed.png["Ferramentas não ONTAP gerenciadas igroup"]
 .Ferramentas ONTAP gerenciam igroups
 Ao criar datastores, ONTAP tools for VMware vSphere cria igroups em uma estrutura aninhada.
 
-Por exemplo, quando o datastore1 é criado e montado nos hosts 1, 2 e 3, e um novo datastore (datastore2) é criado e montado nos hosts 3, 4 e 5, as ferramentas ONTAP reutilizam o igroup de nível de host para gerenciamento eficiente.
+Por exemplo, se você criar o datastore1 e montá-lo nos hosts 1, 2 e 3, depois criar o datastore2 e montá-lo nos hosts 3, 4 e 5, ONTAP tools reutiliza o igroup em nível de host para um gerenciamento eficiente.
 
 image:../media/otv-managed.png["Ferramentas ONTAP gerenciadas igroup"]
 
@@ -98,7 +98,7 @@ NOTE: Somente igroups personalizados podem ser reutilizados. Igroups migrados do
 [[native-to-managed-conversion-view]]
 == Visão de conversão de nativo para gerenciado
 
-Se você criar o igroup e o datastore diretamente em sistemas ONTAP e ambientes VMware, ONTAP tools não gerencia esses objetos inicialmente. Isso resulta em uma estrutura de igroup plana.
+Se você criar o igroup e o datastore diretamente em sistemas ONTAP e ambientes VMware, ONTAP tools não gerencia esses objetos inicialmente, resultando em uma estrutura de igroup plana.
 
 image:../media/vmfsds-native.png["Datastore e igroup criados nativamente"]
 
