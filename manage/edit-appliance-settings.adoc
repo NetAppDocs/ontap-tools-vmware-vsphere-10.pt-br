@@ -11,7 +11,7 @@ summary: 'Dimensione o appliance do ONTAP tools e configure a alta disponibilida
 
 
 [role="lead"]
-Use ONTAP tools Manager para expandir seu appliance e configurar alta disponibilidade (HA). Por padrão, ONTAP tools for VMware vSphere é implantado como uma configuração de nó único, sem HA.
+Use o ONTAP tools Manager para aumentar a escala do appliance ou configurar alta disponibilidade (HA). Por padrão, o ONTAP tools for VMware vSphere é implementado como uma configuração de nó único, sem HA.
 
 .Antes de começar
 * Certifique-se de que seu modelo OVA corresponda à versão do Node 1 (o nó de implantação inicial).
@@ -30,7 +30,7 @@ NOTE: Você só pode aumentar o tamanho do nó, não diminuí-lo. Implantações
 . Na seção *Configuração*, selecione seu novo tamanho de nó e ative a opção HA para habilitar a Alta Disponibilidade.
 . Na página *Configurações do HA*, verifique o seguinte:
 +
-** A biblioteca de conteúdo reside no mesmo vCenter Server onde as VMs das ONTAP tools serão executadas.
+** A biblioteca de conteúdo reside no mesmo vCenter Server onde as máquinas virtuais (VMs) das ONTAP tools são executadas.
 ** As VMs das ONTAP tools são implantadas em um cluster ou pool de recursos, não diretamente em um host ESXi.
 +
 
@@ -40,7 +40,7 @@ IMPORTANT: Após ativar o HA, você não pode reverter para uma configuração d
 
 . Na seção *Configurações de HA*, insira os detalhes de rede para os Nós 2 e 3. ONTAP tools suporta três nós no modo HA.
 +
-As ONTAP tools preenchem automaticamente a maioria dos campos com as configurações de rede do Node 1. Você pode editar esses valores antes de concluir o assistente. As entradas de endereço IPv6 só estão disponíveis se o IPv6 estiver habilitado no nó de gerenciamento. Certifique-se de que cada host ESXi hospede apenas uma VM do ONTAP tools.
+As ONTAP tools preenchem automaticamente a maioria dos campos com as configurações de rede do Node 1. Você pode editar esses valores antes de concluir o assistente. As entradas de endereço IPv6 estão disponíveis somente se o IPv6 estiver habilitado no management node. Certifique-se de que cada host ESXi execute apenas uma máquina virtual das ONTAP tools.
 
 . Analise o resumo e clique em *Salvar*.
 

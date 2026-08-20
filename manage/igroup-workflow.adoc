@@ -4,16 +4,16 @@ sidebar: sidebar
 keywords: ONTAP tools igroup workflow, export policy management, initiator group mapping, VMware datastore access control 
 summary: Entenda como as ferramentas ONTAP criam e gerenciam igroups e políticas de exportação para acesso ao datastore. 
 ---
-= Como as ONTAP tools gerenciam igroups e políticas de exportação
+= Fluxos de trabalho de igroup e de políticas de exportação nas ONTAP tools
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-Grupos iniciadores (igroups) são tabelas de nomes de portas mundiais (WWPNs) de hosts de protocolo FC ou nomes de nós qualificados de hosts iSCSI. Você pode definir grupos e mapeá-los para LUNs para controlar quais iniciadores têm acesso a LUNs.
+Use estas informações para entender como as ONTAP tools for VMware vSphere criam e gerenciam igroups e políticas de exportação para acesso ao datastore.
 
-Nas ONTAP tools for VMware vSphere 9.x, os igroups eram criados e gerenciados em uma estrutura plana, em que cada datastore no vCenter estava associado a um único igroup. Esse modelo limitava a flexibilidade e a reutilização de igroups em vários datastores. ONTAP tools for VMware vSphere 10.4 introduz igroups aninhados, em que cada datastore no vCenter está associado a um igroup pai, enquanto cada host está vinculado a um igroup filho sob esse pai. Você pode definir igroups pai personalizados com nomes definidos pelo usuário para reutilização em vários datastores, facilitando o gerenciamento de igroups. Entenda o fluxo de trabalho de igroup para gerenciar LUNs e datastores nas ONTAP tools for VMware vSphere. Diferentes fluxos de trabalho geram configurações de igroup variadas, como mostrado nos exemplos a seguir:
+Nas ONTAP tools for VMware vSphere 9.x, os igroups eram criados e gerenciados em uma estrutura plana, em que cada datastore no vCenter estava associado a um único igroup. Esse modelo limitava a flexibilidade e a reutilização de igroups em vários datastores. O ONTAP tools for VMware vSphere 10.4 introduz igroups aninhados, em que cada datastore no vCenter está associado a um igroup pai, enquanto cada host está vinculado a um igroup filho sob esse pai. Você pode definir igroups pai personalizados com nomes definidos pelo usuário para reutilização em vários datastores, facilitando o gerenciamento de igroups. Use estas informações para entender como o ONTAP tools for VMware vSphere gerencia LUNs e datastores por meio de fluxos de trabalho de igroup. Diferentes fluxos de trabalho geram configurações de igroup variadas, como mostrado nos exemplos a seguir:
 
 
 NOTE: Os nomes mencionados são apenas para fins ilustrativos e não se referem a nomes reais de igroups.  Os igroups gerenciados por ferramentas ONTAP usam o prefixo “otv_”.  Igroups personalizados podem receber qualquer nome.
@@ -78,7 +78,7 @@ Montar o armazenamento de dados existente em um host adicional
 
 
 
-As ONTAP tools for VMware vSphere criam um igroup filho host2Igroup e o adicionam ao igroup pai existente DS1Igroup.
+As ONTAP tools for VMware vSphere criam um igroup filho, host2Igroup, e o adicionam ao igroup pai existente, DS1Igroup.
 
 .Exemplo 3:
 Desmontar um armazenamento de dados de um host
@@ -203,7 +203,7 @@ Migração das ferramentas ONTAP 9 para 10 (normalização igroup)
 
 *Fluxo de trabalho*
 
-As ferramentas ONTAP para versões do VMware vSPhere 9.x não oferecem suporte a igroups hierárquicos.  Durante a migração para versões 10.3 ou superiores, os igroups devem ser normalizados na estrutura hierárquica.
+As ONTAP tools for VMware vSphere versões 9.x não suportam igroups hierárquicos. Durante a migração para as versões 10.3 ou superiores, os igroups devem ser normalizados para a estrutura hierárquica.
 
 Antes da migração:
 
@@ -243,7 +243,7 @@ Ao criar um repositório de dados NFS nas ferramentas ONTAP para VMware vSphere,
 
 Ao montar um repositório de dados NFS em um novo host ESXi, as ferramentas ONTAP para VMware vSphere adicionam o endereço IP do host à política de exportação existente associada ao repositório de dados. Isso permite que o novo host acesse o repositório de dados sem criar uma nova política de exportação.
 
-Quando você exclui ou desmonta um armazenamento de dados NFS de um host ESXi, as ONTAP tools for VMware vSphere removem o endereço IP do host da política de exportação. Se nenhum outro host estiver usando essa política de exportação, ela será excluída. Quando você exclui um armazenamento de dados NFS, as ONTAP tools for VMware vSphere removem a política de exportação associada a esse armazenamento de dados se ela não for reutilizada por nenhum outro armazenamento de dados. Se a política de exportação for reutilizada, ela manterá o endereço IP do host e não será alterada. Quando você exclui os armazenamentos de dados, a política de exportação cancela a atribuição do endereço IP do host e atribui uma política de exportação padrão, para que os sistemas ONTAP possam acessá-los, se necessário.
+Ao excluir ou desmontar um NFS datastore de um host ESXi, as ONTAP tools for VMware vSphere removem o endereço IP do host da política de exportação. Se nenhum outro host estiver usando essa política de exportação, ela será excluída. Ao excluir um NFS datastore, as ONTAP tools for VMware vSphere removem a política de exportação associada a esse datastore, caso ela não seja reutilizada por nenhum outro datastore. Se a política de exportação for reutilizada, ela mantém o endereço IP do host e não é alterada. Ao excluir datastores, as ONTAP tools removem o endereço IP do host da política de exportação e atribuem a política de exportação padrão, caso o ONTAP precise de acesso.
 
 A atribuição da política de exportação difere quando ela é reutilizada em diferentes repositórios de dados. Ao reutilizar a política de exportação, você pode anexá-la ao novo endereço IP do host. Ao excluir ou desmontar um repositório de dados que usa uma política de exportação compartilhada, a política não será excluída. Ela permanece inalterada e o endereço IP do host não é removido, pois é compartilhado com os outros repositórios de dados. A reutilização de políticas de exportação não é recomendada, pois pode levar a problemas de acesso e latência.
 

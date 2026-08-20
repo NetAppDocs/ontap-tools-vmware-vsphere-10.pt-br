@@ -11,7 +11,7 @@ summary: Configure as configurações do AutoSupport para as ONTAP tools e revis
 
 
 [role="lead"]
-Ao configurar ONTAP tools for VMware vSphere pela primeira vez, o AutoSupport é habilitado por padrão.  Ele envia mensagens ao suporte técnico 24 horas após ser ativado.
+AutoSupport é ativado por padrão quando você configura o ONTAP tools for VMware vSphere pela primeira vez. Ele envia mensagens para o suporte técnico 24 horas após você ativá-lo.
 
 
 
@@ -21,7 +21,7 @@ Ao configurar ONTAP tools for VMware vSphere pela primeira vez, o AutoSupport é
 Ao desabilitar o AutoSupport, você não receberá mais suporte e monitoramento proativos.
 
 
-NOTE: É recomendável manter o AutoSupport ativado, pois ele ajuda a acelerar a detecção e a resolução de problemas.  Mesmo quando o AutoSupport está desativado, o sistema continua coletando e armazenando informações localmente, mas não envia relatórios pela rede.
+NOTE: Mantenha AutoSupport ativado, pois isso ajuda a acelerar a detecção e a resolução de problemas. Mesmo quando AutoSupport está desativado, o sistema continua coletando e armazenando informações localmente, mas não envia relatórios pela rede.
 
 .Passos
 . Inicie o Gerenciador de ferramentas do ONTAP a partir de um navegador da Web: `\https://<ONTAPtoolsIP>:8443/virtualization/ui/`

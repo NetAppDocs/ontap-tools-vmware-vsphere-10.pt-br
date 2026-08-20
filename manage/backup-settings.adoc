@@ -11,13 +11,13 @@ summary: Ative ou desative o backup das ONTAP tools e configure a frequência de
 
 
 [role="lead"]
-A partir das ONTAP tools for VMware vSphere 10.5, o recurso de backup é habilitado por padrão e um backup é criado a cada 10 minutos.  Você pode desabilitar o backup ou editar a frequência do backup.
+A partir do ONTAP tools for VMware vSphere 10.5, os backups são ativados por padrão e executados a cada 10 minutos. Você pode desativar os backups ou alterar a frequência de backup.
 
-Não desabilite o backup porque ele impede que as ferramentas ONTAP mantenham baixo RPO.  Desabilitar o backup não exclui os arquivos de backup existentes.  Você pode alterar a frequência do backup para um valor entre 10 e 60 minutos.
+Não desative o backup, pois isso impede as ONTAP tools de manterem um baixo objetivo de ponto de recuperação (RPO). Desativar o backup não exclui os arquivos de backup existentes. Você pode alterar a frequência do backup para um valor entre 10 e 60 minutos.
 
 .Passos
 . Inicie o Gerenciador de ferramentas do ONTAP a partir de um navegador da Web: `\https://<ONTAPtoolsIP>:8443/virtualization/ui/`
 . Faça login com as ferramentas do ONTAP para as credenciais de administrador do VMware vSphere fornecidas durante a implantação.
 . Selecione a opção *Configurações* > *Backup* > *Editar*.
-. Na janela de edição, você pode desabilitar o backup ou editar a frequência do backup.
+. Na janela Editar, desative o backup ou altere a frequência do backup.
 

@@ -11,7 +11,7 @@ summary: Conecte ou desconecte discos de dados de máquinas virtuais para gerenc
 
 
 [role="lead"]
-Siga estes passos para conectar ou desconectar discos de dados de máquinas virtuais no vSphere e gerenciar seus recursos de armazenamento.
+Conecte ou desconecte discos de dados de máquinas virtuais no vSphere para gerenciar a capacidade de storage.
 
 
 
@@ -24,8 +24,8 @@ Anexe um disco de dados a uma máquina virtual para adicionar mais espaço de ar
 . Faça login no cliente vSphere.
 . Clique com o botão direito do mouse em uma máquina virtual no inventário e selecione *Editar configurações*.
 . Na guia *hardware Virtual*, selecione *disco rígido existente*.
-. Selecione a máquina virtual onde o disco existe.
-. Selecione o disco que deseja conectar e clique no botão *OK*.
+. Selecione a máquina virtual que contém o disco.
+. Selecione o disco que você deseja conectar e selecione *OK*.
 
 
 .Resultado
@@ -36,7 +36,7 @@ O disco rígido aparece na lista dispositivos de hardware virtual.
 [[detach-a-data-disk-from-the-virtual-machine]]
 == Separe um disco de dados da máquina virtual
 
-Desconecte um disco de dados de uma máquina virtual quando não precisar mais dele.  O disco não é apagado; ele permanece no sistema de armazenamento ONTAP .
+Desconecte um disco de dados de uma máquina virtual quando não precisar mais dele. O disco não é excluído e permanece no sistema de storage ONTAP.
 
 .Passos
 . Faça login no cliente vSphere.

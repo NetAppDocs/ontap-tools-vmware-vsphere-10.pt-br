@@ -11,7 +11,7 @@ summary: Exclua um datastore NFS, VMFS ou vVols e revise as máquinas virtuais q
 
 
 [role="lead"]
-Use esta tarefa para excluir datastores NFS, VMFS ou vVols usando as ferramentas ONTAP no vCenter Server. O comportamento de exclusão e as opções de limpeza variam de acordo com o tipo de datastore.
+Exclua datastores NFS, VMFS ou vVols no vCenter Server usando as ferramentas do ONTAP. O comportamento de exclusão e as opções de limpeza variam de acordo com o tipo de datastore.
 
 .Comportamento de exclusão para datastores NFS e VMFS
 * Não é possível excluir um datastore que está sendo usado por máquinas virtuais.
@@ -24,7 +24,7 @@ Para armazenamentos de dados vVols, as seguintes ações são executadas:
 * O contêiner vVol está desmontado.
 * Se o igroup não estiver em uso, seus iniciadores serão removidos do igroup.
 * O contêiner vVol é excluído.
-* Os volumes flexíveis são deixados no array de armazenamento.
+* Os FlexVol permanecem no backend de armazenamento.
 
 
 Para armazenamentos de dados vVols, você só pode excluir o armazenamento de dados se não houver vVols presentes no armazenamento de dados selecionado.
@@ -50,7 +50,7 @@ Para armazenamentos de dados vVols, você só pode excluir o armazenamento de da
 |===
 .Passos
 . Faça login no vSphere Client.
-. Clique com o botão direito do mouse em um sistema host, um cluster de host ou um data center e selecione * Ferramentas NetApp ONTAP * > * Excluir armazenamento de dados *.
+. Clique com o botão direito do mouse em um sistema host, cluster de hosts ou data center e selecione *NetApp ONTAP tools* > *Excluir datastore*.
 +
 
 NOTE: Não é possível excluir um datastore usado por máquinas virtuais. Mova as máquinas virtuais para outro datastore antes de excluir.

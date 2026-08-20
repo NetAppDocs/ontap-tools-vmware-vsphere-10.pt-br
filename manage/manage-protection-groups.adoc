@@ -19,7 +19,7 @@ Use esta tarefa para visualizar, editar e excluir grupos de proteção e seus re
 
 
 
-IMPORTANT: Antes de editar ou remover a proteção, revise as mensagens de aviso na caixa de diálogo. Remover relacionamentos pode afetar o comportamento de backup e consistência.
+IMPORTANT: Antes de editar ou remover um grupo de proteção, revise as mensagens de aviso na caixa de diálogo. Remover relacionamentos pode afetar o comportamento de backup e consistência.
 
 .Sobre esta tarefa
 * As ferramentas ONTAP atualizam os registros de proteção locais na instância das ferramentas ONTAP selecionada.

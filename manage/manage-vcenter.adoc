@@ -11,14 +11,14 @@ summary: Gerencie instâncias do vCenter nas ONTAP tools para controlar hosts, m
 
 
 [role="lead"]
-As instâncias do vCenter Server são plataformas de gerenciamento central que permitem controlar hosts, máquinas virtuais e backends de storage. Nas ONTAP tools, você pode dissociar backends de storage, modificar detalhes da instância, remover instâncias e renovar certificados do vCenter Server.
+Use o ONTAP tools para dissociar backends de storage, modificar detalhes da instância do vCenter Server, remover instâncias e renovar certificados do vCenter Server.
 
 
 
 [[dissociate-storage-backends-from-a-vcenter-server-instance]]
 == Desvincular backends de storage de uma instância do servidor vCenter
 
-A página de listagem do vCenter Server mostra o número associado de backends de armazenamento. Cada instância do vCenter Server tem a opção de associar ou desassociar a um back-end de armazenamento.
+A página de listagem do servidor vCenter mostra o número de backends de storage associados. Cada instância do servidor vCenter pode se associar ou se desassociar de um backend de storage.
 
 .Passos
 . Inicie o Gerenciador de ferramentas do ONTAP a partir de um navegador da Web: `\https://<ONTAPtoolsIP>:8443/virtualization/ui/`
@@ -33,7 +33,7 @@ A página de listagem do vCenter Server mostra o número associado de backends d
 [[modify-a-vcenter-server-instance]]
 == Modifique uma instância do vCenter Server
 
-Modifique uma instância do servidor vCenter seguindo os passos abaixo.
+Para modificar uma instância do servidor vCenter, siga os passos abaixo.
 
 . Inicie o Gerenciador de ferramentas do ONTAP a partir de um navegador da Web: `\https://<ONTAPtoolsIP>:8443/virtualization/ui/`
 . Faça login com as ferramentas do ONTAP para as credenciais de administrador do VMware vSphere fornecidas durante a implantação.
@@ -155,7 +155,7 @@ iVm0cl+2BZNi/QTMh/MkWV2dYXJ3NuNlqqfzFY+bUfkzkR4SneMk0HX3joNNYDJv
 siO7bL+k/Pxql27NVIhuCoVJAlcI7ak=
 ---{}END CERTIFICATE{}---
 ----
-. Copie a saída e salve-a como um arquivo de texto com um `.pem` extensão na sua área de trabalho.
+. Copie o resultado e salve-o como um arquivo  `.pem` no seu desktop.
 . Inicie o Gerenciador de ferramentas do ONTAP a partir de um navegador da Web: `\https://<ONTAPtoolsIP>:8443/virtualization/ui/`
 . Faça login com as ferramentas do ONTAP para as credenciais de administrador do VMware vSphere fornecidas durante a implantação.
 . Selecione a instância aplicável do vCenter Server na barra lateral

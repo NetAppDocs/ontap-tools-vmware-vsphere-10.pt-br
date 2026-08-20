@@ -11,7 +11,7 @@ summary: Altere o valor padrão do nconnect para hosts ESXi em um vCenter Server
 
 
 [role="lead"]
-Use esta tarefa para alterar o número padrão de conexões (nconnect) para hosts ESXi em um servidor vCenter selecionado.
+Altere o número padrão de conexões (nconnect) para hosts ESXi em um vCenter Server selecionado.
 
 .Sobre esta tarefa
 * O valor nconnect definido nesta página é o padrão do host.

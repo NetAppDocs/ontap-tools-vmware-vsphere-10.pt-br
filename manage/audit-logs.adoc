@@ -11,7 +11,7 @@ summary: Analise como as ONTAP tools capturam, retêm e monitoram os logs de aud
 
 
 [role="lead"]
-Use esta tarefa para gerenciar o comportamento do log de auditoria e a resposta operacional em ONTAP tools for VMware vSphere. Os logs de auditoria fornecem um histórico de eventos que mostra quem executou uma ação, qual ação foi executada, quando ocorreu, a origem da solicitação e se foi bem-sucedida ou falhou.
+Gerencie o registro de auditoria nas ONTAP tools for VMware vSphere. Os registros de auditoria mostram quem executou uma ação, o que aconteceu, quando ocorreu, a origem da solicitação e se a ação foi bem-sucedida ou falhou.
 
 .Antes de começar
 * Certifique-se de ter acesso de administrador ao ONTAP tools Manager.

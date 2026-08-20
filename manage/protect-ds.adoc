@@ -4,14 +4,14 @@ sidebar: sidebar
 keywords: protect VMFS datastore, SnapMirror datastore protection, create protection group, ONTAP tools disaster recovery 
 summary: Proteja um datastore VMFS elegível adicionando-o a um grupo de proteção com replicação SnapMirror. 
 ---
-= Proteger um datastore VMFS
+= Proteja um datastore VMFS nas ONTAP tools
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-Use esta tarefa para proteger um datastore VMFS elegível, adicionando-o a um grupo de proteção.
+Proteja um datastore VMFS elegível adicionando-o a um grupo de proteção.
 
 .Antes de começar
 * Certifique-se de que o datastore utilize o protocolo iSCSI ou FC.

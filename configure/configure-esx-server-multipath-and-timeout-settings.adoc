@@ -6,17 +6,21 @@ summary: Configure o multipathing do host ESXi e as configurações de tempo lim
 ---
 = Configure as configurações do host ESXi nas ONTAP tools
 :allow-uri-read: 
+:firstname: = Configure ESXi host settings in ONTAP tools
+:author: = Configure ESXi host settings in ONTAP tools
+:authorinitials: =
+:authors: = Configure ESXi host settings in ONTAP tools
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-Configurar as configurações de multicaminho e tempo limite do servidor ESXi ajuda a manter a disponibilidade e a integridade dos dados.  Ele permite o failover automático para um caminho de armazenamento de backup se o caminho principal ficar indisponível.
+Configurar o multipath e as definições de tempo limite do host ESXi ajuda a manter a disponibilidade de dados e a integridade. Isso permite o failover automático para um caminho de storage de backup caso o caminho primário fique indisponível.
 
 
 
-[[configure-esxi-server-multipath-and-timeout-settings]]
-== Configure as configurações multipath e timeout do servidor ESXi
+[[apply-recommended-esxi-host-settings]]
+== Aplique as configurações recomendadas do host ESXi
 
 As ferramentas do ONTAP para VMware vSphere verificam e definem as configurações de multipath do host ESXi e as configurações de tempo limite do HBA que funcionam melhor com os sistemas de armazenamento NetApp.
 
@@ -27,7 +31,7 @@ Esse processo pode levar algum tempo, dependendo da sua configuração e da carg
 . Na página inicial do VMware vSphere Web client, selecione *hosts and clusters*.
 . Na página de atalhos do cliente da Web VMware vSphere, selecione *Ferramentas do NetApp ONTAP* na seção plug-ins.
 . Vá para a placa *ESXi Host Compliance* na visão geral (painel) das ferramentas do ONTAP para o plug-in VMware vSphere.
-. Selecione o link *Apply Recommended Settings* (aplicar configurações recomendadas).
+. Selecione o link *Aplicar configurações recomendadas*.
 . Na janela *Aplicar configurações de host recomendadas*, selecione os hosts que você deseja atualizar para usar as configurações recomendadas da NetApp e selecione *Avançar*.
 +
 
@@ -51,7 +55,7 @@ Você pode definir os seguintes valores em um host ESXi:
 [[hbacna-adapter-settings]]
 === Definições do adaptador HBA/CNA
 
-Define os seguintes parâmetros para valores padrão:
+As ONTAP tools definem os seguintes parâmetros com valores padrão:
 
 * Disk.QFullSampleSize
 * Disk.QFullThreshold
@@ -64,7 +68,7 @@ Define os seguintes parâmetros para valores padrão:
 [[mpio-settings]]
 === Definições MPIO
 
-As configurações do MPIO escolhem os melhores caminhos para os sistemas de armazenamento NetApp .  As configurações do MPIO selecionam o melhor caminho e o utilizam.
+As configurações MPIO selecionam e utilizam o melhor caminho disponível para os sistemas de storage NetApp.
 
 Para ambientes de alto desempenho ou ao testar com um único armazenamento de dados LUN, ajuste a configuração de balanceamento de carga da política de seleção de caminho (PSP) round-robin (VMW_PSP_RR) para melhorar o desempenho.  Defina o valor padrão de IOPS de 1000 a 1.
 
@@ -77,8 +81,6 @@ NOTE: As configurações de MPIO não se aplicam aos protocolos NVMe, NVMe/FC e 
 === Definições NFS
 
 |===
-
-
 | Parâmetro | Defina este valor para... 
 
 

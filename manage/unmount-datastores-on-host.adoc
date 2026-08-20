@@ -16,14 +16,14 @@ Use esta tarefa para desmontar um datastore NFS ou VMFS de hosts ESXi. O desmont
 A partir da versão 10.6 do ONTAP tools, desmontar é bloqueado para datastores VMFS protegidos.
 
 .Passos
-. Faça login no cliente vSphere.
+. Faça login no vSphere Client.
 . Clique com o botão direito do mouse em um objeto de datastore NFS ou VMFS e selecione *Desmontar datastore*.
 +
-O cliente vSphere abre uma caixa de diálogo e lista os hosts ESXi que montam o datastore. Se o datastore estiver protegido, ONTAP tools bloqueia a solicitação e exibe uma mensagem informando que o datastore está protegido e não pode ser desmontado.
+O vSphere Client abre uma caixa de diálogo e lista os hosts ESXi que montam o datastore. Se o datastore estiver protegido, o ONTAP tools bloqueia a solicitação e exibe uma mensagem informando que o datastore está protegido e não pode ser desmontado.
 
 . Selecione um ou mais hosts ESXi para desmontar o datastore.
 +
-Não é possível desmontar o datastore de todos os hosts. A interface do usuário sugere que você use a operação delete datastore em vez disso.
+Não é possível desmontar o datastore de todos os hosts. A interface de usuário sugere usar a operação de exclusão do datastore.
 
 . Selecione o botão *Desmontar*.
 +

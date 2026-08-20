@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: ONTAP tools maintenance console, appliance system management, support bundle generation, TLS and network configuration 
 summary: Gerencie as configurações das ferramentas ONTAP, redefina senhas, gere pacotes de suporte e configure as definições de TLS. 
 ---
-= Saiba mais sobre o console de manutenção das ONTAP tools
+= Console de manutenção das ONTAP tools
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -13,12 +13,12 @@ summary: Gerencie as configurações das ferramentas ONTAP, redefina senhas, ger
 [role="lead"]
 O console de manutenção das ONTAP tools for VMware vSphere permite gerenciar configurações de aplicativos, sistemas e redes.  Você pode atualizar senhas de administrador e de manutenção, gerar pacotes de suporte, configurar níveis de registro, gerenciar configurações de TLS e habilitar diagnósticos remotos.
 
-Após implantar as ONTAP tools for VMware vSphere, se o console de manutenção não estiver acessível, instale as ferramentas VMware a partir do vCenter Server.  Faça login usando o `maint` Nome de usuário e senha definidos durante a implantação.  Use o *nano* para editar arquivos no console de manutenção ou no console de login de root.
+Após implantar o ONTAP tools for VMware vSphere, se o console de manutenção não estiver acessível, instale o VMware Tools a partir do vCenter Server. Faça login usando o `maint` nome de usuário e a senha definidos durante a implantação. Use o *nano* para editar arquivos no console de manutenção ou no console de login root.
 
 
-NOTE: Você deve definir uma senha para `diag` o usuário ao ativar o diagnóstico remoto.
+NOTE: Defina uma senha para o  `diag` usuário ao ativar o diagnóstico remoto.
 
-Você deve usar a guia *Resumo* das ferramentas do ONTAP implantadas para o VMware vSphere para acessar o console de manutenção. Quando você seleciona image:../media/launch-maintenance-console.gif["Botão Play (Reproduzir)"], o console de manutenção é iniciado.
+Use a guia *Resumo* das suas ONTAP tools for VMware vSphere implantadas para acessar o console de manutenção. Selecione image:../media/launch-maintenance-console.gif["Botão Play (Reproduzir)"] para iniciar o console de manutenção.
 
 |===
 

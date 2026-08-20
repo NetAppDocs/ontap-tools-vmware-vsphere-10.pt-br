@@ -11,15 +11,15 @@ summary: Remova os volumes FlexVol não utilizados após remover a implantação
 
 
 [role="lead"]
-Quando você usa um cluster ONTAP dedicado para ferramentas do ONTAP para implantação do VMware, ele cria muitos volumes FlexVol não utilizados. Depois de remover as ferramentas do ONTAP para VMware vSphere, você deve remover os volumes do FlexVol para evitar possíveis impactos no desempenho.
+Ao implantar o ONTAP tools for VMware vSphere em um cluster ONTAP dedicado, a implantação cria muitos volumes FlexVol não utilizados. Após remover o ONTAP tools, exclua os volumes FlexVol não utilizados para evitar possíveis impactos no desempenho.
 
 .Passos
-. Descubra o tipo de implantação das ONTAP tools for VMware vSphere a partir da máquina virtual do nó de gerenciamento das ferramentas ONTAP .  Execute o seguinte comando para verificar o tipo de implantação: `_cat /opt/netapp/meta/ansible_vars.yaml | grep -i protocol_`
+. Determine o tipo de implantação das ONTAP tools for VMware vSphere a partir da máquina virtual do nó de gerenciamento das ONTAP tools. Execute o seguinte comando para verificar o tipo de implantação: _cat /opt/netapp/meta/ansible_vars.yaml | grep -i protocol_
 +
-Se for uma implementação iSCSI, exclua também os grupos de instâncias (igroups).
+Se a implementação usar iSCSI, exclua também os igroups.
 
 . Obtenha a lista de volumes do FlexVol . _kubectl descreve volumes persistentes | grep nomeInterno | awk -F'=' '{print $2}'_
 . Remova as VMs do vCenter Server. Consulte a https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere/8-0/vsphere-virtual-machine-administration-guide-8-0/managing-virtual-machinesvsphere-vm-admin/adding-and-removing-virtual-machinesvsphere-vm-admin.html#GUID-376174FE-F936-4BE4-B8C2-48EED42F110B-en["Remover e Registrar novamente VMs e modelos de VM"].
 . Excluir volumes FlexVol . Consulte https://docs.netapp.com/us-en/ontap/volumes/delete-flexvol-task.html["Eliminar um FlexVol volume"] . Insira o nome exato do FlexVol volume no comando da CLI para excluir um volume.
-. Excluir grupos SAN do sistema de armazenamento ONTAP em caso de implantação iSCSI. Consulte a https://docs.netapp.com/us-en/ontap/san-admin/manage-san-initiators-task.html["Visualizar e gerenciar iniciadores e grupos SAN"].
+. Para implementações iSCSI, exclua os igroups SAN do backend de storage ONTAP. Consulte  https://docs.netapp.com/us-en/ontap/san-admin/manage-san-initiators-task.html["Visualizar e gerenciar iniciadores e grupos SAN"].
 

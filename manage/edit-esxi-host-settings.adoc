@@ -11,23 +11,23 @@ summary: Edite as configurações do host ESXi no painel de ferramentas do ONTAP
 
 
 [role="lead"]
-Utilize o painel de ferramentas do ONTAP no VMware vSphere para identificar problemas de configuração, selecionar hosts ESXi, revisar as configurações recomendadas pela NetApp e aplicá-las.
+Use o painel de ferramentas do ONTAP no VMware vSphere para identificar problemas de configuração, revisar as configurações recomendadas pela NetApp para hosts ESXi selecionados e aplicá-las.
 
 .Antes de começar
 O portlet de sistemas host ESXi exibe problemas com as configurações do host ESXi.  Selecione um problema para visualizar o nome do host ou o endereço IP.
 
 .Passos
-. Faça login no cliente vSphere.
-. Na página atalhos, selecione *Ferramentas do NetApp ONTAP* na seção plug-ins.
-. Vá para *portlet de conformidade do host ESXi* na Visão geral (painel) das ferramentas do ONTAP para o plug-in do VMware vSphere.
-. Selecione o link *Apply Recommended Settings* (aplicar configurações recomendadas).
-. Na janela *Aplicar configurações de host recomendadas*, selecione os hosts nos quais deseja usar as configurações de host recomendadas pela NetApp e selecione *Avançar*.
+. Faça login no vSphere Client.
+. Na página Atalhos, selecione *NetApp ONTAP tools* na seção Plug-ins.
+. Acesse o portlet *Conformidade do host ESXi* no painel Visão geral do ONTAP tools for VMware vSphere plug-in.
+. Selecione o link *Aplicar configurações recomendadas*.
+. Na janela *Aplicar configurações de host recomendadas*, selecione os hosts para os quais você deseja aplicar as configurações de host recomendadas da NetApp e, em seguida, selecione *Avançar*.
 +
 
 NOTE: Você pode expandir o host ESXi para ver os valores atuais.
 
-. Na página de definições, selecione os valores recomendados, conforme necessário.
-. No painel de resumo, verifique os valores e selecione *Finish*. Você pode acompanhar o progresso no painel de tarefas recentes.
+. Na página Configurações, selecione os valores recomendados conforme necessário.
+. No painel de resumo, verifique os valores e selecione *Concluir*. Você pode acompanhar o progresso no painel Tarefas Recentes.
 
 
 .Informações relacionadas

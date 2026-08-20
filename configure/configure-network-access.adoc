@@ -11,14 +11,14 @@ summary: Configure o acesso à rede para controlar quais endereços IP de hosts 
 
 
 [role="lead"]
-Por padrão, todos os endereços IP descobertos no host ESXi são adicionados automaticamente à política de exportação, a menos que você configure o acesso à rede.  Você pode modificar a política de exportação para permitir o acesso somente a partir de endereços IP específicos.  Se um host ESXi excluído tentar uma operação de montagem, a operação falhará.
+Por padrão, as ONTAP tools adicionam automaticamente todos os endereços IP descobertos do host ESXi à política de exportação, a menos que você configure o acesso à rede. Você pode modificar a política de exportação para permitir o acesso somente de endereços IP específicos; as operações de montagem falham para hosts ESXi excluídos.
 
 .Passos
 . Faça login no cliente vSphere.
-. Selecione *Ferramentas do NetApp ONTAP* na página de atalhos na seção plug-ins.
+. Selecione *NetApp ONTAP tools* na página de atalhos, na seção de plug-ins.
 . No painel esquerdo das ferramentas ONTAP , vá para *Configurações* > *Gerenciar acesso à rede* > *Editar*.
 +
-Para adicionar vários endereços IP, separe a lista com vírgulas, intervalo, CIDR (Classless Inter-Domain Routing) ou uma combinação de todos os três.
+Para adicionar vários endereços IP, separe a lista com vírgulas, intervalos, notação CIDR (Classless Inter-Domain Routing) ou uma combinação dos três.
 
 . Selecione *Guardar*.
 

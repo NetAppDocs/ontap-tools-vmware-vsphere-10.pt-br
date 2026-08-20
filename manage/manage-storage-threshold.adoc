@@ -14,8 +14,8 @@ summary: Defina notificações de limite para níveis de volume e capacidade agr
 Você pode definir limites de armazenamento para receber notificações no vCenter Server quando o volume ou a capacidade agregada atingir um determinado nível.
 
 .Passos
-. Faça login no cliente vSphere.
-. Na página atalhos, selecione *Ferramentas do NetApp ONTAP* na seção plug-ins.
+. Faça login no vSphere Client.
+. Na página *Atalhos*, selecione *NetApp ONTAP tools* na seção *plug-in*.
 . No painel esquerdo das ferramentas ONTAP , vá para *Configurações* > *Configurações de limite* > *Editar*.
 . Na janela *Editar Limite*, insira os valores desejados nos campos *Quase Cheio* e *Cheio* e selecione *Salvar*.
 +
