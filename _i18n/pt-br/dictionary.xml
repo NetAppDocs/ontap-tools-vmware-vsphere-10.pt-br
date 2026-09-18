@@ -1905,7 +1905,6 @@
   <block id="6f8b3b7e42dadd9b7806e6e98d7d0a77" category="list-text">O Identificador de Rede Primário (PNID) do vCenter Server deve estar incluído nos detalhes do SAN. O PNID e o nome DNS devem ser idênticos e resolvíveis no DNS.</block>
   <block id="dbabfcb48125f6c3a069313029fdada8" category="list-text">Para obter mais informações, consulte a documentação VMware:</block>
   <block id="381b5a0822c9882ced35624a3338ea81" category="inline-link">vSphere Requisitos de Certificação para Diferentes Caminhos de Solução</block>
-  <block id="38e7ce10f91b93ef8eecb43d98853cb3" category="list-text"><block ref="38e7ce10f91b93ef8eecb43d98853cb3" category="inline-link-rx"></block></block>
   <block id="bab39c0d7f700e0dbd68e4761a2c9ac4" category="inline-link">Substituir vCenter certificado SSL da máquina Certificado assinado por autoridade certificadora personalizada</block>
   <block id="81c3c30e39dc6db9cf179ead4dc53c00" category="list-text"><block ref="81c3c30e39dc6db9cf179ead4dc53c00" category="inline-link-rx"></block></block>
   <block id="4ce004ede8d7c5a94bcc602e81d0dd46" category="inline-link">Erro: o campo Nome Alternativo do Assunto (SAN) não contém o PNID. Forneça um certificado válido</block>
@@ -3133,4 +3132,5 @@
   <block id="4ea2f2639373a757d002c323f4650ae1" category="list-text">Se o Chrony estiver instalado e o problema estiver nos servidores NTP que você forneceu, verifique se esses servidores estão acessíveis:</block>
   <block id="4db51794b7899f8781b7e514861f9c54" category="paragraph">Se os servidores estiverem acessíveis, o problema não está relacionado à acessibilidade do servidor. Se um servidor estiver realmente inacessível, remova-o do ONTAP tools Manager e forneça um servidor NTP acessível em seu lugar.</block>
   <block id="58d802804e6af6816051d4101a78cd4b" category="list-text">Se a atualização falhar devido a qualquer outro problema durante a atualização do NTP, verifique os seguintes registros:</block>
+  <block id="f5589bd09ceeb2368f74d5725fa2dcc7" category="list-text"><block ref="f5589bd09ceeb2368f74d5725fa2dcc7" category="inline-link-rx"></block></block>
 </blocks>
