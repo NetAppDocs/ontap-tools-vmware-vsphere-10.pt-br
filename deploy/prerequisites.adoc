@@ -16,6 +16,9 @@ Revise as versões suportadas, o dimensionamento, os requisitos de porta e os li
 Implante ONTAP tools for VMware vSphere em um ambiente vSphere compatível que inclua hosts ESXi e VMware vCenter Server Virtual Appliance (vCSA).
 
 
+NOTE: Não implante a máquina virtual do ONTAP dentro de um VMware vApp no vCenter Server.
+
+
 
 [[system-requirements]]
 == Requisitos do sistema

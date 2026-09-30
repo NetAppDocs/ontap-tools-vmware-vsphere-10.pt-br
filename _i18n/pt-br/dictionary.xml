@@ -845,7 +845,6 @@
   <block id="cd976ca49583a8080802261ae61aa5a0" category="list-text">Selecione os armazenamentos de dados que você deseja montar e selecione *Mount*.</block>
   <block id="267de19ac03e71a99875cacf87972c29" category="list-text">Selecione *Configurações* na barra lateral.</block>
   <block id="f0833ce92c23eb056dde238669740988" category="list-text"><block ref="523efdef8100699453c6b07ce8f4921c" category="inline-link-macro-rx"></block> Criado nas ferramentas do ONTAP para VMware vSphere.</block>
-  <block id="b2aac3a919762e9dd0f89ef1b3999500" category="list-text">Excluir todos os backends de armazenamento. <block ref="c97897721457f9108ce9caf2b3f0d235" category="inline-link-macro-rx"></block>Consulte a .</block>
   <block id="11e59432e8c34141d30396d503dc7c73" category="list-text">Selecione *adaptadores de replicação de armazenamento*.</block>
   <block id="51853e46fcef4ee8c2608d1c9995935a" category="list-text">Confirme se você sabe os resultados da exclusão do adaptador e selecione *Excluir*.</block>
   <block id="7ecf25a7ff85dee8180a09f0f8a71a56" category="list-text">No VMware Live Site Recovery, selecione *Array Managers* &gt; *Add Array Manager*.</block>
@@ -933,9 +932,7 @@
   <block id="c961da7f498e50ff48715252d593d099" category="cell">*Informação disponível*</block>
   <block id="b5380e34617914719b059f6d55b97b66" category="cell">Armazenamentos de dados VMFS</block>
   <block id="e122a7a507ac1f580cc5b9f2632a851c" category="cell">Armazenamentos de dados vVols</block>
-  <block id="5a43e80953e87c7df463deaedcab9879" category="section-title">Dissociar os backends de armazenamento com a instância do vCenter Server</block>
   <block id="9a9ef84d994bd8c482cd3e98feba5977" category="list-text">Selecione *dissociar o back-end de armazenamento*.</block>
-  <block id="02a713a12e2b216b65a52896d0728a0a" category="list-text">Desassocie todos os backends de armazenamento da instância do vCenter Server. <block ref="8f766e539ddb39a7c07c0c84dded1670" category="inline-link-macro-rx"></block>Consulte a .</block>
   <block id="f75d6048a8fcc9f4822dcc0f5eef23d2" category="inline-link-macro">Configure o SRA no VMware Live Site Recovery Appliance</block>
   <block id="7f17c0be45130bf2b12d5bf5ec2ead98" category="list-text">Você deve ter baixado o arquivo do adaptador SRA<block ref="d6f1afa70d6145a212d9dc6bc8a2fa64" prefix=" " category="inline-code"></block> do<block ref="db8756d7f65d6a8e593e69ba45adbb2e" category="inline-link-rx"></block>.</block>
   <block id="bc7d4efb983c07650bf67ebd23206b42" category="doc">Saiba mais sobre as ferramentas do ONTAP para VMware vSphere 10 RBAC</block>
@@ -1042,7 +1039,6 @@
   <block id="cdb9fe2a322209ab095ba01e8388697d" category="list-text">Remova o adaptador SRA do VMware Live Site Recovery:</block>
   <block id="1435a5cf1efdb19e83d0f140a2ca4f4f" category="list-text">Faça login como administrador na interface de gerenciamento do VMware Live Site Recovery Appliance usando a porta 5480.</block>
   <block id="2ec2edd0a7db2ac9b3f23b9db6dda124" category="list-text">Selecione o cartão SRA apropriado e, no menu suspenso, selecione *Excluir*.</block>
-  <block id="d34cead72810ffa475c9303607018d30" category="list-text">Exclua as instâncias do vCenter Server integradas às ferramentas do ONTAP para VMware vSphere. <block ref="71e9ea3cb5165d1231d572643ddb35cb" category="inline-link-macro-rx"></block>Consulte a .</block>
   <block id="3014a29195e86ef40c71c31cde3ad9e7" category="list-text">Desligue as ferramentas do ONTAP para VMs VMware vSphere do vCenter Server e exclua as VMs.</block>
   <block id="056110d308abee4fb5305efd8c8994d0" category="paragraph"><block ref="056110d308abee4fb5305efd8c8994d0" category="inline-link-macro-rx"></block></block>
   <block id="af97740fd99b637615a0fe129d5fc42f" category="list-text">Inicie o Gerenciador de ferramentas do ONTAP a partir de um navegador da Web:<block ref="a2fad8db83c338dbc95675bd05c70607" prefix=" " category="inline-code"></block></block>
@@ -2694,7 +2690,6 @@
   <block id="1ecc48e7d703ccee72239ae065025e8b" category="list-text">Proteja apenas os datastores selecionados em um cluster de hosts.</block>
   <block id="36c8c92fa35e1f64c72f630ce6180299" category="list-text">Agrupe os datastores selecionados em grupos de proteção.</block>
   <block id="7d99b8f7ded10f4f2921239a1a9c9a43" category="list-text">Aplique relações e políticas do SnapMirror no nível do grupo de proteção.</block>
-  <block id="76b1a8b712394da72e5366b816d6419b" category="list-text">Utilize abordagens de proteção diferentes para diferentes grupos de datastore no mesmo cluster.</block>
   <block id="1947b0d44f9e85eca7623e1cab6b8bae" category="paragraph">Este recurso suporta apenas datastores VMFS que utilizam os protocolos iSCSI ou FC.</block>
   <block id="632923e99d3fb84490cf1fed11f3d12a" category="paragraph">Você pode usar os seguintes tipos de política para datastores elegíveis:</block>
   <block id="b1f095471f89f11c20fe033a35afe72f" category="list-text">*AutomatedFailOverDuplex (AFD)*</block>
@@ -2726,7 +2721,6 @@
   <block id="ab5d207d269446dad86a9b15cec92d6a" category="list-text">Políticas assíncronas personalizadas não são suportadas. Use a política assíncrona padrão do ONTAP.</block>
   <block id="224a5056830c20959480843b73cf0533" category="list-text">Em configurações terciárias ou exclusivamente assíncronas, a limpeza de relação assíncrona é manual.</block>
   <block id="4f948c7d9b938caffddb97c0d0f8394c" category="list-text">Acione o failover a partir do ONTAP System Manager. Configure o ONTAP Mediator fora das ONTAP tools.</block>
-  <block id="9aab7c7432877f8502ee090eee7abdc2" category="paragraph">Ao atualizar do ONTAP tools 10.5, as configurações de proteção de cluster de hosts existentes são migradas para o formato de proteção granular de datastore. Após a atualização, verifique os grupos de proteção e a associação ao datastore.</block>
   <block id="7f6120908ce94360b9a41585185a9108" category="inline-link-macro">Proteja datastores em um cluster com ONTAP tools</block>
   <block id="c1b7f8376d6217ab8332bd89d741aae1" category="list-text"><block ref="c1b7f8376d6217ab8332bd89d741aae1" category="inline-link-macro-rx"></block></block>
   <block id="aa80a3d8f54a41c521c248368b7227fa" category="summary">Mapeie pastas entre sites protegidos e de recuperação para preparar fluxos de trabalho de failover do VMware Live Site Recovery.</block>
@@ -2850,7 +2844,6 @@
   <block id="a6e5efc1d16eb34745bb75a77226d583" category="list-text">Habilite backup com baixo RPO e certifique-se de que um backup esteja visível na interface do vSphere Client. Baixe a pasta de backup antes da atualização.</block>
   <block id="bbac914a781e9dc109fcf5bab03d2c11" category="list-text">Localize a máquina virtual (VM) principal das ONTAP tools e inicie o console da web.</block>
   <block id="034b9e64b5ae759244f5eecd018ed221" category="list-text">O certificado do gateway é renovado com um período de validade de 1 ano. Ao remover o adaptador SRA anterior e carregar o novo adaptador 10.6, a validade do certificado SRA muda de 10 anos para 1 ano.</block>
-  <block id="9b63ec403219c80e52e7dae8c3a61d23" category="list-text">Se existirem configurações de proteção de cluster de hosts de versões 10.5 ou anteriores, ONTAP tools cria um item de navegação separado chamado *Configuração de proteção de cluster* durante a atualização.</block>
   <block id="1e271ba64f48de298f8de2968b529b3a" category="paragraph">Após a atualização para ONTAP tools for VMware vSphere 10.6:</block>
   <block id="7e07903e1b79156be237c3f4f9194ffe" category="list-text">Remova o adaptador SRA das ONTAP tools 10.4 ou 10.5 e carregue o arquivo tar do adaptador SRA 10.6.</block>
   <block id="2d96dfea27764d22dbafb174af190a36" category="list-text">Abra a *Configuração de proteção de cluster* e verifique se as configurações de proteção de cluster do host existente estão presentes e mapeadas corretamente.</block>
@@ -3133,4 +3126,18 @@
   <block id="4db51794b7899f8781b7e514861f9c54" category="paragraph">Se os servidores estiverem acessíveis, o problema não está relacionado à acessibilidade do servidor. Se um servidor estiver realmente inacessível, remova-o do ONTAP tools Manager e forneça um servidor NTP acessível em seu lugar.</block>
   <block id="58d802804e6af6816051d4101a78cd4b" category="list-text">Se a atualização falhar devido a qualquer outro problema durante a atualização do NTP, verifique os seguintes registros:</block>
   <block id="f5589bd09ceeb2368f74d5725fa2dcc7" category="list-text"><block ref="f5589bd09ceeb2368f74d5725fa2dcc7" category="inline-link-rx"></block></block>
+  <block id="345a87b70523fdb5dd79038a7e873845" category="admonition">Não implante a máquina virtual do ONTAP dentro de um VMware vApp no vCenter Server.</block>
+  <block id="b86439358b560760313055a90bd5812c" category="list-text">Remova as instâncias do servidor vCenter integradas ao ONTAP tools for VMware vSphere. Consulte <block ref="71e9ea3cb5165d1231d572643ddb35cb" category="inline-link-macro-rx"></block>.</block>
+  <block id="26adf559940dd20d02f0bdec74d0cc28" category="paragraph">Ao remover uma instância do servidor vCenter, as ferramentas do ONTAP podem orientar você durante a limpeza necessária. Se solicitado na caixa de diálogo *Remove vCenter*, selecione *Remove all storage artifacts from this vCenter Server* e *I understand that the associated datastores will no longer be managed by ONTAP tools* e, em seguida, selecione *Force delete*.</block>
+  <block id="c4d716c88a05e0d00551ac8ea6da15a0" category="paragraph">Antes de usar a opção *Exclusão forçada*, certifique-se de que todos os datastores vVols foram removidos ou migrados, que todos os datastores protegidos foram desprotegidos e que nenhuma tarefa de descoberta está em execução.</block>
+  <block id="7eb5227d0f36e7346167a93b856b0fa7" category="paragraph">Se o vCenter Server estiver inacessível durante a exclusão, as ONTAP tools removerão apenas o registro do vCenter Server. Você deve cancelar manualmente o registro do plug-in no VMware vCenter Server.</block>
+  <block id="38fbd92f67469b25016c6a83c8a94171" category="list-text">Use abordagens de proteção diferentes para diferentes grupos de datastore no mesmo cluster de hosts.</block>
+  <block id="a56b4b9b7649b05781df3dab1c45651b" category="list-text">Atribua várias configurações de proteção a um único cluster de hosts.</block>
+  <block id="4bf2e3d77c651d3fb73aa4b90e436796" category="list-text">Configure as definições de proteção na mesma máquina virtual de armazenamento (SVM), em diferentes SVMs ou em diferentes sistemas de armazenamento.</block>
+  <block id="20d81ee1f8e1f28cd4b2b539fbf352ee" category="list-text">Mantenha alguns datastores em um cluster de hosts desprotegidos.</block>
+  <block id="e472ea4c0e1a3e6d590c155e00c141db" category="list-text">Remova a proteção de um datastore individual.</block>
+  <block id="aa398ba1f850bdbde5e4cba259662cc0" category="list-text">Proteja um datastore durante o provisionamento.</block>
+  <block id="47d11b58a635ad0e3f489449a130c627" category="paragraph">Ao atualizar do ONTAP tools for VMware vSphere 10.5, as configurações existentes de proteção do cluster de host são convertidas automaticamente em proteção granular de datastore. Após a atualização, verifique os grupos de proteção e a associação do datastore.</block>
+  <block id="c3f0c8b4da16f3b290431c535f98a9f7" category="list-text">Se existirem configurações de proteção de cluster de hosts do ONTAP tools for VMware vSphere 10.5 ou anterior, o ONTAP tools as converte em proteção granular de datastore e cria um item de navegação separado chamado *Configuração de proteção de cluster*.</block>
+  <block id="744e01cbfcb5b5f86287c1c9beac6075" category="list-text">Para obter mais informações sobre os recursos e os critérios de elegibilidade da proteção granular do datastore, consulte <block ref="9a8072c85e6a05ec4ad84b9967b3caa6" category="inline-link-macro-rx"></block>.</block>
 </blocks>

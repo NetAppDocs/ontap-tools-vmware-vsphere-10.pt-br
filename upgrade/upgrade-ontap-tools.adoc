@@ -84,7 +84,7 @@ Durante a atualização, se algum certificado de backend de armazenamento integr
 .. O plug-in remoto foi atualizado
 .. Os certificados ONTAP e vCenter Server são validados e adicionados às ferramentas ONTAP
 .. O backup está habilitado
-.. Se existirem configurações de proteção de cluster de hosts de versões 10.5 ou anteriores, ONTAP tools cria um item de navegação separado chamado *Configuração de proteção de cluster* durante a atualização.
+.. Se existirem configurações de proteção de cluster de hosts do ONTAP tools for VMware vSphere 10.5 ou anterior, o ONTAP tools as converte em proteção granular de datastore e cria um item de navegação separado chamado *Configuração de proteção de cluster*.
 
 
 
@@ -96,6 +96,7 @@ Após a atualização para ONTAP tools for VMware vSphere 10.6:
 * Remova o adaptador SRA das ONTAP tools 10.4 ou 10.5 e carregue o arquivo tar do adaptador SRA 10.6.
 * Execute o comando de instalação após carregar o arquivo tar do adaptador SRA. Em seguida, verifique novamente os adaptadores SRA para atualizar a página de adaptadores de replicação de armazenamento do VMware Site Recovery.
 * Abra a *Configuração de proteção de cluster* e verifique se as configurações de proteção de cluster do host existente estão presentes e mapeadas corretamente.
+* Para obter mais informações sobre os recursos e os critérios de elegibilidade da proteção granular do datastore, consulte link:../protect/granular-datastore-protection-concept.html["Critérios granulares de elegibilidade para proteção de datastore nas ferramentas ONTAP"].
 
 
 Após a atualização, você pode:

@@ -20,7 +20,12 @@ Esta funcionalidade permite você:
 * Proteja apenas os datastores selecionados em um cluster de hosts.
 * Agrupe os datastores selecionados em grupos de proteção.
 * Aplique relações e políticas do SnapMirror no nível do grupo de proteção.
-* Utilize abordagens de proteção diferentes para diferentes grupos de datastore no mesmo cluster.
+* Use abordagens de proteção diferentes para diferentes grupos de datastore no mesmo cluster de hosts.
+* Atribua várias configurações de proteção a um único cluster de hosts.
+* Configure as definições de proteção na mesma máquina virtual de armazenamento (SVM), em diferentes SVMs ou em diferentes sistemas de armazenamento.
+* Mantenha alguns datastores em um cluster de hosts desprotegidos.
+* Remova a proteção de um datastore individual.
+* Proteja um datastore durante o provisionamento.
 
 
 Este recurso suporta apenas datastores VMFS que utilizam os protocolos iSCSI ou FC.
@@ -76,7 +81,7 @@ Considere os seguintes limites operacionais e comportamentos:
 * Acione o failover a partir do ONTAP System Manager. Configure o ONTAP Mediator fora das ONTAP tools.
 
 
-Ao atualizar do ONTAP tools 10.5, as configurações de proteção de cluster de hosts existentes são migradas para o formato de proteção granular de datastore. Após a atualização, verifique os grupos de proteção e a associação ao datastore.
+Ao atualizar do ONTAP tools for VMware vSphere 10.5, as configurações existentes de proteção do cluster de host são convertidas automaticamente em proteção granular de datastore. Após a atualização, verifique os grupos de proteção e a associação do datastore.
 
 .Informações relacionadas
 * link:../protect/protect-multiple-ds.html["Proteja datastores em um cluster com ONTAP tools"]
